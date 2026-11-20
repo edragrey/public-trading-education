@@ -46,3 +46,7 @@ Every page footer says: educational, not financial advice.
 ## Build
 
 `npm install && npm run build` writes the site to `dist/`. Vercel runs the same command.
+
+## Look and feel
+
+All colours, fonts and spacing are tokens at the top of `src/style.css` (dark mode follows the reader's device). Module icons are mapped by slug in `MODULE_ICONS` in `build.mjs`; a new module gets a book icon until you add one. The home-page chart illustrates lesson 1's hypothetical trade.
