@@ -1,18 +1,15 @@
 ---
 title: What actually happens when you get liquidated
 module: survive-first
-order: 2
+order: 11
+section: Leverage
 summary: Margin, leverage and liquidation in plain words, and why your position size and your stop set your risk, not the leverage number.
 date: 2026-11-23
 ---
 
 Every big sell-off brings a wave of "got liquidated, lesson learnt" posts. The usual advice in the replies is "never use leverage". That advice is safe, but it skips the part that actually protects you. This lesson explains what liquidation is, and the one number to check before any leveraged trade.
 
-## Three words first
-
-- **Margin** is the money you put down to open a trade. It's your deposit.
-- **Leverage** lets you open a trade bigger than your margin. At 10x, $100 of margin opens a $1,000 position.
-- **Liquidation** is when the exchange closes your trade for you, because your losses have nearly used up your margin.
+> **Quick recap.** **Margin** is the money you put down. **Leverage** lets your trade be bigger than that. **Liquidation** is when the exchange closes your trade because your losses have nearly used up your margin. New to these words? Start with [Leverage in plain words](/course/survive-first/leverage-in-plain-words/).
 
 ## A simple example
 

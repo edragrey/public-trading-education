@@ -69,7 +69,7 @@ The reason I like this topic is that it's a perfect example of advice that's *tr
 
 So next time you see a rule repeated a hundred times in the replies, ask what it's protecting you from, and whether there's a deeper rule underneath it. There usually is.
 
-If you want to try the numbers yourself, the new lesson [What actually happens when you get liquidated](/course/survive-first/what-happens-when-you-get-liquidated/) has a small calculator: put in your account, your risk, your stop and your leverage, and it tells you whether your stop or your liquidation price comes first.
+If you want to try the numbers yourself, there's a [step-by-step version](/course/survive-first/what-happens-when-you-get-liquidated/steps/) that walks through it one small screen at a time, with a few quick questions and a calculator at the end: put in your account, your risk, your stop and your leverage, and it tells you whether your stop or your liquidation price comes first. The full lesson, [What actually happens when you get liquidated](/course/survive-first/what-happens-when-you-get-liquidated/), has everything on one page.
 
 Stay curious, keep your losses small, and enjoy the ride.
 

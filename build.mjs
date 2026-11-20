@@ -132,6 +132,24 @@ const articles = mdFiles(path.join(root, "content/articles")).map((f) => {
   return { ...d, slug: slugOf(f), url: `/articles/${slugOf(f)}/` };
 }).sort((a, b) => String(b.meta.date || "").localeCompare(String(a.meta.date || "")));
 
+// Step-by-step versions: content/steps/<lesson-slug>.md, steps split by <!-- step -->
+const steps = Object.fromEntries(mdFiles(path.join(root, "content/steps")).map((f) => {
+  const d = read(f);
+  const lesson = d.meta.lesson || slugOf(f);
+  const parts = d.body.split(/^<!--\s*step\s*-->\s*$/m).map((p) => p.trim()).filter(Boolean);
+  return [lesson, { ...d, parts }];
+}));
+const stepsUrl = (l) => `${l.url}steps/`;
+const lessonBySlug = (slug) => lessons.find((l) => l.slug === slug);
+
+// Lessons in a module, grouped by "section" (order from site.config.json; no section = the first one).
+const sectionOf = (m, l) => l.meta.section || m.sections?.[0] || "";
+const groupLessons = (m, ls) => {
+  if (!m.sections?.length) return [{ name: "", ls }];
+  const names = [...m.sections, ...new Set(ls.map((l) => sectionOf(m, l)).filter((n) => !m.sections.includes(n)))];
+  return names.map((name) => ({ name, ls: ls.filter((l) => sectionOf(m, l) === name) })).filter((g) => g.ls.length);
+};
+
 const modOf = (slug) => cfg.modules.find((m) => m.slug === slug);
 const lessonCount = (slug) => lessons.filter((l) => l.module === slug).length;
 const countLabel = (n) => (n ? `${n} lesson${n > 1 ? "s" : ""}` : "Coming soon");
@@ -212,8 +230,9 @@ ${market}`, { wide: true });
   const total = lessons.length;
   const sections = cfg.modules.map((m, i) => {
     const ls = lessons.filter((l) => l.module === m.slug);
+    const item = (l) => `<li><a href="${l.url}"><span class="l-num">${ls.indexOf(l) + 1}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}${steps[l.slug] ? ` · step-by-step version` : ""}</span></span>${icon("arrow", "icon sm")}</a></li>`;
     const list = ls.length
-      ? `<ol class="lesson-list">${ls.map((l, j) => `<li><a href="${l.url}"><span class="l-num">${j + 1}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}</span></span>${icon("arrow", "icon sm")}</a></li>`).join("")}</ol>`
+      ? groupLessons(m, ls).map((g) => `${g.name ? `<h3 class="lesson-group">${esc(g.name)}</h3>` : ""}<ol class="lesson-list">${g.ls.map(item).join("")}</ol>`).join("")
       : `<p class="soon-note">Lessons coming soon.</p>`;
     return `<section class="module" id="${m.slug}">
   <div class="module-head"><span class="step-icon">${icon(modIcon(m.slug))}</span><div><p class="eyebrow">Module ${i + 1} · ${countLabel(ls.length)}</p><h2>${esc(m.title)}</h2><p class="module-sum">${esc(m.summary)}</p></div></div>
@@ -232,14 +251,35 @@ ${market}`, { wide: true });
 <article class="prose">
   <p class="crumb"><a href="/course/">Course</a> / <a href="/course/#${l.module}">Module ${mi + 1}: ${esc(cfg.modules[mi]?.title || l.module)}</a></p>
   <h1>${esc(l.meta.title)}</h1>
-  <p class="meta-row"><span class="chip">${icon(modIcon(l.module), "icon xs")}Lesson ${idx + 1}</span><span>${readTime(l.body)}</span>${l.meta.date ? `<span>${esc(fmtDate(l.meta.date))}</span>` : ""}</p>
+  <p class="meta-row"><span class="chip">${icon(modIcon(l.module), "icon xs")}Lesson ${idx + 1}${l.meta.section ? ` · ${esc(l.meta.section)}` : ""}</span><span>${readTime(l.body)}</span>${l.meta.date ? `<span>${esc(fmtDate(l.meta.date))}</span>` : ""}</p>
   ${l.meta.summary ? `<p class="lead">${esc(l.meta.summary)}</p>` : ""}
+  ${steps[l.slug] ? `<a class="steps-banner" href="${stepsUrl(l)}">${icon("list")}<span><strong>New to this? Go one step at a time.</strong><span>${steps[l.slug].parts.length} short screens with quick questions</span></span>${icon("arrow", "icon sm")}</a>` : ""}
   ${enhanceProse(l.html)}
   <nav class="pager">${next
     ? `<a class="pager-card" href="${next.url}"><span class="eyebrow">Next lesson</span><span class="pager-title">${esc(next.meta.title)}</span>${icon("arrow")}</a>`
     : `<a class="pager-card" href="/course/"><span class="eyebrow">You've reached the end of this module</span><span class="pager-title">Back to the course</span>${icon("arrow")}</a>`}</nav>
 </article>`, { description: l.meta.summary });
   }
+}
+
+// Step-by-step pages: one short screen at a time (all screens show stacked without JavaScript).
+for (const [slug, s] of Object.entries(steps)) {
+  const l = lessonBySlug(slug);
+  if (!l) { console.warn(`steps: no lesson "${slug}"`); continue; }
+  const n = s.parts.length;
+  const screens = s.parts.map((p, i) => `<section class="wstep" data-step="${i + 1}"${i ? " hidden" : ""}>${enhanceProse(marked.parse(p))}</section>`).join("");
+  const done = `<div class="walk-done" hidden><p class="eyebrow">Keep going</p><ul class="walk-links">
+    <li><a href="${l.url}">${icon("book", "icon sm")}<span>Read the full lesson</span></a></li>
+    ${(s.meta.article && articles.find((a) => a.slug === s.meta.article)) ? `<li><a href="/articles/${s.meta.article}/">${icon("pen", "icon sm")}<span>Read the article: ${esc(articles.find((a) => a.slug === s.meta.article).meta.title)}</span></a></li>` : ""}
+    <li><a href="/course/#${l.module}">${icon("list", "icon sm")}<span>Back to the course</span></a></li></ul></div>`;
+  page(stepsUrl(l), s.meta.title || l.meta.title, `
+<div class="walk prose" data-walk>
+  <div class="walk-top"><a class="crumb" href="${l.url}">${icon("back", "icon xs")} Full lesson</a><span class="walk-count" aria-live="polite">Step <b data-walk-i>1</b> of ${n}</span></div>
+  <div class="walk-bar" aria-hidden="true"><span data-walk-bar style="width:${100 / n}%"></span></div>
+  ${screens}
+  ${done}
+  <nav class="walk-nav"><button type="button" class="btn ghost" data-walk-back>${icon("back", "icon xs")} Back</button><button type="button" class="btn" data-walk-next>Next ${icon("arrow", "icon xs")}</button></nav>
+</div>`, { description: s.meta.summary || l.meta.summary });
 }
 
 // Articles
