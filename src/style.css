@@ -211,6 +211,17 @@ main.wrap { padding-top: 28px; padding-bottom: 72px; }
 .calc label { font-weight: 600; }
 .calc input { width: 4.2em; font: 600 1.1rem var(--sans); padding: 6px 8px; border: 1.5px solid color-mix(in srgb, var(--accent) 40%, var(--line)); border-radius: 10px; margin: 0 6px; background: var(--surface); color: var(--ink); text-align: center; }
 .calc-out { margin: 10px 0 0; }
+.calc-row { margin: 0 0 8px; }
+.calc-row input { width: 5.4em; }
+.calc-out b { font-weight: 700; color: var(--ink); }
+.calc-verdict { margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; font-weight: 600; background: var(--surface); border: 1px solid var(--line); }
+.calc-verdict[data-tone="good"] { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); color: var(--accent); }
+.calc-verdict[data-tone="warn"] { border-color: color-mix(in srgb, var(--gold) 55%, var(--line)); background: var(--gold-soft); }
+.calc-verdict[data-tone="bad"] { border-color: color-mix(in srgb, var(--loss) 45%, var(--line)); background: var(--loss-soft); color: var(--loss); }
+.prose details { margin: 12px 0; padding: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.prose details summary { cursor: pointer; font-weight: 600; }
+.prose details[open] summary { margin-bottom: 8px; }
+.prose details p { margin: 0; }
 .calc-out strong { font-family: var(--serif); font-size: 1.6rem; color: var(--accent); vertical-align: -2px; }
 .key-idea { display: flex; gap: 12px; align-items: flex-start; margin: 32px 0 0; padding: 18px 20px; border-radius: 16px; background: var(--accent); color: var(--accent-ink); }
 .key-idea p { margin: 0; font-size: 1.08rem; }
