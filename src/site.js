@@ -9,3 +9,20 @@ document.querySelectorAll('[data-calc="loss-gain"]').forEach((box) => {
   input.addEventListener("input", update);
   update();
 });
+
+// Glossary search: hide cards that don't match.
+const gSearch = document.querySelector("[data-glossary-search]");
+if (gSearch) {
+  const cards = [...document.querySelectorAll(".g-card")];
+  const none = document.querySelector(".g-none");
+  gSearch.addEventListener("input", () => {
+    const q = gSearch.value.trim().toLowerCase();
+    let shown = 0;
+    for (const c of cards) {
+      const hit = !q || c.textContent.toLowerCase().includes(q);
+      c.hidden = !hit;
+      if (hit) shown++;
+    }
+    if (none) none.hidden = shown > 0;
+  });
+}
