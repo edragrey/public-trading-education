@@ -26,6 +26,22 @@ Lesson text in markdown...
 
 Modules are `survive-first`, `read-the-market`, `build-a-system`, `the-traders-mind` (listed in `site.config.json`).
 
+### Group lessons into sections
+
+A module can list `"sections"` in `site.config.json` (for example `["The basics", "Leverage"]`). Put `section: Leverage` in a lesson's frontmatter; lessons without one go in the first section. Use `order` to keep the reading order (for example basics 1–9, leverage 10+).
+
+### Step-by-step version of a lesson
+
+Create `content/steps/<lesson-slug>.md` with `lesson: <lesson-slug>` (and optionally `article: <article-slug>`) in the frontmatter. Split screens with a line `<!-- step -->`. It's published at `<lesson url>steps/`, and the lesson page links to it automatically. Quick questions use:
+
+```html
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">First answer</button>
+<button type="button" data-opt="b">Second answer</button>
+<p class="quiz-why" hidden>Why b is right.</p>
+</div>
+```
+
 ## Add an article
 
 Create `content/articles/<short-slug>.md` with `title`, `summary` and `date` in the frontmatter. Newest shows first.
