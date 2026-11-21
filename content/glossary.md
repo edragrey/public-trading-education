@@ -100,3 +100,36 @@ The gap between the highest price a buyer will pay and the lowest price a seller
 
 ## Two-factor authentication (2FA)
 A second check when you log in, such as a code from an app on your phone, on top of your password.
+
+## Ask
+The lowest price any seller is currently willing to accept. If you buy straight away, you usually pay the ask.
+
+## Bid
+The highest price any buyer is currently offering. If you sell straight away, you usually get the bid.
+
+## Candlestick
+A chart shape that shows four prices for one period: open, high, low and close. Green usually means it closed higher, red lower.
+
+## Limit order
+An order to buy or sell only at your chosen price or better. It waits until someone takes it, and may never fill.
+
+## Market order
+An order to buy or sell straight away at the best price available.
+
+## Order book
+The list of everyone waiting to buy and sell, at which prices and how much.
+
+## Range
+When a price moves sideways between a rough floor and a rough ceiling, without a clear trend.
+
+## Resistance
+A price area where rises have stopped before, because sellers stepped in. An area to watch, not a promise.
+
+## Support
+A price area where falls have stopped before, because buyers stepped in. An area to watch, not a promise.
+
+## Timeframe
+How much time each candle on a chart covers, such as one hour or one day.
+
+## Trend
+A general direction over time. An uptrend makes higher highs and higher lows; a downtrend makes lower highs and lower lows.
