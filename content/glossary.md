@@ -133,3 +133,36 @@ How much time each candle on a chart covers, such as one hour or one day.
 
 ## Trend
 A general direction over time. An uptrend makes higher highs and higher lows; a downtrend makes lower highs and lower lows.
+
+## Circulating supply
+How many coins or shares are actually out in the market right now.
+
+## Economic calendar
+A free list of upcoming scheduled announcements, such as interest rate decisions and inflation figures.
+
+## Fully diluted value (FDV)
+A coin's price times its maximum supply: what it would be valued at if every coin were already released.
+
+## Futures
+Contracts to buy or sell something at a set price on a future date. Many people trade commodities this way.
+
+## Gap
+When a price opens far from where it last closed, skipping the prices in between. Common after news while a market is closed.
+
+## Hype cycle
+The rise and fall of attention around a story in the market, from almost nobody talking about it, to everybody, and back.
+
+## Market cap
+Price times the number of coins or shares in circulation. The total value the market currently puts on the whole thing.
+
+## Narrative
+A story the market is excited about that ties a group of coins or stocks together, such as "AI tokens".
+
+## Priced in
+When the market already expected some news, so the price had moved before the announcement and reacts little to it.
+
+## Unlock
+When coins that were held back, often for a team or early investors, are released and can be sold.
+
+## Volume
+How much was traded in a period, shown as bars along the bottom of most charts.

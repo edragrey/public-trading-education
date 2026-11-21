@@ -150,6 +150,23 @@ document.querySelectorAll('[data-calc="fees"]').forEach((box) => {
   });
 });
 
+// Market cap and fully diluted value from price and supply.
+document.querySelectorAll('[data-calc="market-cap"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  const big = (n) => {
+    const units = [[1e12, " trillion"], [1e9, " billion"], [1e6, " million"]];
+    for (const [d, w] of units) if (n >= d) { const x = n / d; return "$" + (x >= 100 ? Math.round(x) : Math.round(x * 10) / 10) + w; }
+    return calcMoney(n);
+  };
+  calcBind(box, () => {
+    const price = Math.max(0, val("price")), circ = Math.max(0, val("circ"));
+    const max = Math.max(circ, val("max"));
+    out("mcap").textContent = big(price * circ);
+    out("fdv").textContent = big(price * max);
+    out("locked").textContent = max ? calcPct((1 - circ / max) * 100) : "0%";
+  });
+});
+
 // Quick-check questions: tap an answer, see if it's right and why.
 document.querySelectorAll(".quiz").forEach((q) => {
   const why = q.querySelector(".quiz-why");

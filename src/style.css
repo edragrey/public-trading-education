@@ -355,3 +355,4 @@ main.wrap { padding-top: 28px; padding-bottom: 72px; }
 .fig .guide { stroke: var(--line); stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
 .fig .zone { fill: var(--gold-soft); }
 .fig .zone-lbl { fill: var(--gold); font: 600 12px var(--sans); }
+.calc input.wide { width: 17ch; max-width: 100%; }
