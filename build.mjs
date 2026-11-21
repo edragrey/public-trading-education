@@ -41,6 +41,8 @@ const ICONS = {
   calendar: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
+  moon: '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>',
   check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
   x: '<path d="M6 6l12 12M18 6L6 18"/>',
   search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>',
@@ -52,6 +54,9 @@ const MODULE_ICONS = { "survive-first": "shield", "read-the-market": "chart", "b
 const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 
 const logo = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M7 21l6-6 4 4 8-8" stroke="var(--accent-ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+// Runs before the page paints so a saved theme never flashes. "tb-theme" is light, dark, or unset (match device).
+const themeBoot = `try{var t=localStorage.getItem("tb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
 
 const nav = [
   ["/", "Home"], ["/course/", "Course"], ["/articles/", "Articles"], ["/glossary/", "Glossary"], ["/about/", "About"],
@@ -68,13 +73,14 @@ function page(urlPath, title, content, { description = cfg.description, wide = f
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>${themeBoot}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
-<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1513" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" data-tc="light">
+<meta name="theme-color" content="#0f1513" media="(prefers-color-scheme: dark)" data-tc="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
@@ -87,6 +93,7 @@ function page(urlPath, title, content, { description = cfg.description, wide = f
   <div class="wrap wide">
     <a class="brand" href="/">${logo}<span>${esc(cfg.name)}</span></a>
     <nav aria-label="Main">${links}</nav>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch to dark theme">${icon("moon", "icon i-moon")}${icon("sun", "icon i-sun")}</button>
   </div>
 </header>
 <main id="main" class="wrap${wide ? " wide" : ""}">
@@ -101,10 +108,12 @@ ${content}
     <div class="foot-row">
       <a class="brand small" href="/">${logo}<span>${esc(cfg.name)}</span></a>
       <nav aria-label="Footer">${footLinks}</nav>
+      <fieldset class="theme-pick" data-theme-pick><legend>Theme</legend><button type="button" data-set="light">Light</button><button type="button" data-set="dark">Dark</button><button type="button" data-set="auto">Match device</button></fieldset>
       <p class="copy">&copy; ${new Date().getFullYear()} ${esc(cfg.name)}</p>
     </div>
   </div>
 </footer>
+<script src="/theme.js" defer></script>
 <script src="/site.js" defer></script>
 </body>
 </html>`;
@@ -331,5 +340,5 @@ for (const a of articles) {
 page("/404-tmp/", "Page not found", `<div class="empty"><span class="band-icon">${icon("search")}</span><h1>Page not found</h1><p>That page doesn't exist, or it moved.</p><p><a class="btn" href="/">Go to the home page</a></p></div>`);
 fs.renameSync(path.join(out, "404-tmp/index.html"), path.join(out, "404.html"));
 fs.rmSync(path.join(out, "404-tmp"), { recursive: true });
-for (const f of ["style.css", "site.js"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
+for (const f of ["style.css", "site.js", "theme.js"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
 console.log(`Built ${lessons.length} lesson(s), ${articles.length} article(s) into dist/`);
