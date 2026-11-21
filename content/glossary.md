@@ -55,3 +55,27 @@ How much and how fast a price moves up and down. High volatility means bigger sw
 
 ## Win rate
 The share of your trades that make money. A high win rate alone doesn't mean a strategy is profitable.
+
+## Account
+The money you've set aside for trading. Only money you can afford to lose belongs here, not savings or bills.
+
+## Break-even win rate
+The share of trades you need to win just to end up at zero, given your reward to risk. At 2:1 it's about 33%.
+
+## Reward to risk
+How much a trade could make compared with how much it could lose. Risking $10 to make $20 is 2:1.
+
+## Slippage
+The gap between the price you asked for and the price you actually got. It grows when prices move fast or few people are trading.
+
+## Stop distance
+How far the price can move against you, from your entry to your stop, usually as a percentage.
+
+## Stop limit order
+A stop that places a sell order at your chosen price or better. In a fast fall it may not fill at all.
+
+## Stop market order
+A stop that sells straight away at the best available price once it's triggered. You get out, but maybe at a worse price.
+
+## Target
+The price where you plan to take your profit, chosen before you enter the trade.

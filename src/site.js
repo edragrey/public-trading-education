@@ -49,6 +49,69 @@ document.querySelectorAll('[data-calc="stop-loss"]').forEach((box) => {
   update();
 });
 
+// Shared helpers for the small lesson calculators below.
+const calcMoney = (n) => "$" + (Math.abs(n) >= 100 ? Math.round(n).toLocaleString("en-US") : n.toFixed(2).replace(/\.00$/, ""));
+const calcPct = (n) => (Math.abs(n) >= 10 ? Math.round(n) : Math.round(n * 10) / 10) + "%";
+const calcBind = (box, update) => { box.querySelectorAll("input").forEach((i) => i.addEventListener("input", update)); update(); };
+const calcIo = (box) => [(k) => Number(box.querySelector(`[data-in="${k}"]`).value) || 0, (k) => box.querySelector(`[data-out="${k}"]`)];
+
+// Risk amount: account x risk %, plus how many losses in a row halve the account.
+document.querySelectorAll('[data-calc="risk-amount"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const account = Math.max(0, val("account"));
+    const risk = Math.min(100, Math.max(0.1, val("risk"))) / 100;
+    out("loss").textContent = calcMoney(account * risk);
+    out("streak").textContent = risk >= 0.5 ? "1" : String(Math.ceil(Math.log(0.5) / Math.log(1 - risk)));
+  });
+});
+
+// Position size from entry and stop prices.
+document.querySelectorAll('[data-calc="position-size"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const account = Math.max(0, val("account"));
+    const risk = Math.min(100, Math.max(0, val("risk"))) / 100;
+    const entry = Math.max(0, val("entry")), stop = Math.max(0, val("stop"));
+    const loss = account * risk;
+    const v = out("verdict");
+    out("loss").textContent = calcMoney(loss);
+    if (!entry || stop >= entry) {
+      out("dist").textContent = "–"; out("size").textContent = "–"; out("units").textContent = "–";
+      v.textContent = "For a buy, the stop has to be below the price you buy at."; v.dataset.tone = "bad";
+      return;
+    }
+    const dist = (entry - stop) / entry;
+    const size = loss / dist;
+    out("dist").textContent = calcPct(dist * 100);
+    out("size").textContent = calcMoney(size);
+    const units = size / entry;
+    out("units").textContent = units >= 10 ? Math.round(units).toLocaleString("en-US") : String(Math.round(units * 100) / 100);
+    if (size > account) { v.textContent = "That's bigger than your whole account. Take a smaller position or skip the trade."; v.dataset.tone = "bad"; }
+    else { v.textContent = "If the stop is hit, you lose about " + calcMoney(loss) + " plus fees."; v.dataset.tone = "good"; }
+  });
+});
+
+// Reward to risk and the break-even win rate.
+document.querySelectorAll('[data-calc="rr"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const entry = val("entry"), stop = val("stop"), target = val("target");
+    const v = out("verdict");
+    if (!(stop < entry && target > entry)) {
+      out("rr").textContent = "–"; out("be").textContent = "–";
+      v.textContent = "For a buy, the stop goes below your entry and the target above it."; v.dataset.tone = "bad";
+      return;
+    }
+    const rr = (target - entry) / (entry - stop);
+    out("rr").textContent = (Math.round(rr * 10) / 10) + ":1";
+    out("be").textContent = Math.round(100 / (1 + rr)) + "%";
+    if (rr < 1) { v.textContent = "You stand to lose more than you'd make. You'd need to be right more often than not."; v.dataset.tone = "warn"; }
+    else if (rr > 5) { v.textContent = "A big ratio on paper. Ask honestly whether the price is likely to reach that target."; v.dataset.tone = "warn"; }
+    else { v.textContent = "Now ask: is the target somewhere the price could realistically reach?"; v.dataset.tone = "good"; }
+  });
+});
+
 // Quick-check questions: tap an answer, see if it's right and why.
 document.querySelectorAll(".quiz").forEach((q) => {
   const why = q.querySelector(".quiz-why");
