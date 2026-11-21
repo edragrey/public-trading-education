@@ -6,7 +6,7 @@ summary: The number on your screen is just the last deal between a buyer and a s
 date: 2026-11-21
 ---
 
-This module is about understanding what you're looking at when you open a chart or an exchange. We start with the smallest piece: a single price.
+Now the smallest piece of any market: a single price.
 
 ## A price is a deal
 
