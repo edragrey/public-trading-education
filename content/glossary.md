@@ -193,3 +193,18 @@ A written set of rules for what you trade, when you get in, when you get out and
 
 ## Variance
 The normal ups and downs in results that come from chance, even with a good system.
+
+## Daily loss limit
+The most you allow yourself to lose in one day. Reach it and you stop trading until tomorrow.
+
+## FOMO
+Fear of missing out: the anxious urge to jump into something because it's moving and others seem to be profiting.
+
+## Overconfidence
+Believing you're more skilled, or your next trades more certain, than the evidence shows. Common after a winning streak.
+
+## Revenge trading
+Taking a new trade mainly to win back a loss, rather than because it fits your plan.
+
+## Tilt
+A state where frustration or anger is making your trading decisions for you.
