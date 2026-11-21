@@ -1,0 +1,135 @@
+/* Design previews: three alternative looks on top of the current one.
+   Only loaded on preview builds (build.mjs, LOOKS_PREVIEW). Picked with the "Design" strip or ?look=,
+   saved in localStorage "tb-look". Each look sets the same tokens for light and dark, plus a few
+   character rules. No content, calculator or disclaimer changes. */
+
+/* Preview strip */
+.look-bar { background: var(--ink); color: var(--bg); font: 500 .82rem/1.2 var(--sans); }
+.look-bar .wrap { display: flex; align-items: center; gap: 8px; padding-top: 7px; padding-bottom: 7px; overflow-x: auto; scrollbar-width: none; }
+.look-bar .wrap::-webkit-scrollbar { display: none; }
+.look-bar span { opacity: .75; white-space: nowrap; }
+.look-bar button { flex: none; padding: 5px 11px; border: 1px solid color-mix(in srgb, var(--bg) 35%, transparent); border-radius: 999px; background: transparent; color: var(--bg); font: inherit; cursor: pointer; }
+.look-bar button[aria-pressed="true"] { background: var(--bg); color: var(--ink); border-color: var(--bg); }
+
+/* ------------------------------------------------------------------ */
+/* A. Harbor: cool sea-fog paper, deep teal-blue, classic book serif.  */
+/* Flatter cards with crisp borders, slightly smaller corners.         */
+:root[data-look="harbor"] {
+  --bg: #f2f5f6; --bg-2: #e8eef0; --surface: #ffffff; --ink: #14232b; --muted: #55666e; --line: #d8e1e5;
+  --accent: #1c5570; --accent-2: #26708f; --accent-ink: #ffffff; --accent-soft: #e0ecf2;
+  --gold: #a8741f; --gold-soft: #f6ecda; --loss: #c0503f; --loss-soft: #f9e5e1; --gain: #2b7d5f;
+  --shadow: 0 1px 2px rgba(20, 35, 43, .05);
+  --shadow-hover: 0 2px 4px rgba(20, 35, 43, .06), 0 10px 24px -12px rgba(20, 35, 43, .22);
+  --radius: 10px;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+:root[data-look="harbor"][data-theme="dark"] {
+  --bg: #0d161b; --bg-2: #121d23; --surface: #16232a; --ink: #e5edf0; --muted: #98a9b1; --line: #24343c;
+  --accent: #6bb6d6; --accent-2: #8ccae4; --accent-ink: #0a1a22; --accent-soft: #17303b;
+  --gold: #deb066; --gold-soft: #2a2418; --loss: #e8806f; --loss-soft: #301d1a; --gain: #6fcaa2;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+  --shadow-hover: 0 2px 4px rgba(0, 0, 0, .3), 0 12px 28px -12px rgba(0, 0, 0, .6);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-look="harbor"]:not([data-theme="light"]) {
+    --bg: #0d161b; --bg-2: #121d23; --surface: #16232a; --ink: #e5edf0; --muted: #98a9b1; --line: #24343c;
+    --accent: #6bb6d6; --accent-2: #8ccae4; --accent-ink: #0a1a22; --accent-soft: #17303b;
+    --gold: #deb066; --gold-soft: #2a2418; --loss: #e8806f; --loss-soft: #301d1a; --gain: #6fcaa2;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+    --shadow-hover: 0 2px 4px rgba(0, 0, 0, .3), 0 12px 28px -12px rgba(0, 0, 0, .6);
+  }
+}
+:root[data-look="harbor"] body { font-size: 18px; }
+:root[data-look="harbor"] h1, :root[data-look="harbor"] h2, :root[data-look="harbor"] h3 { font-weight: 600; letter-spacing: -.01em; }
+:root[data-look="harbor"] .btn, :root[data-look="harbor"] nav[aria-label="Main"] a { border-radius: 8px; }
+:root[data-look="harbor"] .site-header { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; }
+:root[data-look="harbor"] .hero-chart { border-radius: 12px; }
+:root[data-look="harbor"] .step-icon, :root[data-look="harbor"] .p-icon, :root[data-look="harbor"] .band-icon { border-radius: 8px; }
+:root[data-look="harbor"] .step { border-top: 3px solid var(--accent); }
+:root[data-look="harbor"] .l-num { border-radius: 6px; }
+
+/* ------------------------------------------------------------------ */
+/* B. Studio: bright and friendly, rounded sans throughout, indigo.    */
+/* Bigger corners, soft floating cards, feels like a learning app.     */
+:root[data-look="studio"] {
+  --bg: #f7f7fb; --bg-2: #eeeef8; --surface: #ffffff; --ink: #1b1c2e; --muted: #5d6075; --line: #e4e4ef;
+  --accent: #4a4fc4; --accent-2: #5b61d6; --accent-ink: #ffffff; --accent-soft: #e8e9fb;
+  --gold: #b7791f; --gold-soft: #fbf0dc; --loss: #c8463b; --loss-soft: #fbe6e3; --gain: #24885d;
+  --shadow: 0 2px 4px rgba(27, 28, 46, .04), 0 12px 28px -14px rgba(27, 28, 46, .18);
+  --shadow-hover: 0 4px 8px rgba(27, 28, 46, .05), 0 20px 40px -16px rgba(27, 28, 46, .28);
+  --radius: 22px;
+  --serif: "Plus Jakarta Sans", system-ui, sans-serif;
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+:root[data-look="studio"][data-theme="dark"] {
+  --bg: #11121c; --bg-2: #171826; --surface: #1c1d2d; --ink: #ebebf5; --muted: #a2a4ba; --line: #2b2c40;
+  --accent: #9397f5; --accent-2: #aaadf8; --accent-ink: #12132a; --accent-soft: #25264a;
+  --gold: #e3b366; --gold-soft: #2b2518; --loss: #ec8173; --loss-soft: #321e1c; --gain: #66cc9c;
+  --shadow: 0 2px 4px rgba(0, 0, 0, .3), 0 14px 30px -14px rgba(0, 0, 0, .6);
+  --shadow-hover: 0 4px 8px rgba(0, 0, 0, .3), 0 22px 40px -16px rgba(0, 0, 0, .7);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-look="studio"]:not([data-theme="light"]) {
+    --bg: #11121c; --bg-2: #171826; --surface: #1c1d2d; --ink: #ebebf5; --muted: #a2a4ba; --line: #2b2c40;
+    --accent: #9397f5; --accent-2: #aaadf8; --accent-ink: #12132a; --accent-soft: #25264a;
+    --gold: #e3b366; --gold-soft: #2b2518; --loss: #ec8173; --loss-soft: #321e1c; --gain: #66cc9c;
+    --shadow: 0 2px 4px rgba(0, 0, 0, .3), 0 14px 30px -14px rgba(0, 0, 0, .6);
+    --shadow-hover: 0 4px 8px rgba(0, 0, 0, .3), 0 22px 40px -16px rgba(0, 0, 0, .7);
+  }
+}
+:root[data-look="studio"] h1, :root[data-look="studio"] h2, :root[data-look="studio"] h3,
+:root[data-look="studio"] .brand, :root[data-look="studio"] .step strong, :root[data-look="studio"] .card-title { font-weight: 750; letter-spacing: -.025em; }
+:root[data-look="studio"] .card, :root[data-look="studio"] .step, :root[data-look="studio"] .module,
+:root[data-look="studio"] .g-card, :root[data-look="studio"] .about-card, :root[data-look="studio"] .pager-card { border-color: transparent; }
+:root[data-look="studio"] .hero-chart { border-radius: 28px; border-color: transparent; }
+:root[data-look="studio"] .hero h1 { background: linear-gradient(100deg, var(--ink) 30%, var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+:root[data-look="studio"] .step-icon { border-radius: 16px; background: var(--accent); color: var(--accent-ink); }
+:root[data-look="studio"] .key-idea, :root[data-look="studio"] .calc, :root[data-look="studio"] .prose blockquote { border-radius: 20px; }
+:root[data-look="studio"] .hc-tag.gain rect { fill: color-mix(in srgb, var(--gain) 14%, var(--surface)); }
+
+/* ------------------------------------------------------------------ */
+/* C. Newsprint: ivory page, ink-black accents, serif you read in.     */
+/* No floating boxes: sections sit under ruled lines, like a paper.    */
+:root[data-look="newsprint"] {
+  --bg: #fbf8f1; --bg-2: #f3eee2; --surface: #fffdf8; --ink: #1a1814; --muted: #5f5a50; --line: #ddd5c4;
+  --accent: #1a1814; --accent-2: #3a352c; --accent-ink: #fbf8f1; --accent-soft: #efe9dc;
+  --gold: #a26a12; --gold-soft: #f6ead2; --loss: #b0402f; --loss-soft: #f7e3dd; --gain: #2f7a52;
+  --shadow: none; --shadow-hover: none;
+  --radius: 4px;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+:root[data-look="newsprint"][data-theme="dark"] {
+  --bg: #141310; --bg-2: #1a1915; --surface: #1c1b17; --ink: #ece7dc; --muted: #a8a295; --line: #34312a;
+  --accent: #ece7dc; --accent-2: #ffffff; --accent-ink: #141310; --accent-soft: #26241e;
+  --gold: #deb064; --gold-soft: #2a2418; --loss: #e57f6c; --loss-soft: #2f1e1a; --gain: #73c495;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-look="newsprint"]:not([data-theme="light"]) {
+    --bg: #141310; --bg-2: #1a1915; --surface: #1c1b17; --ink: #ece7dc; --muted: #a8a295; --line: #34312a;
+    --accent: #ece7dc; --accent-2: #ffffff; --accent-ink: #141310; --accent-soft: #26241e;
+    --gold: #deb064; --gold-soft: #2a2418; --loss: #e57f6c; --loss-soft: #2f1e1a; --gain: #73c495;
+  }
+}
+:root[data-look="newsprint"] h1, :root[data-look="newsprint"] h2, :root[data-look="newsprint"] h3 { font-weight: 500; letter-spacing: -.02em; }
+:root[data-look="newsprint"] .prose p:not([class]), :root[data-look="newsprint"] .prose li, :root[data-look="newsprint"] .prose > .lead { font-family: var(--serif); font-size: 1.12em; }
+:root[data-look="newsprint"] .site-header { border-bottom: 3px double var(--ink); }
+:root[data-look="newsprint"] .btn, :root[data-look="newsprint"] nav[aria-label="Main"] a { border-radius: 2px; }
+:root[data-look="newsprint"] nav[aria-label="Main"] a[aria-current="page"] { background: transparent; color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
+:root[data-look="newsprint"] .step, :root[data-look="newsprint"] .card, :root[data-look="newsprint"] .module,
+:root[data-look="newsprint"] .g-card, :root[data-look="newsprint"] .about-card, :root[data-look="newsprint"] .pager-card {
+  background: transparent; border: 0; border-top: 1px solid var(--ink); border-radius: 0; padding-left: 0; padding-right: 0;
+}
+:root[data-look="newsprint"] .pager-card { padding-right: 48px; }
+:root[data-look="newsprint"] .pager-card > .icon { right: 0; }
+:root[data-look="newsprint"] .step:hover, :root[data-look="newsprint"] .card:hover, :root[data-look="newsprint"] .pager-card:hover { transform: none; }
+:root[data-look="newsprint"] .step:hover strong, :root[data-look="newsprint"] .card:hover .card-title { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+:root[data-look="newsprint"] .hero-chart { border-radius: 0; border: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); background: transparent; padding-left: 0; padding-right: 0; }
+:root[data-look="newsprint"] .step-icon, :root[data-look="newsprint"] .p-icon, :root[data-look="newsprint"] .band-icon { border-radius: 50%; }
+:root[data-look="newsprint"] .eyebrow { color: var(--muted); }
+:root[data-look="newsprint"] .chip { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 2px; }
+:root[data-look="newsprint"] .calc, :root[data-look="newsprint"] .key-idea, :root[data-look="newsprint"] .prose blockquote,
+:root[data-look="newsprint"] .steps-banner, :root[data-look="newsprint"] .table-wrap, :root[data-look="newsprint"] .disclaimer { border-radius: 4px; }
+:root[data-look="newsprint"] .hc-tag.gain rect { fill: color-mix(in srgb, var(--gain) 14%, var(--surface)); }
+@media (min-width: 720px) { :root[data-look="newsprint"] .module { padding: 22px 0 8px; } :root[data-look="newsprint"] .lesson-list { margin-left: 60px; } }

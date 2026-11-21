@@ -58,6 +58,19 @@ const logo = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect wid
 // Runs before the page paints so a saved theme never flashes. "tb-theme" is light, dark, or unset (match device).
 const themeBoot = `try{var t=localStorage.getItem("tb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
 
+// Design previews (three alternative looks) appear only on preview builds, never on the live site.
+// Vercel sets VERCEL_ENV=preview for PR deploys; LOOKS_PREVIEW=1 forces them on locally.
+const looksPreview = process.env.LOOKS_PREVIEW === "1" || process.env.VERCEL_ENV === "preview";
+const LOOKS = [["current", "Current"], ["harbor", "A · Harbor"], ["studio", "B · Studio"], ["newsprint", "C · Newsprint"]];
+const lookBoot = `try{var q=new URLSearchParams(location.search).get("look");if(q){if(q==="current")localStorage.removeItem("tb-look");else localStorage.setItem("tb-look",q)}var l=localStorage.getItem("tb-look");if(l)document.documentElement.dataset.look=l}catch(e){}`;
+const lookHead = looksPreview ? `
+<script>${lookBoot}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="/looks.css">` : "";
+const lookBar = looksPreview ? `<div class="look-bar"><div class="wrap wide" data-look-pick><span>Preview design:</span>${LOOKS.map(([k, l]) => `<button type="button" data-look="${k}">${l}</button>`).join("")}</div></div>
+` : "";
+const lookScript = looksPreview ? `\n<script src="/looks.js" defer></script>` : "";
+
 const nav = [
   ["/", "Home"], ["/course/", "Course"], ["/articles/", "Articles"], ["/glossary/", "Glossary"], ["/about/", "About"],
 ];
@@ -84,12 +97,12 @@ function page(urlPath, title, content, { description = cfg.description, wide = f
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css">${lookHead}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%231f5f4a'/><path d='M7 21l6-6 4 4 8-8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
+${lookBar}<header class="site-header">
   <div class="wrap wide">
     <a class="brand" href="/">${logo}<span>${esc(cfg.name)}</span></a>
     <nav aria-label="Main">${links}</nav>
@@ -114,7 +127,7 @@ ${content}
   </div>
 </footer>
 <script src="/theme.js" defer></script>
-<script src="/site.js" defer></script>
+<script src="/site.js" defer></script>${lookScript}
 </body>
 </html>`;
   const dir = path.join(out, urlPath);
@@ -340,5 +353,5 @@ for (const a of articles) {
 page("/404-tmp/", "Page not found", `<div class="empty"><span class="band-icon">${icon("search")}</span><h1>Page not found</h1><p>That page doesn't exist, or it moved.</p><p><a class="btn" href="/">Go to the home page</a></p></div>`);
 fs.renameSync(path.join(out, "404-tmp/index.html"), path.join(out, "404.html"));
 fs.rmSync(path.join(out, "404-tmp"), { recursive: true });
-for (const f of ["style.css", "site.js", "theme.js"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
+for (const f of ["style.css", "site.js", "theme.js", ...(looksPreview ? ["looks.css", "looks.js"] : [])]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
 console.log(`Built ${lessons.length} lesson(s), ${articles.length} article(s) into dist/`);
