@@ -24,7 +24,7 @@ Then they put the stop wherever the loss feels bearable. The problem: the market
 
 Flip it round. Decide three things first:
 
-1. **How much you'll lose** if you're wrong (lesson 2: about 1% of your account).
+1. **How much you'll lose** if you're wrong (the 1% lesson: about 1% of your account).
 2. **Where your stop goes**: the price where your idea is wrong.
 3. Then let the **position size** fall out of a small sum.
 

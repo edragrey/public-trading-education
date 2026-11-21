@@ -1,1 +1,48 @@
-{ "buildCommand": "npm run build", "outputDirectory": "dist", "cleanUrls": true, "trailingSlash": true }
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/course/survive-first/right-forecast-losing-trade/",
+      "destination": "/course/start-here/right-forecast-losing-trade/",
+      "permanent": true
+    },
+    {
+      "source": "/course/read-the-market/what-a-price-is/",
+      "destination": "/course/how-markets-work/what-a-price-is/",
+      "permanent": true
+    },
+    {
+      "source": "/course/read-the-market/how-to-read-a-candlestick/",
+      "destination": "/course/how-markets-work/how-to-read-a-candlestick/",
+      "permanent": true
+    },
+    {
+      "source": "/course/read-the-market/how-to-read-a-candlestick/steps/",
+      "destination": "/course/how-markets-work/how-to-read-a-candlestick/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/read-the-market/timeframes/",
+      "destination": "/course/how-markets-work/timeframes/",
+      "permanent": true
+    },
+    {
+      "source": "/course/read-the-market/volume-and-liquidity/",
+      "destination": "/course/how-markets-work/volume-and-liquidity/",
+      "permanent": true
+    },
+    {
+      "source": "/course/read-the-market/crypto-stocks-and-commodities/",
+      "destination": "/course/how-markets-work/crypto-stocks-and-commodities/",
+      "permanent": true
+    },
+    {
+      "source": "/course/the-traders-mind/where-to-go-from-here/",
+      "destination": "/course/going-further/where-to-go-from-here/",
+      "permanent": true
+    }
+  ]
+}
