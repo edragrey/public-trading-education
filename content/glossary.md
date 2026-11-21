@@ -166,3 +166,30 @@ When coins that were held back, often for a team or early investors, are release
 
 ## Volume
 How much was traded in a period, shown as bars along the bottom of most charts.
+
+## Backtest
+Checking how your trading rules would have done on past charts. Useful, but easy to fool yourself with hindsight.
+
+## Paper trading
+Following your trading rules in real time with pretend money, often in a demo account.
+
+## R (R-multiple)
+A trade's result measured in units of the risk you planned. Risk $20 and make $40, that's +2R. Lose $20, that's −1R.
+
+## Sample size
+How many trades or examples you've looked at. Small samples are mostly chance; bigger ones are more trustworthy.
+
+## Setup
+The specific situation you're looking for before you'll consider a trade, written plainly in your plan.
+
+## Trade plan
+Your trading system on one page: what you trade, when you get in and out, and how much you risk.
+
+## Trading journal
+A record of every trade: the plan before, what happened, and whether you followed your rules.
+
+## Trading system
+A written set of rules for what you trade, when you get in, when you get out and how much you risk.
+
+## Variance
+The normal ups and downs in results that come from chance, even with a good system.

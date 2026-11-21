@@ -356,3 +356,7 @@ main.wrap { padding-top: 28px; padding-bottom: 72px; }
 .fig .zone { fill: var(--gold-soft); }
 .fig .zone-lbl { fill: var(--gold); font: 600 12px var(--sans); }
 .calc input.wide { width: 17ch; max-width: 100%; }
+
+/* Fill-in templates in lessons (fenced code blocks). */
+.prose pre { max-width: 100%; overflow-x: auto; margin: 1.25rem 0; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font: .85rem/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--ink); }
+.prose pre code { font: inherit; background: none; padding: 0; }
