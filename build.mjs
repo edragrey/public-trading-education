@@ -41,6 +41,8 @@ const ICONS = {
   calendar: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
+  moon: '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>',
   check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
   x: '<path d="M6 6l12 12M18 6L6 18"/>',
   search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>',
@@ -52,6 +54,22 @@ const MODULE_ICONS = { "survive-first": "shield", "read-the-market": "chart", "b
 const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 
 const logo = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M7 21l6-6 4 4 8-8" stroke="var(--accent-ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+// Runs before the page paints so a saved theme never flashes. "tb-theme" is light, dark, or unset (match device).
+const themeBoot = `try{var t=localStorage.getItem("tb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
+
+// Design previews (three alternative looks) appear only on preview builds, never on the live site.
+// Vercel sets VERCEL_ENV=preview for PR deploys; LOOKS_PREVIEW=1 forces them on locally.
+const looksPreview = process.env.LOOKS_PREVIEW === "1" || process.env.VERCEL_ENV === "preview";
+const LOOKS = [["current", "Current"], ["harbor", "A · Harbor"], ["studio", "B · Studio"], ["newsprint", "C · Newsprint"]];
+const lookBoot = `try{var q=new URLSearchParams(location.search).get("look");if(q){if(q==="current")localStorage.removeItem("tb-look");else localStorage.setItem("tb-look",q)}var l=localStorage.getItem("tb-look");if(l)document.documentElement.dataset.look=l}catch(e){}`;
+const lookHead = looksPreview ? `
+<script>${lookBoot}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="/looks.css">` : "";
+const lookBar = looksPreview ? `<div class="look-bar"><div class="wrap wide" data-look-pick><span>Preview design:</span>${LOOKS.map(([k, l]) => `<button type="button" data-look="${k}">${l}</button>`).join("")}</div></div>
+` : "";
+const lookScript = looksPreview ? `\n<script src="/looks.js" defer></script>` : "";
 
 const nav = [
   ["/", "Home"], ["/course/", "Course"], ["/articles/", "Articles"], ["/glossary/", "Glossary"], ["/about/", "About"],
@@ -68,25 +86,27 @@ function page(urlPath, title, content, { description = cfg.description, wide = f
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>${themeBoot}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
-<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1513" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" data-tc="light">
+<meta name="theme-color" content="#0f1513" media="(prefers-color-scheme: dark)" data-tc="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css">${lookHead}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%231f5f4a'/><path d='M7 21l6-6 4 4 8-8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
+${lookBar}<header class="site-header">
   <div class="wrap wide">
     <a class="brand" href="/">${logo}<span>${esc(cfg.name)}</span></a>
     <nav aria-label="Main">${links}</nav>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch to dark theme">${icon("moon", "icon i-moon")}${icon("sun", "icon i-sun")}</button>
   </div>
 </header>
 <main id="main" class="wrap${wide ? " wide" : ""}">
@@ -101,11 +121,13 @@ ${content}
     <div class="foot-row">
       <a class="brand small" href="/">${logo}<span>${esc(cfg.name)}</span></a>
       <nav aria-label="Footer">${footLinks}</nav>
+      <fieldset class="theme-pick" data-theme-pick><legend>Theme</legend><button type="button" data-set="light">Light</button><button type="button" data-set="dark">Dark</button><button type="button" data-set="auto">Match device</button></fieldset>
       <p class="copy">&copy; ${new Date().getFullYear()} ${esc(cfg.name)}</p>
     </div>
   </div>
 </footer>
-<script src="/site.js" defer></script>
+<script src="/theme.js" defer></script>
+<script src="/site.js" defer></script>${lookScript}
 </body>
 </html>`;
   const dir = path.join(out, urlPath);
@@ -131,6 +153,24 @@ const articles = mdFiles(path.join(root, "content/articles")).map((f) => {
   const d = read(f);
   return { ...d, slug: slugOf(f), url: `/articles/${slugOf(f)}/` };
 }).sort((a, b) => String(b.meta.date || "").localeCompare(String(a.meta.date || "")));
+
+// Step-by-step versions: content/steps/<lesson-slug>.md, steps split by <!-- step -->
+const steps = Object.fromEntries(mdFiles(path.join(root, "content/steps")).map((f) => {
+  const d = read(f);
+  const lesson = d.meta.lesson || slugOf(f);
+  const parts = d.body.split(/^<!--\s*step\s*-->\s*$/m).map((p) => p.trim()).filter(Boolean);
+  return [lesson, { ...d, parts }];
+}));
+const stepsUrl = (l) => `${l.url}steps/`;
+const lessonBySlug = (slug) => lessons.find((l) => l.slug === slug);
+
+// Lessons in a module, grouped by "section" (order from site.config.json; no section = the first one).
+const sectionOf = (m, l) => l.meta.section || m.sections?.[0] || "";
+const groupLessons = (m, ls) => {
+  if (!m.sections?.length) return [{ name: "", ls }];
+  const names = [...m.sections, ...new Set(ls.map((l) => sectionOf(m, l)).filter((n) => !m.sections.includes(n)))];
+  return names.map((name) => ({ name, ls: ls.filter((l) => sectionOf(m, l) === name) })).filter((g) => g.ls.length);
+};
 
 const modOf = (slug) => cfg.modules.find((m) => m.slug === slug);
 const lessonCount = (slug) => lessons.filter((l) => l.module === slug).length;
@@ -212,8 +252,9 @@ ${market}`, { wide: true });
   const total = lessons.length;
   const sections = cfg.modules.map((m, i) => {
     const ls = lessons.filter((l) => l.module === m.slug);
+    const item = (l) => `<li><a href="${l.url}"><span class="l-num">${ls.indexOf(l) + 1}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}${steps[l.slug] ? ` · step-by-step version` : ""}</span></span>${icon("arrow", "icon sm")}</a></li>`;
     const list = ls.length
-      ? `<ol class="lesson-list">${ls.map((l, j) => `<li><a href="${l.url}"><span class="l-num">${j + 1}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}</span></span>${icon("arrow", "icon sm")}</a></li>`).join("")}</ol>`
+      ? groupLessons(m, ls).map((g) => `${g.name ? `<h3 class="lesson-group">${esc(g.name)}</h3>` : ""}<ol class="lesson-list">${g.ls.map(item).join("")}</ol>`).join("")
       : `<p class="soon-note">Lessons coming soon.</p>`;
     return `<section class="module" id="${m.slug}">
   <div class="module-head"><span class="step-icon">${icon(modIcon(m.slug))}</span><div><p class="eyebrow">Module ${i + 1} · ${countLabel(ls.length)}</p><h2>${esc(m.title)}</h2><p class="module-sum">${esc(m.summary)}</p></div></div>
@@ -232,14 +273,35 @@ ${market}`, { wide: true });
 <article class="prose">
   <p class="crumb"><a href="/course/">Course</a> / <a href="/course/#${l.module}">Module ${mi + 1}: ${esc(cfg.modules[mi]?.title || l.module)}</a></p>
   <h1>${esc(l.meta.title)}</h1>
-  <p class="meta-row"><span class="chip">${icon(modIcon(l.module), "icon xs")}Lesson ${idx + 1}</span><span>${readTime(l.body)}</span>${l.meta.date ? `<span>${esc(fmtDate(l.meta.date))}</span>` : ""}</p>
+  <p class="meta-row"><span class="chip">${icon(modIcon(l.module), "icon xs")}Lesson ${idx + 1}${l.meta.section ? ` · ${esc(l.meta.section)}` : ""}</span><span>${readTime(l.body)}</span>${l.meta.date ? `<span>${esc(fmtDate(l.meta.date))}</span>` : ""}</p>
   ${l.meta.summary ? `<p class="lead">${esc(l.meta.summary)}</p>` : ""}
+  ${steps[l.slug] ? `<a class="steps-banner" href="${stepsUrl(l)}">${icon("list")}<span><strong>New to this? Go one step at a time.</strong><span>${steps[l.slug].parts.length} short screens with quick questions</span></span>${icon("arrow", "icon sm")}</a>` : ""}
   ${enhanceProse(l.html)}
   <nav class="pager">${next
     ? `<a class="pager-card" href="${next.url}"><span class="eyebrow">Next lesson</span><span class="pager-title">${esc(next.meta.title)}</span>${icon("arrow")}</a>`
     : `<a class="pager-card" href="/course/"><span class="eyebrow">You've reached the end of this module</span><span class="pager-title">Back to the course</span>${icon("arrow")}</a>`}</nav>
 </article>`, { description: l.meta.summary });
   }
+}
+
+// Step-by-step pages: one short screen at a time (all screens show stacked without JavaScript).
+for (const [slug, s] of Object.entries(steps)) {
+  const l = lessonBySlug(slug);
+  if (!l) { console.warn(`steps: no lesson "${slug}"`); continue; }
+  const n = s.parts.length;
+  const screens = s.parts.map((p, i) => `<section class="wstep" data-step="${i + 1}"${i ? " hidden" : ""}>${enhanceProse(marked.parse(p))}</section>`).join("");
+  const done = `<div class="walk-done" hidden><p class="eyebrow">Keep going</p><ul class="walk-links">
+    <li><a href="${l.url}">${icon("book", "icon sm")}<span>Read the full lesson</span></a></li>
+    ${(s.meta.article && articles.find((a) => a.slug === s.meta.article)) ? `<li><a href="/articles/${s.meta.article}/">${icon("pen", "icon sm")}<span>Read the article: ${esc(articles.find((a) => a.slug === s.meta.article).meta.title)}</span></a></li>` : ""}
+    <li><a href="/course/#${l.module}">${icon("list", "icon sm")}<span>Back to the course</span></a></li></ul></div>`;
+  page(stepsUrl(l), s.meta.title || l.meta.title, `
+<div class="walk prose" data-walk>
+  <div class="walk-top"><a class="crumb" href="${l.url}">${icon("back", "icon xs")} Full lesson</a><span class="walk-count" aria-live="polite">Step <b data-walk-i>1</b> of ${n}</span></div>
+  <div class="walk-bar" aria-hidden="true"><span data-walk-bar style="width:${100 / n}%"></span></div>
+  ${screens}
+  ${done}
+  <nav class="walk-nav"><button type="button" class="btn ghost" data-walk-back>${icon("back", "icon xs")} Back</button><button type="button" class="btn" data-walk-next>Next ${icon("arrow", "icon xs")}</button></nav>
+</div>`, { description: s.meta.summary || l.meta.summary });
 }
 
 // Articles
@@ -291,5 +353,5 @@ for (const a of articles) {
 page("/404-tmp/", "Page not found", `<div class="empty"><span class="band-icon">${icon("search")}</span><h1>Page not found</h1><p>That page doesn't exist, or it moved.</p><p><a class="btn" href="/">Go to the home page</a></p></div>`);
 fs.renameSync(path.join(out, "404-tmp/index.html"), path.join(out, "404.html"));
 fs.rmSync(path.join(out, "404-tmp"), { recursive: true });
-for (const f of ["style.css", "site.js"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
+for (const f of ["style.css", "site.js", "theme.js", ...(looksPreview ? ["looks.css", "looks.js"] : [])]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
 console.log(`Built ${lessons.length} lesson(s), ${articles.length} article(s) into dist/`);
