@@ -79,3 +79,24 @@ A stop that sells straight away at the best available price once it's triggered.
 
 ## Target
 The price where you plan to take your profit, chosen before you enter the trade.
+
+## Funding rate
+A regular fee on many crypto perpetual futures, paid between traders every few hours while a position is open. It can be paid or received.
+
+## Losing streak
+A run of losing trades in a row. Normal even for good strategies, which is why risk per trade is kept small.
+
+## Maker and taker fees
+Two fee rates many exchanges use. A maker order waits in the order book; a taker order fills straight away. Maker fees are often lower.
+
+## Rug pull
+A scam where the people behind a token hype it, then sell everything or drain its funds and disappear.
+
+## Seed phrase
+The 12 or 24 words that control a crypto wallet. Anyone who has them controls the money, so never share them.
+
+## Spread
+The gap between the highest price a buyer will pay and the lowest price a seller will accept.
+
+## Two-factor authentication (2FA)
+A second check when you log in, such as a code from an app on your phone, on top of your password.

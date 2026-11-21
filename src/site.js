@@ -112,6 +112,44 @@ document.querySelectorAll('[data-calc="rr"]').forEach((box) => {
   });
 });
 
+// Expectancy: average result per trade from win rate, average win and average loss.
+document.querySelectorAll('[data-calc="expectancy"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  const signed = (n) => (n < 0 ? "−" : "") + calcMoney(Math.abs(n));
+  calcBind(box, () => {
+    const w = Math.min(100, Math.max(0, val("win"))) / 100;
+    const e = w * Math.max(0, val("avgwin")) - (1 - w) * Math.max(0, val("avgloss"));
+    out("exp").textContent = signed(e);
+    out("hundred").textContent = signed(e * 100);
+    const v = out("verdict");
+    if (e < 0) { v.textContent = "Negative: on average, every trade loses money, however often it wins."; v.dataset.tone = "bad"; }
+    else if (e === 0) { v.textContent = "Break even before fees. After fees, this loses money."; v.dataset.tone = "warn"; }
+    else { v.textContent = "Positive, before fees. It only means something after many trades, honestly recorded."; v.dataset.tone = "good"; }
+  });
+});
+
+// Losing streak: drawdown after N losses at a fixed % of what's left, and the gain needed to recover.
+document.querySelectorAll('[data-calc="streak"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const r = Math.min(50, Math.max(0.1, val("risk"))) / 100;
+    const n = Math.min(50, Math.max(1, Math.round(val("n"))));
+    const left = Math.pow(1 - r, n);
+    out("dd").textContent = calcPct((1 - left) * 100);
+    out("back").textContent = calcPct((1 / left - 1) * 100);
+  });
+});
+
+// Fees over a month of round trips.
+document.querySelectorAll('[data-calc="fees"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const month = Math.max(0, val("size")) * Math.max(0, val("fee")) / 100 * 2 * Math.max(0, Math.round(val("n")));
+    out("month").textContent = calcMoney(month);
+    out("pct").textContent = calcPct(month / Math.max(1, val("account")) * 100);
+  });
+});
+
 // Quick-check questions: tap an answer, see if it's right and why.
 document.querySelectorAll(".quiz").forEach((q) => {
   const why = q.querySelector(".quiz-why");
