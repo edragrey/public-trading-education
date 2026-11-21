@@ -58,4 +58,16 @@ By 18 August 2020 it closed at a new record high (3,389.78). Someone who sold in
 - A big loss can push you out of the market at the worst moment.
 - That's why this course starts with *surviving*: keeping losses small enough that you can stay in the game.
 
+## Check yourself
+
+<details><summary>1. You buy at $100, sell in a panic at $80, and the price later reaches your $130 target. Was your forecast right? Was your trade?</summary><p>The forecast was right. The trade lost 20%. Being right and making money are different things.</p></details>
+
+<details><summary>2. After a 50% loss, what gain do you need to get back to where you started?</summary><p>100%. Half your money has to double.</p></details>
+
+<details><summary>3. Why does this course start with surviving rather than with finding good trades?</summary><p>Because big losses are hard to recover from and can push you out at the worst moment. Keeping losses small keeps you in the game.</p></details>
+
+## Try it (no real money)
+
+Use the calculator above to find the gain you'd need after a 10%, 30% and 60% loss. Write the three answers down. Notice how fast the numbers climb.
+
 **Key idea:** Being right isn't the same as making money.

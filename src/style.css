@@ -343,3 +343,20 @@ main.wrap { padding-top: 28px; padding-bottom: 72px; }
 .prose .walk-links { padding-left: 0; margin-left: 0; }
 .prose .walk-links li { margin: 0; }
 .walk .wstep:last-of-type { min-height: 0; }
+
+/* Small inline chart drawings in lessons (candles etc.). Colours follow the theme tokens. */
+.fig { margin: 1.5rem 0; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); text-align: center; }
+.fig svg { width: 100%; max-width: 420px; height: auto; display: block; margin: 0 auto; }
+.fig figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); }
+.fig .up { fill: var(--gain); stroke: var(--gain); }
+.fig .down { fill: var(--loss); stroke: var(--loss); }
+.fig .wick { stroke-width: 2; }
+.fig .lbl { fill: var(--muted); font: 13px var(--sans); }
+.fig .guide { stroke: var(--line); stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+.fig .zone { fill: var(--gold-soft); }
+.fig .zone-lbl { fill: var(--gold); font: 600 12px var(--sans); }
+.calc input.wide { width: 17ch; max-width: 100%; }
+
+/* Fill-in templates in lessons (fenced code blocks). */
+.prose pre { max-width: 100%; overflow-x: auto; margin: 1.25rem 0; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font: .85rem/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--ink); }
+.prose pre code { font: inherit; background: none; padding: 0; }
