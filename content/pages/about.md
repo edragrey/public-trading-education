@@ -6,7 +6,7 @@ This is a free site for people who are new to trading and investing. The goal is
 
 ## What you'll find here
 
-- **A course** in four short modules: survive first, read the market, build a system, and the trader's mind.
+- **A course** in short modules: how markets work, survive first, read the market, build a system, the trader's mind, and going further.
 - **Articles** that go deeper on single ideas.
 - **A glossary** of common terms, explained without jargon.
 

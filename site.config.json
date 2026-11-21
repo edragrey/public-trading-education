@@ -3,10 +3,49 @@
   "tagline": "Plain-words trading lessons for beginners.",
   "description": "A free, beginner-friendly course on how markets work, how to manage risk, and how to think like a careful trader. Educational, not financial advice.",
   "modules": [
-    { "slug": "survive-first", "title": "Survive first", "summary": "Why protecting your money comes before making more of it.", "sections": ["The basics", "Leverage"] },
-    { "slug": "read-the-market", "title": "Read the market", "summary": "Prices, charts and the basic forces that move them." },
-    { "slug": "build-a-system", "title": "Build a system", "summary": "Rules you write down before you trade, so emotion doesn't write them for you." },
-    { "slug": "the-traders-mind", "title": "The trader's mind", "summary": "Fear, greed, patience and the habits that keep you in the game." }
+    {
+      "slug": "start-here",
+      "title": "Start here",
+      "summary": "Why being right about a price isn't enough, in one short lesson."
+    },
+    {
+      "slug": "how-markets-work",
+      "title": "How markets work",
+      "summary": "Prices, orders, candles and the basics you need before anything else."
+    },
+    {
+      "slug": "survive-first",
+      "title": "Survive first",
+      "summary": "Why protecting your money comes before making more of it.",
+      "sections": [
+        "The basics",
+        "Leverage",
+        "Staying safe"
+      ]
+    },
+    {
+      "slug": "read-the-market",
+      "title": "Read the market",
+      "summary": "What moves prices, and how to describe what a chart is doing."
+    },
+    {
+      "slug": "build-a-system",
+      "title": "Build a system",
+      "summary": "Rules you write down before you trade, so emotion doesn't write them for you."
+    },
+    {
+      "slug": "the-traders-mind",
+      "title": "The trader's mind",
+      "summary": "Fear, greed, patience and the habits that keep you in the game."
+    },
+    {
+      "slug": "going-further",
+      "title": "Going further",
+      "summary": "Real case studies, taxes, investing and where to go next."
+    }
   ],
-  "marketToday": { "enabled": false, "note": "A short daily \"Market today\" note is coming later." }
+  "marketToday": {
+    "enabled": false,
+    "note": "A short daily \"Market today\" note is coming later."
+  }
 }

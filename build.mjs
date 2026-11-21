@@ -50,7 +50,7 @@ const ICONS = {
   scale: '<path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8l-2.5 6a3 3 0 0 0 5 0z"/><path d="M19 8l-2.5 6a3 3 0 0 0 5 0z"/>',
 };
 const icon = (name, cls = "icon") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.book}</svg>`;
-const MODULE_ICONS = { "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind" };
+const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "going-further": "book" };
 const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 
 const logo = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M7 21l6-6 4 4 8-8" stroke="var(--accent-ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
@@ -133,7 +133,7 @@ const lessons = mdFiles(path.join(root, "content/course")).map((f) => {
   const d = read(f);
   const module = d.meta.module || path.basename(f).split("--")[0];
   return { ...d, module, order: Number(d.meta.order || 99), slug: slugOf(f), url: `/course/${module}/${slugOf(f)}/` };
-}).sort((a, b) => a.order - b.order);
+}).sort((a, b) => (cfg.modules.findIndex((m) => m.slug === a.module) - cfg.modules.findIndex((m) => m.slug === b.module)) || (a.order - b.order));
 
 // Articles: content/articles/<slug>.md, newest first
 const articles = mdFiles(path.join(root, "content/articles")).map((f) => {
@@ -149,6 +149,7 @@ const steps = Object.fromEntries(mdFiles(path.join(root, "content/steps")).map((
   return [lesson, { ...d, parts }];
 }));
 const stepsUrl = (l) => `${l.url}steps/`;
+let nextMod, nextFirst;
 const lessonBySlug = (slug) => lessons.find((l) => l.slug === slug);
 
 // Lessons in a module, grouped by "section" (order from site.config.json; no section = the first one).
@@ -227,10 +228,10 @@ const heroChart = `<figure class="hero-chart">
 </section>
 <section class="promises"><ul>${promises}</ul></section>
 <section class="block">
-  <div class="block-head"><h2>The course in four steps</h2><a href="/course/">All modules ${icon("arrow", "icon xs")}</a></div>
+  <div class="block-head"><h2>The course at a glance</h2><a href="/course/">All modules ${icon("arrow", "icon xs")}</a></div>
   <ol class="steps">${mods}</ol>
 </section>
-${latest.length ? `<section class="block"><div class="block-head"><h2>Latest lessons</h2><a href="/course/">See all ${icon("arrow", "icon xs")}</a></div><ul class="cards${latest.length === 1 ? " solo" : ""}">${latest.map((l) => card(l, { chip: modOf(l.module)?.title, chipIcon: modIcon(l.module) })).join("")}</ul></section>` : ""}
+${latest.length ? `<section class="block"><div class="block-head"><h2>Start with these lessons</h2><a href="/course/">See all ${icon("arrow", "icon xs")}</a></div><ul class="cards${latest.length === 1 ? " solo" : ""}">${latest.map((l) => card(l, { chip: modOf(l.module)?.title, chipIcon: modIcon(l.module) })).join("")}</ul></section>` : ""}
 ${market}`, { wide: true });
 }
 
@@ -266,7 +267,10 @@ ${market}`, { wide: true });
   ${enhanceProse(l.html)}
   <nav class="pager">${next
     ? `<a class="pager-card" href="${next.url}"><span class="eyebrow">Next lesson</span><span class="pager-title">${esc(next.meta.title)}</span>${icon("arrow")}</a>`
-    : `<a class="pager-card" href="/course/"><span class="eyebrow">You've reached the end of this module</span><span class="pager-title">Back to the course</span>${icon("arrow")}</a>`}</nav>
+    : (nextMod = cfg.modules[cfg.modules.findIndex((m) => m.slug === l.module) + 1], nextFirst = nextMod && lessons.find((x) => x.module === nextMod.slug),
+      nextFirst
+        ? `<a class="pager-card" href="${nextFirst.url}"><span class="eyebrow">Next module: ${esc(nextMod.title)}</span><span class="pager-title">${esc(nextFirst.meta.title)}</span>${icon("arrow")}</a>`
+        : `<a class="pager-card" href="/course/"><span class="eyebrow">You've reached the end of the course</span><span class="pager-title">Back to the course</span>${icon("arrow")}</a>`)}</nav>
 </article>`, { description: l.meta.summary });
   }
 }
