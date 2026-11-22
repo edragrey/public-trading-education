@@ -16,7 +16,7 @@ function read(file) {
   if (m) {
     for (const line of m[1].split("\n")) {
       const i = line.indexOf(":");
-      if (i > 0) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+      if (i > 0) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim().replace(/^"(.*)"$/, "$1");
     }
     body = m[2];
   }
@@ -161,7 +161,10 @@ const groupLessons = (m, ls) => {
 };
 
 const modOf = (slug) => cfg.modules.find((m) => m.slug === slug);
-const lessonCount = (slug) => lessons.filter((l) => l.module === slug).length;
+// Module quizzes and cheat sheets ("kind" in the front matter) sit at the end of a module and are not numbered or counted as lessons.
+const KIND_LABEL = { quiz: "Module quiz", cheatsheet: "Cheat sheet" };
+const isCore = (l) => !l.meta.kind;
+const lessonCount = (slug) => lessons.filter((l) => l.module === slug && isCore(l)).length;
 const countLabel = (n) => (n ? `${n} lesson${n > 1 ? "s" : ""}` : "Coming soon");
 
 // A content card: chip, title, summary, meta, arrow.
@@ -202,7 +205,7 @@ const heroChart = `<figure class="hero-chart">
 {
   const h = read(path.join(root, "content/pages/home.md"));
   const first = lessons[0];
-  const latest = lessons.slice(0, 3);
+  const latest = lessons.filter(isCore).slice(0, 3);
   const mods = cfg.modules.map((m, i) => `<li><a class="step" href="/course/#${m.slug}">
     <span class="step-top"><span class="step-icon">${icon(modIcon(m.slug))}</span><span class="step-num">Step ${i + 1}</span></span>
     <strong>${esc(m.title)}</strong><span class="step-sum">${esc(m.summary)}</span>
@@ -237,19 +240,19 @@ ${market}`, { wide: true });
 
 // Course
 {
-  const total = lessons.length;
+  const total = lessons.filter(isCore).length;
   const sections = cfg.modules.map((m, i) => {
     const ls = lessons.filter((l) => l.module === m.slug);
-    const item = (l) => `<li><a href="${l.url}"><span class="l-num">${ls.indexOf(l) + 1}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}${steps[l.slug] ? ` · step-by-step version` : ""}</span></span>${icon("arrow", "icon sm")}</a></li>`;
+    const item = (l) => `<li><a href="${l.url}"><span class="l-num">${isCore(l) ? ls.filter(isCore).indexOf(l) + 1 : (l.meta.kind === "quiz" ? "?" : "≡")}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}${steps[l.slug] ? ` · step-by-step version` : ""}</span></span>${icon("arrow", "icon sm")}</a></li>`;
     const list = ls.length
       ? groupLessons(m, ls).map((g) => `${g.name ? `<h3 class="lesson-group">${esc(g.name)}</h3>` : ""}<ol class="lesson-list">${g.ls.map(item).join("")}</ol>`).join("")
       : `<p class="soon-note">Lessons coming soon.</p>`;
     return `<section class="module" id="${m.slug}">
-  <div class="module-head"><span class="step-icon">${icon(modIcon(m.slug))}</span><div><p class="eyebrow">Module ${i + 1} · ${countLabel(ls.length)}</p><h2>${esc(m.title)}</h2><p class="module-sum">${esc(m.summary)}</p></div></div>
+  <div class="module-head"><span class="step-icon">${icon(modIcon(m.slug))}</span><div><p class="eyebrow">Module ${i + 1} · ${countLabel(lessonCount(m.slug))}</p><h2>${esc(m.title)}</h2><p class="module-sum">${esc(m.summary)}</p></div></div>
   ${list}
 </section>`;
   }).join("");
-  page("/course/", "Course", `${pageHead("The course", "Learn the basics, one short lesson at a time", "Four modules, short lessons, plain words. Start at the top and work down.",
+  page("/course/", "Course", `${pageHead("The course", "Learn the basics, one short lesson at a time", `${cfg.modules.length} modules, short lessons, plain words. Start at the top and work down.`,
     `<ul class="facts"><li>${icon("book", "icon sm")}${cfg.modules.length} modules</li><li>${icon("pen", "icon sm")}${countLabel(total)} so far</li><li>${icon("check", "icon sm")}Free, no sign-up</li></ul>`)}
 <div class="modules">${sections}</div>`, { wide: true });
   for (const l of lessons) {
@@ -261,7 +264,7 @@ ${market}`, { wide: true });
 <article class="prose">
   <p class="crumb"><a href="/course/">Course</a> / <a href="/course/#${l.module}">Module ${mi + 1}: ${esc(cfg.modules[mi]?.title || l.module)}</a></p>
   <h1>${esc(l.meta.title)}</h1>
-  <p class="meta-row"><span class="chip">${icon(modIcon(l.module), "icon xs")}Lesson ${idx + 1}${l.meta.section ? ` · ${esc(l.meta.section)}` : ""}</span><span>${readTime(l.body)}</span>${l.meta.date ? `<span>${esc(fmtDate(l.meta.date))}</span>` : ""}</p>
+  <p class="meta-row"><span class="chip">${icon(modIcon(l.module), "icon xs")}${isCore(l) ? `Lesson ${ml.filter(isCore).indexOf(l) + 1}` : KIND_LABEL[l.meta.kind] || "Extra"}${l.meta.section ? ` · ${esc(l.meta.section)}` : ""}</span><span>${readTime(l.body)}</span>${l.meta.date ? `<span>${esc(fmtDate(l.meta.date))}</span>` : ""}</p>
   ${l.meta.summary ? `<p class="lead">${esc(l.meta.summary)}</p>` : ""}
   ${steps[l.slug] ? `<a class="steps-banner" href="${stepsUrl(l)}">${icon("list")}<span><strong>New to this? Go one step at a time.</strong><span>${steps[l.slug].parts.length} short screens with quick questions</span></span>${icon("arrow", "icon sm")}</a>` : ""}
   ${enhanceProse(l.html)}
