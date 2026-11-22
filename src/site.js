@@ -140,6 +140,22 @@ document.querySelectorAll('[data-calc="streak"]').forEach((box) => {
   });
 });
 
+// Risk simulator: what a win rate, reward-to-risk and risk % imply over many trades (averages, not a forecast).
+document.querySelectorAll('[data-calc="risk-sim"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const p = Math.min(99, Math.max(1, val("win"))) / 100;
+    const rr = Math.max(0.1, val("rr"));
+    const r = Math.min(20, Math.max(0.1, val("risk"))) / 100;
+    const n = Math.min(1000, Math.max(1, Math.round(val("n"))));
+    const e = p * rr - (1 - p);
+    out("exp").textContent = (e >= 0 ? "+" : "-") + Math.abs(e).toFixed(2) + "R";
+    const growth = Math.pow(1 + e * r, n);
+    out("avg").textContent = (growth >= 1 ? "+" : "-") + calcPct(Math.abs(growth - 1) * 100);
+    out("streak").textContent = String(Math.max(1, Math.round(Math.log(n) / Math.log(1 / (1 - p)))));
+  });
+});
+
 // Fees over a month of round trips.
 document.querySelectorAll('[data-calc="fees"]').forEach((box) => {
   const [val, out] = calcIo(box);
