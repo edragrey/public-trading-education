@@ -50,7 +50,7 @@ const ICONS = {
   scale: '<path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8l-2.5 6a3 3 0 0 0 5 0z"/><path d="M19 8l-2.5 6a3 3 0 0 0 5 0z"/>',
 };
 const icon = (name, cls = "icon") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.book}</svg>`;
-const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "going-further": "book" };
+const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "thinking-in-probabilities": "scale", "going-further": "book" };
 const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 
 const logo = `<svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M7 21l6-6 4 4 8-8" stroke="var(--accent-ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
