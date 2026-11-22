@@ -45,6 +45,16 @@ Under 30 trades, results are mostly variance (see the testing lesson). Wait.
 | The market you trade has clearly changed (much lower volume, new hours) | You saw a new indicator on social media |
 | A specific condition keeps showing up in losing trades | You're bored with the rules |
 
+## Common mistakes
+
+- Changing the system after one bad week.
+- Changing two things at once.
+- Changing rules to fit your mood.
+
+## Go deeper
+
+<details><summary>Change log</summary><p>Keep a short log of each change: date, reason, and what you expect to see. Later it shows whether changes helped.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You've lost 5 trades in a row. Should you change your system?</summary><p>Not yet. First check if you followed the rules, and whether you have enough trades to judge. Five losses in a row is normal variance.</p></details>
@@ -52,6 +62,10 @@ Under 30 trades, results are mostly variance (see the testing lesson). Wait.
 <details><summary>2. Why change only one thing at a time?</summary><p>So you can tell which change made the difference.</p></details>
 
 <details><summary>3. Your losses mostly come from trades where you broke a rule. Should you change the rules?</summary><p>No. The problem is following them. Work on that first.</p></details>
+
+<details><summary>4. What should you check before changing any rule?</summary><p>Whether the problem was your behaviour or the rule itself.</p></details>
+
+<details><summary>5. Why change only one thing at a time?</summary><p>Otherwise you can't tell which change helped or hurt.</p></details>
 
 ## Try it (no real money)
 

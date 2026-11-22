@@ -46,6 +46,16 @@ Waiting doesn't mean wasting time:
 - **Learn** something from this course or elsewhere.
 - **Go live your life.** Screen time isn't the same as progress.
 
+## Common mistakes
+
+- Opening trades out of boredom.
+- Calling a weak setup 'good enough'.
+- Feeling that not trading is wasting time.
+
+## Go deeper
+
+<details><summary>Waiting is skilled work</summary><p>Experienced traders often take few trades. They wait for the setup, because each unnecessary trade pays costs and risks a mistake.</p></details>
+
 ## Check yourself
 
 <details><summary>1. Your setup hasn't appeared all week. Is something wrong?</summary><p>No. A specific setup won't appear every day. Zero trades can be the right number.</p></details>
@@ -53,6 +63,10 @@ Waiting doesn't mean wasting time:
 <details><summary>2. What's a boredom trade?</summary><p>A trade taken because nothing is happening, by lowering your standards, rather than because it matches your plan.</p></details>
 
 <details><summary>3. What does it cost you to sit in cash while waiting for a setup?</summary><p>Nothing in trading losses or fees. It only feels like missing out.</p></details>
+
+<details><summary>4. What is a boredom trade?</summary><p>A trade taken for something to do, with no real setup.</p></details>
+
+<details><summary>5. What does not trading cost?</summary><p>Nothing. Your capital is still there.</p></details>
 
 ## Try it (no real money)
 

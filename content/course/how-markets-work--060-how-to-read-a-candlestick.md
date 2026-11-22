@@ -56,6 +56,16 @@ Being honest: a single candle **describes the past**. It doesn't predict the nex
 
 A candle also hides the order of events. A green candle with long wicks on both sides could have gone up first, or down first. You can't tell from the shape.
 
+## Common mistakes
+
+- Reading a single candle as a forecast.
+- Ignoring the timeframe the candle belongs to.
+- Treating colour alone as meaning more than the body and wicks show.
+
+## Go deeper
+
+<details><summary>Candle colours are a convention</summary><p>Green for up and red for down is common, but some platforms use other colours or reverse them (for example in some Asian markets). Always check what your chart uses.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A candle opens at $50 and closes at $47. What colour is it, usually?</summary><p>Red, because it closed lower than it opened.</p></details>
@@ -63,6 +73,10 @@ A candle also hides the order of events. A green candle with long wicks on both 
 <details><summary>2. On a green candle, which end of the body is the close?</summary><p>The top. The close is higher than the open on a green candle.</p></details>
 
 <details><summary>3. A candle has a long upper wick. What happened during that period?</summary><p>The price went much higher at some point, then fell back before the close. Higher prices were tried and pushed back.</p></details>
+
+<details><summary>4. A candle has a long upper wick and a small body near the low. What happened in that period?</summary><p>Price rose a lot, then sellers pushed it back down. It describes what happened, not what comes next.</p></details>
+
+<details><summary>5. What four prices does a candle summarise?</summary><p>Open, high, low and close for its period.</p></details>
 
 ## Try it (no real money)
 

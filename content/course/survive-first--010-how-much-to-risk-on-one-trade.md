@@ -60,6 +60,16 @@ Being honest about the limits:
 - It only works if you actually stop at your planned loss. That needs a stop, which is covered in the stops lesson.
 - Fees and slippage (see the hidden costs lesson) can make a $20 loss into $22 or $25. Plan for a little extra.
 
+## Common mistakes
+
+- Risking 5 to 10% per trade because you feel sure.
+- Changing risk size after wins or losses.
+- Calling it too small and thinking it isn't worth it.
+
+## Go deeper
+
+<details><summary>Risk per trade vs risk of ruin</summary><p>The smaller your fixed risk, the more losses in a row you can survive. At 1% you'd need dozens of consecutive losses to be badly hurt. At 10%, a handful can be.</p></details>
+
 ## Check yourself
 
 <details><summary>1. Your account is $5,000 and you risk 1% per trade. What's the most you plan to lose on one trade?</summary><p>$50. That's 1% of $5,000.</p></details>
@@ -67,6 +77,10 @@ Being honest about the limits:
 <details><summary>2. Does risking 1% mean you can only put $50 into the trade?</summary><p>No. The $50 is what you lose if the trade goes wrong. How big the trade is depends on where your stop is. That's the position size lesson.</p></details>
 
 <details><summary>3. Why do traders keep the percentage the same every time?</summary><p>Because you never know which trade will lose. A fixed small percentage stops one bad trade, or one bad streak, from doing serious damage.</p></details>
+
+<details><summary>4. Account $8,000, risk 0.5%. How much do you risk?</summary><p>$40.</p></details>
+
+<details><summary>5. Why keep the risk percentage the same each trade?</summary><p>It keeps one lucky or unlucky run from distorting how much you stand to lose.</p></details>
 
 ## Try it (no real money)
 

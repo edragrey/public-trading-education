@@ -37,6 +37,16 @@ Nobody can see in real time exactly which stage it is. Stage 3 can feel like sta
 - **Size it like any other trade.** A good story doesn't change your risk per trade. If anything, hyped coins move faster, so stops need more room and the position should be **smaller**.
 - **Write down why** you're buying, before you buy. "Because everyone's talking about it" is a feeling, not a reason. The Trader's mind module looks at this as FOMO.
 
+## Common mistakes
+
+- Buying because everyone is talking about it.
+- Treating a story as proof of value.
+- Holding a hype-driven position with no exit plan.
+
+## Go deeper
+
+<details><summary>Attention is not value</summary><p>Rising attention can lift prices without any change in what something is worth. That's why narratives can reverse as fast as they rise.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A narrative is on every news site and your friends are asking about it. What stage might this be?</summary><p>Possibly late: excitement or peak attention. You can't be sure, but much of the early move has often happened by then.</p></details>
@@ -44,6 +54,10 @@ Nobody can see in real time exactly which stage it is. Stage 3 can feel like sta
 <details><summary>2. Lots of new copycat tokens are launching around one story. What does that suggest?</summary><p>That the story is drawing a lot of attention and money, which often happens in the excitement stage. Copycats frequently have little behind them.</p></details>
 
 <details><summary>3. Should a strong story make you risk more on a trade?</summary><p>No. Your risk per trade stays the same. Hyped coins tend to swing more, so a smaller position is often wiser.</p></details>
+
+<details><summary>4. When is a narrative usually loudest?</summary><p>Often after much of the move has already happened.</p></details>
+
+<details><summary>5. What helps instead of following hype?</summary><p>A written plan with a stop and a size you can afford to lose.</p></details>
 
 ## Try it (no real money)
 

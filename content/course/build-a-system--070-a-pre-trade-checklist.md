@@ -53,6 +53,16 @@ Not chasing a loss, not trading because of a post you just saw, not over today's
 - **Say the answers out loud** or type them. Thinking "yeah, yeah" doesn't count.
 - **Log the "no" trades too.** Over time you'll see whether the checklist is saving you money or missing good trades. That's evidence for the lesson on changing your rules.
 
+## Common mistakes
+
+- Skipping the checklist when you're confident.
+- Ticking gates without really checking.
+- Changing the gates mid-trade.
+
+## Go deeper
+
+<details><summary>Checklists work for experts too</summary><p>Pilots and surgeons use checklists because even experts forget steps under stress. A checklist is protection from a bad day, not a sign you're a beginner.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A trade passes five gates out of six. Do you take it?</summary><p>No. Every gate must be a yes.</p></details>
@@ -60,6 +70,10 @@ Not chasing a loss, not trading because of a post you just saw, not over today's
 <details><summary>2. Which gate is about you rather than the market?</summary><p>Gate 6. Your state: not chasing losses, not acting on hype, within your daily limit, rested.</p></details>
 
 <details><summary>3. You skipped a trade because it failed a gate, and it would have won. Was the checklist wrong?</summary><p>Not necessarily. The checklist keeps trades inside your rules, not every winner. Log it, and look at many such cases before changing anything.</p></details>
+
+<details><summary>4. What should you do if a gate fails?</summary><p>No trade.</p></details>
+
+<details><summary>5. Why run the checklist even on a trade that looks great?</summary><p>Excitement is when mistakes are most likely.</p></details>
 
 ## Try it (no real money)
 

@@ -96,6 +96,16 @@ Being honest about the limits:
 
 No. For a beginner, not using leverage is the simplest way to stay safe, and it's what this course recommends while you learn. The point is that leverage isn't the root cause. Trading too big, without a stop, is. That mistake hurts with or without leverage.
 
+## Common mistakes
+
+- Using a stop that sits beyond your liquidation price.
+- Treating liquidation as an automatic stop.
+- Using cross margin without understanding that the whole account backs the trade.
+
+## Go deeper
+
+<details><summary>Liquidation fees</summary><p>Many exchanges charge a fee on liquidation and may close your position at a worse price in fast moves. Liquidation is almost always costlier than a stop you chose.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You use 20x leverage. Roughly how far does the price need to move against you before you're liquidated?</summary><p>About 5% (100 ÷ 20), and in practice a little less.</p></details>
@@ -103,6 +113,10 @@ No. For a beginner, not using leverage is the simplest way to stay safe, and it'
 <details><summary>2. Two traders both use 10x. One loses 10% of their account, the other loses all of it. What's different?</summary><p>Their position size. One put a small part of the account in as margin, the other put in everything.</p></details>
 
 <details><summary>3. Your stop is 3% away and you're using 50x. What happens if the price drops 3%?</summary><p>You were already liquidated at about 2%, before your stop could act. Lower the leverage until the liquidation price is well beyond the stop.</p></details>
+
+<details><summary>4. Why must your stop come before your liquidation price?</summary><p>So you lose a small planned amount instead of the whole margin.</p></details>
+
+<details><summary>5. Which is the safer margin mode for a beginner: isolated or cross?</summary><p>Isolated, because the loss is capped at the margin assigned to that position.</p></details>
 
 ## Try it (no real money)
 

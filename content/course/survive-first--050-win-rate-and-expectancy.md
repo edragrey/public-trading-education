@@ -61,6 +61,16 @@ Winning feels good, and losing feels bad. So it's natural to take profits quickl
 - **The past isn't a promise.** Even a good expectancy over 100 trades can change when the market changes.
 - **Fees count.** Take them off your average win and add them to your average loss (the hidden costs lesson). A small positive expectancy can turn negative once you include them.
 
+## Common mistakes
+
+- Chasing a high win rate while ignoring how big the losses are.
+- Judging expectancy from a handful of trades.
+- Forgetting to include costs in the calculation.
+
+## Go deeper
+
+<details><summary>Expectancy in R</summary><p>Measure results in R (units of what you risked). Expectancy = (win rate × average win in R) - (loss rate × average loss in R). It lets you compare strategies with different sizes.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A strategy wins 90% of the time. Is it profitable?</summary><p>You can't tell. You also need the average win and the average loss. One large loss can wipe out many small wins.</p></details>
@@ -68,6 +78,10 @@ Winning feels good, and losing feels bad. So it's natural to take profits quickl
 <details><summary>2. Win rate 50%, average win $20, average loss $10. What's the expectancy?</summary><p>(0.5 × $20) − (0.5 × $10) = $10 − $5 = +$5 per trade.</p></details>
 
 <details><summary>3. Why isn't 10 trades enough to know your expectancy?</summary><p>Because luck dominates over a few trades. It takes many trades before the average settles down and means something.</p></details>
+
+<details><summary>4. Win rate 35%, average win 3R, average loss 1R. Expectancy?</summary><p>0.35 × 3 - 0.65 × 1 = +0.40R.</p></details>
+
+<details><summary>5. Win rate 80%, average win 0.2R, average loss 1R. Expectancy?</summary><p>0.8 × 0.2 - 0.2 × 1 = -0.04R, slightly negative despite winning most trades.</p></details>
 
 ## Try it (no real money)
 

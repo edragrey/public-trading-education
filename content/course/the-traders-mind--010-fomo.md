@@ -43,6 +43,16 @@ Seeing a gain you didn't get can feel like a **loss**, even though you didn't lo
 
 **3. Remember there's always another trade.** Markets open every day. Missing one move costs you nothing. Chasing it can cost a lot.
 
+## Common mistakes
+
+- Buying after a big move because you can't bear to miss it.
+- Skipping the stop to get in quickly.
+- Sizing up to 'make up' for missed gains.
+
+## Go deeper
+
+<details><summary>Why social media feeds it</summary><p>Feeds show wins and hide losses. You see winners celebrating and not the many who lost, which makes missing out feel worse than it is.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A coin is up 40% today and you didn't buy. You feel you must get in now. What is that?</summary><p>FOMO. A normal feeling, but not information about whether the trade is good.</p></details>
@@ -50,6 +60,10 @@ Seeing a gain you didn't get can feel like a **loss**, even though you didn't lo
 <details><summary>2. Why does FOMO often lead to buying near a high?</summary><p>Because the urge is strongest right after a big move, which is often when a lot of the move has already happened.</p></details>
 
 <details><summary>3. What does missing a move actually cost you?</summary><p>Nothing. You didn't lose money. It only feels like a loss.</p></details>
+
+<details><summary>4. You missed a coin that rose 40%. How much did you lose?</summary><p>Nothing. Your money is where it was.</p></details>
+
+<details><summary>5. What's the first of the three habits?</summary><p>Name it: 'This is FOMO.'</p></details>
 
 ## Try it (no real money)
 

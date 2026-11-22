@@ -53,6 +53,16 @@ The real use of these ideas for a beginner is **planning**, not predicting:
 - **Choosing targets.** A realistic target is often near the last area where the price turned around, not a number you'd like it to reach.
 - **Staying out.** If the price is in the middle of a range, with no clear area near your entry, there may be no trade at all. That's fine.
 
+## Common mistakes
+
+- Treating support and resistance as exact lines.
+- Assuming a level that held twice will hold a third time.
+- Trading a range as if it were a trend.
+
+## Go deeper
+
+<details><summary>Role reversal</summary><p>When support breaks it can become resistance, and the other way round. Some traders watch for price to retest a broken level, but retests don't always happen.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A chart keeps making lower highs and lower lows. What would you call that?</summary><p>A downtrend.</p></details>
@@ -60,6 +70,10 @@ The real use of these ideas for a beginner is **planning**, not predicting:
 <details><summary>2. Why do support and resistance areas sometimes hold?</summary><p>Because many people remember them and place orders around them. There's nothing special about the number itself.</p></details>
 
 <details><summary>3. Does a support area mean the price will bounce there again?</summary><p>No. It's an area to watch, not a promise. Supports break, and your stop should be ready for that.</p></details>
+
+<details><summary>4. Why call them areas, not lines?</summary><p>Price reacts around a zone, not at one exact number.</p></details>
+
+<details><summary>5. What is a range?</summary><p>A period when price moves sideways between a high and a low without a clear trend.</p></details>
 
 ## Try it (no real money)
 

@@ -53,6 +53,16 @@ Write the before part **before** you enter. It's tempting to fill it all in afte
 - **Keep it boring.** No essays. If one line covers it, use one line.
 - **Note the skipped trades** too, with the gate they failed. They're part of the evidence.
 
+## Common mistakes
+
+- Writing the journal only after you know the result.
+- Skipping losing trades.
+- Writing long entries you'll never reread.
+
+## Go deeper
+
+<details><summary>What to log</summary><p>Setup, entry, stop, size, plan followed (yes or no), result in R, and how you felt. Screenshots of the chart help review.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You risked $25 and lost $40. What's that in R, and what does it tell you?</summary><p>−1.6R. The loss was bigger than planned, so something slipped: fees, slippage, or a stop that was moved or missing.</p></details>
@@ -60,6 +70,10 @@ Write the before part **before** you enter. It's tempting to fill it all in afte
 <details><summary>2. Why fill in the "before" part before entering?</summary><p>Because once you know the result, your memory of your reasons changes.</p></details>
 
 <details><summary>3. Why record whether you followed your plan?</summary><p>It separates the system's results from your own mistakes, so you know which one to fix.</p></details>
+
+<details><summary>4. Which two fields matter most?</summary><p>Whether you followed the plan, and how you felt.</p></details>
+
+<details><summary>5. Why fill in 'before' before the trade?</summary><p>Afterwards memory rewrites what you thought.</p></details>
 
 ## Try it (no real money)
 

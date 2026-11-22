@@ -49,6 +49,16 @@ Also: you don't have to trade at all. Understanding how markets work is valuable
 4. If, and only if, you followed your plan and the results are reasonable, **go small with real money**, at a fraction of your normal risk.
 5. **Keep learning.** Re-read lessons when they become relevant. They'll mean more once you've lived them.
 
+## Common mistakes
+
+- Racing through the course without practising.
+- Moving to real money before testing.
+- Taking on size before habits are solid.
+
+## Go deeper
+
+<details><summary>Keep learning</summary><p>The best next step is to practise your written system on paper, journal it, review weekly, and grow size slowly. Revisit lessons when a problem appears in your trades.</p></details>
+
 ## Check yourself
 
 <details><summary>1. What's the single most important rule while you're learning?</summary><p>Stay small. Keep your risk per trade low, so mistakes are cheap lessons.</p></details>
@@ -56,6 +66,10 @@ Also: you don't have to trade at all. Understanding how markets work is valuable
 <details><summary>2. What should you do before trading real money?</summary><p>Write your plan, then paper trade around 30 trades with the full checklist, journal and weekly reviews.</p></details>
 
 <details><summary>3. Is it okay to understand markets and decide not to trade?</summary><p>Yes. Knowing how markets work is useful on its own.</p></details>
+
+<details><summary>4. What's the sensible first step after the course?</summary><p>Paper trade your written system and keep a journal.</p></details>
+
+<details><summary>5. Why stay small while learning?</summary><p>Mistakes are inevitable. Small size keeps them cheap.</p></details>
 
 ## Try it (no real money)
 

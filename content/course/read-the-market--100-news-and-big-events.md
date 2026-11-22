@@ -49,6 +49,16 @@ Common habits careful traders use:
 - **Make positions smaller** if you're holding through one, so a gap or slippage can't hurt much.
 - **Wait for the dust to settle.** The first minutes after an announcement are often the noisiest.
 
+## Common mistakes
+
+- Trading right through a major scheduled release with a big position.
+- Reacting to a headline before checking whether it's confirmed.
+- Assuming good news means the price will rise.
+
+## Go deeper
+
+<details><summary>Spreads widen around events</summary><p>Around big releases, spreads often widen and liquidity thins, so stops can fill worse than planned. Many traders reduce size or stay out until things settle.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A company announces higher profits than ever, but its price falls. How can that happen?</summary><p>The profits were lower than people expected. Markets react to news compared with expectations.</p></details>
@@ -56,6 +66,10 @@ Common habits careful traders use:
 <details><summary>2. What's an economic calendar for?</summary><p>It lists upcoming scheduled announcements, like interest rate decisions and inflation data, so you know when big moves are more likely.</p></details>
 
 <details><summary>3. Why are stops less reliable right around a big announcement?</summary><p>Spreads widen and prices can jump, so a stop may fill far from where you set it.</p></details>
+
+<details><summary>4. Name one scheduled and one unscheduled event.</summary><p>Scheduled: a central bank decision or earnings report. Unscheduled: a hack, a lawsuit or a sudden announcement.</p></details>
+
+<details><summary>5. Why can good news be followed by a falling price?</summary><p>Prices react to news compared with expectations, and it may already have been priced in.</p></details>
 
 ## Try it (no real money)
 

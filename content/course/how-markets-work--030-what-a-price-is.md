@@ -61,6 +61,16 @@ Nothing "happened" in the news. A buyer was simply more eager than the sellers w
 - **The chart price isn't always the price you'll get.** You buy at the ask and sell at the bid.
 - In quiet markets, or for small coins, the spread can be wide. That's a cost every time.
 
+## Common mistakes
+
+- Thinking the price on screen is the price you'll get.
+- Using market orders in thin books and being surprised by slippage.
+- Believing every price move has a news story behind it.
+
+## Go deeper
+
+<details><summary>Reading depth</summary><p>Many exchanges show how many units wait at each price level. A thin book (few units near the price) means a modest order can move the price. A thick book absorbs it.</p></details>
+
 ## Check yourself
 
 <details><summary>1. The best bid is $50.00 and the best ask is $50.10. You place a market order to buy. Roughly what do you pay?</summary><p>About $50.10, the ask. Possibly a little more if your order is bigger than what's waiting at that price.</p></details>
@@ -68,6 +78,10 @@ Nothing "happened" in the news. A buyer was simply more eager than the sellers w
 <details><summary>2. What's the difference between a market order and a limit order?</summary><p>A market order fills now at the best price available. A limit order only fills at your price or better, and may not fill at all.</p></details>
 
 <details><summary>3. Does a price move always mean there was news?</summary><p>No. Every move is just buyers and sellers making deals. Sometimes one side is simply more eager.</p></details>
+
+<details><summary>4. The book shows 5 coins at $100.05 and 8 at $100.10. A market buy for 10 coins fills at which prices?</summary><p>5 at $100.05 and 5 of the 8 at $100.10, so it uses up the cheapest sellers first.</p></details>
+
+<details><summary>5. Why is the spread a cost even if the price doesn't move?</summary><p>You buy at the ask and sell at the bid, so a round trip loses the gap straight away.</p></details>
 
 ## Try it (no real money)
 

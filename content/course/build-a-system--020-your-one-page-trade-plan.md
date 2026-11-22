@@ -61,6 +61,16 @@ Notice every line links back to an earlier lesson: timeframes, support, stops, r
 - **Date every version.** You'll change it (the lesson on changing your rules explains when). Dating it lets you compare.
 - **Plan the "no".** Line 10 is as important as line 4. Most good systems spend most of their time saying no.
 
+## Common mistakes
+
+- Writing a plan so long it's never read.
+- Leaving the stop out of the template.
+- Not testing whether you could follow it on a bad day.
+
+## Go deeper
+
+<details><summary>Make rules binary</summary><p>A good rule is one you can answer yes or no to. 'Buy when it looks strong' is vague. 'Buy when price closes above the 20-day average' can be checked.</p></details>
+
 ## Check yourself
 
 <details><summary>1. Is "I buy when the chart looks bullish" a usable rule?</summary><p>No. It's too vague. Someone else couldn't follow it and get the same trade. Describe exactly what you see.</p></details>
@@ -68,6 +78,10 @@ Notice every line links back to an earlier lesson: timeframes, support, stops, r
 <details><summary>2. Why keep the plan to one page?</summary><p>So you can actually check it before every trade, including when you're stressed.</p></details>
 
 <details><summary>3. Why date each version of your plan?</summary><p>So you know which trades were taken under which rules, and can compare versions fairly.</p></details>
+
+<details><summary>4. Why keep the plan to one page?</summary><p>A short plan can be followed under pressure.</p></details>
+
+<details><summary>5. What makes a rule 'followable'?</summary><p>It can be answered yes or no without interpretation.</p></details>
 
 ## Try it (no real money)
 

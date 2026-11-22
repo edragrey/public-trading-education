@@ -53,6 +53,16 @@ This doesn't mean the price must fall on an unlock day. Sometimes unlocks are ex
 
 Most crypto data sites show circulating supply, maximum supply, market cap and FDV for each coin, and many show an unlock schedule. The project's own documents usually list who holds what and when it unlocks. Treat any single source as a starting point, and check a second.
 
+## Common mistakes
+
+- Judging a coin as 'cheap' because its price is low.
+- Ignoring the gap between market cap and fully diluted value.
+- Not checking the unlock schedule.
+
+## Go deeper
+
+<details><summary>Circulating vs total supply</summary><p>Circulating supply is what's tradable now. Total supply includes coins not yet released. A coin with low circulating supply can look cheaper than it is on a fully diluted basis.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A coin costs $0.001. Is it cheap?</summary><p>You can't tell from the price. Multiply by the circulating supply to get the market cap, and compare that.</p></details>
@@ -60,6 +70,10 @@ Most crypto data sites show circulating supply, maximum supply, market cap and F
 <details><summary>2. Market cap $200 million, FDV $2 billion. What does the gap tell you?</summary><p>Only about 10% of the supply is out. The other 90% will be released over time, which adds potential sellers.</p></details>
 
 <details><summary>3. For a coin at $0.01 with 500 billion coins out to reach $1, what would its market cap need to be?</summary><p>$500 billion (500 billion × $1).</p></details>
+
+<details><summary>4. A coin costs $0.01 and has 100 billion coins in circulation. What's its market cap?</summary><p>$1 billion. Price alone says nothing about value.</p></details>
+
+<details><summary>5. Why can an unlock matter for the price?</summary><p>New supply arrives and some holders may want to sell, so it needs more buyers to hold the price.</p></details>
 
 ## Try it (no real money)
 

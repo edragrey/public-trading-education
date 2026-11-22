@@ -43,6 +43,16 @@ A routine you'll actually do is better than a perfect one you won't. Start with 
 
 > **Hypothetical example.** A minimal routine: "Before: read my plan and check the calendar. During: six gates every time. After: journal and close the app."
 
+## Common mistakes
+
+- Making a routine too long to keep.
+- Skipping the routine when busy.
+- Ignoring sleep and food.
+
+## Go deeper
+
+<details><summary>Sleep and health</summary><p>Tired, hungry or stressed traders make worse decisions. The basics that quietly matter are sleep, food, movement and breaks.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You wake up after a bad night's sleep and feel rushed. What does a good routine suggest?</summary><p>Consider a no-trading day. Your state is part of the checklist.</p></details>
@@ -50,6 +60,10 @@ A routine you'll actually do is better than a perfect one you won't. Start with 
 <details><summary>2. Why set your stop at the same moment you open the trade?</summary><p>So there's never a gap where you're in a trade with no exit, and so you don't have to decide it later under pressure.</p></details>
 
 <details><summary>3. Why start with a small routine?</summary><p>Because a short routine you actually follow beats a long one you skip.</p></details>
+
+<details><summary>4. How long should the pre-trade routine be?</summary><p>About ten minutes.</p></details>
+
+<details><summary>5. Why keep a routine small?</summary><p>A small routine is one you'll actually repeat.</p></details>
 
 ## Try it (no real money)
 

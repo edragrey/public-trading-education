@@ -47,6 +47,16 @@ A simple rule of thumb: **daily limit = 2 or 3 losing trades**. Weekly = about t
 
 Hitting your daily limit means the system did its job: it stopped a bad day from becoming a disaster. Log it in your journal as "limit reached, stopped" and be proud of that line.
 
+## Common mistakes
+
+- Setting a limit and breaking it.
+- Setting it so wide it never triggers.
+- Feeling a limit means failure.
+
+## Go deeper
+
+<details><summary>Weekly limit as well</summary><p>Many traders add a weekly loss limit as well as a daily one, for example two or three times the daily limit. Hitting it means stopping until the next week.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You risk 1% per trade with a 3% daily limit. You've lost three trades today. What now?</summary><p>Stop for the day. You've hit your limit.</p></details>
@@ -54,6 +64,10 @@ Hitting your daily limit means the system did its job: it stopped a bad day from
 <details><summary>2. Why is a daily limit better than "I'll stop when it feels like a bad day"?</summary><p>Because after losses, your feelings push you to keep trading. A rule set in advance doesn't change with your mood.</p></details>
 
 <details><summary>3. You're at −2.5% with a 3% limit, and the next trade risks 1%. Should you take it?</summary><p>No. If it hits the stop, you'd be at −3.5%, past your limit.</p></details>
+
+<details><summary>4. What do you do when you reach your daily limit?</summary><p>Stop trading for the day.</p></details>
+
+<details><summary>5. Why decide the limit before the day starts?</summary><p>Because you won't judge it well after losing.</p></details>
 
 ## Try it (no real money)
 

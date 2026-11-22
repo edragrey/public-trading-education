@@ -54,6 +54,16 @@ Some smaller exchanges and tokens have been found to inflate their volume with f
 1. **What's the spread?** Look at the order book. If it's more than a fraction of a percent, think twice.
 2. **Could you get out?** Look at how much is waiting on the bid side near the price. If your position is a big chunk of it, you'll struggle to sell without moving the price.
 
+## Common mistakes
+
+- Trusting a chart on a coin with almost no volume.
+- Judging a market by volume numbers you haven't checked.
+- Ignoring the spread when comparing two markets.
+
+## Go deeper
+
+<details><summary>Reported volume can be inflated</summary><p>Some venues have reported trading volume far above what real activity supports, for example through wash trading. Prefer well-known venues, compare several sources and treat odd numbers as unverified.</p></details>
+
 ## Check yourself
 
 <details><summary>1. Two coins have the same price. One trades $1 billion a day, the other $50,000. Which is riskier to trade, and why?</summary><p>The $50,000 one. Wider spreads, more slippage, and your stop may fill far from where you set it.</p></details>
@@ -61,6 +71,10 @@ Some smaller exchanges and tokens have been found to inflate their volume with f
 <details><summary>2. A price jumps 20% on very low volume. What does that tell you?</summary><p>Only a few trades moved it. It may not reflect what most participants think, and it can reverse just as easily.</p></details>
 
 <details><summary>3. Why might you be sceptical of huge volume on a tiny token?</summary><p>Some venues inflate volume with fake trades. Check whether the volume is spread across several well-known exchanges.</p></details>
+
+<details><summary>4. What does a wide spread tell you about liquidity?</summary><p>Few buyers and sellers are close to the price, so it's less liquid and costs more to trade.</p></details>
+
+<details><summary>5. Name two quick checks before any trade.</summary><p>Check recent volume and check the current spread.</p></details>
 
 ## Try it (no real money)
 

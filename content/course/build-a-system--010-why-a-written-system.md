@@ -50,6 +50,16 @@ The rest of this module builds each part. In short:
 - **How much you risk** (your fixed % from Survive first).
 - **When you don't trade** (big events, daily loss limit, your own state).
 
+## Common mistakes
+
+- Making the system so complicated it can't be followed.
+- Trading on gut feel, then explaining it afterwards.
+- Never writing down results.
+
+## Go deeper
+
+<details><summary>Systematic vs discretionary</summary><p>A fully systematic trader follows exact rules. A discretionary one uses judgement. Most people sit between, with fixed risk rules and some room for judgement inside them.</p></details>
+
 ## Check yourself
 
 <details><summary>1. What makes a system useful: being clever, or being written down and followed?</summary><p>Being written down, specific and followed. A simple system you stick to beats a clever one you abandon.</p></details>
@@ -57,6 +67,10 @@ The rest of this module builds each part. In short:
 <details><summary>2. Two traders both lose 6% over 30 trades. Why might one of them be better off?</summary><p>If one followed written rules, they can see which trades broke the rules and what to fix. The other has nothing to compare against.</p></details>
 
 <details><summary>3. You've had three wins in a row and everything looks like a great trade. Is that information about the market?</summary><p>Mostly about your mood. That's exactly what written rules protect you from.</p></details>
+
+<details><summary>4. Why can't you improve what you don't measure?</summary><p>Without records, memory rewrites your trades and you can't see what really works.</p></details>
+
+<details><summary>5. What does a basic system contain?</summary><p>Market and style, entry, stop, size, exit and a review habit.</p></details>
 
 ## Try it (no real money)
 
