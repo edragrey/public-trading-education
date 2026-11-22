@@ -58,6 +58,16 @@ By 18 August 2020 it closed at a new record high (3,389.78). Someone who sold in
 - A big loss can push you out of the market at the worst moment.
 - That's why this course starts with *surviving*: keeping losses small enough that you can stay in the game.
 
+## Common mistakes
+
+- Judging a trade only by whether your forecast came true.
+- Selling in a panic after a fall, then watching the forecast play out.
+- Ignoring how a big loss makes the climb back steeper.
+
+## Go deeper
+
+<details><summary>Why drawdowns are asymmetrical</summary><p>A loss of x% needs a gain of x ÷ (1 - x) to recover. At 10% that's about 11%, at 50% it's 100%, at 80% it's 400%. The deeper the hole, the more the maths works against you.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You buy at $100, sell in a panic at $80, and the price later reaches your $130 target. Was your forecast right? Was your trade?</summary><p>The forecast was right. The trade lost 20%. Being right and making money are different things.</p></details>
@@ -65,6 +75,10 @@ By 18 August 2020 it closed at a new record high (3,389.78). Someone who sold in
 <details><summary>2. After a 50% loss, what gain do you need to get back to where you started?</summary><p>100%. Half your money has to double.</p></details>
 
 <details><summary>3. Why does this course start with surviving rather than with finding good trades?</summary><p>Because big losses are hard to recover from and can push you out at the worst moment. Keeping losses small keeps you in the game.</p></details>
+
+<details><summary>4. A 20% loss needs what gain to get back to even?</summary><p>25%. 100 falls to 80, and 80 must rise by 20 to return to 100, which is 25% of 80.</p></details>
+
+<details><summary>5. Can you be right about direction and still lose money?</summary><p>Yes. Entry, size, stop and timing decide the result as well as the forecast.</p></details>
 
 ## Try it (no real money)
 

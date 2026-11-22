@@ -60,6 +60,16 @@ You have two honest choices: **take a smaller position** (and risk less than pla
 
 Because then your stop gets chosen by your wallet instead of by the chart. People who pick "$500" first often place the stop wherever the loss feels bearable. The market doesn't care what feels bearable. Your stop should go where your idea is proven wrong, and the size should follow.
 
+## Common mistakes
+
+- Picking the position size first and putting the stop wherever it fits.
+- Ignoring fees when working out the real loss at your stop.
+- Not shrinking the trade when the stop is far away.
+
+## Go deeper
+
+<details><summary>Rounding down</summary><p>If the sum gives 47.8 units and you can only buy 47, round down. Rounding up risks slightly more than you planned.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You'll risk $30. Your stop is 3% below your entry. How big should the position be?</summary><p>$30 ÷ 3% = $1,000.</p></details>
@@ -67,6 +77,10 @@ Because then your stop gets chosen by your wallet instead of by the chart. Peopl
 <details><summary>2. You move your stop from 5% away to 10% away. What happens to your position size if your risk stays the same?</summary><p>It halves. Twice the stop distance means half the size, so the loss stays the same.</p></details>
 
 <details><summary>3. The sum says $3,000 but your account is $2,000. What do you do?</summary><p>Take a smaller position, or skip the trade. Don't borrow to make the number fit.</p></details>
+
+<details><summary>4. Account $4,000, risk 1%, entry $10, stop $9.50. How many units?</summary><p>$40 risk ÷ $0.50 = 80 units.</p></details>
+
+<details><summary>5. Your stop is twice as far away. What happens to the correct size?</summary><p>It halves, because the loss per unit doubled.</p></details>
 
 ## Try it (no real money)
 

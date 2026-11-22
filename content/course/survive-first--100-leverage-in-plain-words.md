@@ -44,10 +44,26 @@ Leverage usually comes with **futures** (often called "perps" in crypto) and **m
 
 While you're learning, this course suggests you don't. Not because leverage is evil, but because it adds a new way to lose (getting closed out by the exchange) on top of everything else. The next lesson shows exactly how that works, and the one check that keeps it from surprising you.
 
+## Common mistakes
+
+- Using high leverage because the position size looks small.
+- Treating leverage as a way to be right more often.
+- Opening a leveraged trade with no stop.
+
+## Go deeper
+
+<details><summary>Leverage and margin</summary><p>Margin is the money you put up. Leverage of 10x means a position worth ten times your margin. A move of about 10% against you can wipe out the margin.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You put down $200 at 3x. How big is your position?</summary><p>$600 (200 × 3).</p></details>
 
 <details><summary>2. At 10x, the price moves 2% against you. Roughly how much of your margin have you lost?</summary><p>About 20% (2% × 10), before fees.</p></details>
+
+<details><summary>3. Does leverage make you right more often?</summary><p>No. It only makes each move count for more.</p></details>
+
+<details><summary>4. What does 5x leverage do to a 4% move against you?</summary><p>It acts like a 20% move on your margin.</p></details>
+
+<details><summary>5. Does leverage change your odds of being right?</summary><p>No. It changes the size of the swing, not the odds.</p></details>
 
 **Key idea:** Leverage makes your trade bigger than your money, so every move against you hits your margin harder. It changes the size of the swing, not the odds of being right.

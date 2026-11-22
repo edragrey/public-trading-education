@@ -50,6 +50,16 @@ There's no magic number, but **10 is far too few** and **30 is a sensible minimu
 
 A common path: look back → paper trade 30 trades → real money at small size for 30 trades → normal size. Move up a step only if you **followed the plan** and the results are at least reasonable. Drop back a step if either fails.
 
+## Common mistakes
+
+- Judging a rule on ten trades.
+- Going straight to big size after one good test.
+- Tweaking the rule until the past looks perfect.
+
+## Go deeper
+
+<details><summary>Three steps</summary><p>Look back (manual backtest), paper trade forward, then trade very small. Each step catches different problems.</p></details>
+
 ## Check yourself
 
 <details><summary>1. What's the biggest trap when testing on past charts?</summary><p>Hindsight. Seeing setups that only looked obvious afterwards, or skipping the bad ones.</p></details>
@@ -57,6 +67,10 @@ A common path: look back → paper trade 30 trades → real money at small size 
 <details><summary>2. Why isn't paper trading enough on its own?</summary><p>There's no real fear or greed, and fills can look better than reality. It's easier to follow rules with pretend money.</p></details>
 
 <details><summary>3. After 10 trades your setup has lost money. Is it a bad setup?</summary><p>You can't tell yet. 10 trades is a tiny sample. Keep testing before you judge.</p></details>
+
+<details><summary>4. Name the three ways to test before risking real money.</summary><p>Look back, paper trade forward, and go small with real money.</p></details>
+
+<details><summary>5. Why not trust ten trades?</summary><p>The sample is too small. Luck can easily dominate.</p></details>
 
 ## Try it (no real money)
 

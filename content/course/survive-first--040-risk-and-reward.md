@@ -60,6 +60,16 @@ The honest question isn't "how big is my ratio?" but "**is this target somewhere
 
 The table shows what you *need*. It says nothing about what you'll *get*. Your actual win rate only shows up after many trades, written down honestly. That's the expectancy lesson, and the journal lesson later in Build a system.
 
+## Common mistakes
+
+- Choosing a target just to make the ratio look good.
+- Ignoring win rate when picking a ratio.
+- Counting reward without subtracting costs.
+
+## Go deeper
+
+<details><summary>Break-even win rate</summary><p>Break-even win rate = 1 ÷ (1 + reward-to-risk), before costs. At 1 to 1 it's 50%. At 2 to 1 it's about 33%. At 3 to 1 it's 25%.</p></details>
+
 ## Check yourself
 
 <details><summary>1. Entry $100, stop $95, target $110. What's the reward to risk?</summary><p>You risk $5 to make $10, so 2:1.</p></details>
@@ -67,6 +77,10 @@ The table shows what you *need*. It says nothing about what you'll *get*. Your a
 <details><summary>2. At 1:1, what share of trades do you need to win to break even?</summary><p>50%, before fees.</p></details>
 
 <details><summary>3. Why not just set every target really far away for a huge ratio?</summary><p>Because far targets get reached less often. A higher ratio on paper usually means a lower win rate in practice.</p></details>
+
+<details><summary>4. At 3 to 1, roughly what win rate breaks even before costs?</summary><p>About 25%.</p></details>
+
+<details><summary>5. Why can a very high target ratio be a trap?</summary><p>Targets that far away are hit rarely, so the win rate falls and the plan may lose.</p></details>
 
 ## Try it (no real money)
 

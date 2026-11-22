@@ -47,6 +47,16 @@ The week was down. But the system's trades were up, and the whole loss came from
 
 One week is a tiny sample. A bad week **following your plan** is not a reason to change the plan. A good week **breaking your plan** is not a reason to keep breaking it. The lesson on changing your rules covers when changes are justified.
 
+## Common mistakes
+
+- Reviewing only the biggest wins and losses.
+- Changing several things after one week.
+- Skipping the review when results are good.
+
+## Go deeper
+
+<details><summary>Compare process, not just profit</summary><p>Split trades into 'followed the plan' and 'broke the plan'. If rule breaks cost money, fix behaviour before you change the system.</p></details>
+
 ## Check yourself
 
 <details><summary>1. Your week was down overall, but every trade that followed your plan was up. What's the lesson?</summary><p>The losses came from breaking the plan. Fix the behaviour, not the system.</p></details>
@@ -54,6 +64,10 @@ One week is a tiny sample. A bad week **following your plan** is not a reason to
 <details><summary>2. How many things should you change after a weekly review?</summary><p>One. Changing many things at once makes it impossible to tell what helped.</p></details>
 
 <details><summary>3. You had a great week by ignoring your stop rules. Should you keep doing that?</summary><p>No. One good week is luck-heavy. Breaking stop rules is how the big losses from Survive first happen.</p></details>
+
+<details><summary>4. How many things should you change after one review?</summary><p>One at most.</p></details>
+
+<details><summary>5. Why split followed-plan from broke-plan trades?</summary><p>It shows whether the system or your behaviour is the problem.</p></details>
 
 ## Try it (no real money)
 

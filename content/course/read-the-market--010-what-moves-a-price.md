@@ -43,6 +43,16 @@ You will never know every reason a price moved. Big funds don't announce their o
 
 That's why this course never tells you where a price will go. What you **can** do is understand the forces, notice which ones are active, and size your trades (Survive first) so that being wrong is affordable.
 
+## Common mistakes
+
+- Looking for one cause of every move.
+- Assuming the news you see is the news the market already knew.
+- Treating a good explanation after the fact as a prediction.
+
+## Go deeper
+
+<details><summary>Expectations are priced in</summary><p>Prices often move when reality differs from what the market expected, not when something merely good or bad happens. That's why 'good news, price down' occurs.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A price rises sharply with no news at all. Is that possible?</summary><p>Yes. A large buyer, a thin order book, or forced buying from leveraged traders can all move prices without any headline.</p></details>
@@ -50,6 +60,10 @@ That's why this course never tells you where a price will go. What you **can** d
 <details><summary>2. Why might lots of new coins being released push a price down?</summary><p>More supply means more potential sellers. It takes more buyers just to keep the price where it is.</p></details>
 
 <details><summary>3. You read a headline explaining exactly why the market fell. Should you trust it completely?</summary><p>Treat it as one possible reason. Many explanations are written after the move, and some forces, like big orders or liquidations, rarely make the news.</p></details>
+
+<details><summary>4. Name two forces that move prices.</summary><p>For example news, scheduled data, supply and demand, sentiment, and large orders.</p></details>
+
+<details><summary>5. Why plan for being wrong?</summary><p>You can never see all the forces, so every trade needs a stop and a size you can live with.</p></details>
 
 ## Try it (no real money)
 

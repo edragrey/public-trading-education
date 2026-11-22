@@ -49,6 +49,16 @@ Not every loud coin is a scam. But hype makes prices move fast in both direction
 5. **Keep trading money separate** from savings, and only use money you can afford to lose.
 6. **If it sounds too good to be true, it is.**
 
+## Common mistakes
+
+- Clicking links in messages or ads instead of typing the address.
+- Sharing a recovery phrase with anyone, including 'support'.
+- Skipping two-factor authentication.
+
+## Go deeper
+
+<details><summary>Two-factor authentication</summary><p>Use an authenticator app or a hardware key rather than SMS where possible. SMS codes can be hijacked through SIM-swap attacks.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A support agent messages you first and asks for your 12 words to "fix your wallet". What do you do?</summary><p>Refuse and block. No real support team ever needs your seed phrase. Anyone who has it can take your money.</p></details>
@@ -56,6 +66,10 @@ Not every loud coin is a scam. But hype makes prices move fast in both direction
 <details><summary>2. Someone promises 5% a week, guaranteed. Why is that a red flag?</summary><p>No one can guarantee market returns. Guaranteed high returns are a classic sign of a scam.</p></details>
 
 <details><summary>3. What's a safe way to try a new exchange?</summary><p>Start with a small amount and check you can withdraw it before sending more.</p></details>
+
+<details><summary>4. Someone messages you offering to double your crypto. What do you do?</summary><p>Ignore and block. Doubling offers are a classic scam.</p></details>
+
+<details><summary>5. Where should a recovery phrase be stored?</summary><p>Offline, on paper, never in a photo, chat or cloud note.</p></details>
 
 ## Try it (no real money)
 

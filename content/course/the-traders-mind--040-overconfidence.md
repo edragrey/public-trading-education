@@ -51,6 +51,16 @@ Account now around **$1,920**, below where it started, after one of the best run
 
 Take a short break. Same as after a loss. Strong emotions in either direction cloud judgement.
 
+## Common mistakes
+
+- Increasing size after a winning streak.
+- Skipping the checklist when things are going well.
+- Believing a run of wins proves skill.
+
+## Go deeper
+
+<details><summary>Variance</summary><p>Even a coin-flip strategy produces long winning streaks by chance. Wins feel like skill, which is why they tempt people to bet bigger.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You've won 6 trades in a row. Does that prove your system is excellent?</summary><p>No. Winning streaks happen by chance too. You need many more trades to judge.</p></details>
@@ -58,6 +68,10 @@ Take a short break. Same as after a loss. Strong emotions in either direction cl
 <details><summary>2. Why is raising your size after a winning streak risky?</summary><p>If the streak was partly luck, normal losses will arrive at the bigger size, and can wipe out the gains quickly.</p></details>
 
 <details><summary>3. How can your trade size grow safely over time?</summary><p>By keeping the same percentage risk. As the account grows, the dollar amount grows automatically.</p></details>
+
+<details><summary>4. A trader wins five in a row and doubles their risk. What's the danger?</summary><p>One normal losing streak now costs much more.</p></details>
+
+<details><summary>5. What good habit follows a big win?</summary><p>Take a break, review the process, and keep risk the same.</p></details>
 
 ## Try it (no real money)
 

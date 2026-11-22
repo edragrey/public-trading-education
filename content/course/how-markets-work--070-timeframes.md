@@ -46,6 +46,16 @@ A common habit is to **check one timeframe higher** than the one you trade on. I
 
 This connects to the next module, Survive first. A stop placed using a 5-minute chart will usually be close to your entry (small wobbles). A stop placed using a daily chart will usually be further away (bigger swings). Neither is wrong, but your **position size must follow** the stop distance, as the position size lesson in Survive first will show.
 
+## Common mistakes
+
+- Looking at one timeframe and ignoring the one above it.
+- Setting a stop that suits a 5-minute chart on a trade meant to last days.
+- Switching timeframes until the chart says what you want.
+
+## Go deeper
+
+<details><summary>Multiple timeframe habit</summary><p>Many traders check a higher timeframe for direction and a lower one for timing. If the two disagree, that's information: smaller size or no trade.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A coin is up on the daily chart but down on the weekly. Which one is right?</summary><p>Both. They describe different periods. The daily shows the last days; the weekly shows the last months.</p></details>
@@ -53,6 +63,10 @@ This connects to the next module, Survive first. A stop placed using a 5-minute 
 <details><summary>2. Why are 1-minute charts hard for beginners?</summary><p>They're full of random noise, they lead to many fast decisions and lots of fees.</p></details>
 
 <details><summary>3. You plan to hold a trade for about two weeks. Which timeframes fit best?</summary><p>Daily and weekly charts.</p></details>
+
+<details><summary>4. Why are very short timeframes noisier?</summary><p>Small random moves fill each candle, so more of what you see is noise and less is trend.</p></details>
+
+<details><summary>5. You plan to hold for weeks. Which chart should lead your decision?</summary><p>A daily or weekly chart, with a quick check of a higher one.</p></details>
 
 ## Try it (no real money)
 

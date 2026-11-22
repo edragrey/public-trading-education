@@ -49,6 +49,16 @@ Stock markets are closely regulated, for example by the SEC in the US and the CN
 
 Crypto rules are newer and vary by country. The EU has introduced a framework called MiCA for crypto service providers, but protections are still generally thinner than for stocks. That's one more reason to read the staying safe lesson in Survive first carefully.
 
+## Common mistakes
+
+- Assuming every market trades the same hours.
+- Holding a stock position through news that lands after the close.
+- Using the same size in a volatile coin as in a calm index fund.
+
+## Go deeper
+
+<details><summary>Gaps</summary><p>Because stocks close, price can open far from the previous close. A stop can't protect you from a gap: it triggers at the next available price, which may be much worse.</p></details>
+
 ## Check yourself
 
 <details><summary>1. Why can a stock "gap" past your stop?</summary><p>Because the market closes. News overnight or at the weekend can make it open far from the last price, and your stop fills at the opening price.</p></details>
@@ -56,6 +66,10 @@ Crypto rules are newer and vary by country. The EU has introduced a framework ca
 <details><summary>2. How do most people trade oil or gold?</summary><p>Through futures contracts or funds that track the price, not by owning the physical commodity.</p></details>
 
 <details><summary>3. Small crypto tokens tend to swing a lot. What should that mean for your position size?</summary><p>Smaller. Wider stops are needed, so for the same risk per trade the position has to be smaller.</p></details>
+
+<details><summary>4. Which of crypto, stocks and commodities usually trades around the clock?</summary><p>Crypto trades 24 hours a day, every day.</p></details>
+
+<details><summary>5. Why should position size differ between a calm market and a very volatile one?</summary><p>The same stop distance as a percentage can be hit much more easily in a volatile market, so size should shrink.</p></details>
 
 ## Try it (no real money)
 

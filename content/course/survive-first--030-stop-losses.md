@@ -63,6 +63,16 @@ You can move a stop **closer** to lock in less risk. You should **never move it 
 - **Fast markets.** In crypto, a sudden crash can cause big slippage even on a stop market.
 - **Getting "stopped out" then watching it recover.** It happens to everyone. A stop that sometimes takes you out too early is the price of never taking a huge loss.
 
+## Common mistakes
+
+- Placing the stop where it feels comfortable instead of where the idea is wrong.
+- Moving it further away to avoid taking the loss.
+- Having no stop and promising to watch.
+
+## Go deeper
+
+<details><summary>Mental stops</summary><p>A mental stop is one you only promise yourself. It fails at the moment you need it, when emotion argues with the plan. A stop order placed with the platform works even if you're away.</p></details>
+
 ## Check yourself
 
 <details><summary>1. What's the main risk of a stop limit order?</summary><p>If the price moves past your limit quickly, your order may not fill and you stay in a losing trade.</p></details>
@@ -70,6 +80,10 @@ You can move a stop **closer** to lock in less risk. You should **never move it 
 <details><summary>2. Where should your stop go?</summary><p>At the price where your reason for the trade is proven wrong, not at a number that just feels comfortable.</p></details>
 
 <details><summary>3. Your trade is losing and getting close to your stop. Should you move the stop further away to give it room?</summary><p>No. Moving a stop further away is changing your plan because of fear. You can move it closer, never further.</p></details>
+
+<details><summary>4. What is the difference between a stop-market and a stop-limit?</summary><p>A stop-market fills at the best price once triggered, fast but may slip. A stop-limit only fills at your limit or better, which may leave you unfilled.</p></details>
+
+<details><summary>5. Is it okay to move a stop to break-even after price moves your way?</summary><p>Yes. Moving it to reduce risk is fine. Never move it further away.</p></details>
 
 ## Try it (no real money)
 

@@ -59,6 +59,16 @@ With leverage, fees are charged on the **whole position**, not just your margin.
 - **Avoid thin markets.** Coins or stocks with little trading have wider spreads and more slippage.
 - **Count costs in your plan.** Add a little to your expected loss and take a little off your expected win.
 
+## Common mistakes
+
+- Ignoring fees on small, frequent trades.
+- Using market orders in thin markets.
+- Forgetting that a round trip pays costs twice.
+
+## Go deeper
+
+<details><summary>Fees as a share of risk</summary><p>If you risk $20 and costs per round trip are $2, costs are 10% of your risk before price even moves. Costs matter most when risk per trade is small.</p></details>
+
 ## Check yourself
 
 <details><summary>1. A $500 trade with a 0.2% fee each way. What does the round trip cost?</summary><p>About $1 to open and $1 to close, so about $2.</p></details>
@@ -66,6 +76,10 @@ With leverage, fees are charged on the **whole position**, not just your margin.
 <details><summary>2. Why do fees matter more when you use leverage?</summary><p>Because they're charged on the full position, which is bigger than the money you put in.</p></details>
 
 <details><summary>3. What's the simplest way to pay less in fees?</summary><p>Make fewer trades.</p></details>
+
+<details><summary>4. Fees are $3 each way. How much is a round trip?</summary><p>$6.</p></details>
+
+<details><summary>5. Name two ways to cut costs.</summary><p>For example use limit orders where sensible, trade fewer times, and pick liquid markets.</p></details>
 
 ## Try it (no real money)
 

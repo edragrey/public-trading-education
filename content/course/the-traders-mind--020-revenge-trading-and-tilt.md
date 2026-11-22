@@ -49,6 +49,16 @@ Write your circuit-breaker into your trade plan (see the one-page trade plan les
 
 A loss is gone. The market doesn't know you lost and owes you nothing. The next trade should be judged exactly like any other: does it pass all six gates? If the honest answer to gate 6 ("am I okay to trade?") is no, then it's no.
 
+## Common mistakes
+
+- Trading straight after a loss.
+- Doubling size to win it back.
+- Treating the market as an opponent.
+
+## Go deeper
+
+<details><summary>The circuit-breaker</summary><p>A fixed rule that stops you at once: for example two losses in a row means you close the platform and walk away for the day.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You've just taken a loss and immediately want a new trade to make it back. What's that?</summary><p>Revenge trading. The reason for the trade is the loss, not your plan.</p></details>
@@ -56,6 +66,10 @@ A loss is gone. The market doesn't know you lost and owes you nothing. The next 
 <details><summary>2. Name two signs of tilt.</summary><p>Any two of: raising size to recover, moving or removing stops, trading outside your plan, feeling angry or tense, wanting to trade right now because of a loss.</p></details>
 
 <details><summary>3. When should you decide your circuit-breaker rules?</summary><p>In advance, while you're calm. Write them into your trade plan.</p></details>
+
+<details><summary>4. Name two signs you're on tilt.</summary><p>For example: trading faster, ignoring your checklist, increasing size after losses, feeling angry at the market.</p></details>
+
+<details><summary>5. Why isn't a loss 'yours to win back'?</summary><p>The next trade has no memory of the last one. It's a new decision.</p></details>
 
 ## Try it (no real money)
 

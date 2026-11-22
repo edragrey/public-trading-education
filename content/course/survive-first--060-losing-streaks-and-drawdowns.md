@@ -54,6 +54,16 @@ The exact numbers are yours to choose. Having them written down is what matters.
 
 Usually a streak is just noise. But it's worth one honest check: **did I follow my plan on these trades?** If you did, it's probably normal variance. If you didn't (moved stops, traded bigger, skipped your checklist), the problem isn't the strategy. The Trader's mind module covers this.
 
+## Common mistakes
+
+- Raising risk after a loss to catch up.
+- Taking a normal streak as proof the system is broken.
+- Having no written plan for a drawdown.
+
+## Go deeper
+
+<details><summary>Typical streak length</summary><p>With a 50% win rate, a streak of six or seven losses somewhere in 100 trades is normal. At 40%, expect longer runs. Plan for more than you've seen.</p></details>
+
 ## Check yourself
 
 <details><summary>1. You win half your trades. You've just lost 6 in a row. Is your strategy broken?</summary><p>Not necessarily. Over 100 trades, a run of 5 or 6 losses is quite likely even with a 50% win rate. Check whether you followed your plan.</p></details>
@@ -61,6 +71,10 @@ Usually a streak is just noise. But it's worth one honest check: **did I follow 
 <details><summary>2. 10 losses in a row at 10% risk per trade leaves you down about how much?</summary><p>About 65%. Getting back would need a gain of nearly 190%.</p></details>
 
 <details><summary>3. When should you decide what to do in a drawdown?</summary><p>Before it starts, while you're calm, and write it down.</p></details>
+
+<details><summary>4. You risk 2% and lose 10 in a row. Roughly how much is left?</summary><p>About 82% of the account, a fall of roughly 18%.</p></details>
+
+<details><summary>5. Name one rule you could write in advance for a drawdown.</summary><p>For example cut size by half after a 10% drawdown, or pause after five losses.</p></details>
 
 ## Try it (no real money)
 
