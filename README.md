@@ -24,7 +24,7 @@ date: 2026-11-26
 Lesson text in markdown...
 ```
 
-Modules are `start-here`, `how-markets-work`, `survive-first`, `read-the-market`, `build-a-system`, `the-traders-mind`, `going-further` (listed in `site.config.json`). Use `order` in steps of 10 so new lessons can slot in between. A module with `sections` in `site.config.json` groups lessons by their `section:` frontmatter.
+Modules are `start-here`, `how-markets-work`, `survive-first`, `read-the-market`, `build-a-system`, `the-traders-mind`, `thinking-in-probabilities`, `going-further` (listed in `site.config.json`). Use `order` in steps of 10 so new lessons can slot in between. A module with `sections` in `site.config.json` groups lessons by their `section:` frontmatter.
 
 ### Group lessons into sections
 
