@@ -52,5 +52,9 @@
   "marketToday": {
     "enabled": false,
     "note": "A short daily \"Market today\" note is coming later."
+  },
+  "privacy": {
+    "controller": "",
+    "contactEmail": ""
   }
 }

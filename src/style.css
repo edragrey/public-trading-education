@@ -406,3 +406,37 @@ main.wrap { padding-top: 28px; padding-bottom: 72px; }
 /* Fill-in templates in lessons (fenced code blocks). */
 .prose pre { max-width: 100%; overflow-x: auto; margin: 1.25rem 0; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font: .85rem/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--ink); }
 .prose pre code { font: inherit; background: none; padding: 0; }
+
+/* Accounts: header link, lock notes on the course list, the /account/ page. Theme tokens only. */
+.account-btn { display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 14px 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font: 500 .9rem var(--sans); white-space: nowrap; transition: background .15s, border-color .15s; }
+.account-btn:hover { background: var(--bg-2); border-color: var(--muted); color: var(--ink); }
+.account-btn[aria-current="page"] { border-color: var(--accent); color: var(--accent); }
+.account-btn .icon { width: 18px; height: 18px; }
+@media (max-width: 599px) { .account-btn { order: 2; margin-left: auto; } .accounts-on .theme-btn { order: 2; margin-left: 0; } }
+@media (min-width: 600px) { .account-btn { margin-left: 0; } }
+.lock-note { display: none; align-items: center; gap: 4px; margin-left: 8px; color: var(--gold); font-weight: 600; }
+.lock-note .icon { width: 13px; height: 13px; }
+.accounts-on:not(.signed-in) .lock-note { display: inline-flex; }
+
+.account { max-width: 34rem; }
+.acct-card { padding: 22px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.acct-card h2 { margin-top: 0; }
+.acct-card h3 { margin: 22px 0 10px; font-size: 1.05rem; }
+.acct-card form { display: grid; gap: 14px; margin-top: 14px; }
+.acct-card form .btn { justify-self: start; cursor: pointer; }
+.acct-card .text-button { justify-self: start; }
+.field { display: grid; gap: 6px; font-weight: 600; font-size: .92rem; }
+.field input { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); color: var(--ink); font: 400 1rem var(--sans); }
+.field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.field input[name="code"] { max-width: 12rem; font-size: 1.4rem; letter-spacing: .3em; font-variant-numeric: tabular-nums; }
+.check { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; color: var(--ink); }
+.check input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--accent); flex: none; }
+.fine { margin: 0; font-size: .85rem; color: var(--muted); }
+.form-msg { margin: 0; min-height: 1.2em; font-size: .92rem; color: var(--muted); }
+.form-msg[data-tone="bad"] { color: var(--loss); }
+.form-msg[data-tone="good"] { color: var(--gain); }
+.acct-card .course-progress { grid-template-columns: 1fr; margin: 14px 0 18px; background: var(--bg); }
+.acct-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 0; margin: 0 0 14px; list-style: none; }
+.acct-actions .btn { cursor: pointer; font-size: .92rem; padding: 10px 16px; }
+.btn.danger { color: var(--loss); border-color: color-mix(in srgb, var(--loss) 40%, var(--line)); }
+.btn.danger:hover { background: var(--loss-soft); color: var(--loss); border-color: var(--loss); }

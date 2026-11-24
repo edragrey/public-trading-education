@@ -193,6 +193,7 @@ document.querySelectorAll(".quiz").forEach((q) => {
     b.setAttribute("aria-pressed", "true");
     if (!right) q.querySelector(`[data-opt="${q.dataset.answer}"]`)?.classList.add("is-right");
     q.dataset.state = right ? "right" : "wrong";
+    recordQuiz(q, right);
     if (why) { why.hidden = false; why.dataset.lead = right ? "Right." : "Not quite."; }
   }));
 });
@@ -241,19 +242,52 @@ if (gSearch) {
   });
 }
 
-// Lesson completion: deliberately local-only so the public site needs no account or backend.
+// Course progress: lessons marked complete and first answers to quick questions.
+// Saved in this browser, and in the reader's account when they're signed in (see /account/).
 const COMPLETED_KEY = "tb-course-completed-v1";
+const QUIZ_KEY = "tb-quiz-v1";
+const SYNCED_KEY = "tb-synced-user"; // which account this browser's progress was last merged into
+const readLocal = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key) || "null") ?? fallback; } catch (e) { return fallback; } };
+const writeLocal = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} };
+const dropLocal = (...keys) => { try { keys.forEach((k) => localStorage.removeItem(k)); } catch (e) {} };
+
 const completedLessons = () => {
-  try {
-    const value = JSON.parse(localStorage.getItem(COMPLETED_KEY) || "[]");
-    return new Set(Array.isArray(value) ? value.filter((x) => typeof x === "string") : []);
-  } catch (e) {
-    return new Set();
-  }
+  const value = readLocal(COMPLETED_KEY, []);
+  return new Set(Array.isArray(value) ? value.filter((x) => typeof x === "string") : []);
 };
-const saveCompleted = (done) => {
-  try { localStorage.setItem(COMPLETED_KEY, JSON.stringify([...done])); } catch (e) {}
+const quizAnswers = () => {
+  const value = readLocal(QUIZ_KEY, {});
+  return value && typeof value === "object" && !Array.isArray(value) ? value : {};
 };
+
+let account = null; // { enabled, signedIn, email, ... } from /api/me/
+const signedIn = () => Boolean(account?.signedIn);
+const api = (url, opts = {}) => fetch(url, { credentials: "same-origin", headers: { "content-type": "application/json" }, ...opts })
+  .then(async (r) => ({ ok: r.ok, status: r.status, data: await r.json().catch(() => ({})) }));
+
+let pushTimer;
+const pushProgress = () => {
+  if (!signedIn()) return;
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(() => {
+    api("/api/progress/", { method: "PUT", body: JSON.stringify({ completed: [...completedLessons()], quizzes: quizAnswers() }) })
+      .then((r) => { if (r.status === 401) location.reload(); });
+  }, 300);
+};
+
+const saveCompleted = (done) => { writeLocal(COMPLETED_KEY, [...done]); pushProgress(); };
+
+function recordQuiz(q, right) {
+  if (!/^\/course\//.test(location.pathname)) return;
+  const n = [...document.querySelectorAll(".quiz")].indexOf(q);
+  const key = `${location.pathname}#${n}`;
+  const answers = quizAnswers();
+  if (key in answers) return; // keep the first try
+  answers[key] = right ? 1 : 0;
+  writeLocal(QUIZ_KEY, answers);
+  pushProgress();
+}
+
 const updateCompletionUi = () => {
   const done = completedLessons();
   document.querySelectorAll("[data-lesson-done]").forEach((button) => {
@@ -287,6 +321,10 @@ const updateCompletionUi = () => {
     if (label) label.textContent = `${count} of ${total} complete`;
     if (bar) bar.style.width = `${total ? (count / total) * 100 : 0}%`;
   });
+
+  document.querySelectorAll("[data-progress-where]").forEach((el) => {
+    el.textContent = signedIn() ? "Saved to your account" : account?.enabled ? "Saved on this device. Sign in to keep it." : "Saved on this device";
+  });
 };
 
 document.addEventListener("click", (event) => {
@@ -304,11 +342,138 @@ document.addEventListener("click", (event) => {
   }
   const reset = event.target.closest("[data-reset-progress]");
   if (reset) {
-    if (window.confirm("Reset all lesson progress on this device?")) {
-      try { localStorage.removeItem(COMPLETED_KEY); } catch (e) {}
+    if (window.confirm(signedIn() ? "Reset all lesson progress in your account?" : "Reset all lesson progress on this device?")) {
+      dropLocal(COMPLETED_KEY, QUIZ_KEY);
+      pushProgress();
       updateCompletionUi();
     }
   }
 });
 
 updateCompletionUi();
+
+// Account: ask the server who's signed in, merge this browser's progress into the account the first time,
+// then keep the account as the source of truth. Pages work the same when accounts are off.
+const accountsOn = document.documentElement.classList.contains("accounts-on");
+const signedInHint = /(?:^|;\s*)tb_in=1/.test(document.cookie);
+const acctPage = document.querySelector("[data-account]");
+const setHeader = () => {
+  document.querySelectorAll("[data-account-label]").forEach((el) => { el.textContent = signedIn() ? "Account" : "Sign in"; });
+  document.documentElement.classList.toggle("signed-in", signedIn());
+};
+if (signedInHint) document.documentElement.classList.add("signed-in");
+setHeader();
+
+const applyAccount = (me) => {
+  account = me;
+  if (me.signedIn) {
+    const server = me.progress || { completed: [], quizzes: {} };
+    let completed = new Set(server.completed || []);
+    let quizzes = { ...(server.quizzes || {}) };
+    if (readLocal(SYNCED_KEY, null) !== me.id) {
+      // First time this browser meets this account: keep anything done here before signing in.
+      completedLessons().forEach((s) => completed.add(s));
+      quizzes = { ...quizAnswers(), ...quizzes };
+      writeLocal(SYNCED_KEY, me.id);
+      writeLocal(COMPLETED_KEY, [...completed]);
+      writeLocal(QUIZ_KEY, quizzes);
+      pushProgress();
+    } else {
+      writeLocal(COMPLETED_KEY, [...completed]);
+      writeLocal(QUIZ_KEY, quizzes);
+    }
+  } else if (readLocal(SYNCED_KEY, null)) {
+    // Signed out elsewhere or the session expired: don't leave the account's progress on a shared device.
+    dropLocal(SYNCED_KEY, COMPLETED_KEY, QUIZ_KEY);
+  }
+  setHeader();
+  updateCompletionUi();
+  if (acctPage) renderAccount();
+};
+
+const loadAccount = () => api("/api/me/").then((r) => applyAccount(r.ok ? r.data : { enabled: false }), () => applyAccount({ enabled: false }));
+
+// The /account/ page.
+let pendingEmail = "";
+const params = new URLSearchParams(location.search);
+const nextUrl = /^\/[a-z0-9\-/]*$/i.test(params.get("next") || "") && !String(params.get("next")).startsWith("//") ? params.get("next") : "";
+const show = (state) => acctPage.querySelectorAll("[data-acct]").forEach((s) => { s.hidden = s.dataset.acct !== state; });
+const msg = (state, text, tone) => {
+  const el = acctPage.querySelector(`[data-acct="${state}"] [data-acct-msg]`);
+  if (el) { el.textContent = text || ""; el.dataset.tone = tone || ""; }
+};
+
+function renderAccount() {
+  if (!account.enabled) return show("off");
+  if (!account.signedIn) {
+    if (params.get("t")) return verify({ token: params.get("t") }, "out");
+    if (nextUrl) {
+      const why = acctPage.querySelector("[data-acct-why]");
+      if (why) why.insertAdjacentHTML("afterbegin", "<strong>This lesson needs a free account.</strong> ");
+    }
+    return show(pendingEmail ? "code" : "out");
+  }
+  if (nextUrl && params.get("t")) { location.replace(nextUrl); return; }
+  show("in");
+  acctPage.querySelectorAll('[data-acct="in"] [data-acct-email]').forEach((el) => { el.textContent = account.email; });
+  const n = completedLessons().size;
+  const answers = Object.values(quizAnswers());
+  acctPage.querySelector("[data-acct-progress]").textContent = `${n} lesson${n === 1 ? "" : "s"} complete`;
+  acctPage.querySelector("[data-acct-quiz]").textContent = answers.length
+    ? `${answers.length} quick question${answers.length === 1 ? "" : "s"} answered, ${answers.filter((x) => x === 1).length} right first time`
+    : "No quick questions answered yet";
+  acctPage.querySelector("[data-acct-updates]").checked = Boolean(account.emailUpdates);
+  if (nextUrl) acctPage.querySelector("[data-acct-continue]").href = nextUrl;
+}
+
+function verify(body, state) {
+  msg(state, "Signing you in…");
+  return api("/api/auth/verify/", { method: "POST", body: JSON.stringify(body) }).then((r) => {
+    if (!r.ok) { if (body.token) history.replaceState(null, "", location.pathname); show(body.token ? "out" : state); msg(body.token ? "out" : state, r.data.error || "Something went wrong.", "bad"); return; }
+    if (nextUrl) { location.replace(nextUrl); return; }
+    history.replaceState(null, "", location.pathname);
+    pendingEmail = "";
+    loadAccount();
+  }, () => msg(state, "No connection. Please try again.", "bad"));
+}
+
+if (acctPage) {
+  acctPage.querySelector("[data-acct-start]").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const f = e.currentTarget;
+    const email = f.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg("out", "Please enter a valid email address.", "bad"); return; }
+    msg("out", "Sending…");
+    api("/api/auth/start/", { method: "POST", body: JSON.stringify({ email, emailUpdates: f.updates.checked, next: nextUrl }) }).then((r) => {
+      if (!r.ok) { msg("out", r.data.error || "Something went wrong.", "bad"); return; }
+      pendingEmail = email;
+      msg("out", "");
+      acctPage.querySelectorAll('[data-acct="code"] [data-acct-email]').forEach((el) => { el.textContent = email; });
+      show("code");
+      acctPage.querySelector('[data-acct-verify] input[name="code"]').focus();
+    }, () => msg("out", "No connection. Please try again.", "bad"));
+  });
+  acctPage.querySelector("[data-acct-verify]").addEventListener("submit", (e) => {
+    e.preventDefault();
+    verify({ email: pendingEmail, code: e.currentTarget.code.value }, "code");
+  });
+  acctPage.querySelector("[data-acct-back]").addEventListener("click", () => { pendingEmail = ""; show("out"); });
+  acctPage.querySelector("[data-acct-updates]").addEventListener("change", (e) => {
+    api("/api/account/", { method: "PATCH", body: JSON.stringify({ emailUpdates: e.target.checked }) })
+      .then((r) => msg("in", r.ok ? (e.target.checked ? "You'll get an email when new lessons come out." : "No more emails about new lessons.") : "Couldn't save that. Please try again.", r.ok ? "good" : "bad"));
+  });
+  acctPage.querySelector("[data-acct-logout]").addEventListener("click", () => {
+    api("/api/auth/logout/", { method: "POST" }).then(() => { dropLocal(SYNCED_KEY, COMPLETED_KEY, QUIZ_KEY); location.href = "/"; });
+  });
+  acctPage.querySelector("[data-acct-delete]").addEventListener("click", () => {
+    if (!window.confirm("Delete your account and all saved progress? This can't be undone.")) return;
+    api("/api/account/", { method: "DELETE" }).then((r) => {
+      if (!r.ok) { msg("in", r.data.error || "Couldn't delete the account. Please try again.", "bad"); return; }
+      dropLocal(SYNCED_KEY, COMPLETED_KEY, QUIZ_KEY);
+      location.href = "/?account=deleted";
+    });
+  });
+}
+
+// Start last, once everything above is defined. The build adds "accounts-on" when accounts are switched on.
+if (accountsOn) loadAccount(); else if (acctPage) applyAccount({ enabled: false });

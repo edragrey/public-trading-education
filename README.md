@@ -1,6 +1,8 @@
 # Public trading-education site
 
-A small, fast static site for beginner trading education. Five pages: Home, Course, Articles, Glossary, About.
+A small, fast static site for beginner trading education. Pages: Home, Course, Articles, Glossary, About, plus Account and Privacy.
+
+Lessons after the free module need a free account that saves progress. See [docs/accounts.md](docs/accounts.md) for how it works and how to switch it on. Which lessons are free is set in `access.config.js`.
 This repo is public-only content. Never add positions, wallets, trades, journal notes, watchlists, keys, tokens or private desk URLs.
 
 ## Rename the site

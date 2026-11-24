@@ -2,6 +2,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { marked } from "marked";
+import access from "./access.config.js";
+import { accountsEnabled, isFreePath } from "./lib/token.js";
+// Accounts are on only when every env var is set in Vercel (see docs/accounts.md). Changing them needs a redeploy.
+const ACCOUNTS = accountsEnabled(process.env);
 
 const root = path.dirname(new URL(import.meta.url).pathname);
 const cfg = JSON.parse(fs.readFileSync(path.join(root, "site.config.json"), "utf8"));
@@ -47,6 +51,8 @@ const ICONS = {
   x: '<path d="M6 6l12 12M18 6L6 18"/>',
   search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>',
   info: '<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/>',
+  user: '<circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/>',
+  lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/>',
   scale: '<path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8l-2.5 6a3 3 0 0 0 5 0z"/><path d="M19 8l-2.5 6a3 3 0 0 0 5 0z"/>',
 };
 const icon = (name, cls = "icon") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.book}</svg>`;
@@ -70,7 +76,7 @@ function page(urlPath, title, content, { description = cfg.description, wide = f
   }).join("");
   const footLinks = nav.map(([href, label]) => `<a href="${href}">${label}</a>`).join("");
   const html = `<!doctype html>
-<html lang="en">
+<html lang="en"${ACCOUNTS ? ' class="accounts-on"' : ""}>
 <head>
 <meta charset="utf-8">
 <script>${themeBoot}</script>
@@ -93,6 +99,7 @@ function page(urlPath, title, content, { description = cfg.description, wide = f
   <div class="wrap wide">
     <a class="brand" href="/">${logo}<span>${esc(cfg.name)}</span></a>
     <nav aria-label="Main">${links}</nav>
+    ${ACCOUNTS ? `<a class="account-btn" href="/account/" data-account-link${urlPath === "/account/" ? ' aria-current="page"' : ""}>${icon("user")}<span data-account-label>Sign in</span></a>` : ""}
     <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch to dark theme">${icon("moon", "icon i-moon")}${icon("sun", "icon i-sun")}</button>
   </div>
 </header>
@@ -107,7 +114,7 @@ ${content}
     </div>
     <div class="foot-row">
       <a class="brand small" href="/">${logo}<span>${esc(cfg.name)}</span></a>
-      <nav aria-label="Footer">${footLinks}</nav>
+      <nav aria-label="Footer">${footLinks}<a href="/privacy/">Privacy</a></nav>
       <fieldset class="theme-pick" data-theme-pick><legend>Theme</legend><button type="button" data-set="light">Light</button><button type="button" data-set="dark">Dark</button><button type="button" data-set="auto">Match device</button></fieldset>
       <p class="copy">&copy; ${new Date().getFullYear()} ${esc(cfg.name)}</p>
     </div>
@@ -266,7 +273,7 @@ ${market}`, { wide: true });
   const total = lessons.filter(isCore).length;
   const sections = cfg.modules.map((m, i) => {
     const ls = lessons.filter((l) => l.module === m.slug);
-    const item = (l) => `<li class="lesson-row"${isCore(l) ? ` data-lesson-row data-course-lesson data-module="${esc(m.slug)}" data-lesson-slug="${esc(l.slug)}"` : ""}><a href="${l.url}"><span class="l-num">${isCore(l) ? ls.filter(isCore).indexOf(l) + 1 : (l.meta.kind === "quiz" ? "?" : "≡")}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}${walkFor(l) ? ` · guided version` : ""}</span></span>${icon("arrow", "icon sm")}</a>${isCore(l) ? `<button class="lesson-check" type="button" data-lesson-done data-lesson-check data-lesson-slug="${esc(l.slug)}" aria-label="Mark ${esc(l.meta.title)} complete"><span class="check-icon">${icon("check", "icon xs")}</span><span class="check-label">Done</span></button>` : ""}</li>`;
+    const item = (l) => `<li class="lesson-row"${isFreePath(l.url, access) ? "" : " data-gated"}${isCore(l) ? ` data-lesson-row data-course-lesson data-module="${esc(m.slug)}" data-lesson-slug="${esc(l.slug)}"` : ""}><a href="${l.url}"><span class="l-num">${isCore(l) ? ls.filter(isCore).indexOf(l) + 1 : (l.meta.kind === "quiz" ? "?" : "≡")}</span><span class="l-body"><span class="l-title">${esc(l.meta.title)}</span><span class="l-meta">${readTime(l.body)}${walkFor(l) ? ` · guided version` : ""}${isFreePath(l.url, access) ? "" : `<span class="lock-note">${icon("lock", "icon xs")}Free account</span>`}</span></span>${icon("arrow", "icon sm")}</a>${isCore(l) ? `<button class="lesson-check" type="button" data-lesson-done data-lesson-check data-lesson-slug="${esc(l.slug)}" aria-label="Mark ${esc(l.meta.title)} complete"><span class="check-icon">${icon("check", "icon xs")}</span><span class="check-label">Done</span></button>` : ""}</li>`;
     const list = ls.length
       ? groupLessons(m, ls).map((g) => `${g.name ? `<h3 class="lesson-group">${esc(g.name)}</h3>` : ""}<ol class="lesson-list">${g.ls.map(item).join("")}</ol>`).join("")
       : `<p class="soon-note">Lessons coming soon.</p>`;
@@ -277,8 +284,8 @@ ${market}`, { wide: true });
 </section>`;
   }).join("");
   page("/course/", "Course", `${pageHead("The course", "Learn the basics, one short lesson at a time", `${cfg.modules.length} modules, short lessons, plain words. Start at the top and work down.`,
-    `<ul class="facts"><li>${icon("book", "icon sm")}${cfg.modules.length} modules</li><li>${icon("pen", "icon sm")}${countLabel(total)} so far</li><li>${icon("check", "icon sm")}Free, no sign-up</li></ul>`)}
-<div class="course-progress" data-course-progress data-total="${total}"><div><strong data-course-progress-label>0 of ${total} lessons complete</strong><span>Saved on this device</span></div><span class="progress-track"><span data-course-progress-bar></span></span><button type="button" class="text-button" data-reset-progress>Reset progress</button></div>
+    `<ul class="facts"><li>${icon("book", "icon sm")}${cfg.modules.length} modules</li><li>${icon("pen", "icon sm")}${countLabel(total)} so far</li><li>${icon("check", "icon sm")}${ACCOUNTS ? "Free account" : "Free, no sign-up"}</li></ul>`)}
+<div class="course-progress" data-course-progress data-total="${total}"><div><strong data-course-progress-label>0 of ${total} lessons complete</strong><span data-progress-where>Saved on this device</span></div><span class="progress-track"><span data-course-progress-bar></span></span><button type="button" class="text-button" data-reset-progress>Reset progress</button></div>
 <div class="modules">${sections}</div>`, { wide: true });
   for (const l of lessons) {
     const mi = cfg.modules.findIndex((m) => m.slug === l.module);
@@ -292,7 +299,7 @@ ${market}`, { wide: true });
   <p class="meta-row"><span class="chip">${icon(modIcon(l.module), "icon xs")}${isCore(l) ? `Lesson ${ml.filter(isCore).indexOf(l) + 1}` : KIND_LABEL[l.meta.kind] || "Extra"}${l.meta.section ? ` · ${esc(l.meta.section)}` : ""}</span><span>${readTime(l.body)}</span>${l.meta.date ? `<span>${esc(fmtDate(l.meta.date))}</span>` : ""}</p>
   ${l.meta.summary ? `<p class="lead">${esc(l.meta.summary)}</p>` : ""}
   ${walkFor(l) ? `<a class="steps-banner" href="${stepsUrl(l)}">${icon("list")}<span><strong>Read this one screen at a time.</strong><span>${walkFor(l).parts.length} guided screens${steps[l.slug] ? " with quick questions" : ""}</span></span>${icon("arrow", "icon sm")}</a>` : ""}
-  ${isCore(l) ? `<div class="completion-row"><button class="completion-toggle" type="button" data-lesson-done data-lesson-slug="${esc(l.slug)}"><span class="check-icon">${icon("check", "icon xs")}</span><span class="completion-label">Mark lesson complete</span></button><span class="completion-note">Saved on this device</span></div>` : ""}
+  ${isCore(l) ? `<div class="completion-row"><button class="completion-toggle" type="button" data-lesson-done data-lesson-slug="${esc(l.slug)}"><span class="check-icon">${icon("check", "icon xs")}</span><span class="completion-label">Mark lesson complete</span></button><span class="completion-note" data-progress-where>Saved on this device</span></div>` : ""}
   ${enhanceProse(l.html)}
   <nav class="pager">${next
     ? `<a class="pager-card" href="${next.url}"><span class="eyebrow">Next lesson</span><span class="pager-title">${esc(next.meta.title)}</span>${icon("arrow")}</a>`
@@ -371,9 +378,62 @@ for (const a of articles) {
   page("/about/", "About", `${pageHead("About", "A calm place to learn how markets work", "")}<div class="about-intro lead">${intro}</div><div class="about-grid">${blocks}</div>`, { wide: true });
 }
 
+// Account: one page for sign-up, sign-in, progress, data download and deletion. The script in site.js fills it in.
+page("/account/", "Your account", `${pageHead("Your account", "Save your progress", "")}
+<div class="account" data-account>
+  <section class="acct-card" data-acct="loading"><p class="muted">Loading…</p></section>
+  <section class="acct-card" data-acct="off" hidden><h2>Accounts are coming soon</h2><p>Right now your progress is saved on this device only. Everything on the site is open.</p><p><a class="btn" href="/course/">Go to the course ${icon("arrow", "icon xs")}</a></p></section>
+  <section class="acct-card" data-acct="out" hidden>
+    <h2>Sign in or create a free account</h2>
+    <p class="muted" data-acct-why>${access.freeModules.length ? `Lessons after <em>${access.freeModules.map((m) => esc(modOf(m)?.title || m)).join(", ")}</em> need a free account.` : "Lessons need a free account."} It saves which lessons you finished and your quiz answers, so you can pick up on any device.</p>
+    <form data-acct-start novalidate>
+      <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label class="check"><input type="checkbox" name="updates"> <span>Email me now and then when new lessons come out (optional, you can stop any time).</span></label>
+      <p class="fine">We'll email you a code to sign in. No password needed. We store your email and your course progress, nothing else. <a href="/privacy/">Privacy notice</a>.</p>
+      <button class="btn" type="submit">Email me a code ${icon("arrow", "icon xs")}</button>
+      <p class="form-msg" data-acct-msg role="status"></p>
+    </form>
+  </section>
+  <section class="acct-card" data-acct="code" hidden>
+    <h2>Check your email</h2>
+    <p class="muted">We sent a 6-digit code to <strong data-acct-email></strong>. It works for 15 minutes.</p>
+    <form data-acct-verify novalidate>
+      <label class="field"><span>Code</span><input name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" required placeholder="123456"></label>
+      <button class="btn" type="submit">Sign in ${icon("arrow", "icon xs")}</button>
+      <button class="text-button" type="button" data-acct-back>Use a different email</button>
+      <p class="form-msg" data-acct-msg role="status"></p>
+    </form>
+  </section>
+  <section class="acct-card" data-acct="in" hidden>
+    <h2>Signed in</h2>
+    <p class="muted">as <strong data-acct-email></strong></p>
+    <div class="course-progress"><div><strong data-acct-progress>0 lessons complete</strong><span data-acct-quiz></span></div></div>
+    <p><a class="btn" href="/course/" data-acct-continue>Continue the course ${icon("arrow", "icon xs")}</a></p>
+    <label class="check"><input type="checkbox" data-acct-updates> <span>Email me now and then when new lessons come out.</span></label>
+    <h3>Your data</h3>
+    <ul class="acct-actions">
+      <li><a class="btn ghost" href="/api/account/" download>Download my data</a></li>
+      <li><button class="btn ghost" type="button" data-acct-logout>Sign out</button></li>
+      <li><button class="btn ghost danger" type="button" data-acct-delete>Delete my account</button></li>
+    </ul>
+    <p class="fine">Deleting removes your email and progress from our database straight away. <a href="/privacy/">Privacy notice</a>.</p>
+    <p class="form-msg" data-acct-msg role="status"></p>
+  </section>
+</div>`);
+
+// Privacy notice
+{
+  const pv = read(path.join(root, "content/pages/privacy.md"));
+  const who = cfg.privacy?.controller && cfg.privacy?.contactEmail
+    ? `${esc(cfg.privacy.controller)} runs this site and is responsible for your data. Write to <a href="mailto:${esc(cfg.privacy.contactEmail)}">${esc(cfg.privacy.contactEmail)}</a> with any question or request about it.`
+    : "Contact details for data requests will be added here before accounts open.";
+  pv.html = pv.html.replace(/<p>\{\{controller\}\}<\/p>/, `<p>${who}</p>`);
+  page("/privacy/", "Privacy", `<article class="prose"><h1>${esc(pv.meta.title)}</h1>${pv.meta.date ? `<p class="meta-row"><span>Last updated ${esc(fmtDate(pv.meta.date))}</span></p>` : ""}${enhanceProse(pv.html)}</article>`, { description: "What we store when you create an account, and how to download or delete it." });
+}
+
 // 404 + assets
 page("/404-tmp/", "Page not found", `<div class="empty"><span class="band-icon">${icon("search")}</span><h1>Page not found</h1><p>That page doesn't exist, or it moved.</p><p><a class="btn" href="/">Go to the home page</a></p></div>`);
 fs.renameSync(path.join(out, "404-tmp/index.html"), path.join(out, "404.html"));
 fs.rmSync(path.join(out, "404-tmp"), { recursive: true });
 for (const f of ["style.css", "site.js", "theme.js"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
-console.log(`Built ${lessons.length} lesson(s), ${articles.length} article(s) into dist/`);
+console.log(`Built ${lessons.length} lesson(s), ${articles.length} article(s) into dist/. Accounts ${ACCOUNTS ? "ON" : "off (env vars not set)"}.`);
