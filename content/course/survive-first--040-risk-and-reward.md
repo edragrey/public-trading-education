@@ -1,7 +1,7 @@
 ---
 title: Risk and reward in plain words
 module: survive-first
-order: 40
+order: 50
 summary: How to compare what a trade could make with what it could lose, and why that comparison tells you how often you need to be right.
 date: 2026-11-21
 ---

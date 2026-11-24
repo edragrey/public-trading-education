@@ -1,7 +1,7 @@
 ---
 title: "Win rate isn't everything: expectancy"
 module: survive-first
-order: 50
+order: 60
 summary: Why a strategy that wins most of the time can still lose money, and the one number that tells you whether it really works.
 date: 2026-11-21
 ---

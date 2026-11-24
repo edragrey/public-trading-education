@@ -1,12 +1,12 @@
 ---
-title: You can predict a stock's price perfectly and still lose a third of your money
-module: start-here
+title: A correct forecast can still lose you money
+module: survive-first
 order: 10
-summary: A made-up example with exact numbers, plus a real one from 2020, showing why being right isn't the same as making money.
+summary: A made-up example with exact numbers, plus a real one from 2020, showing why survival comes before finding the perfect trade.
 date: 2026-11-19
 ---
 
-Most beginners think the hard part of trading is guessing where a price will go. This lesson shows why that's only half the story.
+Most beginners think the hard part of trading is guessing where a price will go. This lesson shows why that is only half the story, and why this module starts with surviving.
 
 ## A simple example
 
@@ -56,7 +56,7 @@ By 18 August 2020 it closed at a new record high (3,389.78). Someone who sold in
 
 - A good forecast doesn't protect you on its own. **Timing, the size of your losses, and your emotions** matter just as much.
 - A big loss can push you out of the market at the worst moment.
-- That's why this course starts with *surviving*: keeping losses small enough that you can stay in the game.
+- That's why this module starts with surviving: keeping losses small enough that you can stay in the game.
 
 ## Common mistakes
 
@@ -74,7 +74,7 @@ By 18 August 2020 it closed at a new record high (3,389.78). Someone who sold in
 
 <details><summary>2. After a 50% loss, what gain do you need to get back to where you started?</summary><p>100%. Half your money has to double.</p></details>
 
-<details><summary>3. Why does this course start with surviving rather than with finding good trades?</summary><p>Because big losses are hard to recover from and can push you out at the worst moment. Keeping losses small keeps you in the game.</p></details>
+<details><summary>3. Why does this module start with surviving rather than with finding good trades?</summary><p>Because big losses are hard to recover from and can push you out at the worst moment. Keeping losses small keeps you in the game.</p></details>
 
 <details><summary>4. A 20% loss needs what gain to get back to even?</summary><p>25%. 100 falls to 80, and 80 must rise by 20 to return to 100, which is 25% of 80.</p></details>
 
@@ -84,4 +84,4 @@ By 18 August 2020 it closed at a new record high (3,389.78). Someone who sold in
 
 Use the calculator above to find the gain you'd need after a 10%, 30% and 60% loss. Write the three answers down. Notice how fast the numbers climb.
 
-**Key idea:** Being right isn't the same as making money.
+**Key idea:** Being right isn't the same as making money. Survival comes first.

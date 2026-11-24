@@ -65,4 +65,4 @@ Every page footer says: educational, not financial advice.
 
 ## Look and feel
 
-All colours, fonts and spacing are tokens at the top of `src/style.css` (dark mode follows the reader's device). Module icons are mapped by slug in `MODULE_ICONS` in `build.mjs`; a new module gets a book icon until you add one. The home-page chart illustrates lesson 1's hypothetical trade.
+All colours, fonts and spacing are tokens at the top of `src/style.css` (dark mode follows the reader's device). Module icons are mapped by slug in `MODULE_ICONS` in `build.mjs`; a new module gets a book icon until you add one. The home-page chart illustrates the hypothetical drawdown example from Survive first.

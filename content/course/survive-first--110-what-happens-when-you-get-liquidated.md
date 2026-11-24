@@ -1,7 +1,7 @@
 ---
 title: What actually happens when you get liquidated
 module: survive-first
-order: 110
+order: 120
 section: Leverage
 summary: Margin, leverage and liquidation in plain words, and why your position size and your stop set your risk, not the leverage number.
 date: 2026-11-23

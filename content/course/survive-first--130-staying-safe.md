@@ -1,7 +1,7 @@
 ---
 title: "Staying safe: scams, hype and protecting your account"
 module: survive-first
-order: 130
+order: 140
 section: Staying safe
 summary: The common ways beginners lose money that have nothing to do with trading, and a short checklist to protect yourself.
 date: 2026-11-21

@@ -1,7 +1,7 @@
 ---
 title: "How much to risk on one trade: the 1% idea"
 module: survive-first
-order: 10
+order: 20
 summary: Why careful traders decide the most they can lose before they think about what they might win, and why a small fixed percentage keeps you in the game.
 date: 2026-11-21
 ---

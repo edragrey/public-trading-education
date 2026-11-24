@@ -1,7 +1,7 @@
 ---
 title: "The hidden costs: fees, spreads, slippage and funding"
 module: survive-first
-order: 80
+order: 90
 summary: The small charges on every trade that beginners rarely count, and how quickly they add up if you trade often.
 date: 2026-11-21
 ---

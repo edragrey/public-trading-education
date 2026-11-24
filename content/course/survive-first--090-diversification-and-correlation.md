@@ -1,7 +1,7 @@
 ---
 title: "Diversification and correlation: why five trades isn't five bets"
 module: survive-first
-order: 90
+order: 100
 summary: Spreading risk only helps if the things you hold don't all move together. Here's what correlation means and how to avoid hidden concentration.
 date: 2026-11-22
 section: The basics

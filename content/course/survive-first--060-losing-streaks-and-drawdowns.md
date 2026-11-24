@@ -1,7 +1,7 @@
 ---
 title: Losing streaks and drawdowns happen to everyone
 module: survive-first
-order: 60
+order: 70
 summary: Why runs of losses are normal even for a good strategy, how deep they can go, and how to plan for them before they arrive.
 date: 2026-11-21
 ---

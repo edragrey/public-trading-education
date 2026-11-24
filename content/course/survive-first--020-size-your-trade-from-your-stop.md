@@ -1,7 +1,7 @@
 ---
 title: Size your trade from your stop, not your gut
 module: survive-first
-order: 20
+order: 30
 summary: How to work out how big a trade should be, using only three numbers, so a wrong trade costs exactly what you planned.
 date: 2026-11-21
 ---

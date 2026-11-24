@@ -181,7 +181,7 @@ const pageHead = (eyebrow, title, lead, extra = "") => `<header class="page-head
   ${lead ? `<p class="lead">${lead}</p>` : ""}${extra}
 </header>`;
 
-// Hero illustration: the first lesson's hypothetical trade (buy $100, sell $65, price later hits $150).
+// Hero illustration: the hypothetical drawdown example from Survive first (buy $100, sell $65, price later hits $150).
 const heroChart = `<figure class="hero-chart">
   <svg viewBox="0 0 440 270" role="img" aria-labelledby="hc-t hc-d">
     <title id="hc-t">Right forecast, losing trade</title>
@@ -198,7 +198,7 @@ const heroChart = `<figure class="hero-chart">
     <g class="hc-tag loss"><rect x="126" y="214" width="140" height="44" rx="10"/><text x="140" y="233">Sold at $65</text><text class="big" x="140" y="251">−35%</text></g>
     <g class="hc-tag gain"><rect x="276" y="14" width="140" height="40" rx="10"/><text x="290" y="31">Price later hits</text><text class="big" x="290" y="47">$150 ✓</text></g>
   </svg>
-  <figcaption><span class="pill">Hypothetical</span> The forecast was right. The trade still lost a third. Lesson 1 shows why.</figcaption>
+  <figcaption><span class="pill">Hypothetical</span> The forecast was right. The trade still lost a third. Survive first explains why.</figcaption>
 </figure>`;
 
 // Home

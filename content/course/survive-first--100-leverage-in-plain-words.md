@@ -1,7 +1,7 @@
 ---
 title: Leverage in plain words
 module: survive-first
-order: 100
+order: 110
 section: Leverage
 summary: What leverage and margin are, why they make gains and losses bigger at the same speed, and what they cost.
 date: 2026-11-23

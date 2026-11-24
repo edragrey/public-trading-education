@@ -6,7 +6,12 @@
   "redirects": [
     {
       "source": "/course/survive-first/right-forecast-losing-trade/",
-      "destination": "/course/start-here/right-forecast-losing-trade/",
+      "destination": "/course/survive-first/why-a-correct-forecast-can-still-lose-money/",
+      "permanent": true
+    },
+    {
+      "source": "/course/start-here/right-forecast-losing-trade/",
+      "destination": "/course/survive-first/why-a-correct-forecast-can-still-lose-money/",
       "permanent": true
     },
     {

@@ -1,7 +1,7 @@
 ---
 title: "Risk simulator: what your numbers imply over many trades"
 module: survive-first
-order: 70
+order: 80
 summary: Plug in a win rate, a reward-to-risk and a risk per trade to see the average result and a typical losing streak. The point is to see how much the numbers matter.
 date: 2026-11-22
 section: The basics

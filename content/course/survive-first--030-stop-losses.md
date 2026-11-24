@@ -1,7 +1,7 @@
 ---
 title: "Stop losses: what they are and where they go"
 module: survive-first
-order: 30
+order: 40
 summary: What a stop loss does, the two main kinds, where to place one so it means something, and the honest ways stops can let you down.
 date: 2026-11-21
 ---
