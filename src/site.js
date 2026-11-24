@@ -240,3 +240,75 @@ if (gSearch) {
     if (none) none.hidden = shown > 0;
   });
 }
+
+// Lesson completion: deliberately local-only so the public site needs no account or backend.
+const COMPLETED_KEY = "tb-course-completed-v1";
+const completedLessons = () => {
+  try {
+    const value = JSON.parse(localStorage.getItem(COMPLETED_KEY) || "[]");
+    return new Set(Array.isArray(value) ? value.filter((x) => typeof x === "string") : []);
+  } catch (e) {
+    return new Set();
+  }
+};
+const saveCompleted = (done) => {
+  try { localStorage.setItem(COMPLETED_KEY, JSON.stringify([...done])); } catch (e) {}
+};
+const updateCompletionUi = () => {
+  const done = completedLessons();
+  document.querySelectorAll("[data-lesson-done]").forEach((button) => {
+    const slug = button.dataset.lessonSlug;
+    const complete = slug ? done.has(slug) : false;
+    button.classList.toggle("is-complete", complete);
+    button.setAttribute("aria-pressed", complete ? "true" : "false");
+    const label = button.querySelector(".completion-label, .check-label");
+    if (label) label.textContent = button.hasAttribute("data-lesson-check") ? (complete ? "Done" : "Mark done") : (complete ? "Lesson complete" : "Mark lesson complete");
+    const row = button.closest("[data-lesson-row]");
+    if (row) row.classList.toggle("is-complete", complete);
+  });
+
+  document.querySelectorAll("[data-course-progress]").forEach((box) => {
+    const rows = [...document.querySelectorAll("[data-course-lesson]")];
+    const total = Number(box.dataset.total) || rows.length;
+    const count = rows.filter((row) => done.has(row.dataset.lessonSlug)).length;
+    const label = box.querySelector("[data-course-progress-label]");
+    const bar = box.querySelector("[data-course-progress-bar]");
+    if (label) label.textContent = `${count} of ${total} lessons complete`;
+    if (bar) bar.style.width = `${total ? (count / total) * 100 : 0}%`;
+  });
+
+  document.querySelectorAll("[data-module-progress]").forEach((box) => {
+    const module = box.dataset.module;
+    const rows = [...document.querySelectorAll(`[data-course-lesson][data-module="${module}"]`)];
+    const total = Number(box.dataset.total) || rows.length;
+    const count = rows.filter((row) => done.has(row.dataset.lessonSlug)).length;
+    const label = box.querySelector("[data-module-progress-label]");
+    const bar = box.querySelector("[data-module-progress-bar]");
+    if (label) label.textContent = `${count} of ${total} complete`;
+    if (bar) bar.style.width = `${total ? (count / total) * 100 : 0}%`;
+  });
+};
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-lesson-done]");
+  if (button) {
+    event.preventDefault();
+    event.stopPropagation();
+    const slug = button.dataset.lessonSlug;
+    if (!slug) return;
+    const done = completedLessons();
+    if (done.has(slug)) done.delete(slug); else done.add(slug);
+    saveCompleted(done);
+    updateCompletionUi();
+    return;
+  }
+  const reset = event.target.closest("[data-reset-progress]");
+  if (reset) {
+    if (window.confirm("Reset all lesson progress on this device?")) {
+      try { localStorage.removeItem(COMPLETED_KEY); } catch (e) {}
+      updateCompletionUi();
+    }
+  }
+});
+
+updateCompletionUi();
