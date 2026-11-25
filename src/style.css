@@ -77,7 +77,7 @@ h3 { font-size: 1.15rem; }
 .theme-pick button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 600; font-size: 1.2rem; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
 .brand:hover { color: var(--ink); }
-.logo { width: 30px; height: 30px; flex: none; }
+.logo { width: 30px; height: 30px; flex: none; border-radius: 50%; object-fit: cover; background: #f7f0e5; }
 .brand.small { font-size: 1.05rem; }
 .brand.small .logo { width: 26px; height: 26px; }
 nav[aria-label="Main"] { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; margin: 0 -10px; padding: 2px; max-width: calc(100% + 20px); }
