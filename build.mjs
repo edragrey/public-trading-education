@@ -59,7 +59,7 @@ const icon = (name, cls = "icon") => `<svg class="${cls}" viewBox="0 0 24 24" fi
 const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "thinking-in-probabilities": "scale", "going-further": "book" };
 const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 
-const logo = `<img class="logo" src="/logo.jpg" alt="" aria-hidden="true">`;
+const logo = `<img class="logo" src="/brand-logo.jpg" alt="" aria-hidden="true">`;
 
 // Runs before the page paints so a saved theme never flashes. "tb-theme" is light, dark, or unset (match device).
 const themeBoot = `try{var t=localStorage.getItem("tb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
@@ -91,7 +91,7 @@ function page(urlPath, title, content, { description = cfg.description, wide = f
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/style.css">
-<link rel="icon" href="/logo.jpg" type="image/jpeg">
+<link rel="icon" href="/brand-logo.jpg" type="image/jpeg">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -435,5 +435,5 @@ page("/account/", "Your account", `${pageHead("Your account", "Save your progres
 page("/404-tmp/", "Page not found", `<div class="empty"><span class="band-icon">${icon("search")}</span><h1>Page not found</h1><p>That page doesn't exist, or it moved.</p><p><a class="btn" href="/">Go to the home page</a></p></div>`);
 fs.renameSync(path.join(out, "404-tmp/index.html"), path.join(out, "404.html"));
 fs.rmSync(path.join(out, "404-tmp"), { recursive: true });
-for (const f of ["style.css", "site.js", "theme.js", "logo.jpg"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
+for (const f of ["style.css", "site.js", "theme.js", "logo.jpg", "brand-logo.jpg"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
 console.log(`Built ${lessons.length} lesson(s), ${articles.length} article(s) into dist/. Accounts ${ACCOUNTS ? "ON" : "off (env vars not set)"}.`);
