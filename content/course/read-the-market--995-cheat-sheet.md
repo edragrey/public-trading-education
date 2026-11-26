@@ -22,6 +22,8 @@ A one-page reminder of this module. Read the lessons first; use this to refresh 
 - **Macro:** inflation, interest rates and the dollar move many markets. Surprises matter, not the numbers.
 - **Sentiment:** fear and greed swing; use as context.
 
+- **Trendline and channel:** two swing points make a line, a third touch makes it believable. **Volume:** compare to recent bars; breakouts on thin volume can fail. **ATR:** how far a price normally moves; stop = a multiple of ATR, smaller size when ATR is big. **Top-down:** trend, areas, extras, timing, plan.
+
 ## Watch out for
 
 - Seeing patterns because you want a trade.
