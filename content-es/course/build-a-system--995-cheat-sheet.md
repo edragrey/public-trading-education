@@ -24,6 +24,8 @@ Un recordatorio de una página de este módulo. Lee primero las lecciones; usa e
 
 Mercado y estilo · contexto · entrada · stop · tamaño (alrededor del 1 % de riesgo) · salidas · límites de pérdida · lista · ritmo de revisión
 
+- **Plan de venta:** decide el primer objetivo, cuánto vender y qué pasa con el resto antes de entrar. Un stop de seguimiento solo se mueve a tu favor. Tras una gran ganancia: asegura, saca una parte y enfría.
+
 ## Ojo con
 
 - Copiar el sistema de otra persona sin cambios.

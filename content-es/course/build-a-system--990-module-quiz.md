@@ -3,11 +3,11 @@ title: "Construir un sistema: test del módulo"
 module: build-a-system
 order: 990
 kind: quiz
-summary: Diez preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
+summary: Doce preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
 date: 2026-11-22
 ---
 
-Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
+Doce preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
 
 ## 1. ¿Por qué escribir tu sistema?
 
@@ -100,3 +100,21 @@ Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro re
 </div>
 
 **Idea clave:** Las respuestas equivocadas son útiles. Vuelve a la lección de cualquier pregunta que hayas fallado.
+
+## 11. ¿Cuándo debes decidir cómo tomarás beneficios?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Antes de entrar</button>
+<button type="button" data-opt="b">Cuando la operación va ganando</button>
+<button type="button" data-opt="c">Después de que se gire</button>
+<p class="quiz-why" hidden>Decide con calma. Una vez en ganancias, la emoción te empuja a vender pronto o aguantar demasiado.</p>
+</div>
+
+## 12. ¿En qué dirección se mueve un stop de seguimiento?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Solo a tu favor</button>
+<button type="button" data-opt="b">Arriba y abajo con el precio</button>
+<button type="button" data-opt="c">Solo hacia abajo</button>
+<p class="quiz-why" hidden>Un stop de seguimiento sigue al precio a tu favor y nunca retrocede.</p>
+</div>

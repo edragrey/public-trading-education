@@ -161,6 +161,52 @@ document.querySelectorAll('[data-calc="risk-sim"]').forEach((box) => {
   });
 });
 
+// Percent change, and the gain needed to get back to the starting price.
+document.querySelectorAll('[data-calc="pct-change"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  const signed = (n) => (n < 0 ? "−" : "+") + calcPct(Math.abs(n));
+  calcBind(box, () => {
+    const a = Math.max(0, val("from")), b = Math.max(0, val("to"));
+    const v = out("verdict");
+    if (!a) { out("chg").textContent = "–"; out("back").textContent = "–"; v.textContent = t("Enter a starting price above zero.","Introduce un precio inicial mayor que cero."); v.dataset.tone = "warn"; return; }
+    const chg = (b - a) / a * 100;
+    out("chg").textContent = signed(chg);
+    out("back").textContent = b ? signed((a - b) / b * 100) : "–";
+    if (chg < 0) { v.textContent = t("A loss needs a bigger gain to undo, because the gain starts from a smaller number.","Una pérdida necesita una ganancia mayor para deshacerse, porque la ganancia parte de un número menor."); v.dataset.tone = "warn"; }
+    else if (chg > 0) { v.textContent = t("Going back down by the same dollar amount would be a smaller percentage drop.","Volver a bajar la misma cantidad en dólares sería una caída porcentual menor."); v.dataset.tone = "good"; }
+    else { v.textContent = t("No change.","Sin cambios."); v.dataset.tone = "warn"; }
+  });
+});
+
+// Compounding: the same rate each period, with and without growth on growth. Made-up rate, not a forecast.
+document.querySelectorAll('[data-calc="compound"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const s = Math.max(0, val("start")), r = Math.min(100, Math.max(-99, val("rate"))) / 100;
+    const n = Math.min(600, Math.max(1, Math.round(val("n"))));
+    const end = s * Math.pow(1 + r, n), simple = s * (1 + r * n);
+    out("end").textContent = calcMoney(Math.max(0, end));
+    out("simple").textContent = calcMoney(Math.max(0, simple));
+    const v = out("verdict");
+    if (r < 0) { v.textContent = t("Losses compound too: each one applies to a smaller amount, so the drop slows but never reaches zero.","Las pérdidas también se componen: cada una se aplica a una cantidad menor, así que la caída se frena pero nunca llega a cero."); v.dataset.tone = "warn"; }
+    else { v.textContent = t("A made-up steady rate. Real markets never move in a straight line, so treat this as a picture, not a forecast.","Una tasa constante inventada. Los mercados reales nunca se mueven en línea recta, así que tómalo como una imagen, no como una previsión."); v.dataset.tone = "good"; }
+  });
+});
+
+// Round-trip fees and the break-even price for one trade.
+document.querySelectorAll('[data-calc="breakeven"]').forEach((box) => {
+  const [val, out] = calcIo(box);
+  calcBind(box, () => {
+    const entry = Math.max(0, val("entry")), size = Math.max(0, val("size")), fee = Math.min(10, Math.max(0, val("fee"))) / 100;
+    const v = out("verdict");
+    const cost = size * fee * 2;
+    out("cost").textContent = calcMoney(cost);
+    out("bepct").textContent = (Math.round(fee * 2 * 10000) / 100) + "%";
+    out("be").textContent = entry ? "$" + (entry * (1 + fee * 2)).toLocaleString(LOC, { maximumFractionDigits: 6 }) : "–";
+    v.textContent = t("Fees are paid in and out, so the price has to move this much before you are even.","Las comisiones se pagan al entrar y al salir, así que el precio tiene que moverse esto antes de que estés en tablas."); v.dataset.tone = "warn";
+  });
+});
+
 // Fees over a month of round trips.
 document.querySelectorAll('[data-calc="fees"]').forEach((box) => {
   const [val, out] = calcIo(box);

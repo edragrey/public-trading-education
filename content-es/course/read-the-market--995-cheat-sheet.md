@@ -22,6 +22,8 @@ Un recordatorio de una página de este módulo. Lee primero las lecciones; usa e
 - **Macro:** la inflación, los tipos de interés y el dólar mueven muchos mercados. Importan las sorpresas, no las cifras.
 - **Sentimiento:** el miedo y la codicia oscilan; úsalo como contexto.
 
+- **Línea de tendencia y canal:** dos puntos del swing hacen una línea, un tercer toque la hace creíble. **Volumen:** compara con barras recientes; las rupturas con poco volumen pueden fallar. **ATR:** cuánto se mueve normalmente un precio; stop = múltiplo del ATR, menos tamaño si el ATR es grande. **De arriba abajo:** tendencia, zonas, extras, momento, plan.
+
 ## Ojo con
 
 - Ver patrones porque quieres una operación.

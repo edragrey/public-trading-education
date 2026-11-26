@@ -14,6 +14,11 @@
       "summary": "Prices, orders, candles and the basics you need before anything else."
     },
     {
+      "slug": "trading-math",
+      "title": "Trading math",
+      "summary": "The simple arithmetic behind every trade: percentages, R, compounding, fees and how many trades you need to trust a result."
+    },
+    {
       "slug": "survive-first",
       "title": "Survive first",
       "summary": "Why protecting your money comes before making more of it.",
@@ -67,6 +72,7 @@
       "modules": [
         "start-here",
         "how-markets-work",
+        "trading-math",
         "survive-first"
       ]
     },
@@ -148,6 +154,10 @@
       "going-further": {
         "title": "Ir más allá",
         "summary": "Casos reales, impuestos, inversión y adónde ir después."
+      },
+      "trading-math": {
+        "title": "Matemáticas del trading",
+        "summary": "La aritmética sencilla detrás de cada operación: porcentajes, R, interés compuesto, comisiones y cuántas operaciones necesitas para fiarte de un resultado."
       }
     }
   }

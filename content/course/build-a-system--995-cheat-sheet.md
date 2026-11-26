@@ -24,6 +24,8 @@ A one-page reminder of this module. Read the lessons first; use this to refresh 
 
 Market and style · context · entry · stop · size (about 1% risk) · exits · loss limits · checklist · review rhythm
 
+- **Selling plan:** decide the first target, how much to sell and what happens to the rest before you enter. A trailing stop only moves in your favour. After a big win: lock in, take some out, cool off.
+
 ## Watch out for
 
 - Copying someone's system unchanged.

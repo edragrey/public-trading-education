@@ -3,11 +3,11 @@ title: "Leer el mercado: test del módulo"
 module: read-the-market
 order: 990
 kind: quiz
-summary: Diez preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
+summary: Trece preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
 date: 2026-11-22
 ---
 
-Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
+Trece preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
 
 ## 1. ¿Qué sugiere un máximo de oscilación con mínimos más altos?
 
@@ -97,4 +97,31 @@ Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro re
 <button type="button" data-opt="b">50 %</button>
 <button type="button" data-opt="c">75 %</button>
 <p class="quiz-why" hidden>Con una relación beneficio/riesgo de 3 a 1, ganar 1 de cada 4 operaciones cubre las 3 pérdidas.</p>
+</div>
+
+## 11. Una ruptura por encima de un rango ocurre con muy poco volumen. ¿Cuál es la reacción sensata?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Ser prudente: hay poca gente detrás</button>
+<button type="button" data-opt="b">Seguro que funciona</button>
+<button type="button" data-opt="c">Ignorar el precio</button>
+<p class="quiz-why" hidden>Poco volumen significa pocos participantes, así que el movimiento puede fallar.</p>
+</div>
+
+## 12. Entrada 100 $, ATR 5 $, stop a 2 × ATR por debajo. ¿Dónde está el stop?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">98 $</button>
+<button type="button" data-opt="b">90 $</button>
+<button type="button" data-opt="c">95 $</button>
+<p class="quiz-why" hidden>2 × 5 $ = 10 $ por debajo, es decir 90 $.</p>
+</div>
+
+## 13. ¿Qué compruebas primero al leer un gráfico de arriba abajo?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Un gráfico de 1 minuto</button>
+<button type="button" data-opt="b">La tendencia en un marco temporal mayor</button>
+<button type="button" data-opt="c">El RSI</button>
+<p class="quiz-why" hidden>Empieza por la visión general y luego acércate.</p>
 </div>
