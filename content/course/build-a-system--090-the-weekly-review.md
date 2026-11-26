@@ -4,6 +4,7 @@ module: build-a-system
 order: 90
 summary: A 20-minute weekly routine that turns your journal into lessons, without overreacting to one good or bad week.
 date: 2026-11-21
+needs: keeping-a-trading-journal
 ---
 
 A journal on its own is just a pile of notes. Once a week, you sit down and read it. That's the **weekly review**: the moment your trades turn into lessons.

@@ -1,3 +1,8 @@
+// Language of the page (set by the build): English at /..., Spanish at /es/...
+const ES = document.documentElement.lang === "es";
+const LOC = ES ? "es-ES" : "en-US";
+const t = (en, es) => (ES ? es : en);
+
 // Loss -> gain-needed calculator used in lessons.
 document.querySelectorAll('[data-calc="loss-gain"]').forEach((box) => {
   const input = box.querySelector("input");
@@ -14,7 +19,7 @@ document.querySelectorAll('[data-calc="loss-gain"]').forEach((box) => {
 document.querySelectorAll('[data-calc="liq-size"]').forEach((box) => {
   const val = (k) => Number(box.querySelector(`[data-in="${k}"]`).value) || 0;
   const out = (k) => box.querySelector(`[data-out="${k}"]`);
-  const money = (n) => "$" + (n >= 100 ? Math.round(n).toLocaleString("en-US") : n.toFixed(2).replace(/\.00$/, ""));
+  const money = (n) => "$" + (n >= 100 ? Math.round(n).toLocaleString(LOC) : n.toFixed(2).replace(/\.00$/, ""));
   const update = () => {
     const account = Math.max(0, val("account"));
     const risk = Math.min(100, Math.max(0, val("risk"))) / 100;
@@ -29,10 +34,10 @@ document.querySelectorAll('[data-calc="liq-size"]').forEach((box) => {
     out("margin").textContent = money(margin);
     out("liq").textContent = (liq * 100 >= 10 ? Math.round(liq * 100) : Math.round(liq * 1000) / 10) + "%";
     const v = out("verdict");
-    if (margin > account) { v.textContent = "You don't have enough money for this margin. Use a smaller position."; v.dataset.tone = "bad"; }
-    else if (liq <= stop) { v.textContent = "Liquidation comes before your stop. Lower the leverage."; v.dataset.tone = "bad"; }
-    else if (liq < stop * 2) { v.textContent = "Your stop comes first, but only just. Real liquidation sits a little closer, so leave more room."; v.dataset.tone = "warn"; }
-    else { v.textContent = "Your stop comes first, with room to spare."; v.dataset.tone = "good"; }
+    if (margin > account) { v.textContent = t("You don't have enough money for this margin. Use a smaller position.","No tienes dinero suficiente para este margen. Usa una posición más pequeña."); v.dataset.tone = "bad"; }
+    else if (liq <= stop) { v.textContent = t("Liquidation comes before your stop. Lower the leverage.","La liquidación llega antes que tu stop. Baja el apalancamiento."); v.dataset.tone = "bad"; }
+    else if (liq < stop * 2) { v.textContent = t("Your stop comes first, but only just. Real liquidation sits a little closer, so leave more room.","Tu stop salta primero, pero por poco. La liquidación real queda un poco más cerca, así que deja más margen."); v.dataset.tone = "warn"; }
+    else { v.textContent = t("Your stop comes first, with room to spare.","Tu stop salta primero, con margen de sobra."); v.dataset.tone = "good"; }
   };
   box.querySelectorAll("input").forEach((i) => i.addEventListener("input", update));
   update();
@@ -43,14 +48,14 @@ document.querySelectorAll('[data-calc="stop-loss"]').forEach((box) => {
   const size = box.querySelector('[data-in="size"]'), stop = box.querySelector('[data-in="stop"]'), out = box.querySelector('[data-out="loss"]');
   const update = () => {
     const loss = Math.max(0, Number(size.value) || 0) * Math.min(100, Math.max(0, Number(stop.value) || 0)) / 100;
-    out.textContent = "$" + (loss >= 100 ? Math.round(loss).toLocaleString("en-US") : loss.toFixed(2).replace(/\.00$/, ""));
+    out.textContent = "$" + (loss >= 100 ? Math.round(loss).toLocaleString(LOC) : loss.toFixed(2).replace(/\.00$/, ""));
   };
   [size, stop].forEach((i) => i.addEventListener("input", update));
   update();
 });
 
 // Shared helpers for the small lesson calculators below.
-const calcMoney = (n) => "$" + (Math.abs(n) >= 100 ? Math.round(n).toLocaleString("en-US") : n.toFixed(2).replace(/\.00$/, ""));
+const calcMoney = (n) => "$" + (Math.abs(n) >= 100 ? Math.round(n).toLocaleString(LOC) : n.toFixed(2).replace(/\.00$/, ""));
 const calcPct = (n) => (Math.abs(n) >= 10 ? Math.round(n) : Math.round(n * 10) / 10) + "%";
 const calcBind = (box, update) => { box.querySelectorAll("input").forEach((i) => i.addEventListener("input", update)); update(); };
 const calcIo = (box) => [(k) => Number(box.querySelector(`[data-in="${k}"]`).value) || 0, (k) => box.querySelector(`[data-out="${k}"]`)];
@@ -78,7 +83,7 @@ document.querySelectorAll('[data-calc="position-size"]').forEach((box) => {
     out("loss").textContent = calcMoney(loss);
     if (!entry || stop >= entry) {
       out("dist").textContent = "–"; out("size").textContent = "–"; out("units").textContent = "–";
-      v.textContent = "For a buy, the stop has to be below the price you buy at."; v.dataset.tone = "bad";
+      v.textContent = t("For a buy, the stop has to be below the price you buy at.","En una compra, el stop tiene que estar por debajo del precio al que compras."); v.dataset.tone = "bad";
       return;
     }
     const dist = (entry - stop) / entry;
@@ -86,9 +91,9 @@ document.querySelectorAll('[data-calc="position-size"]').forEach((box) => {
     out("dist").textContent = calcPct(dist * 100);
     out("size").textContent = calcMoney(size);
     const units = size / entry;
-    out("units").textContent = units >= 10 ? Math.round(units).toLocaleString("en-US") : String(Math.round(units * 100) / 100);
-    if (size > account) { v.textContent = "That's bigger than your whole account. Take a smaller position or skip the trade."; v.dataset.tone = "bad"; }
-    else { v.textContent = "If the stop is hit, you lose about " + calcMoney(loss) + " plus fees."; v.dataset.tone = "good"; }
+    out("units").textContent = units >= 10 ? Math.round(units).toLocaleString(LOC) : String(Math.round(units * 100) / 100);
+    if (size > account) { v.textContent = t("That's bigger than your whole account. Take a smaller position or skip the trade.","Eso es más grande que toda tu cuenta. Toma una posición menor o sáltate la operación."); v.dataset.tone = "bad"; }
+    else { v.textContent = t("If the stop is hit, you lose about ","Si salta el stop, pierdes unos ") + calcMoney(loss) + t(" plus fees."," más comisiones."); v.dataset.tone = "good"; }
   });
 });
 
@@ -100,15 +105,15 @@ document.querySelectorAll('[data-calc="rr"]').forEach((box) => {
     const v = out("verdict");
     if (!(stop < entry && target > entry)) {
       out("rr").textContent = "–"; out("be").textContent = "–";
-      v.textContent = "For a buy, the stop goes below your entry and the target above it."; v.dataset.tone = "bad";
+      v.textContent = t("For a buy, the stop goes below your entry and the target above it.","En una compra, el stop va por debajo de tu entrada y el objetivo por encima."); v.dataset.tone = "bad";
       return;
     }
     const rr = (target - entry) / (entry - stop);
     out("rr").textContent = (Math.round(rr * 10) / 10) + ":1";
     out("be").textContent = Math.round(100 / (1 + rr)) + "%";
-    if (rr < 1) { v.textContent = "You stand to lose more than you'd make. You'd need to be right more often than not."; v.dataset.tone = "warn"; }
-    else if (rr > 5) { v.textContent = "A big ratio on paper. Ask honestly whether the price is likely to reach that target."; v.dataset.tone = "warn"; }
-    else { v.textContent = "Now ask: is the target somewhere the price could realistically reach?"; v.dataset.tone = "good"; }
+    if (rr < 1) { v.textContent = t("You stand to lose more than you'd make. You'd need to be right more often than not.","Arriesgas más de lo que ganarías. Tendrías que acertar más veces de las que fallas."); v.dataset.tone = "warn"; }
+    else if (rr > 5) { v.textContent = t("A big ratio on paper. Ask honestly whether the price is likely to reach that target.","Una ratio grande sobre el papel. Pregúntate con honestidad si el precio puede llegar a ese objetivo."); v.dataset.tone = "warn"; }
+    else { v.textContent = t("Now ask: is the target somewhere the price could realistically reach?","Ahora pregúntate: ¿puede el precio llegar de forma realista a ese objetivo?"); v.dataset.tone = "good"; }
   });
 });
 
@@ -122,9 +127,9 @@ document.querySelectorAll('[data-calc="expectancy"]').forEach((box) => {
     out("exp").textContent = signed(e);
     out("hundred").textContent = signed(e * 100);
     const v = out("verdict");
-    if (e < 0) { v.textContent = "Negative: on average, every trade loses money, however often it wins."; v.dataset.tone = "bad"; }
-    else if (e === 0) { v.textContent = "Break even before fees. After fees, this loses money."; v.dataset.tone = "warn"; }
-    else { v.textContent = "Positive, before fees. It only means something after many trades, honestly recorded."; v.dataset.tone = "good"; }
+    if (e < 0) { v.textContent = t("Negative: on average, every trade loses money, however often it wins.","Negativa: de media, cada operación pierde dinero, por mucho que acierte."); v.dataset.tone = "bad"; }
+    else if (e === 0) { v.textContent = t("Break even before fees. After fees, this loses money.","Empate antes de comisiones. Con comisiones, pierde dinero."); v.dataset.tone = "warn"; }
+    else { v.textContent = t("Positive, before fees. It only means something after many trades, honestly recorded.","Positiva, antes de comisiones. Solo significa algo tras muchas operaciones anotadas con honestidad."); v.dataset.tone = "good"; }
   });
 });
 
@@ -194,7 +199,7 @@ document.querySelectorAll(".quiz").forEach((q) => {
     if (!right) q.querySelector(`[data-opt="${q.dataset.answer}"]`)?.classList.add("is-right");
     q.dataset.state = right ? "right" : "wrong";
     recordQuiz(q, right);
-    if (why) { why.hidden = false; why.dataset.lead = right ? "Right." : "Not quite."; }
+    if (why) { why.hidden = false; why.dataset.lead = right ? t("Right.","Correcto.") : t("Not quite.","No exactamente."); }
   }));
 });
 
@@ -296,7 +301,7 @@ const updateCompletionUi = () => {
     button.classList.toggle("is-complete", complete);
     button.setAttribute("aria-pressed", complete ? "true" : "false");
     const label = button.querySelector(".completion-label, .check-label");
-    if (label) label.textContent = button.hasAttribute("data-lesson-check") ? (complete ? "Done" : "Mark done") : (complete ? "Lesson complete" : "Mark lesson complete");
+    if (label) label.textContent = button.hasAttribute("data-lesson-check") ? (complete ? t("Done","Hecha") : t("Mark done","Marcar hecha")) : (complete ? t("Lesson complete","Lección completada") : t("Mark lesson complete","Marcar lección como completada"));
     const row = button.closest("[data-lesson-row]");
     if (row) row.classList.toggle("is-complete", complete);
   });
@@ -307,7 +312,7 @@ const updateCompletionUi = () => {
     const count = rows.filter((row) => done.has(row.dataset.lessonSlug)).length;
     const label = box.querySelector("[data-course-progress-label]");
     const bar = box.querySelector("[data-course-progress-bar]");
-    if (label) label.textContent = `${count} of ${total} lessons complete`;
+    if (label) label.textContent = t(`${count} of ${total} lessons complete`,`${count} de ${total} lecciones completadas`);
     if (bar) bar.style.width = `${total ? (count / total) * 100 : 0}%`;
   });
 
@@ -318,12 +323,12 @@ const updateCompletionUi = () => {
     const count = rows.filter((row) => done.has(row.dataset.lessonSlug)).length;
     const label = box.querySelector("[data-module-progress-label]");
     const bar = box.querySelector("[data-module-progress-bar]");
-    if (label) label.textContent = `${count} of ${total} complete`;
+    if (label) label.textContent = t(`${count} of ${total} complete`,`${count} de ${total} completadas`);
     if (bar) bar.style.width = `${total ? (count / total) * 100 : 0}%`;
   });
 
   document.querySelectorAll("[data-progress-where]").forEach((el) => {
-    el.textContent = signedIn() ? "Saved to your account" : account?.enabled ? "Saved on this device. Sign in to keep it." : "Saved on this device";
+    el.textContent = signedIn() ? t("Saved to your account","Guardado en tu cuenta") : account?.enabled ? t("Saved on this device. Sign in to keep it.","Guardado en este dispositivo. Inicia sesión para conservarlo.") : t("Saved on this device","Guardado en este dispositivo");
   });
 };
 
@@ -342,7 +347,7 @@ document.addEventListener("click", (event) => {
   }
   const reset = event.target.closest("[data-reset-progress]");
   if (reset) {
-    if (window.confirm(signedIn() ? "Reset all lesson progress in your account?" : "Reset all lesson progress on this device?")) {
+    if (window.confirm(signedIn() ? t("Reset all lesson progress in your account?","¿Reiniciar todo el progreso de las lecciones en tu cuenta?") : t("Reset all lesson progress on this device?","¿Reiniciar todo el progreso de las lecciones en este dispositivo?"))) {
       dropLocal(COMPLETED_KEY, QUIZ_KEY);
       pushProgress();
       updateCompletionUi();
@@ -358,7 +363,7 @@ const accountsOn = document.documentElement.classList.contains("accounts-on");
 const signedInHint = /(?:^|;\s*)tb_in=1/.test(document.cookie);
 const acctPage = document.querySelector("[data-account]");
 const setHeader = () => {
-  document.querySelectorAll("[data-account-label]").forEach((el) => { el.textContent = signedIn() ? "Account" : "Sign in"; });
+  document.querySelectorAll("[data-account-label]").forEach((el) => { el.textContent = signedIn() ? t("Account","Cuenta") : t("Sign in","Iniciar sesión"); });
   document.documentElement.classList.toggle("signed-in", signedIn());
 };
 if (signedInHint) document.documentElement.classList.add("signed-in");
@@ -418,23 +423,23 @@ function renderAccount() {
   acctPage.querySelectorAll('[data-acct="in"] [data-acct-email]').forEach((el) => { el.textContent = account.email; });
   const n = completedLessons().size;
   const answers = Object.values(quizAnswers());
-  acctPage.querySelector("[data-acct-progress]").textContent = `${n} lesson${n === 1 ? "" : "s"} complete`;
+  acctPage.querySelector("[data-acct-progress]").textContent = t(`${n} lesson${n === 1 ? "" : "s"} complete`, `${n} ${n === 1 ? "lección completada" : "lecciones completadas"}`);
   acctPage.querySelector("[data-acct-quiz]").textContent = answers.length
-    ? `${answers.length} quick question${answers.length === 1 ? "" : "s"} answered, ${answers.filter((x) => x === 1).length} right first time`
-    : "No quick questions answered yet";
+    ? t(`${answers.length} quick question${answers.length === 1 ? "" : "s"} answered, ${answers.filter((x) => x === 1).length} right first time`, `${answers.length} ${answers.length === 1 ? "pregunta rápida respondida" : "preguntas rápidas respondidas"}, ${answers.filter((x) => x === 1).length} acertadas a la primera`)
+    : t("No quick questions answered yet","Aún no has respondido preguntas rápidas");
   acctPage.querySelector("[data-acct-updates]").checked = Boolean(account.emailUpdates);
   if (nextUrl) acctPage.querySelector("[data-acct-continue]").href = nextUrl;
 }
 
 function verify(body, state) {
-  msg(state, "Signing you in…");
+  msg(state, t("Signing you in…","Iniciando sesión…"));
   return api("/api/auth/verify/", { method: "POST", body: JSON.stringify(body) }).then((r) => {
-    if (!r.ok) { if (body.token) history.replaceState(null, "", location.pathname); show(body.token ? "out" : state); msg(body.token ? "out" : state, r.data.error || "Something went wrong.", "bad"); return; }
+    if (!r.ok) { if (body.token) history.replaceState(null, "", location.pathname); show(body.token ? "out" : state); msg(body.token ? "out" : state, r.data.error || t("Something went wrong.","Algo ha salido mal."), "bad"); return; }
     if (nextUrl) { location.replace(nextUrl); return; }
     history.replaceState(null, "", location.pathname);
     pendingEmail = "";
     loadAccount();
-  }, () => msg(state, "No connection. Please try again.", "bad"));
+  }, () => msg(state, t("No connection. Please try again.","Sin conexión. Inténtalo de nuevo."), "bad"));
 }
 
 if (acctPage) {
@@ -442,16 +447,16 @@ if (acctPage) {
     e.preventDefault();
     const f = e.currentTarget;
     const email = f.email.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg("out", "Please enter a valid email address.", "bad"); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg("out", t("Please enter a valid email address.","Introduce un correo electrónico válido."), "bad"); return; }
     msg("out", "Sending…");
-    api("/api/auth/start/", { method: "POST", body: JSON.stringify({ email, emailUpdates: f.updates.checked, next: nextUrl }) }).then((r) => {
-      if (!r.ok) { msg("out", r.data.error || "Something went wrong.", "bad"); return; }
+    api("/api/auth/start/", { method: "POST", body: JSON.stringify({ email, emailUpdates: f.updates.checked, next: nextUrl, lang: ES ? "es" : "en" }) }).then((r) => {
+      if (!r.ok) { msg("out", r.data.error || t("Something went wrong.","Algo ha salido mal."), "bad"); return; }
       pendingEmail = email;
       msg("out", "");
       acctPage.querySelectorAll('[data-acct="code"] [data-acct-email]').forEach((el) => { el.textContent = email; });
       show("code");
       acctPage.querySelector('[data-acct-verify] input[name="code"]').focus();
-    }, () => msg("out", "No connection. Please try again.", "bad"));
+    }, () => msg("out", t("No connection. Please try again.","Sin conexión. Inténtalo de nuevo."), "bad"));
   });
   acctPage.querySelector("[data-acct-verify]").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -460,17 +465,17 @@ if (acctPage) {
   acctPage.querySelector("[data-acct-back]").addEventListener("click", () => { pendingEmail = ""; show("out"); });
   acctPage.querySelector("[data-acct-updates]").addEventListener("change", (e) => {
     api("/api/account/", { method: "PATCH", body: JSON.stringify({ emailUpdates: e.target.checked }) })
-      .then((r) => msg("in", r.ok ? (e.target.checked ? "You'll get an email when new lessons come out." : "No more emails about new lessons.") : "Couldn't save that. Please try again.", r.ok ? "good" : "bad"));
+      .then((r) => msg("in", r.ok ? (e.target.checked ? t("You'll get an email when new lessons come out.","Recibirás un correo cuando salgan lecciones nuevas.") : t("No more emails about new lessons.","No recibirás más correos sobre lecciones nuevas.")) : t("Couldn't save that. Please try again.","No se ha podido guardar. Inténtalo de nuevo."), r.ok ? "good" : "bad"));
   });
   acctPage.querySelector("[data-acct-logout]").addEventListener("click", () => {
-    api("/api/auth/logout/", { method: "POST" }).then(() => { dropLocal(SYNCED_KEY, COMPLETED_KEY, QUIZ_KEY); location.href = "/"; });
+    api("/api/auth/logout/", { method: "POST" }).then(() => { dropLocal(SYNCED_KEY, COMPLETED_KEY, QUIZ_KEY); location.href = ES ? "/es/" : "/"; });
   });
   acctPage.querySelector("[data-acct-delete]").addEventListener("click", () => {
-    if (!window.confirm("Delete your account and all saved progress? This can't be undone.")) return;
+    if (!window.confirm(t("Delete your account and all saved progress? This can't be undone.","¿Eliminar tu cuenta y todo el progreso guardado? No se puede deshacer."))) return;
     api("/api/account/", { method: "DELETE" }).then((r) => {
-      if (!r.ok) { msg("in", r.data.error || "Couldn't delete the account. Please try again.", "bad"); return; }
+      if (!r.ok) { msg("in", r.data.error || t("Couldn't delete the account. Please try again.","No se ha podido eliminar la cuenta. Inténtalo de nuevo."), "bad"); return; }
       dropLocal(SYNCED_KEY, COMPLETED_KEY, QUIZ_KEY);
-      location.href = "/?account=deleted";
+      location.href = (ES ? "/es/" : "/") + "?account=deleted";
     });
   });
 }

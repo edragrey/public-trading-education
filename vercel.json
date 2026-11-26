@@ -48,6 +48,241 @@
       "source": "/course/the-traders-mind/where-to-go-from-here/",
       "destination": "/course/going-further/where-to-go-from-here/",
       "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/think-in-probabilities/",
+      "destination": "/course/survive-first/think-in-probabilities/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/think-in-probabilities/steps/",
+      "destination": "/course/survive-first/think-in-probabilities/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/going-further/investing-vs-trading-and-etfs/",
+      "destination": "/course/start-here/investing-vs-trading-and-etfs/",
+      "permanent": true
+    },
+    {
+      "source": "/course/going-further/investing-vs-trading-and-etfs/steps/",
+      "destination": "/course/start-here/investing-vs-trading-and-etfs/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/why-the-market-tests-your-mind/",
+      "destination": "/course/the-traders-mind/why-the-market-tests-your-mind/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/why-the-market-tests-your-mind/steps/",
+      "destination": "/course/the-traders-mind/why-the-market-tests-your-mind/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/five-truths-in-plain-words/",
+      "destination": "/course/the-traders-mind/five-truths-in-plain-words/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/five-truths-in-plain-words/steps/",
+      "destination": "/course/the-traders-mind/five-truths-in-plain-words/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/accept-the-risk-before-you-trade/",
+      "destination": "/course/the-traders-mind/accept-the-risk-before-you-trade/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/accept-the-risk-before-you-trade/steps/",
+      "destination": "/course/the-traders-mind/accept-the-risk-before-you-trade/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/the-four-fears/",
+      "destination": "/course/the-traders-mind/the-four-fears/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/the-four-fears/steps/",
+      "destination": "/course/the-traders-mind/the-four-fears/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/your-beliefs-about-the-market/",
+      "destination": "/course/the-traders-mind/your-beliefs-about-the-market/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/your-beliefs-about-the-market/steps/",
+      "destination": "/course/the-traders-mind/your-beliefs-about-the-market/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/consistency-trade-the-series/",
+      "destination": "/course/the-traders-mind/consistency-trade-the-series/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/consistency-trade-the-series/steps/",
+      "destination": "/course/the-traders-mind/consistency-trade-the-series/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/responsibility-and-practice/",
+      "destination": "/course/the-traders-mind/responsibility-and-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/responsibility-and-practice/steps/",
+      "destination": "/course/the-traders-mind/responsibility-and-practice/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/course/thinking-in-probabilities/",
+      "destination": "/course/#the-traders-mind",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/survive-first/right-forecast-losing-trade/",
+      "destination": "/es/course/survive-first/why-a-correct-forecast-can-still-lose-money/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/start-here/right-forecast-losing-trade/",
+      "destination": "/es/course/survive-first/why-a-correct-forecast-can-still-lose-money/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/read-the-market/what-a-price-is/",
+      "destination": "/es/course/how-markets-work/what-a-price-is/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/read-the-market/how-to-read-a-candlestick/",
+      "destination": "/es/course/how-markets-work/how-to-read-a-candlestick/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/read-the-market/how-to-read-a-candlestick/steps/",
+      "destination": "/es/course/how-markets-work/how-to-read-a-candlestick/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/read-the-market/timeframes/",
+      "destination": "/es/course/how-markets-work/timeframes/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/read-the-market/volume-and-liquidity/",
+      "destination": "/es/course/how-markets-work/volume-and-liquidity/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/read-the-market/crypto-stocks-and-commodities/",
+      "destination": "/es/course/how-markets-work/crypto-stocks-and-commodities/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/the-traders-mind/where-to-go-from-here/",
+      "destination": "/es/course/going-further/where-to-go-from-here/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/think-in-probabilities/",
+      "destination": "/es/course/survive-first/think-in-probabilities/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/think-in-probabilities/steps/",
+      "destination": "/es/course/survive-first/think-in-probabilities/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/going-further/investing-vs-trading-and-etfs/",
+      "destination": "/es/course/start-here/investing-vs-trading-and-etfs/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/going-further/investing-vs-trading-and-etfs/steps/",
+      "destination": "/es/course/start-here/investing-vs-trading-and-etfs/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/why-the-market-tests-your-mind/",
+      "destination": "/es/course/the-traders-mind/why-the-market-tests-your-mind/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/why-the-market-tests-your-mind/steps/",
+      "destination": "/es/course/the-traders-mind/why-the-market-tests-your-mind/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/five-truths-in-plain-words/",
+      "destination": "/es/course/the-traders-mind/five-truths-in-plain-words/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/five-truths-in-plain-words/steps/",
+      "destination": "/es/course/the-traders-mind/five-truths-in-plain-words/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/accept-the-risk-before-you-trade/",
+      "destination": "/es/course/the-traders-mind/accept-the-risk-before-you-trade/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/accept-the-risk-before-you-trade/steps/",
+      "destination": "/es/course/the-traders-mind/accept-the-risk-before-you-trade/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/the-four-fears/",
+      "destination": "/es/course/the-traders-mind/the-four-fears/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/the-four-fears/steps/",
+      "destination": "/es/course/the-traders-mind/the-four-fears/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/your-beliefs-about-the-market/",
+      "destination": "/es/course/the-traders-mind/your-beliefs-about-the-market/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/your-beliefs-about-the-market/steps/",
+      "destination": "/es/course/the-traders-mind/your-beliefs-about-the-market/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/consistency-trade-the-series/",
+      "destination": "/es/course/the-traders-mind/consistency-trade-the-series/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/consistency-trade-the-series/steps/",
+      "destination": "/es/course/the-traders-mind/consistency-trade-the-series/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/responsibility-and-practice/",
+      "destination": "/es/course/the-traders-mind/responsibility-and-practice/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/responsibility-and-practice/steps/",
+      "destination": "/es/course/the-traders-mind/responsibility-and-practice/steps/",
+      "permanent": true
+    },
+    {
+      "source": "/es/course/thinking-in-probabilities/",
+      "destination": "/es/course/#the-traders-mind",
+      "permanent": true
     }
   ]
 }

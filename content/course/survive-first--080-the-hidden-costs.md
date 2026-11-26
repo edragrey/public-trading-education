@@ -4,6 +4,7 @@ module: survive-first
 order: 90
 summary: The small charges on every trade that beginners rarely count, and how quickly they add up if you trade often.
 date: 2026-11-21
+needs: order-types, what-a-price-is
 ---
 
 Every trade costs something, even the ones that break even. These costs are small one at a time, which is why they're easy to ignore. Over a month of active trading they can be the difference between making and losing money.

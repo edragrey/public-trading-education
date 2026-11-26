@@ -5,6 +5,7 @@ order: 140
 section: Staying safe
 summary: The common ways beginners lose money that have nothing to do with trading, and a short checklist to protect yourself.
 date: 2026-11-21
+needs: where-you-trade
 ---
 
 Surviving isn't only about bad trades. A lot of beginners lose money to scams, fake "gurus" and stolen accounts before they ever place a real trade. This lesson covers the common traps and a simple checklist.
@@ -48,6 +49,8 @@ Not every loud coin is a scam. But hype makes prices move fast in both direction
 4. **Start small** with any new platform. Send a little first and make sure you can withdraw it.
 5. **Keep trading money separate** from savings, and only use money you can afford to lose.
 6. **If it sounds too good to be true, it is.**
+
+**See it happen.** How a "safe" high yield collapsed: [Read the Terra case study](/course/going-further/case-study-terra-ust-collapse/).
 
 ## Common mistakes
 

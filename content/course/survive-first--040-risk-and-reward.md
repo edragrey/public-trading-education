@@ -4,6 +4,7 @@ module: survive-first
 order: 50
 summary: How to compare what a trade could make with what it could lose, and why that comparison tells you how often you need to be right.
 date: 2026-11-21
+needs: stop-losses
 ---
 
 You now know how much you'll lose if a trade goes wrong. This lesson adds the other side: how much you might make if it goes right, and why the two belong together.

@@ -4,6 +4,7 @@ module: survive-first
 order: 80
 summary: Plug in a win rate, a reward-to-risk and a risk per trade to see the average result and a typical losing streak. The point is to see how much the numbers matter.
 date: 2026-11-22
+needs: losing-streaks-and-drawdowns, size-your-trade-from-your-stop
 section: The basics
 ---
 

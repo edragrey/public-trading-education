@@ -4,6 +4,7 @@ module: survive-first
 order: 40
 summary: What a stop loss does, the two main kinds, where to place one so it means something, and the honest ways stops can let you down.
 date: 2026-11-21
+needs: size-your-trade-from-your-stop, order-types
 ---
 
 The last two lessons kept saying "your stop". This one explains what a stop actually is, and the hardest part: deciding where it goes.
@@ -33,7 +34,7 @@ Put it **where your reason for the trade stops being true**. Not at a random rou
 
 > **Hypothetical example.** The coin and prices are made up.
 
-You buy a coin at **$50** because it has bounced off **$48** three times in the past month. Your idea is "buyers keep stepping in around $48".
+You buy a coin at **$50** because it has bounced off **$48** three times in the past month. (A price area where falls have stopped before is called **support**; Read the market covers it. For now, read it as "buyers showed up there".) Your idea is "buyers keep stepping in around $48".
 
 - If the price falls to $47.50, your idea is wrong: the buyers didn't show up. So a stop just below $48, say **$47.50**, makes sense.
 - A stop at **$49.50** would probably get hit by normal wobbles, even if your idea was right.
@@ -88,5 +89,7 @@ You can move a stop **closer** to lock in less risk. You should **never move it 
 ## Try it (no real money)
 
 Look at any chart and pick a pretend entry. Write one sentence: "I'm buying because ___." Then find the price where that sentence would stop being true. That's your stop. Work out the distance as a percentage.
+
+Now go back to Trade 1 and write down its stop in one sentence: "My idea is wrong if ___."
 
 **Key idea:** A stop is your exit, chosen while you're calm. Place it where your idea is wrong, and never move it further away.

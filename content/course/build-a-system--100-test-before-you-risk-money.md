@@ -4,6 +4,7 @@ module: build-a-system
 order: 100
 summary: Three ways to check a trading idea cheaply first, what each can and can't tell you, and how to move to real money in small steps.
 date: 2026-11-21
+needs: win-rate-and-expectancy
 ---
 
 You've written a plan. Before you risk real money on it, it makes sense to check whether it holds up at all. This lesson covers three cheap ways to test, and is honest about what each one misses.

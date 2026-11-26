@@ -4,6 +4,8 @@ module: read-the-market
 order: 90
 summary: A share is a slice of a business. Learn the handful of numbers that describe how a company is doing, and why a good company can still be a bad trade.
 date: 2026-11-21
+section: The story
+needs: market-cap-supply-and-unlocks
 ---
 
 If you trade stocks, you're trading slices of real businesses. You don't need an accounting degree. A few numbers go a long way.

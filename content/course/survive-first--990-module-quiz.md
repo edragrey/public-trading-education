@@ -8,7 +8,7 @@ date: 2026-11-22
 section: Staying safe
 ---
 
-Ten quick questions on this module. Tap an answer to see whether it's right and why. No score is kept, and you can read the lesson again any time.
+Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. What's a sensible starting risk per trade?
 
@@ -28,22 +28,22 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Risk is $50, stop distance is $1, so 50 units.</p>
 </div>
 
-## 3. Where does a stop belong?
+## 3. You want to buy right now, whatever the price. Which order do you use?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">A market order</button>
+<button type="button" data-opt="b">A limit order</button>
+<button type="button" data-opt="c">A stop-limit order</button>
+<p class="quiz-why" hidden>A market order fills straight away at the best price available. A limit order may never fill.</p>
+</div>
+
+## 4. Where does a stop belong?
 
 <div class="quiz" data-answer="c">
 <button type="button" data-opt="a">Wherever you can bear to lose</button>
 <button type="button" data-opt="b">At the price you paid, always</button>
 <button type="button" data-opt="c">Where your trade idea is proven wrong</button>
 <p class="quiz-why" hidden>Place the stop by the idea, then size the trade to fit it.</p>
-</div>
-
-## 4. A trade risks $1 to make $3. What's the reward-to-risk?
-
-<div class="quiz" data-answer="a">
-<button type="button" data-opt="a">3 to 1</button>
-<button type="button" data-opt="b">1 to 3</button>
-<button type="button" data-opt="c">1 to 1</button>
-<p class="quiz-why" hidden>Reward $3 for $1 risked is 3 to 1.</p>
 </div>
 
 ## 5. Win rate 40%, wins are twice the size of losses. Is expectancy positive?
@@ -55,7 +55,16 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Expectancy combines how often you win and how much you win or lose.</p>
 </div>
 
-## 6. After a 50% drawdown, what gain do you need to get back to even?
+## 6. A stock closes at $50. Bad news arrives overnight and it opens at $42. Where does your $48 stop fill?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">At $48</button>
+<button type="button" data-opt="b">Near $42, the opening price</button>
+<button type="button" data-opt="c">It cancels itself</button>
+<p class="quiz-why" hidden>A stop can't fill in a gap. It triggers at the next available price, which here is far worse.</p>
+</div>
+
+## 7. After a 50% drawdown, what gain do you need to get back to even?
 
 <div class="quiz" data-answer="c">
 <button type="button" data-opt="a">A 50% gain to get back</button>
@@ -64,16 +73,16 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Recovery is not symmetrical: halving needs doubling.</p>
 </div>
 
-## 7. Which is a hidden cost of trading?
+## 8. Best bid $20.00, best ask $20.20. You buy at market, then instantly sell at market. About what do you lose per unit, before fees?
 
-<div class="quiz" data-answer="a">
-<button type="button" data-opt="a">Spread, fees and slippage</button>
-<button type="button" data-opt="b">Only the broker's headline fee</button>
-<button type="button" data-opt="c">There are none for market orders</button>
-<p class="quiz-why" hidden>Every trade pays the spread, and often fees and slippage too.</p>
+<div class="quiz" data-answer="c">
+<button type="button" data-opt="a">Nothing</button>
+<button type="button" data-opt="b">About $0.10</button>
+<button type="button" data-opt="c">About $0.20</button>
+<p class="quiz-why" hidden>You buy at the ask ($20.20) and sell at the bid ($20.00). The spread is a cost.</p>
 </div>
 
-## 8. What does 10x leverage do?
+## 9. What does 10x leverage do?
 
 <div class="quiz" data-answer="b">
 <button type="button" data-opt="a">Makes your position safer</button>
@@ -82,22 +91,11 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Leverage amplifies both ways and brings liquidation closer.</p>
 </div>
 
-## 9. Four highly correlated trades each risk 1%. Roughly how much can one bad day cost?
-
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">1%</button>
-<button type="button" data-opt="b">0.25%</button>
-<button type="button" data-opt="c">Close to 4%</button>
-<p class="quiz-why" hidden>Highly correlated trades fall together, so risk adds up.</p>
-</div>
-
-## 10. A trader holds on a platform they only found last week. What's a safe habit?
+## 10. Trading in a coin is very thin. What does that mainly make harder?
 
 <div class="quiz" data-answer="a">
-<button type="button" data-opt="a">Test a small withdrawal first</button>
-<button type="button" data-opt="b">Deposit everything to get the bonus</button>
-<button type="button" data-opt="c">Reply to messages offering help</button>
-<p class="quiz-why" hidden>Test small, research regulation, and ignore unsolicited support.</p>
+<button type="button" data-opt="a">Getting in and out near a fair price</button>
+<button type="button" data-opt="b">Reading a candlestick</button>
+<button type="button" data-opt="c">Paying tax</button>
+<p class="quiz-why" hidden>Thin markets have few buyers and sellers, so your order can move the price and exits can be costly.</p>
 </div>
-
-**Key idea:** Wrong answers are useful. Go back to the lesson behind any question you missed.

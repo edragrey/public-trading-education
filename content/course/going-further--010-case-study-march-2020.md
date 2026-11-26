@@ -4,6 +4,7 @@ module: going-further
 order: 10
 summary: In March 2020 almost everything fell at once, even assets thought of as safe. What happened, and what it teaches about correlation and liquidity.
 date: 2026-11-22
+needs: volume-and-liquidity
 ---
 
 This is the first of four short case studies. Each takes a real event, sticks to what's documented, and asks what a beginner can learn. They look at the past; they predict nothing.

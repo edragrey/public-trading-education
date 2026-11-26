@@ -4,6 +4,8 @@ module: read-the-market
 order: 100
 summary: The scheduled events that regularly move markets, why prices sometimes move the "wrong" way on good news, and how to stay safe around big announcements.
 date: 2026-11-21
+section: The story
+needs: what-moves-a-price
 ---
 
 Some days, a single announcement moves the whole market in seconds. This lesson covers the main kinds of events, why reactions can be surprising, and the simple ways careful traders protect themselves around them.

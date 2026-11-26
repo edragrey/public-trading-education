@@ -4,6 +4,8 @@ module: read-the-market
 order: 130
 summary: Markets swing between fear and greed. Learn what sentiment is, how to see it, and why 'be careful when others are greedy' is easier said than done.
 date: 2026-11-21
+section: The story
+needs: narratives-and-hype-cycles
 ---
 
 Prices reflect the facts, but also **how people feel** about them. That mood is called **sentiment**.

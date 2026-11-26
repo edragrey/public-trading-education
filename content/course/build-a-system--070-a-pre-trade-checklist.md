@@ -4,6 +4,7 @@ module: build-a-system
 order: 70
 summary: Six yes-or-no questions to answer before you click buy. If any answer is no, there's no trade. Simple, strict and surprisingly hard to skip once it's a habit.
 date: 2026-11-21
+needs: your-one-page-trade-plan
 ---
 
 Your trade plan says what you're looking for. This checklist makes sure each trade actually matches it. Pilots run through a checklist before every flight, however experienced they are. It's not because they forget how to fly. It's because a checklist catches the mistake you'd make on a bad day.
@@ -52,6 +53,18 @@ Not chasing a loss, not trading because of a post you just saw, not over today's
 - **Write it on paper or a note** next to your screen.
 - **Say the answers out loud** or type them. Thinking "yeah, yeah" doesn't count.
 - **Log the "no" trades too.** Over time you'll see whether the checklist is saving you money or missing good trades. That's evidence for the lesson on changing your rules.
+
+## Ready check before your first real trade
+
+This is a suggestion, not a lock. Before putting real money in, you can honestly say:
+
+- Your one-page plan is written, and the checklist above is complete.
+- You have logged at least ten paper trades and followed the plan on most of them.
+- A daily loss limit is written down.
+- You have read the taxes lesson in Going further.
+- You know the loss at your stop in dollars, and you accept it.
+
+If one is missing, practise more. The paper trades cost nothing.
 
 ## Common mistakes
 

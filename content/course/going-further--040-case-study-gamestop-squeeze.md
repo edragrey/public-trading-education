@@ -4,6 +4,7 @@ module: going-further
 order: 40
 summary: A video game retailer's share price exploded in days, and brokers restricted buying. What a regulator's own report says, and what it teaches about crowds, shorts and costs.
 date: 2026-11-22
+needs: going-long-and-short, leverage-in-plain-words
 ---
 
 Fourth case study, based on the US Securities and Exchange Commission's staff report on the event.

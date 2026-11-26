@@ -4,6 +4,7 @@ module: build-a-system
 order: 20
 summary: A fill-in template that turns everything from the first two modules into one page you can check before every trade.
 date: 2026-11-21
+needs: why-a-written-system, size-your-trade-from-your-stop, stop-losses
 ---
 
 Last lesson said a system needs to be written down. This lesson gives you the page to write it on. Keep it to **one page**: if it doesn't fit, it's too complicated to follow under pressure.
@@ -85,6 +86,6 @@ Notice every line links back to an earlier lesson: timeframes, support, stops, r
 
 ## Try it (no real money)
 
-Fill in the template with your own answers. Where you don't know yet, write your best guess and mark it with a question mark. Then read it as if it belonged to a stranger: could they follow it?
+Fill in the template with your own answers, using Trade 1 from How markets work as the example. Where you don't know yet, write your best guess and mark it with a question mark. Then read it as if it belonged to a stranger: could they follow it?
 
 **Key idea:** Put your whole system on one page. If a rule can't be written plainly, it can't be followed under pressure.

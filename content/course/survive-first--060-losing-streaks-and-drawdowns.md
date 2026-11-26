@@ -4,6 +4,7 @@ module: survive-first
 order: 70
 summary: Why runs of losses are normal even for a good strategy, how deep they can go, and how to plan for them before they arrive.
 date: 2026-11-21
+needs: win-rate-and-expectancy
 ---
 
 Sooner or later you'll lose five, six, maybe ten trades in a row. It feels personal. It usually isn't. This lesson shows why streaks are normal, and how to make sure one doesn't end your trading.

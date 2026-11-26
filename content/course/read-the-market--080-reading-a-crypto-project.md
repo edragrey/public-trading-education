@@ -4,6 +4,8 @@ module: read-the-market
 order: 80
 summary: Before you put money into a coin, six questions to ask about what it is, who made it, who owns it and how it makes money (if it does).
 date: 2026-11-21
+section: The story
+needs: market-cap-supply-and-unlocks
 ---
 
 Thousands of coins exist, and many are copies, jokes or scams. You can't know everything, but a short checklist filters out a lot of trouble. This isn't about finding winners. It's about avoiding obvious losers.

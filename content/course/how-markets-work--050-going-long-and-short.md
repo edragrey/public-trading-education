@@ -4,6 +4,7 @@ module: how-markets-work
 order: 50
 summary: You can profit from prices going up or down. Here's what going long and going short really mean, and why short is riskier.
 date: 2026-11-21
+needs: order-types
 ---
 
 Most people think trading only means buying and hoping it goes up. You can also take a position that gains when the price **falls**.
@@ -40,6 +41,8 @@ You usually don't borrow coins by hand. Common routes:
 - **Margin trading** on an exchange, borrowing to short.
 - **Perpetual futures** or **futures**, a contract that gains when the price falls. (Covered in a later lesson.)
 - **Inverse products** that rise when the market falls.
+
+**See it happen.** What a short squeeze looks like: [Read the GameStop case study](/course/going-further/case-study-gamestop-squeeze/).
 
 ## Common mistakes
 

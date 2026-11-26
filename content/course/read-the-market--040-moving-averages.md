@@ -4,6 +4,8 @@ module: read-the-market
 order: 40
 summary: A moving average turns jumpy prices into one smooth line. What it shows, what it can't, and why it always lags.
 date: 2026-11-21
+section: The chart
+needs: market-structure
 ---
 
 Candles are noisy. A **moving average (MA)** is a line that smooths them so the direction is easier to see.

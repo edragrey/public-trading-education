@@ -27,7 +27,7 @@ export async function POST(request) {
   const next = safeNext(body.next);
   if (next !== "/course/") link.searchParams.set("next", next);
   try {
-    await sendLoginEmail({ to: email, code, link: link.toString(), siteName: siteName() });
+    await sendLoginEmail({ to: email, code, link: link.toString(), siteName: siteName(), lang: body.lang === "es" ? "es" : "en" });
   } catch (e) {
     console.error("sign-in email failed", e.message);
     return json({ error: "We couldn't send the email just now. Please try again in a minute." }, 502);

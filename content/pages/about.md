@@ -6,7 +6,7 @@ This is a free site for people who are new to trading and investing. The goal is
 
 ## What you'll find here
 
-- **A course** in short modules: how markets work, survive first, read the market, build a system, the trader's mind, and going further.
+- **A course** in short modules: how markets work, survive first, read the market, build a system, the trader's mind, and going further. Three stages, in order: foundations, skills, then mind and the real world.
 - **Articles** that go deeper on single ideas.
 - **A glossary** of common terms, explained without jargon.
 

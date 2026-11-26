@@ -4,6 +4,7 @@ module: how-markets-work
 order: 80
 summary: How much trading is really happening behind a price, why thin markets are dangerous for beginners, and two quick checks before you trade anything.
 date: 2026-11-21
+needs: what-a-price-is
 ---
 
 A price on a chart looks the same whether millions of dollars changed hands or almost nothing did. This lesson shows how to tell the difference, and why it matters a lot for your risk.
@@ -53,6 +54,8 @@ Some smaller exchanges and tokens have been found to inflate their volume with f
 
 1. **What's the spread?** Look at the order book. If it's more than a fraction of a percent, think twice.
 2. **Could you get out?** Look at how much is waiting on the bid side near the price. If your position is a big chunk of it, you'll struggle to sell without moving the price.
+
+**See it happen.** What happens when liquidity disappears: [Read the March 2020 case study](/course/going-further/case-study-march-2020/).
 
 ## Common mistakes
 

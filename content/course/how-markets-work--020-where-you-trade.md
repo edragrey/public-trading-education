@@ -41,6 +41,8 @@ A **wallet** is where you hold crypto yourself. There are two kinds:
 4. **Does it offer two-factor authentication** (a second code to log in)? Turn it on.
 5. **Can you withdraw easily?** Test with a small amount first.
 
+**See it happen.** What happens when a platform fails: [Read the FTX case study](/course/going-further/case-study-ftx-failure/).
+
 ## Common mistakes
 
 - Leaving large amounts on a platform you've barely researched.

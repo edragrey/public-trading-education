@@ -4,6 +4,7 @@ module: going-further
 order: 20
 summary: A stablecoin that wasn't backed by dollars lost its peg in days. What an algorithmic stablecoin is, and the warning signs a beginner can learn to see.
 date: 2026-11-22
+needs: defi-stablecoins-and-nfts
 ---
 
 Second case study. We stick to widely reported facts and say where a figure comes from.

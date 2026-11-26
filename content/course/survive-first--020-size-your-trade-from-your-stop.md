@@ -4,6 +4,7 @@ module: survive-first
 order: 30
 summary: How to work out how big a trade should be, using only three numbers, so a wrong trade costs exactly what you planned.
 date: 2026-11-21
+needs: how-much-to-risk-on-one-trade
 ---
 
 Most beginners pick a trade size by feel: "I'll put $500 in, that seems about right." This lesson replaces that feeling with a small sum you can do in your head.
@@ -85,5 +86,7 @@ Because then your stop gets chosen by your wallet instead of by the chart. Peopl
 ## Try it (no real money)
 
 Pick any price chart. Choose an imaginary entry and a stop. Work out the stop distance as a percentage, then the position size for 1% of your account. Check it with the calculator above.
+
+If you made a paper trade in How markets work, size **that** trade (Trade 1) from its stop.
 
 **Key idea:** Choose your risk, find your stop, and let the position size fall out of the sum. Never the other way round.

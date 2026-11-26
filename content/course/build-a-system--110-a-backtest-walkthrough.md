@@ -4,6 +4,7 @@ module: build-a-system
 order: 110
 summary: Step by step, test one simple rule on past prices, and learn why a good-looking backtest can still mislead.
 date: 2026-11-21
+needs: test-before-you-risk-money
 ---
 
 A **backtest** applies your written rule to past prices to see how it would have done. It's the second of the three tests in the earlier lesson. Here's a worked example, with the traps.

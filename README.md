@@ -26,7 +26,7 @@ date: 2026-11-26
 Lesson text in markdown...
 ```
 
-Modules are `start-here`, `how-markets-work`, `survive-first`, `read-the-market`, `build-a-system`, `the-traders-mind`, `thinking-in-probabilities`, `going-further` (listed in `site.config.json`). Use `order` in steps of 10 so new lessons can slot in between. A module with `sections` in `site.config.json` groups lessons by their `section:` frontmatter.
+Modules are `start-here`, `how-markets-work`, `survive-first`, `read-the-market`, `build-a-system`, `the-traders-mind`, `going-further` (three stages: Foundations, Skills, Mind and world) (listed in `site.config.json`). Use `order` in steps of 10 so new lessons can slot in between. A module with `sections` in `site.config.json` groups lessons by their `section:` frontmatter.
 
 ### Group lessons into sections
 
@@ -68,3 +68,12 @@ Every page footer says: educational, not financial advice.
 ## Look and feel
 
 All colours, fonts and spacing are tokens at the top of `src/style.css` (dark mode follows the reader's device). Module icons are mapped by slug in `MODULE_ICONS` in `build.mjs`; a new module gets a book icon until you add one. The home-page chart illustrates the hypothetical drawdown example from Survive first.
+
+
+## Spanish version (`/es/`)
+
+Spanish pages live in `content-es/` and mirror `content/`: same filename, same front matter (slugs, `order`, `module`), translated text. Put a Spanish lesson at `content-es/course/<same-filename>.md`, a Spanish step-by-step at `content-es/steps/<same-slug>.md`, and so on. Anything without a Spanish file falls back to English (the build reports how many). Progress is shared between languages because slugs are identical. Use Spain Spanish, plain words, US dollars.
+
+## Figures and animations
+
+Simple diagrams are inline SVG in a `<figure class="fig">` (see the existing ones in `content/steps/`). Use the classes in `src/style.css` (`.box`, `.bar-bid`, `.ln`, `.dot`, `.lbl`, `.t`…) so they follow the light and dark themes. Animations (`.travel`, `.grow`, `.draw`, `.pulse`, `.eat`) only run when the reader has not asked for reduced motion. Give every figure a `role="img"` and an `aria-label`.

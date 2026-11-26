@@ -7,7 +7,7 @@ summary: Ten quick questions to check you've got the key ideas from this module.
 date: 2026-11-22
 ---
 
-Ten quick questions on this module. Tap an answer to see whether it's right and why. No score is kept, and you can read the lesson again any time.
+Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. What did the March 2020 'dash for cash' show?
 
@@ -27,13 +27,13 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Its stability depended on confidence and the sister token's price.</p>
 </div>
 
-## 3. Why is a very high yield a warning sign?
+## 3. A platform holds your coins and suddenly stops withdrawals. Which idea from Survive first and How markets work is this?
 
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">It means a safe product</button>
-<button type="button" data-opt="b">Yield doesn't matter</button>
-<button type="button" data-opt="c">It's the price of hidden risk</button>
-<p class="quiz-why" hidden>Ask who pays it and where the money comes from.</p>
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Not your keys, not your coins</button>
+<button type="button" data-opt="b">Reward-to-risk</button>
+<button type="button" data-opt="c">Expectancy</button>
+<p class="quiz-why" hidden>If a company holds the keys, you hold a promise. That's platform risk.</p>
 </div>
 
 ## 4. According to the court, what left FTX in a precarious position?
@@ -45,22 +45,22 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>The assets weren't there to meet customer withdrawals.</p>
 </div>
 
-## 5. What's one way to reduce platform risk?
-
-<div class="quiz" data-answer="b">
-<button type="button" data-opt="a">Leave everything on one platform</button>
-<button type="button" data-opt="b">Keep only trading funds on an exchange and test withdrawals</button>
-<button type="button" data-opt="c">Trust big names</button>
-<p class="quiz-why" hidden>Spread across places and test regularly.</p>
-</div>
-
-## 6. What happened to GameStop's price on 22 Jan 2021 (SEC report)?
+## 5. What happened to GameStop's price on 22 Jan 2021 (SEC report)?
 
 <div class="quiz" data-answer="c">
 <button type="button" data-opt="a">It stayed flat</button>
 <button type="button" data-opt="b">It fell 71%</button>
 <button type="button" data-opt="c">It rose from $43 to $72 in about three hours</button>
 <p class="quiz-why" hidden>Extreme crowd-driven moves happen in either direction.</p>
+</div>
+
+## 6. You use 10x leverage and the price falls 10% against you. What happens?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">You lose about 10% of your trade</button>
+<button type="button" data-opt="b">Your margin is wiped out and you're liquidated</button>
+<button type="button" data-opt="c">Nothing, it recovers</button>
+<p class="quiz-why" hidden>At 10x a 10% move against you is roughly your whole margin.</p>
 </div>
 
 ## 7. What is a short squeeze?
@@ -72,13 +72,13 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Buying to cover adds to the buying pressure.</p>
 </div>
 
-## 8. Selling a coin for more than your cost basis usually creates…
+## 8. A post says 'guaranteed 40% a month, act now'. What does this signal?
 
 <div class="quiz" data-answer="b">
-<button type="button" data-opt="a">Nothing to report</button>
-<button type="button" data-opt="b">A gain you may need to report and pay tax on</button>
-<button type="button" data-opt="c">A refund</button>
-<p class="quiz-why" hidden>Rules vary by country; keep records and check them.</p>
+<button type="button" data-opt="a">A real opportunity</button>
+<button type="button" data-opt="b">Hype or a scam</button>
+<button type="button" data-opt="c">A good time to size up</button>
+<p class="quiz-why" hidden>Guaranteed returns and urgency are classic red flags.</p>
 </div>
 
 ## 9. What is an ETF?
@@ -90,13 +90,11 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>It lets you hold a basket of assets in one trade.</p>
 </div>
 
-## 10. What's a good safety habit in DeFi?
+## 10. Why size a position from your stop?
 
 <div class="quiz" data-answer="a">
-<button type="button" data-opt="a">Use a separate wallet with a small amount</button>
-<button type="button" data-opt="b">Approve whatever a site asks</button>
-<button type="button" data-opt="c">Use your main wallet for everything</button>
-<p class="quiz-why" hidden>Limit what a mistake can cost.</p>
+<button type="button" data-opt="a">So the loss at the stop equals the risk you chose</button>
+<button type="button" data-opt="b">So you can use more leverage</button>
+<button type="button" data-opt="c">So fees are lower</button>
+<p class="quiz-why" hidden>Stop distance and risk amount together set the size.</p>
 </div>
-
-**Key idea:** Wrong answers are useful. Go back to the lesson behind any question you missed.

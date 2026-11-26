@@ -6,7 +6,7 @@
     {
       "slug": "start-here",
       "title": "Start here",
-      "summary": "What trading is, what this course will teach, and how to learn without rushing."
+      "summary": "What trading is, whether trading or investing fits you, and how to learn without rushing."
     },
     {
       "slug": "how-markets-work",
@@ -26,7 +26,11 @@
     {
       "slug": "read-the-market",
       "title": "Read the market",
-      "summary": "What moves prices, and how to describe what a chart is doing."
+      "summary": "What moves prices, and how to describe what a chart is doing.",
+      "sections": [
+        "The chart",
+        "The story"
+      ]
     },
     {
       "slug": "build-a-system",
@@ -36,12 +40,11 @@
     {
       "slug": "the-traders-mind",
       "title": "The trader's mind",
-      "summary": "Fear, greed, patience and the habits that keep you in the game."
-    },
-    {
-      "slug": "thinking-in-probabilities",
-      "title": "Thinking in probabilities",
-      "summary": "Inspired by Trading in the Zone: accept risk, think in series of trades and manage your own reactions."
+      "summary": "Think in probabilities, understand your fears and beliefs, and build habits that protect you from yourself.",
+      "sections": [
+        "Understand yourself",
+        "Protect yourself"
+      ]
     },
     {
       "slug": "going-further",
@@ -56,5 +59,96 @@
   "privacy": {
     "controller": "",
     "contactEmail": ""
+  },
+  "stages": [
+    {
+      "title": "Stage 1: Foundations",
+      "summary": "Learn the game and how not to lose too much.",
+      "modules": [
+        "start-here",
+        "how-markets-work",
+        "survive-first"
+      ]
+    },
+    {
+      "title": "Stage 2: Skills",
+      "summary": "Read a market, then turn what you know into written rules.",
+      "modules": [
+        "read-the-market",
+        "build-a-system"
+      ]
+    },
+    {
+      "title": "Stage 3: Mind and world",
+      "summary": "Your own behaviour, real cases and the practical side.",
+      "modules": [
+        "the-traders-mind",
+        "going-further"
+      ]
+    }
+  ],
+  "es": {
+    "tagline": "Lecciones de trading para principiantes, en palabras sencillas.",
+    "description": "Un curso gratuito para principiantes sobre cómo funcionan los mercados, cómo gestionar el riesgo y cómo pensar como un trader prudente. Contenido educativo, no asesoramiento financiero.",
+    "marketToday": {
+      "note": "Más adelante llegará una breve nota diaria de «El mercado hoy»."
+    },
+    "stages": [
+      {
+        "title": "Etapa 1: Fundamentos",
+        "summary": "Aprende el juego y cómo no perder demasiado."
+      },
+      {
+        "title": "Etapa 2: Habilidades",
+        "summary": "Lee un mercado y convierte lo que sabes en reglas escritas."
+      },
+      {
+        "title": "Etapa 3: Mente y mundo",
+        "summary": "Tu propio comportamiento, casos reales y el lado práctico."
+      }
+    ],
+    "modules": {
+      "start-here": {
+        "title": "Empieza aquí",
+        "summary": "Qué es el trading, si te encaja operar o invertir, y cómo aprender sin prisas."
+      },
+      "how-markets-work": {
+        "title": "Cómo funcionan los mercados",
+        "summary": "Precios, órdenes, velas y lo básico que necesitas antes que nada."
+      },
+      "survive-first": {
+        "title": "Sobrevive primero",
+        "summary": "Por qué proteger tu dinero va antes que ganar más.",
+        "sectionNames": {
+          "The basics": "Lo básico",
+          "Leverage": "Apalancamiento",
+          "Staying safe": "Mantenerte a salvo"
+        }
+      },
+      "read-the-market": {
+        "title": "Lee el mercado",
+        "summary": "Qué mueve los precios y cómo describir lo que hace un gráfico.",
+        "sectionNames": {
+          "The chart": "El gráfico",
+          "The story": "La historia"
+        }
+      },
+      "build-a-system": {
+        "title": "Construye un sistema",
+        "summary": "Reglas que escribes antes de operar, para que no las escriba la emoción."
+      },
+      "the-traders-mind": {
+        "title": "La mente del trader",
+        "summary": "Piensa en probabilidades, entiende tus miedos y creencias, y crea hábitos que te protejan de ti mismo.",
+        "sectionNames": {
+          "Understand yourself": "Entiéndete",
+          "Protect yourself": "Protégete"
+        }
+      },
+      "going-further": {
+        "title": "Ir más allá",
+        "summary": "Casos reales, impuestos, inversión y adónde ir después."
+      }
+    }
   }
 }

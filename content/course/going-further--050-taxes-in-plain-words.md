@@ -4,6 +4,7 @@ module: going-further
 order: 50
 summary: A general guide to why trading creates tax questions, what records to keep, and a few examples from the US and Spain. Not tax advice.
 date: 2026-11-22
+needs: keeping-a-trading-journal
 ---
 
 **This is general education, not tax advice.** Rules differ by country and change often. Check your own country's tax authority or a qualified adviser before you rely on any of this.

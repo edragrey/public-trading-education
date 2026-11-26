@@ -4,6 +4,7 @@ module: build-a-system
 order: 50
 summary: Every trade has two exits. Learn to plan both before you enter, and the honest trade-offs of targets, trailing stops and time exits.
 date: 2026-11-21
+needs: stop-losses, risk-and-reward
 ---
 
 Beginners plan the entry and hope for the exit. A system plans **both exits first**.

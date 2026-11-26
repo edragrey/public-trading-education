@@ -7,7 +7,7 @@ summary: Ten quick questions to check you've got the key ideas from this module.
 date: 2026-11-22
 ---
 
-Ten quick questions on this module. Tap an answer to see whether it's right and why. No score is kept, and you can read the lesson again any time.
+Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. What does a swing high with higher lows suggest?
 
@@ -27,22 +27,22 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>It's a warning that your idea may be wrong, not a forecast.</p>
 </div>
 
-## 3. Why does a moving average lag?
+## 3. Account $2,000, risk 1%, entry $10, stop $9.50. How many units?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">20</button>
+<button type="button" data-opt="b">40</button>
+<button type="button" data-opt="c">200</button>
+<p class="quiz-why" hidden>Risk is $20. The stop is $0.50 away, so $20 / $0.50 = 40 units.</p>
+</div>
+
+## 4. Why does a moving average lag?
 
 <div class="quiz" data-answer="c">
 <button type="button" data-opt="a">It's delayed by the exchange</button>
 <button type="button" data-opt="b">It ignores recent candles</button>
 <button type="button" data-opt="c">It's built only from past prices</button>
 <p class="quiz-why" hidden>It averages history, so it always arrives late.</p>
-</div>
-
-## 4. Where do moving averages work worst?
-
-<div class="quiz" data-answer="a">
-<button type="button" data-opt="a">Choppy sideways markets</button>
-<button type="button" data-opt="b">Strong steady trends</button>
-<button type="button" data-opt="c">On daily charts</button>
-<p class="quiz-why" hidden>Price keeps crossing the line in a range, giving false signals.</p>
 </div>
 
 ## 5. RSI is above 70. What does that mean?
@@ -54,13 +54,13 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>In strong trends RSI can stay high for a long time.</p>
 </div>
 
-## 6. What is the best practical use of a chart pattern?
+## 6. Win rate 30%, wins three times the size of losses. Is expectancy positive?
 
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">To predict the exact move</button>
-<button type="button" data-opt="b">To skip using a stop</button>
-<button type="button" data-opt="c">To define where the idea is wrong</button>
-<p class="quiz-why" hidden>A pattern gives a clear point for the stop and the size.</p>
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Yes, about +0.2 of a loss per trade</button>
+<button type="button" data-opt="b">No, the win rate is too low</button>
+<button type="button" data-opt="c">Can't tell without the price</button>
+<p class="quiz-why" hidden>0.3 x 3 - 0.7 x 1 = +0.2. Low win rates can work if wins are big enough.</p>
 </div>
 
 ## 7. A coin has 20% of its supply in circulation. What's worth knowing?
@@ -72,13 +72,13 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>More supply needs more buyers just to keep the price steady.</p>
 </div>
 
-## 8. What does P/E of 20 mean?
+## 8. The daily chart shows an uptrend and the 15-minute chart a downtrend. What does that mean?
 
 <div class="quiz" data-answer="b">
-<button type="button" data-opt="a">The company grows 20% a year</button>
-<button type="button" data-opt="b">You pay $20 for each $1 of yearly profit</button>
-<button type="button" data-opt="c">The company has 20 years left</button>
-<p class="quiz-why" hidden>P/E is price divided by earnings per share.</p>
+<button type="button" data-opt="a">One chart is wrong</button>
+<button type="button" data-opt="b">Both can be right, on different timeframes</button>
+<button type="button" data-opt="c">The market is broken</button>
+<p class="quiz-why" hidden>Structure depends on the timeframe. Always say which one you mean.</p>
 </div>
 
 ## 9. Why can a stock fall after good results?
@@ -90,13 +90,11 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Surprises against expectations move prices.</p>
 </div>
 
-## 10. Why do traders watch the economic calendar?
+## 10. You risk $50 to make $150. Roughly what win rate breaks even, before costs?
 
 <div class="quiz" data-answer="a">
-<button type="button" data-opt="a">Data and rate decisions can move many markets at once</button>
-<button type="button" data-opt="b">Charts don't show news</button>
-<button type="button" data-opt="c">It tells them which way price will go</button>
-<p class="quiz-why" hidden>Big releases cause spikes and gaps; plan for them.</p>
+<button type="button" data-opt="a">25%</button>
+<button type="button" data-opt="b">50%</button>
+<button type="button" data-opt="c">75%</button>
+<p class="quiz-why" hidden>With 3-to-1 reward-to-risk, winning 1 trade in 4 covers the 3 losses.</p>
 </div>
-
-**Key idea:** Wrong answers are useful. Go back to the lesson behind any question you missed.

@@ -4,6 +4,7 @@ module: going-further
 order: 30
 summary: A large crypto exchange failed and customers could not withdraw. What a court record says happened, and what it teaches about where you keep your money.
 date: 2026-11-22
+needs: where-you-trade
 ---
 
 Third case study. For this one we rely on a US bankruptcy court record, which is a primary source.
