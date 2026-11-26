@@ -90,3 +90,6 @@ Why can a stop-market fill worse than your stop price?
 - Safety exit if wrong: **stop-loss**.
 
 **Key idea:** The order type decides how you trade. Pick it on purpose.
+
+<figure class="fig"><svg viewBox="0 0 320 170" role="img" aria-label="Order types around the current price: a sell limit above it, a market order at it, a buy limit below it, and a stop-loss further below."><line class="guide" x1="20" y1="28" x2="300" y2="28"/><line class="axis" x1="20" y1="76" x2="300" y2="76"/><line class="guide" x1="20" y1="118" x2="300" y2="118"/><line class="guide" x1="20" y1="150" x2="300" y2="150" style="stroke:var(--loss)"/><text class="t-gain" x="24" y="22">Sell limit (above the price)</text><text class="t" x="24" y="70">Price now: a market order fills here</text><text class="t-gain" x="24" y="112">Buy limit (below the price)</text><text class="t-loss" x="24" y="144">Stop-loss (further below)</text><circle class="dot pulse" cx="296" cy="76" r="5"/></svg><figcaption>Where each order type sits compared with the current price.</figcaption></figure>
+

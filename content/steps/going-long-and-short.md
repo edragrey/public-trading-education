@@ -42,6 +42,8 @@ You buy at $20 and sell at $25. Long or short, and what's the gain per unit?
 
 > **Hypothetical.** Sell 10 coins at $100, buy them back at $90. Gain: **$100**.
 
+<figure class="fig"><svg viewBox="0 0 320 160" role="img" aria-label="Left: a long, buy at $100 then sell at $110 as the price rises. Right: a short, sell at $100 then buy back at $90 as the price falls."><text class="t-gain" x="80" y="18" text-anchor="middle">Long: price rises</text><path class="ln draw" d="M25 115 L135 55"/><circle class="dot-acc" cx="25" cy="115" r="5"/><circle class="dot-acc" cx="135" cy="55" r="5"/><text class="t-sm" x="25" y="136">Buy $100</text><text class="t-sm" x="135" y="44" text-anchor="end">Sell $110</text><text class="t-loss" x="240" y="18" text-anchor="middle">Short: price falls</text><path class="ln ln-loss draw" d="M185 55 L295 115"/><circle class="dot-loss" cx="185" cy="55" r="5"/><circle class="dot-loss" cx="295" cy="115" r="5"/><text class="t-sm" x="185" y="44">Sell $100</text><text class="t-sm" x="295" y="136" text-anchor="end">Buy back $90</text></svg><figcaption>Both gain $100 on 10 coins. Hypothetical.</figcaption></figure>
+
 <!-- step -->
 
 ## When a short goes wrong

@@ -26,6 +26,8 @@ Put it where **the idea is proven wrong**: for example just below a recent swing
 
 Then size the trade so that loss is about 1% of your account.
 
+<figure class="fig"><svg viewBox="0 0 320 150" role="img" aria-label="A price line rises, dips to a swing low, then climbs. A dashed stop line sits just below the swing low."><path class="ln draw" d="M20 95 L70 62 L115 102 L175 52 L235 30 L290 42"/><circle class="dot-acc" cx="115" cy="102" r="5"/><text class="lbl" x="126" y="110">swing low</text><line class="guide" x1="60" y1="118" x2="300" y2="118" style="stroke:var(--loss)"/><text class="t-loss" x="300" y="138" text-anchor="end">Stop: just below the swing low</text></svg><figcaption>The stop goes where the idea is proven wrong. Hypothetical.</figcaption></figure>
+
 <!-- step -->
 
 ## Quick check

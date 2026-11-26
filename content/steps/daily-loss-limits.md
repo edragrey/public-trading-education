@@ -46,6 +46,8 @@ Same account. Limit: **3%**, so **$60**.
 
 Worst possible day: **about −3%**.
 
+<figure class="fig"><svg viewBox="0 0 320 172" role="img" aria-label="Without a limit, four losses add up to $230. With a 3% limit of $60, the day stops after three $20 losses."><text class="t" x="70" y="18" text-anchor="middle">No limit</text><text class="t" x="230" y="18" text-anchor="middle">3% limit</text><line class="axis" x1="10" y1="32" x2="310" y2="32"/><rect class="bar-ask" x="16" y="34" width="24" height="12.0" rx="3"/><text class="lbl" x="28" y="59.0" text-anchor="middle">−20</text><rect class="bar-ask" x="48" y="34" width="24" height="12.0" rx="3"/><text class="lbl" x="60" y="59.0" text-anchor="middle">−20</text><rect class="bar-ask" x="80" y="34" width="24" height="24.0" rx="3"/><text class="lbl" x="92" y="71.0" text-anchor="middle">−40</text><rect class="bar-ask" x="112" y="34" width="24" height="90.0" rx="3"/><text class="lbl" x="124" y="137.0" text-anchor="middle">−150</text><rect class="bar-ask" x="188" y="34" width="24" height="12.0" rx="3"/><text class="lbl" x="200" y="59.0" text-anchor="middle">−20</text><rect class="bar-ask" x="220" y="34" width="24" height="12.0" rx="3"/><text class="lbl" x="232" y="59.0" text-anchor="middle">−20</text><rect class="bar-ask" x="252" y="34" width="24" height="12.0" rx="3"/><text class="lbl" x="264" y="59.0" text-anchor="middle">−20</text><text class="t-loss" x="70" y="164" text-anchor="middle">−$230 in one afternoon</text><text class="t-gain" x="236" y="164" text-anchor="middle">−$60 and stop</text><text class="t-sm" x="236" y="96" text-anchor="middle">Limit reached: stop.</text></svg><figcaption>Same account, same bad start. Hypothetical.</figcaption></figure>
+
 <!-- step -->
 
 ## Quick check

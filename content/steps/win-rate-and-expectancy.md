@@ -84,6 +84,8 @@ Trader A: (0.8 × $10) − (0.2 × $50) = **−$2**
 
 Trader B: (0.4 × $30) − (0.6 × $10) = **+$6**
 
+<figure class="fig"><svg viewBox="0 0 320 156" role="img" aria-label="Trader A wins often but loses $20 over ten trades; Trader B wins less often but makes $60."><text class="t" x="10" y="18">Trader A: wins 80%</text><rect class="bar-bid" x="10" y="26" width="104" height="18" rx="3"/><text class="lbl" x="122" y="40">wins $80</text><rect class="bar-ask" x="10" y="50" width="130" height="18" rx="3"/><text class="lbl" x="148" y="64">losses $100</text><text class="t-loss" x="310" y="18" text-anchor="end">−$20</text><text class="t" x="10" y="92">Trader B: wins 40%</text><rect class="bar-bid" x="10" y="100" width="156" height="18" rx="3"/><text class="lbl" x="174" y="114">wins $120</text><rect class="bar-ask" x="10" y="124" width="78" height="18" rx="3"/><text class="lbl" x="96" y="138">losses $60</text><text class="t-gain" x="310" y="92" text-anchor="end">+$60</text></svg><figcaption>After 10 trades each. How much you win matters, not only how often.</figcaption></figure>
+
 <!-- step -->
 
 ## Why Trader A happens
