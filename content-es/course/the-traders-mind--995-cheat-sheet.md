@@ -41,6 +41,8 @@ Un recordatorio de una página de este módulo. Lee primero las lecciones; usa e
 
 ¿Estoy tranquilo? ¿Es mi setup? ¿Está puesto el stop y es correcto el tamaño? ¿Estoy persiguiendo algo?
 
+- **Vender es difícil:** decide las salidas de antemano y juzga el plan, no el resultado. **Volver tras una gran pérdida:** primero papel, tamaño muy pequeño y una escalera según sigas las reglas.
+
 ## Ojo con
 
 - Aumentar el tamaño tras ganancias o pérdidas.

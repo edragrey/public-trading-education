@@ -3,12 +3,12 @@ title: "The trader's mind: module quiz"
 module: the-traders-mind
 order: 990
 kind: quiz
-summary: Ten quick questions to check you've got the key ideas from this module. Tap an answer to see why.
+summary: Twelve quick questions to check you've got the key ideas from this module. Tap an answer to see why.
 date: 2026-11-22
 section: Protect yourself
 ---
 
-Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
+Twelve quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. What is an edge?
 
@@ -98,4 +98,22 @@ Ten quick questions on this module. Six are about this module and four bring bac
 <button type="button" data-opt="b">A price prediction</button>
 <button type="button" data-opt="c">What friends think</button>
 <p class="quiz-why" hidden>Knowing the loss at your stop, before you enter, is the core risk check.</p>
+</div>
+
+## 11. Why do traders often hold losers too long?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Selling makes the loss real</button>
+<button type="button" data-opt="b">Losers always recover</button>
+<button type="button" data-opt="c">Fees are lower</button>
+<p class="quiz-why" hidden>Selling turns a paper loss into a real one, and people avoid the regret.</p>
+</div>
+
+## 12. You return after a long drawdown. What is a sensible first step?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Full size to recover fast</button>
+<button type="button" data-opt="b">Paper trade, then very small size</button>
+<button type="button" data-opt="c">Double size once</button>
+<p class="quiz-why" hidden>Rebuild your process first, with paper trading and small size, and move up on following your rules.</p>
 </div>

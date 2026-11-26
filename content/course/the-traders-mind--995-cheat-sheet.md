@@ -41,6 +41,8 @@ A one-page reminder of this module. Read the lessons first; use this to refresh 
 
 Am I calm? Is this my setup? Is the stop in and the size right? Am I chasing?
 
+- **Selling is hard:** decide exits in advance and judge the plan, not the outcome. **Coming back after a big loss:** paper first, very small size, climb a ladder on rule-following trades.
+
 ## Watch out for
 
 - Growing size after wins or losses.

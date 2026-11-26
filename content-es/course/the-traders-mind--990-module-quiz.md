@@ -3,12 +3,12 @@ title: "La mente del trader: test del módulo"
 module: the-traders-mind
 order: 990
 kind: quiz
-summary: Diez preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
+summary: Doce preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
 date: 2026-11-22
 section: Protect yourself
 ---
 
-Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
+Doce preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
 
 ## 1. ¿Qué es una ventaja (edge)?
 
@@ -98,4 +98,22 @@ Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro re
 <button type="button" data-opt="b">Una predicción de precio</button>
 <button type="button" data-opt="c">Lo que piensan los amigos</button>
 <p class="quiz-why" hidden>Conocer la pérdida en tu stop, antes de entrar, es la comprobación de riesgo esencial.</p>
+</div>
+
+## 11. ¿Por qué suelen aguantar los traders las perdedoras demasiado tiempo?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Vender hace real la pérdida</button>
+<button type="button" data-opt="b">Las perdedoras siempre se recuperan</button>
+<button type="button" data-opt="c">Las comisiones son menores</button>
+<p class="quiz-why" hidden>Vender convierte una pérdida en papel en real, y la gente evita el arrepentimiento.</p>
+</div>
+
+## 12. Vuelves tras un drawdown largo. ¿Cuál es un primer paso sensato?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Tamaño completo para recuperar rápido</button>
+<button type="button" data-opt="b">Papel y luego un tamaño muy pequeño</button>
+<button type="button" data-opt="c">Duplicar el tamaño una vez</button>
+<p class="quiz-why" hidden>Reconstruye primero tu proceso, con papel y poco tamaño, y sube por seguir tus reglas.</p>
 </div>

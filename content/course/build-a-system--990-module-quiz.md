@@ -3,11 +3,11 @@ title: "Build a system: module quiz"
 module: build-a-system
 order: 990
 kind: quiz
-summary: Ten quick questions to check you've got the key ideas from this module. Tap an answer to see why.
+summary: Twelve quick questions to check you've got the key ideas from this module. Tap an answer to see why.
 date: 2026-11-22
 ---
 
-Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
+Twelve quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. Why write your system down?
 
@@ -99,4 +99,22 @@ Ten quick questions on this module. Six are about this module and four bring bac
 <button type="button" data-opt="b">Spread</button>
 <button type="button" data-opt="c">Funding</button>
 <p class="quiz-why" hidden>Slippage is the gap between the price you expected and the price you got.</p>
+</div>
+
+## 11. When should you decide how you will take profit?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Before you enter</button>
+<button type="button" data-opt="b">When the trade is up</button>
+<button type="button" data-opt="c">After it reverses</button>
+<p class="quiz-why" hidden>Decide while calm. Once you are up, emotion pushes you to sell too early or hold too long.</p>
+</div>
+
+## 12. Which way does a trailing stop move?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Only in your favour</button>
+<button type="button" data-opt="b">Up and down with price</button>
+<button type="button" data-opt="c">Only down</button>
+<p class="quiz-why" hidden>A trailing stop follows price in your favour and never moves back.</p>
 </div>
