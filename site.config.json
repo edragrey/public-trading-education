@@ -29,6 +29,11 @@
       ]
     },
     {
+      "slug": "how-markets-really-work",
+      "title": "How markets really work",
+      "summary": "What actually moves a price: supply and demand, liquidity, who is on the other side, leverage, money flows, cycles and the big economy."
+    },
+    {
       "slug": "read-the-market",
       "title": "Read the market",
       "summary": "What moves prices, and how to describe what a chart is doing.",
@@ -80,6 +85,7 @@
       "title": "Stage 2: Skills",
       "summary": "Read a market, then turn what you know into written rules.",
       "modules": [
+        "how-markets-really-work",
         "read-the-market",
         "build-a-system"
       ]
@@ -158,6 +164,10 @@
       "trading-math": {
         "title": "Matemáticas del trading",
         "summary": "La aritmética sencilla detrás de cada operación: porcentajes, R, interés compuesto, comisiones y cuántas operaciones necesitas para fiarte de un resultado."
+      },
+      "how-markets-really-work": {
+        "title": "Cómo funcionan de verdad los mercados",
+        "summary": "Qué mueve realmente un precio: oferta y demanda, liquidez, quién está al otro lado, apalancamiento, flujos de dinero, ciclos y la economía en general."
       }
     }
   }

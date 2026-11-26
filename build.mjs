@@ -39,6 +39,7 @@ const mdFiles = (dir) => (fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) =>
 const ICONS = {
   shield: '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
   calc: '<rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M8.5 7.5h7M9 12h.01M12 12h.01M15 12h.01M9 16h.01M12 16h.01M15 16h.01"/>',
+  flow: '<path d="M4 8h12l-3-3M20 16H8l3 3"/>',
   chart: '<path d="M4 19h16"/><path d="M5 15l4-4 3 3 6-7"/><path d="M15 7h3v3"/>',
   list: '<rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 8.5h6M9 12h6M9 15.5h4"/>',
   mind: '<path d="M12 20c-4 0-7-3-7-7 0-3.5 2.5-6.5 6-7 .3 2 1.5 3 3 3.5"/><path d="M12 20c4 0 7-3 7-7 0-2.5-1.5-4.7-3.6-5.9"/><path d="M12 20v-6"/><path d="M12 14c0-2 1.5-3.5 3.5-3.5"/>',
@@ -59,7 +60,7 @@ const ICONS = {
   scale: '<path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8l-2.5 6a3 3 0 0 0 5 0z"/><path d="M19 8l-2.5 6a3 3 0 0 0 5 0z"/>',
 };
 const icon = (name, cls = "icon") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.book}</svg>`;
-const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "trading-math": "calc", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "thinking-in-probabilities": "scale", "going-further": "book" };
+const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "trading-math": "calc", "how-markets-really-work": "flow", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "thinking-in-probabilities": "scale", "going-further": "book" };
 const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 
 const logo = `<img class="logo" src="/brand-logo.jpg" alt="" aria-hidden="true">`;
