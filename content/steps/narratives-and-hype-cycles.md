@@ -18,6 +18,8 @@ One small idea per screen, with a few quick questions. About **3 minutes**.
 
 A **narrative** is a story that ties a group of coins or stocks together. Money tends to rush into the hottest one, then out again.
 
+<figure class="fig"><svg viewBox="0 0 320 168" role="img" aria-label="A hype cycle curve in five stages: quiet start, discovery, excitement, peak attention, then a fade."><line class="axis" x1="15" y1="135" x2="308" y2="135"/><path class="ln draw" d="M20 125 L36 122 Q70 120 98 105 Q130 85 160 50 Q190 20 222 22 Q255 24 284 110 L305 128"/><circle class="dot-acc" cx="36" cy="122" r="5"/><text class="t-sm" x="36" y="112" text-anchor="middle">1</text><text class="lbl" x="36" y="156" text-anchor="middle">Quiet</text><circle class="dot-acc" cx="98" cy="105" r="5"/><text class="t-sm" x="98" y="95" text-anchor="middle">2</text><text class="lbl" x="98" y="156" text-anchor="middle">Discovery</text><circle class="dot-acc" cx="160" cy="50" r="5"/><text class="t-sm" x="160" y="40" text-anchor="middle">3</text><text class="lbl" x="160" y="156" text-anchor="middle">Excited</text><circle class="dot-acc" cx="222" cy="22" r="5"/><text class="t-sm" x="222" y="12" text-anchor="middle">4</text><text class="lbl" x="222" y="156" text-anchor="middle">Peak</text><circle class="dot-acc" cx="284" cy="110" r="5"/><text class="t-sm" x="284" y="100" text-anchor="middle">5</text><text class="lbl" x="284" y="156" text-anchor="middle">Fade</text></svg><figcaption>The five stages of a hype cycle. Not a prediction for any real coin.</figcaption></figure>
+
 <!-- step -->
 
 ## Stage 1: quiet start

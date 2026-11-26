@@ -25,6 +25,8 @@ For any trade there are two distances from your entry:
 
 > **Hypothetical.** Entry $50, stop $48, target $56. Risk $2, reward $6. That's **3 to 1**.
 
+<figure class="fig"><svg viewBox="0 0 320 150" role="img" aria-label="A trade ladder: entry at $50, stop at $48 below it (risk $2), target at $56 above it (reward $6)."><rect fill="var(--accent-soft)" x="90" y="22" width="90" height="78"/><rect fill="var(--loss-soft)" x="90" y="100" width="90" height="26"/><line class="guide" x1="40" y1="22" x2="300" y2="22"/><line class="guide" x1="40" y1="100" x2="300" y2="100"/><line class="guide" x1="40" y1="126" x2="300" y2="126"/><text class="t-gain" x="190" y="18">Target $56</text><text class="t" x="190" y="95">Entry $50</text><text class="t-loss" x="190" y="142">Stop $48</text><text class="t-gain" x="10" y="66">Reward</text><text class="t-gain" x="10" y="82">$6</text><text class="t-loss" x="10" y="116">Risk $2</text><circle class="dot pulse" cx="135" cy="100" r="5"/></svg><figcaption>Reward is three times the risk: 3 to 1. Hypothetical.</figcaption></figure>
+
 <!-- step -->
 
 ## Quick check

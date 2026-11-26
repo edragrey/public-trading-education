@@ -32,6 +32,8 @@ If it went from $10,000 to $8,000, that's a **20% drawdown**.
 
 The deeper the hole, the harder the climb.
 
+<figure class="fig"><svg viewBox="0 0 320 160" role="img" aria-label="Bars comparing a loss with the gain needed to recover it: 10% needs 11%, 25% needs 33%, 50% needs 100%."><line class="axis" x1="10" y1="130" x2="310" y2="130"/><rect class="bar-ask" x="22" y="120" width="30" height="10" rx="3"/><rect class="bar-bid" x="58" y="119" width="30" height="11" rx="3"/><text class="t-loss" x="37" y="115" text-anchor="middle">−10%</text><text class="t-gain" x="73" y="114" text-anchor="middle">+11%</text><text class="lbl" x="55" y="148" text-anchor="middle">Lose 10%</text><rect class="bar-ask" x="122" y="105" width="30" height="25" rx="3"/><rect class="bar-bid" x="158" y="97" width="30" height="33" rx="3"/><text class="t-loss" x="137" y="100" text-anchor="middle">−25%</text><text class="t-gain" x="173" y="92" text-anchor="middle">+33%</text><text class="lbl" x="155" y="148" text-anchor="middle">Lose 25%</text><rect class="bar-ask" x="222" y="80" width="30" height="50" rx="3"/><rect class="bar-bid" x="258" y="30" width="30" height="100" rx="3"/><text class="t-loss" x="237" y="75" text-anchor="middle">−50%</text><text class="t-gain" x="273" y="25" text-anchor="middle">+100%</text><text class="lbl" x="255" y="148" text-anchor="middle">Lose 50%</text></svg><figcaption>Red is the loss, green is the gain needed to get back to even.</figcaption></figure>
+
 <!-- step -->
 
 ## Quick check
