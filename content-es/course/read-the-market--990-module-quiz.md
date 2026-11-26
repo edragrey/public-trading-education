@@ -3,11 +3,11 @@ title: "Leer el mercado: test del módulo"
 module: read-the-market
 order: 990
 kind: quiz
-summary: Trece preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
+summary: Dieciséis preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
 date: 2026-11-22
 ---
 
-Trece preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
+Dieciséis preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
 
 ## 1. ¿Qué sugiere un máximo de oscilación con mínimos más altos?
 
@@ -124,4 +124,31 @@ Trece preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro r
 <button type="button" data-opt="b">La tendencia en un marco temporal mayor</button>
 <button type="button" data-opt="c">El RSI</button>
 <p class="quiz-why" hidden>Empieza por la visión general y luego acércate.</p>
+</div>
+
+## 14. Las barras del histograma del MACD se encogen mientras el precio sigue subiendo. ¿Qué sugiere?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">El precio tiene que caer mañana</button>
+<button type="button" data-opt="b">El momentum se apaga, así que ten cuidado</button>
+<button type="button" data-opt="c">El MACD está roto</button>
+<p class="quiz-why" hidden>El histograma muestra momentum, no una predicción. Un momentum que se apaga es un aviso, no una certeza.</p>
+</div>
+
+## 15. Las bandas de Bollinger se comprimen mucho. ¿Qué te dice eso?
+
+<div class="quiz" data-answer="c">
+<button type="button" data-opt="a">El precio subirá</button>
+<button type="button" data-opt="b">El precio bajará</button>
+<button type="button" data-opt="c">Puede venir un movimiento mayor, dirección desconocida</button>
+<p class="quiz-why" hidden>A la baja volatilidad suele seguir un estallido, pero las bandas no dicen hacia dónde.</p>
+</div>
+
+## 16. Una moneda sube de 100 $ a 200 $. ¿Dónde está el retroceso de Fibonacci del 50 %?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">150 $</button>
+<button type="button" data-opt="b">138 $</button>
+<button type="button" data-opt="c">50 $</button>
+<p class="quiz-why" hidden>200 $ − (0,5 × 100 $) = 150 $. Tómalo como una zona a vigilar, no como una garantía.</p>
 </div>

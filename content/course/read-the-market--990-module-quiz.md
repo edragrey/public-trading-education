@@ -3,11 +3,11 @@ title: "Read the market: module quiz"
 module: read-the-market
 order: 990
 kind: quiz
-summary: Thirteen quick questions to check you've got the key ideas from this module. Tap an answer to see why.
+summary: Sixteen quick questions to check you've got the key ideas from this module. Tap an answer to see why.
 date: 2026-11-22
 ---
 
-Thirteen quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
+Sixteen quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. What does a swing high with higher lows suggest?
 
@@ -124,4 +124,31 @@ Thirteen quick questions on this module. Six are about this module and four brin
 <button type="button" data-opt="b">The trend on a higher timeframe</button>
 <button type="button" data-opt="c">The RSI</button>
 <p class="quiz-why" hidden>Start with the big picture, then zoom in.</p>
+</div>
+
+## 14. The MACD histogram bars are shrinking while price still rises. What does it suggest?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Price must fall tomorrow</button>
+<button type="button" data-opt="b">Momentum is fading, so take care</button>
+<button type="button" data-opt="c">The MACD is broken</button>
+<p class="quiz-why" hidden>The histogram shows momentum, not a prediction. Fading momentum is a warning, not a certainty.</p>
+</div>
+
+## 15. Bollinger bands squeeze very tight. What does that tell you?
+
+<div class="quiz" data-answer="c">
+<button type="button" data-opt="a">Price will rise</button>
+<button type="button" data-opt="b">Price will fall</button>
+<button type="button" data-opt="c">A bigger move may come, direction unknown</button>
+<p class="quiz-why" hidden>Low volatility is often followed by a burst, but the bands don't say which way.</p>
+</div>
+
+## 16. A coin rises from $100 to $200. Where is the 50% Fibonacci retracement?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">$150</button>
+<button type="button" data-opt="b">$138</button>
+<button type="button" data-opt="c">$50</button>
+<p class="quiz-why" hidden>$200 − (0.5 × $100) = $150. Treat it as an area to watch, not a guarantee.</p>
 </div>
