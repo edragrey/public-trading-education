@@ -4,6 +4,7 @@ module: build-a-system
 order: 30
 summary: Scalping, day trading, swing trading and investing are different jobs with different costs. Pick the one that fits your time, nerves and account.
 date: 2026-11-21
+needs: timeframes
 ---
 
 Before you write rules, decide **what kind of trader you're trying to be**. The style sets your timeframe, how often you trade, how much time it takes, and what costs hurt you most.

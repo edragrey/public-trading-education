@@ -4,6 +4,7 @@ module: survive-first
 order: 130
 summary: Perpetual futures are the most common leveraged product in crypto. Plain-words guide to how they work, what funding is, and the costs and risks.
 date: 2026-11-22
+needs: what-happens-when-you-get-liquidated
 section: Leverage
 ---
 

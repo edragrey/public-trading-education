@@ -1,9 +1,10 @@
 ---
 title: "The four fears that wreck good plans"
-module: thinking-in-probabilities
+module: the-traders-mind
 order: 50
 summary: Fear of being wrong, losing money, missing out and leaving money behind. Learn their disguises so you can spot them.
 date: 2026-11-22
+section: Understand yourself
 ---
 
 Fear isn't a flaw. It's an alarm. The trouble starts when it quietly takes over decisions. Four fears show up again and again.

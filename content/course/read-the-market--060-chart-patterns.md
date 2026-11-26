@@ -4,6 +4,9 @@ module: read-the-market
 order: 60
 summary: Triangles, flags, double tops and the rest. What patterns describe, why they're easy to see only afterwards, and how to treat them.
 date: 2026-11-21
+optional: true
+section: The chart
+needs: trends-ranges-support-resistance
 ---
 
 Traders name shapes that prices often draw. Here are the common ones, and a warning about all of them.

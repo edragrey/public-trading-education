@@ -1,9 +1,10 @@
 ---
 title: "Responsibility and practice"
-module: thinking-in-probabilities
+module: the-traders-mind
 order: 80
 summary: You can't control the market, but you can own your responses. Here's how to practise until the habits stick.
 date: 2026-11-22
+section: Understand yourself
 ---
 
 **Taking responsibility** in trading means accepting that your results come from your decisions, not from the market, other traders or bad luck. It's a freeing idea, because decisions are the part you can change.

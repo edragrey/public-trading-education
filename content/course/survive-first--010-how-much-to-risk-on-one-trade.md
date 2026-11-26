@@ -4,6 +4,7 @@ module: survive-first
 order: 20
 summary: Why careful traders decide the most they can lose before they think about what they might win, and why a small fixed percentage keeps you in the game.
 date: 2026-11-21
+needs: why-a-correct-forecast-can-still-lose-money
 ---
 
 The first lesson showed that one big loss can undo a lot of good forecasting. This lesson gives you the simplest tool to stop that from happening: decide your loss *before* you trade.

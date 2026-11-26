@@ -14,33 +14,25 @@ This course teaches those pieces in order.
 
 ## The path
 
-### 1. Start here
+The course has three stages. Do them in order: each one uses the words and habits of the one before.
 
-You are here. These short introductions explain what trading is, what the course covers, and how to learn without rushing into a real-money trade.
+### Stage 1: Foundations
 
-### 2. How markets work
+- **Start here** (you are here): what trading is, whether trading or investing fits you, and how to learn without rushing.
+- **How markets work:** what a market is, where trades happen, how prices form, what orders do, how to read a candle, and how stocks, commodities and crypto differ. It ends with your first paper trade.
+- **Survive first:** how to limit a loss. Position size, stop losses, risk and reward, probabilities, losing streaks, fees, leverage and basic account safety. Everything here is required, including leverage, because exchanges offer it from day one.
 
-You will learn what a market is, where trades happen, how prices are formed, what orders do, how charts work, and how stocks, commodities and crypto differ.
+### Stage 2: Skills
 
-### 3. Survive first
+- **Read the market:** how to describe what a chart is doing, what moves a price, and how to treat news and narratives without mistaking attention for certainty.
+- **Build a system:** written rules for entries, exits, a pre-trade checklist, a journal, testing and a weekly review.
 
-Before looking for a big win, you will learn how to limit a loss. This includes position size, stop losses, risk and reward, losing streaks, fees, leverage and basic account safety.
+### Stage 3: Mind and world
 
-### 4. Read the market
+- **The trader's mind:** how thinking in probabilities, fear, overconfidence, FOMO and revenge trading affect your decisions, and the habits that protect you.
+- **Going further:** case studies, taxes and what to practise next.
 
-You will learn to describe what a chart is doing, what can move a price, how to use volume and liquidity, and how to treat news and narratives without mistaking attention for certainty.
-
-### 5. Build a system
-
-You will turn those ideas into written rules: entries, exits, a pre-trade checklist, a journal, testing and a weekly review.
-
-### 6. The trader's mind and probabilities
-
-You will look at fear, overconfidence, FOMO and revenge trading, then learn why a good process can still produce losing trades for a while.
-
-### 7. Go further
-
-The final module uses case studies and covers topics such as investing versus trading, taxes and what to practise next.
+Your first paper trade, at the end of How markets work, follows you through the course: you size it, set its stop, and write its plan and journal entry.
 
 ## What this course does not promise
 

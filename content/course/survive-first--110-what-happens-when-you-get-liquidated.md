@@ -5,6 +5,7 @@ order: 120
 section: Leverage
 summary: Margin, leverage and liquidation in plain words, and why your position size and your stop set your risk, not the leverage number.
 date: 2026-11-23
+needs: leverage-in-plain-words
 ---
 
 Every big sell-off brings a wave of "got liquidated, lesson learnt" posts. The usual advice in the replies is "never use leverage". That advice is safe, but it skips the part that actually protects you. This lesson explains what liquidation is, and the one number to check before any leveraged trade.

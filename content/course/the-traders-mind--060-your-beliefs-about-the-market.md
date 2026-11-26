@@ -1,9 +1,10 @@
 ---
 title: "Your beliefs about the market"
-module: thinking-in-probabilities
+module: the-traders-mind
 order: 60
 summary: What you believe about markets quietly decides what you notice and what you do. Some beliefs are worth changing.
 date: 2026-11-22
+section: Understand yourself
 ---
 
 A **belief** is something you treat as true, usually without checking. We all hold beliefs about money, risk and being right. They filter what we see.

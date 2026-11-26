@@ -7,7 +7,7 @@ summary: Ten quick questions to check you've got the key ideas from this module.
 date: 2026-11-22
 ---
 
-Ten quick questions on this module. Tap an answer to see whether it's right and why. No score is kept, and you can read the lesson again any time.
+Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. Why write your system down?
 
@@ -27,13 +27,13 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>A good entry is specific and includes the stop.</p>
 </div>
 
-## 3. Which style fits someone with a day job who checks charts twice a day?
+## 3. Account $10,000, risk 1%, stop 5% away. What position size?
 
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">Scalping on 1-minute charts</button>
-<button type="button" data-opt="b">Day trading on 5-minute charts</button>
-<button type="button" data-opt="c">Swing trading on daily charts</button>
-<p class="quiz-why" hidden>Pick a style you can follow with your time.</p>
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">$500</button>
+<button type="button" data-opt="b">$2,000</button>
+<button type="button" data-opt="c">$5,000</button>
+<p class="quiz-why" hidden>Risk is $100. $100 / 0.05 = $2,000.</p>
 </div>
 
 ## 4. Which stop move is acceptable?
@@ -54,13 +54,13 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Feelings aren't new information about the trade.</p>
 </div>
 
-## 6. What's a time exit for?
+## 6. What does it mean that a moving average lags?
 
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">To exit at noon</button>
-<button type="button" data-opt="b">To avoid using stops</button>
-<button type="button" data-opt="c">To leave trades that go nowhere</button>
-<p class="quiz-why" hidden>It stops money sitting in dead trades.</p>
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">It predicts the next move</button>
+<button type="button" data-opt="b">It reacts after price has already moved</button>
+<button type="button" data-opt="c">It ignores old prices</button>
+<p class="quiz-why" hidden>It's built from past prices, so it confirms moves rather than forecasting them.</p>
 </div>
 
 ## 7. Why list every trade when backtesting?
@@ -72,25 +72,16 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Hindsight tempts you to skip bad trades.</p>
 </div>
 
-## 8. What is overfitting?
+## 8. Four highly correlated trades each risk 1%. About how much can one bad day cost?
 
 <div class="quiz" data-answer="b">
-<button type="button" data-opt="a">Using too many trades</button>
-<button type="button" data-opt="b">Tweaking a rule until it fits past data perfectly</button>
-<button type="button" data-opt="c">Using a stop that is too tight</button>
-<p class="quiz-why" hidden>An overfit rule tends to fail on new data.</p>
+<button type="button" data-opt="a">1%</button>
+<button type="button" data-opt="b">Close to 4%</button>
+<button type="button" data-opt="c">0.25%</button>
+<p class="quiz-why" hidden>Correlated trades tend to lose together, so the risks add up.</p>
 </div>
 
-## 9. What does a journal's weekly review look at first?
-
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">Only profits</button>
-<button type="button" data-opt="b">Only the biggest loss</button>
-<button type="button" data-opt="c">Rule breaks, then results</button>
-<p class="quiz-why" hidden>Process comes first. Results follow.</p>
-</div>
-
-## 10. When may you change a rule?
+## 9. When may you change a rule?
 
 <div class="quiz" data-answer="a">
 <button type="button" data-opt="a">After enough trades, one change at a time</button>
@@ -100,3 +91,12 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 </div>
 
 **Key idea:** Wrong answers are useful. Go back to the lesson behind any question you missed.
+
+## 10. Your stop is hit at a worse price than you set. What's that called?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">Slippage</button>
+<button type="button" data-opt="b">Spread</button>
+<button type="button" data-opt="c">Funding</button>
+<p class="quiz-why" hidden>Slippage is the gap between the price you expected and the price you got.</p>
+</div>

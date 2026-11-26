@@ -1,9 +1,11 @@
 ---
 title: "Think in probabilities"
-module: thinking-in-probabilities
-order: 20
+module: survive-first
+order: 45
 summary: One trade tells you almost nothing. A pattern with an edge only shows itself over many trades, like a casino's advantage.
 date: 2026-11-22
+needs: why-a-correct-forecast-can-still-lose-money
+section: The basics
 ---
 
 A **probability** is how likely something is, such as "this setup works about 4 times in 10". An **edge** is a small, repeatable tilt in your favour: over many trades, your wins bring in more than your losses cost.

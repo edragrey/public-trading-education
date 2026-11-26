@@ -4,6 +4,7 @@ module: survive-first
 order: 100
 summary: Spreading risk only helps if the things you hold don't all move together. Here's what correlation means and how to avoid hidden concentration.
 date: 2026-11-22
+needs: how-much-to-risk-on-one-trade
 section: The basics
 ---
 
@@ -45,6 +46,8 @@ The idea is simple, but it hides a trap: **five positions with high correlation 
 
 - It can't remove market-wide risk. In a crash, correlations often rise toward 1, so things you thought were different fall together.
 - Too much spreading can mean you can't follow any of it. Ten positions you can't watch is worse than three you understand.
+
+**See it happen.** When everything falls together: [Read the March 2020 case study](/course/going-further/case-study-march-2020/).
 
 ## Common mistakes
 

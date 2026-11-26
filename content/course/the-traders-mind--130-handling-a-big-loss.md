@@ -1,9 +1,10 @@
 ---
 title: "Handling a big loss"
 module: the-traders-mind
-order: 30
+order: 130
 summary: Everyone who trades long enough has a bad day, or a bad month. Here's what to do in the first hour, the first week, and when you come back.
 date: 2026-11-22
+section: Protect yourself
 ---
 
 A big loss can feel like a punch. It's also one of the most important moments in your trading life, because what you do next matters more than the loss.

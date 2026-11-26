@@ -1,9 +1,11 @@
 ---
 title: Daily loss limits and knowing when to stop
 module: the-traders-mind
-order: 70
+order: 170
 summary: A hard limit on how much you can lose in one day (and one week), why it works when willpower doesn't, and how to set yours.
 date: 2026-11-21
+needs: how-much-to-risk-on-one-trade
+section: Protect yourself
 ---
 
 Willpower is weakest exactly when you need it most: after losses, when you're tired, frustrated or desperate to turn the day around. A daily loss limit replaces willpower with a rule you set while calm.

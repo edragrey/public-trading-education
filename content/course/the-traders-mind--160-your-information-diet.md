@@ -1,9 +1,10 @@
 ---
 title: "Your information diet: news, social media and noise"
 module: the-traders-mind
-order: 60
+order: 160
 summary: More information doesn't mean better decisions. Learn to choose a few sources, spot hype, and protect your attention.
 date: 2026-11-22
+section: Protect yourself
 ---
 
 Trading comes with an endless stream of news, posts, charts and opinions. Most of it will make your trading worse.

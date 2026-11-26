@@ -4,6 +4,7 @@ module: survive-first
 order: 10
 summary: A made-up example with exact numbers, plus a real one from 2020, showing why survival comes before finding the perfect trade.
 date: 2026-11-19
+needs: what-a-price-is
 ---
 
 Most beginners think the hard part of trading is guessing where a price will go. This lesson shows why that is only half the story, and why this module starts with surviving.

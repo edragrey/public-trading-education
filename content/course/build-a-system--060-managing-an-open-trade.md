@@ -4,6 +4,7 @@ module: build-a-system
 order: 60
 summary: Once you're in, the hard part is doing nothing sensible. A short list of what you may change, and what to leave alone.
 date: 2026-11-21
+needs: exits
 ---
 
 You've entered with a stop and a plan. Now the market moves, and so do your emotions. This lesson is about what to do, and what **not** to do, while a trade is open.

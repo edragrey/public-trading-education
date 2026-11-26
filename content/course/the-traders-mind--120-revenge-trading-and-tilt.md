@@ -1,9 +1,11 @@
 ---
 title: Revenge trading and tilt
 module: the-traders-mind
-order: 20
+order: 120
 summary: How one loss can turn into five, what "tilt" looks like from the inside, and a simple circuit-breaker to stop the spiral.
 date: 2026-11-21
+needs: stop-losses
+section: Protect yourself
 ---
 
 A loss on its own is just a cost of trading. The dangerous part is often what happens **next**. This lesson is about the urge to win it back, straight away.

@@ -1,9 +1,11 @@
 ---
 title: Routines that keep you steady
 module: the-traders-mind
-order: 80
+order: 180
 summary: A short routine for before, during and after trading that makes good habits automatic, plus the basics that quietly affect every decision.
 date: 2026-11-21
+needs: a-pre-trade-checklist, keeping-a-trading-journal
+section: Protect yourself
 ---
 
 Most of this course is rules. Rules work best when they're wrapped in a **routine**: the same small steps, in the same order, every time. Routines take decisions off your plate, so your energy goes where it matters.

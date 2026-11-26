@@ -4,6 +4,8 @@ module: read-the-market
 order: 120
 summary: How stories pull money into one corner of the market and then out again, the stages most hype cycles go through, and why the loudest moment is rarely the earliest.
 date: 2026-11-21
+section: The story
+needs: news-and-big-events
 ---
 
 Markets don't just move on numbers. They move on **stories**. "AI will change everything." "This is the next big gaming coin." In crypto especially, money tends to rush into whatever story is hottest, then rush out again. This lesson explains how that usually plays out.

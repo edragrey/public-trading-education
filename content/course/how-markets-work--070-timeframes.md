@@ -4,6 +4,7 @@ module: how-markets-work
 order: 70
 summary: Why one market can look like it's rising, falling and going nowhere all at the same moment, and how to choose which view to trust for your trade.
 date: 2026-11-21
+needs: how-to-read-a-candlestick
 ---
 
 Here's something that confuses almost every beginner: two people look at the same coin at the same moment. One says it's going up. The other says it's going down. They can both be right, because they're looking at different **timeframes**.

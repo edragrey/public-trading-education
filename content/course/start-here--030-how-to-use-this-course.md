@@ -26,6 +26,14 @@ Beginners often want to jump to chart patterns, leverage or the latest narrative
 
 The course follows that order deliberately. Mechanics come before tactics. Survival comes before size. A written process comes before confidence.
 
+## Your running trade
+
+In How markets work you will place one paper trade. Keep it. You will return to it in later modules: sizing it, choosing its stop, writing its plan and journal entry. Using one trade again and again is easier than inventing a new example every lesson.
+
+## Warm-ups and checks
+
+Most lessons start with two **warm-up** questions from earlier lessons. Try to answer before you open them. Trying first, even when you get it wrong, helps you remember far better than reading the answer.
+
 ## What counts as progress
 
 Progress is not finding a trade that went up. It is being able to explain:

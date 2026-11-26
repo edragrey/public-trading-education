@@ -4,6 +4,8 @@ module: read-the-market
 order: 10
 summary: Prices move when buyers or sellers become more eager. Here are the main things that change how eager they are, and why nobody can know all of them in advance.
 date: 2026-11-21
+section: The chart
+needs: what-a-price-is
 ---
 
 In How markets work you saw the mechanics: a price moves when one side uses up the orders waiting on the other side. This lesson asks the next question: **why** does one side suddenly become more eager?

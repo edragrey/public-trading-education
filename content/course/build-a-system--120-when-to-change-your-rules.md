@@ -4,6 +4,7 @@ module: build-a-system
 order: 120
 summary: How to tell a real problem in your system from a normal bad patch, and how to make changes one at a time so you learn from them.
 date: 2026-11-21
+needs: the-weekly-review
 ---
 
 Sooner or later your system will have a rough patch, and you'll want to change it. Sometimes that's right. Often it's the worst moment to do it. This lesson gives you a simple way to decide.

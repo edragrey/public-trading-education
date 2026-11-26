@@ -4,6 +4,7 @@ module: build-a-system
 order: 10
 summary: What a trading system actually is, why writing it down matters more than how clever it is, and why it's the only way to learn from your own trades.
 date: 2026-11-21
+needs: win-rate-and-expectancy
 ---
 
 Welcome to the third module. You can now protect your money (Survive first) and read what a market is doing (Read the market). This module puts the two together into a **system**: a set of rules you write down before you trade.

@@ -4,6 +4,7 @@ module: how-markets-work
 order: 100
 summary: Put the module together. Plan, place and review one practice trade with no real money, using a simple written plan.
 date: 2026-11-21
+needs: order-types, going-long-and-short, how-to-read-a-candlestick
 ---
 
 You now know what a market is, where you trade, what a price is, the order types, long and short, and how to read a candle. Time to use them, with **no real money**.
@@ -84,5 +85,7 @@ The result matters less than the review. A trade that loses while following your
 ## Try it (no real money)
 
 Do exactly one paper trade using the steps above and write the two-line review. Come back to it after a week and ask yourself whether you'd make the same plan again.
+
+**Keep this trade.** Name it "Trade 1" and save its entry, stop and your two-line review. It follows you through the course: you will size it in Survive first, choose its stop and entry in Read the market, and write its plan and journal entry in Build a system.
 
 **Key idea:** Plan first, size from your stop, protect the trade, then review. Practise the process before the money is real.

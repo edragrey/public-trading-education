@@ -4,6 +4,7 @@ module: build-a-system
 order: 40
 summary: A good entry is a clear, written trigger. Learn the common types, and why the entry matters less than most beginners think.
 date: 2026-11-21
+needs: market-structure, your-one-page-trade-plan
 ---
 
 An **entry** is the rule for **when you open a trade**. Beginners obsess over it. It matters, but less than risk and exits. What it must be is **clear**, so you aren't deciding on a feeling.

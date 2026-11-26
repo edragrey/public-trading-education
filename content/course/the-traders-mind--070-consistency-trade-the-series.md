@@ -1,9 +1,11 @@
 ---
 title: "Consistency: trade the series, not the trade"
-module: thinking-in-probabilities
+module: the-traders-mind
 order: 70
 summary: Doing the same sensible thing again and again is where an edge pays off. Here's what that looks like day to day.
 date: 2026-11-22
+needs: think-in-probabilities, a-pre-trade-checklist
+section: Understand yourself
 ---
 
 **Consistency** means following your plan the same way each time, whatever the last result was. It's less exciting than it sounds. That's the point.

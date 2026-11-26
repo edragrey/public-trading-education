@@ -20,13 +20,22 @@ That is part of it. But you also need to decide how much to risk, when your idea
 
 ## The course path
 
-You will learn, in order:
+You will learn, in three stages:
+
+**Foundations:**
 
 - How markets work
 - How to protect your money
+
+**Skills:**
+
 - How to read a market
 - How to write and test a trading process
+
+**Mind and world:**
+
 - How emotions and probabilities affect results
+- Case studies, taxes and what to practise next
 
 <!-- step -->
 

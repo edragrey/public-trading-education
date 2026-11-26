@@ -4,6 +4,7 @@ module: how-markets-work
 order: 40
 summary: The three order types you'll use most, what each one does with your money, and which to pick when.
 date: 2026-11-21
+needs: what-a-price-is
 ---
 
 An **order** is your instruction to the market. The type of order decides how and when it fills. You've already seen two; here are all the ones a beginner needs.

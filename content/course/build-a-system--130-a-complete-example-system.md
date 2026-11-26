@@ -4,6 +4,7 @@ module: build-a-system
 order: 130
 summary: One worked, hypothetical system: market, style, entry, stop, exits, risk and review. Use it as a model, not as advice.
 date: 2026-11-21
+needs: your-one-page-trade-plan, a-backtest-walkthrough
 ---
 
 This is the whole module in one page. It's a **made-up example** to show what a finished system looks like. It's not a recommendation and not a promise of results. Your own should fit your time, costs and nerves.

@@ -1,9 +1,10 @@
 ---
 title: Overconfidence after a winning streak
 module: the-traders-mind
-order: 40
+order: 140
 summary: Why a run of wins can be more dangerous than a run of losses, and how to stay steady when you feel like you've figured it out.
 date: 2026-11-21
+section: Protect yourself
 ---
 
 Most people expect losing streaks to be the hard part. But a run of **wins** causes its own kind of damage, and it's harder to notice because it feels so good.

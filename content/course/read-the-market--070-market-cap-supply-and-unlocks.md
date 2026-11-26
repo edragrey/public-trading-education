@@ -4,6 +4,8 @@ module: read-the-market
 order: 70
 summary: Why a $0.01 coin isn't "cheap", how to work out what the whole thing is valued at, and how new supply can weigh on a price.
 date: 2026-11-21
+section: The story
+needs: what-a-market-is
 ---
 
 "It's only one cent, imagine if it goes to a dollar!" This is one of the most common beginner thoughts in crypto. This lesson explains why the price of a single coin tells you almost nothing about whether it's cheap or expensive.

@@ -4,6 +4,8 @@ module: read-the-market
 order: 20
 summary: Four words traders use to describe what a chart has been doing, what they really mean, and why they're areas to watch, not promises.
 date: 2026-11-21
+section: The chart
+needs: how-to-read-a-candlestick, timeframes, stop-losses
 ---
 
 Now you can read candles and choose a timeframe, you can start describing what a chart has been doing. Traders use four words for this all the time. This lesson explains them plainly, and is honest about what they can't do.
@@ -77,6 +79,6 @@ The real use of these ideas for a beginner is **planning**, not predicting:
 
 ## Try it (no real money)
 
-On a daily chart, find one area where the price turned around at least twice. Mark it as a zone, not a line. Then ask: if I bought near here, where would my idea be proven wrong? That's your stop.
+On a daily chart, find one area where the price turned around at least twice. Mark it as a zone, not a line. If you have a Trade 1, check whether its stop sits at a sensible zone. Then ask: if I bought near here, where would my idea be proven wrong? That's your stop.
 
 **Key idea:** Trends, ranges, support and resistance describe where a price has been. Use them to plan stops and targets, never as promises about where it's going.

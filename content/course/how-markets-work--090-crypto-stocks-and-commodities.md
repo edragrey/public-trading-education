@@ -4,6 +4,7 @@ module: how-markets-work
 order: 90
 summary: Three kinds of market side by side: when they're open, what you actually own, who keeps an eye on them, and what that means for your risk.
 date: 2026-11-21
+needs: what-a-market-is
 ---
 
 Most of this course works for any market. But crypto, stocks and commodities each have their own habits, and knowing them helps you plan. This lesson puts them side by side.

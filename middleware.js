@@ -4,7 +4,7 @@ import { next } from "@vercel/functions";
 import access from "./access.config.js";
 import { SESSION_COOKIE, accountsEnabled, isFreePath, readCookie, verifySession } from "./lib/token.js";
 
-export const config = { matcher: ["/course/:module/:path+"] };
+export const config = { matcher: ["/course/:module/:path+", "/es/course/:module/:path+"] };
 
 export default async function middleware(request) {
   const env = process.env;
@@ -12,7 +12,7 @@ export default async function middleware(request) {
   if (!accountsEnabled(env) || isFreePath(url.pathname, access)) return next();
   const session = await verifySession(readCookie(request.headers.get("cookie"), SESSION_COOKIE), env.AUTH_SECRET);
   if (session) return next({ headers: { "cache-control": "private, no-store" } });
-  const to = new URL("/account/", url);
+  const to = new URL(url.pathname.startsWith("/es/") ? "/es/account/" : "/account/", url);
   to.searchParams.set("next", url.pathname);
   return Response.redirect(to, 302);
 }

@@ -1,9 +1,10 @@
 ---
 title: Doing nothing is a decision too
 module: the-traders-mind
-order: 50
+order: 150
 summary: Why most of good trading is waiting, how to tell boredom from opportunity, and what to do with your time instead.
 date: 2026-11-21
+section: Protect yourself
 ---
 
 Trading apps are designed to make you want to tap something. Prices flicker, notifications buzz, and sitting still feels like falling behind. This lesson makes the case for the most underrated skill in trading: **not trading**.

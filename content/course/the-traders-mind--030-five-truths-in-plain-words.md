@@ -1,9 +1,11 @@
 ---
 title: "Five truths worth accepting"
-module: thinking-in-probabilities
+module: the-traders-mind
 order: 30
 summary: Five plain statements about markets that, once you really accept them, make trading calmer and less personal.
 date: 2026-11-22
+needs: think-in-probabilities
+section: Understand yourself
 ---
 
 Mark Douglas sets out a handful of basic truths about markets. Here they are in our own words, with a simple example for each.

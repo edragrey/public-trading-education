@@ -4,6 +4,8 @@ module: read-the-market
 order: 110
 summary: Three big forces that move almost every market at once, explained without jargon, and why they're hard to trade on.
 date: 2026-11-21
+section: The story
+needs: news-and-big-events
 ---
 
 Sometimes everything moves together: stocks, crypto, bonds. Often the cause is not one company or coin, but the economy. Three ideas explain a lot.

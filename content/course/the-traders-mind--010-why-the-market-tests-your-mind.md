@@ -1,9 +1,10 @@
 ---
 title: "Why the market tests your mind"
-module: thinking-in-probabilities
+module: the-traders-mind
 order: 10
 summary: The market gives you no rules. That freedom is the hard part, and it's why trading is as much about you as about charts.
 date: 2026-11-22
+section: Understand yourself
 ---
 
 Most beginners think trading is a knowledge problem: learn enough patterns and the money follows. Plenty of people know a lot and still trade badly. The missing piece is usually **how they respond to what happens**.

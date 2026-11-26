@@ -4,6 +4,8 @@ module: read-the-market
 order: 30
 summary: A trend is a pattern of swing highs and swing lows. Learn to mark them, and to see when the pattern has changed.
 date: 2026-11-21
+section: The chart
+needs: trends-ranges-support-resistance
 ---
 
 The last lesson used the word "trend". Here is the exact way traders decide whether one is there.

@@ -4,6 +4,7 @@ module: survive-first
 order: 60
 summary: Why a strategy that wins most of the time can still lose money, and the one number that tells you whether it really works.
 date: 2026-11-21
+needs: think-in-probabilities, risk-and-reward
 ---
 
 "This strategy wins 80% of the time!" is one of the most common lines on trading social media. It sounds great. On its own, it tells you almost nothing. This lesson shows why, and what to look at instead.

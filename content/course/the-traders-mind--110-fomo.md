@@ -1,9 +1,11 @@
 ---
 title: "FOMO: the fear of missing out"
 module: the-traders-mind
-order: 10
+order: 110
 summary: Why watching a price run without you feels so painful, what it makes people do, and three simple habits that take the sting out of it.
 date: 2026-11-21
+needs: a-pre-trade-checklist
+section: Protect yourself
 ---
 
 Welcome to the next module. You've learned to protect your money, read a market and build a system. This module is about the part that decides whether you actually use any of it: **you**. We start with the most common feeling in trading.

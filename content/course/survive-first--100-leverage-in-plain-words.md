@@ -5,6 +5,7 @@ order: 110
 section: Leverage
 summary: What leverage and margin are, why they make gains and losses bigger at the same speed, and what they cost.
 date: 2026-11-23
+needs: going-long-and-short, size-your-trade-from-your-stop
 ---
 
 You'll see leverage everywhere in crypto: "10x", "50x", "100x" on every exchange's trading screen. This short lesson explains what it actually does, before the next one shows what happens when it goes wrong.
@@ -43,6 +44,8 @@ Leverage usually comes with **futures** (often called "perps" in crypto) and **m
 ## Should you use it?
 
 While you're learning, this course suggests you don't. Not because leverage is evil, but because it adds a new way to lose (getting closed out by the exchange) on top of everything else. The next lesson shows exactly how that works, and the one check that keeps it from surprising you.
+
+**See it happen.** Leverage and forced buying in a real event: [Read the GameStop case study](/course/going-further/case-study-gamestop-squeeze/).
 
 ## Common mistakes
 

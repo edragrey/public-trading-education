@@ -1,9 +1,11 @@
 ---
 title: "Process over outcome: judging decisions, not results"
 module: the-traders-mind
-order: 90
+order: 190
 summary: A good decision can lose and a bad one can win. Learn to grade your trades by how you made them, not how they ended.
 date: 2026-11-22
+needs: think-in-probabilities
+section: Protect yourself
 ---
 
 The most freeing idea in trading: **a single result tells you very little about whether your decision was good.**

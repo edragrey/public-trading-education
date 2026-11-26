@@ -4,6 +4,8 @@ module: read-the-market
 order: 50
 summary: Momentum asks how fast price is moving, not just where it is. The RSI is one popular way to measure it, with real limits.
 date: 2026-11-21
+section: The chart
+needs: moving-averages
 ---
 
 Price can rise quickly or slowly. **Momentum** is how fast and how consistently it's moving. Indicators for it are drawn under the chart.

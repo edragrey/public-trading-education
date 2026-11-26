@@ -1,9 +1,11 @@
 ---
 title: "Accept the risk before you trade"
-module: thinking-in-probabilities
+module: the-traders-mind
 order: 40
 summary: A loss only hurts as much as it surprises you. Deciding in advance what you'll risk takes most of the sting out.
 date: 2026-11-22
+needs: size-your-trade-from-your-stop
+section: Understand yourself
 ---
 
 Every trade can lose. That sounds obvious, but many traders act as if each one is certain to win, and then feel betrayed when it doesn't.

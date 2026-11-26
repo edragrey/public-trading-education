@@ -5,11 +5,21 @@ order: 990
 kind: quiz
 summary: Ten quick questions to check you've got the key ideas from this module. Tap an answer to see why.
 date: 2026-11-22
+section: Protect yourself
 ---
 
-Ten quick questions on this module. Tap an answer to see whether it's right and why. No score is kept, and you can read the lesson again any time.
+Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
-## 1. What is FOMO?
+## 1. What is an edge?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">A guarantee that this trade wins</button>
+<button type="button" data-opt="b">A small repeatable tilt that shows over many trades</button>
+<button type="button" data-opt="c">An indicator</button>
+<p class="quiz-why" hidden>It describes a series, not one trade.</p>
+</div>
+
+## 2. What is FOMO?
 
 <div class="quiz" data-answer="a">
 <button type="button" data-opt="a">Fear of missing out, pushing you to chase a move</button>
@@ -18,7 +28,25 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>It makes people buy late, skip plans and trade too big.</p>
 </div>
 
-## 2. After a big loss, what's the first step?
+## 3. Daily loss limit 2% of $5,000. You've lost $100 today. What now?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Take one more trade to win it back</button>
+<button type="button" data-opt="b">Stop for the day</button>
+<button type="button" data-opt="c">Double the size</button>
+<p class="quiz-why" hidden>$100 is 2% of $5,000. The limit exists so you stop while calm.</p>
+</div>
+
+## 4. Why can 3 losses in a row be normal with an edge?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">It means the plan is broken</button>
+<button type="button" data-opt="b">Wins and losses arrive in a random order</button>
+<button type="button" data-opt="c">It never happens</button>
+<p class="quiz-why" hidden>Streaks occur in every real series.</p>
+</div>
+
+## 5. After a big loss, what's the first step?
 
 <div class="quiz" data-answer="b">
 <button type="button" data-opt="a">Trade bigger to recover</button>
@@ -27,25 +55,34 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>Revenge trading turns one loss into several.</p>
 </div>
 
-## 3. Why does overconfidence hurt?
+## 6. Your stop is at $47.50 and the price is near it. You want to move it to $44. What does your rule say?
 
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">It makes you too careful</button>
-<button type="button" data-opt="b">It improves win rate</button>
-<button type="button" data-opt="c">It leads to bigger size and skipped rules after wins</button>
-<p class="quiz-why" hidden>A winning streak can be luck, so keep risk steady.</p>
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Fine, give it room</button>
+<button type="button" data-opt="b">Never move a stop further away</button>
+<button type="button" data-opt="c">Remove it</button>
+<p class="quiz-why" hidden>Moving a stop away is changing the plan because of fear.</p>
 </div>
 
-## 4. Why is doing nothing a valid position?
+## 7. Which fear makes people close winners too soon?
 
 <div class="quiz" data-answer="a">
-<button type="button" data-opt="a">No setup means no edge</button>
-<button type="button" data-opt="b">Markets are always wrong</button>
-<button type="button" data-opt="c">You can't lose when idle</button>
-<p class="quiz-why" hidden>Waiting for your setup protects your capital.</p>
+<button type="button" data-opt="a">Fear of being wrong</button>
+<button type="button" data-opt="b">Fear of rain</button>
+<button type="button" data-opt="c">Fear of fees</button>
+<p class="quiz-why" hidden>Taking profit quickly locks in 'being right'.</p>
 </div>
 
-## 5. What does a daily loss limit do?
+## 8. Win rate 40%, wins twice the size of losses, and you lose four in a row. What do you conclude?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">The plan is broken</button>
+<button type="button" data-opt="b">Nothing yet: streaks like this are normal</button>
+<button type="button" data-opt="c">Raise your size</button>
+<p class="quiz-why" hidden>With a 40% win rate, four losses in a row happen often. One streak tells you little.</p>
+</div>
+
+## 9. What does a daily loss limit do?
 
 <div class="quiz" data-answer="b">
 <button type="button" data-opt="a">Guarantees profit</button>
@@ -54,49 +91,11 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 <p class="quiz-why" hidden>It prevents a bad day from becoming a disaster.</p>
 </div>
 
-## 6. Which source is most reliable?
-
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">An anonymous post with a screenshot</button>
-<button type="button" data-opt="b">A paid promotion</button>
-<button type="button" data-opt="c">A company filing or official announcement</button>
-<p class="quiz-why" hidden>Primary sources are closest to the truth.</p>
-</div>
-
-## 7. A claim urges you to act fast. What does that signal?
+## 10. Which belongs on a pre-trade checklist?
 
 <div class="quiz" data-answer="a">
-<button type="button" data-opt="a">A warning sign</button>
-<button type="button" data-opt="b">Good timing</button>
-<button type="button" data-opt="c">Confirmation</button>
-<p class="quiz-why" hidden>Urgency is a classic pressure tactic.</p>
+<button type="button" data-opt="a">The loss in dollars if the stop is hit</button>
+<button type="button" data-opt="b">A price prediction</button>
+<button type="button" data-opt="c">What friends think</button>
+<p class="quiz-why" hidden>Knowing the loss at your stop, before you enter, is the core risk check.</p>
 </div>
-
-## 8. A trader breaks rules and wins. Good trade?
-
-<div class="quiz" data-answer="b">
-<button type="button" data-opt="a">Yes, a win is a win</button>
-<button type="button" data-opt="b">No: good result, bad process</button>
-<button type="button" data-opt="c">Only if it was large</button>
-<p class="quiz-why" hidden>Process matters because luck evens out.</p>
-</div>
-
-## 9. What does 'resulting' mean?
-
-<div class="quiz" data-answer="c">
-<button type="button" data-opt="a">Increasing your result</button>
-<button type="button" data-opt="b">Reporting results weekly</button>
-<button type="button" data-opt="c">Judging a decision by its outcome instead of its quality</button>
-<p class="quiz-why" hidden>It's a common thinking error in uncertain fields.</p>
-</div>
-
-## 10. What's a healthy sign you're ready to return after a loss?
-
-<div class="quiz" data-answer="a">
-<button type="button" data-opt="a">You've written what went wrong and will trade smaller</button>
-<button type="button" data-opt="b">You want revenge</button>
-<button type="button" data-opt="c">You feel numb</button>
-<p class="quiz-why" hidden>Come back slowly with limits in place.</p>
-</div>
-
-**Key idea:** Wrong answers are useful. Go back to the lesson behind any question you missed.

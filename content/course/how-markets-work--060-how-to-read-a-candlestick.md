@@ -4,6 +4,7 @@ module: how-markets-work
 order: 60
 summary: The most common chart shape, explained piece by piece. What the body and the wicks show, and what they don't.
 date: 2026-11-21
+needs: what-a-price-is
 ---
 
 Open almost any trading chart and you'll see rows of little coloured bars with lines sticking out. These are **candlesticks**, or candles. Each one packs four prices into one shape. Once you can read one, you can read any chart.
@@ -55,6 +56,14 @@ A candle is a summary of a fight between buyers and sellers during that period:
 Being honest: a single candle **describes the past**. It doesn't predict the next one. You'll see books and posts full of named candle "patterns" (hammers, dojis, engulfing). They're useful words for describing what happened, but none of them reliably tells you what happens next. Treat them as vocabulary, not signals.
 
 A candle also hides the order of events. A green candle with long wicks on both sides could have gone up first, or down first. You can't tell from the shape.
+
+## Three words you will meet soon
+
+- **Swing low:** the bottom of a dip, with higher prices on both sides of it.
+- **Swing high:** the top of a rise, with lower prices on both sides.
+- **Support:** a price area where falls have stopped before.
+
+You will use them when placing stops in Survive first. Read the market explains them properly.
 
 ## Common mistakes
 

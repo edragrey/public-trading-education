@@ -1,7 +1,7 @@
 ---
 title: "Investing vs trading, and what an ETF is"
-module: going-further
-order: 60
+module: start-here
+order: 25
 summary: Two different games with different skills. Learn how they differ, what an index fund or ETF is, and how to decide where your time and money belong.
 date: 2026-11-22
 ---

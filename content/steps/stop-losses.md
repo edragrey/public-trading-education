@@ -22,7 +22,7 @@ It's your plan for being wrong, written before the trade.
 
 Not "wherever I can bear to lose".
 
-Put it where **the idea is proven wrong**: for example just below a recent swing low.
+Put it where **the idea is proven wrong**: for example just below a recent swing low (the bottom of a recent dip).
 
 Then size the trade so that loss is about 1% of your account.
 

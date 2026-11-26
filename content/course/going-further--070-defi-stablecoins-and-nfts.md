@@ -4,6 +4,8 @@ module: going-further
 order: 70
 summary: Three crypto terms you'll meet often. What each is, how it works, and the main ways beginners lose money.
 date: 2026-11-22
+optional: true
+needs: where-you-trade
 ---
 
 Crypto has its own vocabulary. Here are three common words, explained plainly, with the risks first.

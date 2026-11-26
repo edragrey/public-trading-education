@@ -4,6 +4,7 @@ module: build-a-system
 order: 80
 summary: What to write down for each trade, a short template that takes two minutes, and how to keep the habit going.
 date: 2026-11-21
+needs: a-pre-trade-checklist
 ---
 
 A system tells you what to do. A journal tells you what you **actually did**. Without one, your memory will quietly rewrite your trades: the wins will feel like skill and the losses like bad luck. This lesson gives you a journal short enough to keep.
@@ -77,6 +78,6 @@ Write the before part **before** you enter. It's tempting to fill it all in afte
 
 ## Try it (no real money)
 
-Copy the template into a note or spreadsheet. Use it for your next three paper trades, including any you skip.
+Copy the template into a note or spreadsheet. Start with Trade 1, then use it for your next three paper trades, including any you skip.
 
 **Key idea:** Your memory rewrites your trades. A short, honest journal, filled in before and after, is the only record you can trust.

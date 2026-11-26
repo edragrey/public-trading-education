@@ -449,3 +449,22 @@ main.wrap { padding-top: 28px; padding-bottom: 72px; }
 .acct-actions .btn { cursor: pointer; font-size: .92rem; padding: 10px 16px; }
 .btn.danger { color: var(--loss); border-color: color-mix(in srgb, var(--loss) 40%, var(--line)); }
 .btn.danger:hover { background: var(--loss-soft); color: var(--loss); border-color: var(--loss); }
+
+/* Language switch, stage headings, notices, warm-ups, prerequisites */
+.lang-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 38px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--line, currentColor); color: var(--ink); font-weight: 600; font-size: .85rem; text-decoration: none; }
+.lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+.stage { margin-top: 44px; }
+.stage:first-child { margin-top: 8px; }
+.stage-head { padding-bottom: 8px; margin-bottom: 8px; border-bottom: 2px solid var(--accent); }
+.stage-title { margin: 0 0 4px; }
+.stage-head p { margin: 0; color: var(--muted); }
+.notice { display: flex; align-items: center; gap: 10px; margin: 14px 0; padding: 10px 14px; border-radius: 12px; background: var(--accent-soft); color: var(--ink); font-size: .95rem; }
+.needs { margin: 10px 0; color: var(--muted); font-size: .95rem; }
+.needs a { color: var(--ink); }
+.attempt { margin: 0 0 10px; color: var(--muted); font-style: italic; }
+.opt-note { color: var(--gold); font-weight: 600; }
+.chip.soft { background: transparent; border: 1px solid currentColor; color: var(--muted); }
+.warmup { margin: 18px 0; padding: 14px 16px; border-radius: 14px; border: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent); }
+.warmup h2 { margin: 0 0 4px; font-size: 1.05rem; }
+.warmup details { margin-top: 8px; }
+.warm-from { color: var(--muted); font-size: .88rem; margin: 6px 0 0; }
