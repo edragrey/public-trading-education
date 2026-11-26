@@ -64,7 +64,7 @@ const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 const logo = `<img class="logo" src="/brand-logo.jpg" alt="" aria-hidden="true">`;
 
 // Runs before the page paints so a saved theme never flashes. "tb-theme" is light, dark, or unset (match device).
-const themeBoot = `try{var t=localStorage.getItem("tb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
+const themeBoot = `(function(){try{var t=localStorage.getItem("tb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}})()`;
 
 const nav = () => [["/", L.nav.home], ["/course/", L.nav.course], ["/articles/", L.nav.articles], ["/glossary/", L.nav.glossary], ["/about/", L.nav.about]];
 const tagline = () => (L.code === "es" && cfg.es?.tagline) || cfg.tagline;
