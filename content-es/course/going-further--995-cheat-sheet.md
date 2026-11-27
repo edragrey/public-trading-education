@@ -18,6 +18,8 @@ Un recordatorio de una página de este módulo. Lee primero las lecciones; usa e
 - **Impuestos:** dependen de tu país. Guarda registros desde el primer día y comprueba las normas vigentes.
 - **Invertir frente a operar:** son oficios distintos. Un fondo diversificado de bajo coste es un buen núcleo; opera con una porción pequeña.
 - **DeFi, stablecoins, NFT:** sabe de dónde viene el rendimiento y quién puede fallar.
+- **Cartera:** decide primero el reparto: seguridad, núcleo y una pequeña parte para operar; reequilibra una o dos veces al año.
+- **Normas y estafas:** una licencia no es una garantía; compruébala en la web del regulador; las rentabilidades garantizadas, la urgencia y que te pidan tu frase semilla son señales de alarma.
 
 ## Preguntas que seguir haciéndote
 

@@ -60,6 +60,11 @@
       "slug": "going-further",
       "title": "Going further",
       "summary": "Real case studies, taxes, investing and where to go next."
+    },
+    {
+      "slug": "finish-line",
+      "title": "Finish line",
+      "summary": "Write your own trading plan, take the final exam and see what you've learned."
     }
   ],
   "marketToday": {
@@ -95,7 +100,8 @@
       "summary": "Your own behaviour, real cases and the practical side.",
       "modules": [
         "the-traders-mind",
-        "going-further"
+        "going-further",
+        "finish-line"
       ]
     }
   ],
@@ -144,6 +150,10 @@
           "The chart": "El gráfico",
           "The story": "La historia"
         }
+      },
+      "finish-line": {
+        "title": "Meta final",
+        "summary": "Escribe tu propio plan de trading, haz el examen final y comprueba lo que has aprendido."
       },
       "build-a-system": {
         "title": "Construye un sistema",

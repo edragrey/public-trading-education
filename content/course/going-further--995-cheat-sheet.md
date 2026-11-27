@@ -18,6 +18,8 @@ A one-page reminder of this module. Read the lessons first; use this to refresh 
 - **Taxes:** depend on your country. Keep records from day one and check current rules.
 - **Investing vs trading:** different jobs. A diversified low-cost fund is a sound core; trade with a small slice.
 - **DeFi, stablecoins, NFTs:** know where the return comes from and who can fail.
+- **Portfolio:** decide the split first: safety, core, small trading slice; rebalance once or twice a year.
+- **Rules and scams:** a licence is not a guarantee; check it on the regulator's site; guaranteed returns, urgency and requests for your seed phrase are red flags.
 
 ## Questions to keep asking
 

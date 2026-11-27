@@ -3,11 +3,11 @@ title: "Ir más allá: test del módulo"
 module: going-further
 order: 990
 kind: quiz
-summary: Diez preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
+summary: Doce preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
 date: 2026-11-22
 ---
 
-Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
+Doce preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro recuperan ideas anteriores, mezcladas a propósito: recordar ideas antiguas es lo que hace que se queden. Toca una respuesta para ver por qué. No se guarda ninguna puntuación.
 
 ## 1. ¿Qué mostró la «carrera por el efectivo» de marzo de 2020?
 
@@ -97,4 +97,22 @@ Diez preguntas rápidas sobre este módulo. Seis son de este módulo y cuatro re
 <button type="button" data-opt="b">Para poder usar más apalancamiento</button>
 <button type="button" data-opt="c">Para que las comisiones sean menores</button>
 <p class="quiz-why" hidden>La distancia al stop y la cantidad en riesgo juntas fijan el tamaño.</p>
+</div>
+
+## 11. En un reparto sencillo de cartera, ¿qué es la «parte para operar»?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Tu dinero de emergencia</button>
+<button type="button" data-opt="b">Una parte pequeña que puedes permitirte perder mientras practicas</button>
+<button type="button" data-opt="c">La mayor parte de tus inversiones a largo plazo</button>
+<p class="quiz-why" hidden>Mantener pequeña la parte para operar hace que una pérdida no dañe tu vida y puedas seguir tu plan con más calma.</p>
+</div>
+
+## 12. Un «grupo de trading» promete duplicar tu depósito en una semana. ¿Cuál es la reacción sensata?
+
+<div class="quiz" data-answer="c">
+<button type="button" data-opt="a">Depositar mucho rápido antes de que acabe la oferta</button>
+<button type="button" data-opt="b">Pedir una captura de ganancias pasadas</button>
+<button type="button" data-opt="c">Tratarlo como una señal de estafa y alejarte</button>
+<p class="quiz-why" hidden>Las rentabilidades garantizadas y la urgencia son señales clásicas de estafa. Las capturas son fáciles de falsificar.</p>
 </div>
