@@ -52,7 +52,7 @@ Create `content/articles/<short-slug>.md` with `title`, `summary` and `date` in 
 
 ## Glossary and About
 
-Edit `content/glossary.md` (one `## Term` heading per word) and `content/pages/about.md`.
+Edit `content/glossary.md` (one `## Term` heading per word), its Spanish counterpart and the matching canonical entry in `content/concepts.json`. The glossary includes personal understanding marks and course/video references. Follow [docs/transcript-learning.md](docs/transcript-learning.md) before every transcript breakdown; do not repeat familiar definitions by default. Edit `content/pages/about.md` for About.
 
 ## Market today (later)
 

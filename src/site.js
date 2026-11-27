@@ -276,22 +276,7 @@ document.querySelectorAll("[data-walk]").forEach((w) => {
   show(i, false);
 });
 
-// Glossary search: hide cards that don't match.
-const gSearch = document.querySelector("[data-glossary-search]");
-if (gSearch) {
-  const cards = [...document.querySelectorAll(".g-card")];
-  const none = document.querySelector(".g-none");
-  gSearch.addEventListener("input", () => {
-    const q = gSearch.value.trim().toLowerCase();
-    let shown = 0;
-    for (const c of cards) {
-      const hit = !q || c.textContent.toLowerCase().includes(q);
-      c.hidden = !hit;
-      if (hit) shown++;
-    }
-    if (none) none.hidden = shown > 0;
-  });
-}
+// Glossary search, review filters and personal understanding live in concept-progress.js.
 
 // Course progress: lessons marked complete and first answers to quick questions.
 // Saved in this browser, and in the reader's account when they're signed in (see /account/).

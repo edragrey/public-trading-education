@@ -7,6 +7,8 @@ import { accountsEnabled, isFreePath } from "./lib/token.js";
 import { STR } from "./src/i18n.mjs";
 import { COPY as EXPLAINER } from "./src/explainer-copy.js";
 import { explainerPage } from "./src/explainer-page.js";
+import { concepts, sources as conceptSources } from "./lib/concepts.js";
+import { CONCEPT_COPY } from "./src/concept-copy.js";
 // Accounts are on only when every env var is set in Vercel (see docs/accounts.md). Changing them needs a redeploy.
 const ACCOUNTS = accountsEnabled(process.env);
 
@@ -133,6 +135,7 @@ ${content}
 </footer>
 <script src="/theme.js" defer></script>
 <script src="/site.js" defer></script>
+${urlPath === '/glossary/' ? '<script type="module" src="/concept-progress.js"></script>' : ''}
 </body>
 </html>`;
   // Spanish pages live under /es/ with the same paths. Internal links in templates and lesson text are written
@@ -448,17 +451,34 @@ ${market}`, { wide: true, description: h.meta.description });
     }).sort((a, b) => a.term.localeCompare(b.term, L.code));
     const letters = [...new Set(terms.map((t) => firstLetter(t.term)))];
     const seen = new Set();
+    const G = CONCEPT_COPY[L.code];
     const cards = terms.map((t) => {
+      const termText = t.term.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+      const concept = concepts.find(c => c.terms[L.code] === termText);
+      if (!concept) throw new Error(`Glossary term needs a canonical concept: ${t.term}`);
+      const linkedLessons = concept.lessons.map(slug => {
+        const lesson = lessonBySlug(slug);
+        if (!lesson) throw new Error(`Missing concept lesson: ${slug}`);
+        return lesson;
+      });
       const Lt = firstLetter(t.term);
       const first = !seen.has(Lt) && seen.add(Lt);
-      return `<div class="g-card" id="${t.id}"${first ? ` data-letter="${Lt}"` : ""}>${first ? `<span class="g-anchor" id="letter-${Lt}"></span>` : ""}<dt><span class="g-l">${Lt}</span>${t.term}</dt><dd>${t.def}</dd></div>`;
+      const coverage = linkedLessons.length ? `<p class="g-coverage">${concept.courseCoverage === 'covered' ? G.course : G.related}: ${linkedLessons.map(l => `<a href="${l.url}">${esc(l.meta.title)}</a>`).join(' · ')}</p>` : `<p class="g-coverage">${G.noLesson}</p>`;
+      const sourceLinks = concept.sources.map(id => conceptSources.find(s => s.id === id)).filter(Boolean);
+      return `<div class="g-card" id="${t.id}" data-initial="${Lt}" data-concept-id="${concept.id}" data-from-video="${sourceLinks.length > 0}" data-search="${esc([t.term, concept.terms.en, concept.terms.es, ...concept.aliases].join(' '))}"${first ? ` data-letter="${Lt}"` : ""}>${first ? `<span class="g-anchor" id="letter-${Lt}"></span>` : ""}<span class="g-anchor" id="concept-${concept.id}"></span><dt><span class="g-l">${Lt}</span>${t.term}</dt><dd>${t.def}${coverage}
+      <label class="g-understanding" for="understanding-${concept.id}"><span>${G.understanding}</span><select id="understanding-${concept.id}" aria-label="${esc(G.understanding + ': ' + termText)}" data-concept-state disabled><option value="unmarked">${G.unmarked}</option><option value="review">${G.review}</option><option value="understood">${G.understood}</option></select></label>
+      ${concept.review?.[L.code] ? `<details class="g-review"><summary>${G.deeper}</summary><p>${esc(concept.review[L.code])}</p></details>` : ''}
+      ${sourceLinks.length ? `<details class="g-sources"><summary>${G.source} ${sourceLinks.length} ${L.code === 'es' ? 'vídeo(s)' : 'video(s)'}</summary><ul>${sourceLinks.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a></li>`).join('')}</ul></details>` : ''}</dd></div>`;
     }).join("");
-    page("/glossary/", L.glossary, `${pageHead(L.glossary, esc(g.meta.title), L.glossaryLead)}${notice(gf)}
+    page("/glossary/", L.glossary, `${pageHead(L.glossary, esc(g.meta.title), G.lead)}${notice(gf)}<section data-concept-glossary aria-label="${esc(L.glossary)}">
 <div class="g-tools">
   <label class="search">${icon("search", "icon sm")}<span class="sr">${L.searchGloss}</span><input type="search" placeholder="${esc(L.searchPh(terms.length))}" data-glossary-search autocomplete="off"></label>
+  <label class="g-filter">${G.filter}<select data-concept-filter><option value="all">${G.all}</option><option value="videos">${G.videos}</option><option value="review">${G.review}</option><option value="understood">${G.understood}</option><option value="unmarked">${G.unmarked}</option></select></label>
   <nav class="az" aria-label="${esc(L.jump)}">${letters.map((x) => `<a href="#letter-${x}">${x}</a>`).join("")}</nav>
 </div>
-<dl class="g-cards">${cards}</dl><p class="muted g-none" hidden>${L.noTerm}</p>`, { wide: true });
+<p data-concept-summary aria-live="polite"></p><div class="g-save"><p class="muted" data-concept-save role="status">${G.loading}</p><button class="text-button" type="button" data-concept-retry hidden>${G.retry}</button><button class="text-button" type="button" data-concept-export>${G.export}</button></div>
+<noscript><p>${L.code === 'es' ? 'Las definiciones se pueden leer sin JavaScript; actívalo para guardar tus marcas.' : 'Definitions work without JavaScript; enable it to save your understanding marks.'}</p></noscript>
+<dl class="g-cards">${cards}</dl><p class="muted g-none" hidden>${G.noMatch}</p><p class="fine">${G.sourceNote}</p></section>`, { wide: true });
   }
 
   // About: each "## Heading" section becomes a card; the "won't" list gets crosses instead of ticks.
@@ -541,5 +561,5 @@ L = STR.en;
 page("/404-tmp/", "Page not found", `<div class="empty"><span class="band-icon">${icon("search")}</span><h1>Page not found</h1><p>That page doesn't exist, or it moved.</p><p><a class="btn" href="/">Go to the home page</a></p></div>`);
 fs.renameSync(path.join(out, "404-tmp/index.html"), path.join(out, "404.html"));
 fs.rmSync(path.join(out, "404-tmp"), { recursive: true });
-for (const f of ["style.css", "site.js", "theme.js", "logo.jpg", "brand-logo.jpg", "explainer.js", "explainer-copy.js", "explainer.css"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
+for (const f of ["style.css", "site.js", "theme.js", "logo.jpg", "brand-logo.jpg", "explainer.js", "explainer-copy.js", "explainer.css", "concept-progress.js", "concept-state.js", "concept-copy.js"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
 console.log(`Built EN ${stats.en.lessons} lesson(s) and ES ${stats.es.lessons} lesson(s) (${stats.es.fallbacks} not translated yet, shown in English) into dist/. Accounts ${ACCOUNTS ? "ON" : "off (env vars not set)"}.`);

@@ -24,10 +24,10 @@ A basket of investments tracked as one number, such as the S&P 500. It shows how
 A setting where only the margin you chose for a trade can be lost on it. The rest of your account is kept separate.
 
 ## Leverage
-Borrowing to trade a bigger amount than you have. It makes both gains and losses bigger, and can wipe out an account quickly.
+Taking market exposure larger than the money you put up, through borrowing or a margin-based contract. It magnifies gains and losses relative to that money.
 
 ## Liquidation
-When an exchange closes your leveraged trade for you because your losses have nearly used up your margin. The money you put down is lost.
+When an exchange forcibly closes a leveraged position because its collateral no longer meets the required margin. Much or all of the money supporting that position can be lost.
 
 ## Liquidation price
 The price at which the exchange will close your leveraged trade. The higher your leverage, the closer it sits to the price you bought at.
@@ -48,7 +48,7 @@ The amount you're willing to lose on one trade if it goes wrong, often set as a 
 An index of about 500 large companies listed in the United States. It's often used as a quick read on the US stock market.
 
 ## Stop loss
-An order you set in advance to sell if the price falls to a certain level, so a loss can't grow beyond what you planned.
+An order intended to close a position when the price moves against it by a chosen amount. It helps limit losses, but gaps, slippage or an unfilled stop-limit order can produce a larger loss than planned.
 
 ## Volatility
 How much and how fast a price moves up and down. High volatility means bigger swings in both directions.
@@ -208,3 +208,132 @@ Taking a new trade mainly to win back a loss, rather than because it fits your p
 
 ## Tilt
 A state where frustration or anger is making your trading decisions for you.
+
+## Bounce
+A rise after a fall. It can happen inside a longer downward trend without ending that trend.
+
+## Market bottom
+A low point before a sustained recovery. Calling the bottom in real time is uncertain.
+
+## Bull market
+A sustained period of generally rising prices. One strong day does not establish a bull market.
+
+## Bear market
+A sustained period of generally falling prices. A 20% fall from a recent high is a common convention, not a universal law.
+
+## Correction
+A decline after a rise. For stock indexes, a fall of about 10% from a recent high is commonly called a correction.
+
+## Bull trap
+A rise that appears to signal a recovery but is followed by renewed falls.
+
+## Breakout
+A move above a watched trading range or resistance area. It can fail.
+
+## Breakdown
+A move below a watched support area or trading range. It can reverse.
+
+## Retest
+When a price returns to an area it previously broke through, testing whether that area now attracts buying or selling.
+
+## Moving average
+An average of recent prices, updated as new periods arrive. It smooths the chart but reacts after prices change.
+
+## 200-week moving average
+An average based on 200 weeks of prices. Some traders watch it for long-term context; it is not a guaranteed floor.
+
+## Seasonality
+A tendency for returns or activity to differ by calendar period. A past monthly pattern may not repeat.
+
+## Bitcoin halving
+A scheduled reduction by half in the new-bitcoin portion of the reward paid for mining a block. It does not automatically halve Bitcoin's price or supply.
+
+## Market cycle
+A broad sequence of changing market conditions, such as expansion, optimism, decline and recovery. Its timing is not fixed.
+
+## All-time high
+The highest recorded price in a specified data series. Exchanges and data providers may report slightly different values.
+
+## Fear and Greed Index
+A score summarizing selected measures of market sentiment. A low score is not an automatic buy or sell instruction.
+
+## Momentum
+The pace and strength of price changes. A decline can lose momentum while prices are still falling.
+
+## RSI
+A price-momentum indicator on a 0–100 scale, comparing recent gains and losses. It is not a count of buyers and sellers.
+
+## Oversold
+An indicator condition associated with strong recent downward movement. It does not mean the fall must end.
+
+## Bullish divergence
+When price makes a lower low but an indicator makes a higher low. It may suggest weakening downward momentum, not a confirmed recovery.
+
+## MACD
+An indicator comparing faster and slower moving averages to examine changes in momentum and trend.
+
+## Candlestick wick
+The thin line showing prices reached beyond a candle's opening and closing prices during that period.
+
+## Closing price
+The last price recorded for a chosen candle or trading period. Crypto candles close even though the market trades around the clock.
+
+## Double bottom
+A possible reversal pattern with two lows near a similar area and a recovery between them. Two touches alone do not confirm a reversal.
+
+## Symmetrical triangle
+A narrowing price range formed by lower highs and higher lows. The shape alone does not decide the breakout direction.
+
+## Wedge
+A narrowing chart pattern whose two boundaries generally slope in the same direction. It differs from a symmetrical triangle.
+
+## Long position
+A position that benefits if the asset's price rises and loses if it falls, before costs.
+
+## Short position
+A position that benefits if the asset's price falls and loses if it rises, before costs.
+
+## Spot market
+A market where you buy or sell the asset itself, rather than only a contract tracking its price.
+
+## Scalping
+A trading style seeking small moves over very short periods, often seconds or minutes. Frequent trades also create costs.
+
+## Liquidation heatmap
+A model estimating where leveraged positions might be forcibly closed if prices reach certain levels. It is not the order book.
+
+## Liquidation cascade
+A chain reaction in which forced position closures add orders that can trigger further forced closures.
+
+## Short squeeze
+A sharp rise amplified by short sellers buying to close their positions, voluntarily or under pressure.
+
+## V-shaped recovery
+A sharp fall followed by a sharp rise. It describes a price path, not a promised outcome.
+
+## GDP
+Gross domestic product: the value of goods and services produced within an economy over a period.
+
+## Interest rate
+The cost of borrowing, or the return paid for lending or saving, expressed over a stated period.
+
+## Inflation
+A sustained rise in the overall price level. It reduces what a unit of money can buy.
+
+## Federal Reserve
+The central bank of the United States. Its policy decisions influence financing conditions, but do not control each market price.
+
+## FOMC
+The Federal Reserve committee responsible for key US monetary-policy decisions, including the target range for its policy interest rate.
+
+## IPO
+An initial public offering: a company offers shares to public investors as part of becoming publicly traded.
+
+## Retail investor
+An individual investing their own money, rather than investing on behalf of a large institution.
+
+## Conditional scenario
+An if-then description of what could happen and what evidence would support or invalidate it. It is not a probability estimate.
+
+## Gambler's fallacy
+The mistaken belief that a streak alone makes the opposite result due. Markets are not independent coin flips, but a streak alone still proves little.

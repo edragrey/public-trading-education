@@ -104,7 +104,7 @@ if (root) {
       freeUsed = true; canUse = false;
       $('#explain-access').textContent = t.upgrade;
       isSample = false;
-      render(data.result, data.sourceUrl);
+      render(data.result, data.sourceUrl, data.learning);
     } catch (e) { if (controller === pending && e.name !== 'AbortError') showError(e.message === 'Failed to fetch' ? 'network' : e.message); }
     finally { if (controller === pending) busy(false); }
   });
@@ -114,13 +114,14 @@ if (root) {
     render(t.demo); busy(false);
   });
 
-  function render(data, sourceUrl) {
+  function render(data, sourceUrl, learning = []) {
     currentResult = data;
     const canonical = /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/.test(sourceUrl || '') ? sourceUrl : '';
     resultEl.innerHTML = `<div class="explain-result-top"><p class="explain-result-label">${isSample ? t.sampleTag : t.resultLabel}</p><button class="text-button" type="button" data-copy>${t.copy}</button></div>
       <h2 class="explain-result-title">${esc(data.title)}</h2>
       <section class="explain-summary"><h3>${t.main}</h3><p>${esc(data.summary)}</p></section>
-      <section class="explain-concepts"><h3>${t.concepts}</h3>${data.concepts.map((c, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(c.term)}</summary><div><p>${esc(c.explanation)}</p><p class="explain-example"><strong>${t.example}</strong>${esc(c.example)}</p>${c.quote ? `<blockquote><span>${t.sourceQuote}</span>${esc(c.quote)}</blockquote>` : ''}</div></details>`).join('')}</section>
+      ${data.concepts.length ? `<section class="explain-concepts"><h3>${t.concepts}</h3>${data.concepts.map((c, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(c.term)}</summary><div><p>${esc(c.explanation)}</p><p class="explain-example"><strong>${t.example}</strong>${esc(c.example)}</p>${c.quote ? `<blockquote><span>${t.sourceQuote}</span>${esc(c.quote)}</blockquote>` : ''}</div></details>`).join('')}</section>` : ''}
+      ${learning.length ? `<section class="explain-learning"><h3>${language === 'es' ? 'En tu biblioteca de conceptos' : 'In your concept library'}</h3><p>${language === 'es' ? 'No repetimos las definiciones que has marcado como entendidas. Puedes cambiar tus marcas o repasar cada concepto en el glosario.' : 'Definitions you marked understood are not repeated. Change your marks or revisit a concept in the glossary.'}</p><ul>${learning.filter(c => /^\/(es\/)?glossary\/#concept-[a-z0-9-]+$/.test(c.url)).map(c => `<li><a href="${esc(c.url)}">${esc(c.term)}</a> · ${c.status === 'understood' ? (language === 'es' ? 'Lo entiendo' : 'Understood') : c.status === 'review' ? (language === 'es' ? 'Necesito repasarlo' : 'Needs review') : (language === 'es' ? 'Sin marcar' : 'Not marked yet')}${c.inCourse ? ` · ${language === 'es' ? 'Incluido en el curso' : 'Covered in the course'}` : ''}</li>`).join('')}</ul></section>` : ''}
       <section class="explain-claims"><h3>${t.claims}</h3>${data.claims.map(c => `<article><span class="explain-type type-${esc(c.type)}">${esc(t.types[c.type] || t.types.interpretation)}</span><h4>${esc(c.statement)}</h4><p>${esc(c.explanation)}</p></article>`).join('')}</section>
       <section class="explain-caveats"><h3>${t.caveats}</h3><ul>${data.caveats.map(c => `<li>${esc(c)}</li>`).join('')}</ul></section>
       <section class="explain-takeaway"><h3>${t.takeaway}</h3><p>${esc(data.takeaway)}</p></section>
