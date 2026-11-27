@@ -1,12 +1,12 @@
 # Transcript-driven concept library
 
-The glossary is one growing library, not a fresh set of repeated definitions after every video. The public catalogue contains neutral definitions and public video references; understanding is personal.
+The glossary is one growing library, not a fresh set of repeated definitions after every video. The catalogue contains neutral explanations; understanding is personal. Public video references remain in editorial metadata for deduplication, not in the glossary interface.
 
 ## Reader experience
 
-Every concept has three self-reported states: **Not marked yet**, **Needs review**, **Understood**. None is selected as understood automatically. English and Spanish use the same canonical ID. The page can filter the review queue, show concepts encountered in the reviewed videos, open a short reinforcement example, and link to course material.
+Every concept has three self-reported states: **Not marked yet**, **Needs review**, **Understood**. None is selected as understood automatically. English and Spanish use the same canonical ID. The page filters the review queue and links to course material. Each main explanation contains short visible paragraphs covering the meaning, mechanism, and an example or limitation. There is no separate "Help me understand" disclosure and no visible source-origin section or video-origin filter.
 
-Course links distinguish **Covered in the course** from **Related course material**. A topic merely being similar to a lesson does not establish complete coverage. The initial catalogue has 112 concepts: the existing 69 glossary entries plus 43 concepts encountered while reviewing the two supplied transcripts. Source references record where a concept appeared, not endorsement or verification of the author's market claims.
+Course links distinguish **Covered in the course** from **Related course material**. A topic merely being similar to a lesson does not establish complete coverage. The catalogue has 112 concepts. Origin references are an internal editorial aid, not reader-facing content or endorsement of a video's market claims. More depth belongs in every concept's main explanation, not hidden behind an extra click.
 
 Choices save locally for signed-out readers. Signed-in readers use `/api/concepts/` with the existing verified account session. Only canonical IDs and valid states are accepted. Individual changes merge atomically into `tb_users.progress.concepts`; lesson-progress saves preserve that field. No new database table is required. Account export already includes this field, and deleting the account removes it. Failed saves remain queued on the device with a retry, not a false claim of successful sync.
 
