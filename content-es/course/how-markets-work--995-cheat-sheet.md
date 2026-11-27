@@ -26,6 +26,9 @@ Un recordatorio de una página de este módulo. Lee primero las lecciones; usa e
 3. Coloca el stop en cuanto se ejecute la entrada.
 4. Planifica la operación en cinco líneas antes de hacer clic: activo, motivo, entrada, stop, objetivo.
 
+5. Otros en el mercado: fondos, bots y creadores de mercado; el tamaño y la velocidad son suyos, la paciencia y un plan son tuyos.
+6. Los futuros son obligaciones a un precio fijo; las opciones son derechos por los que pagas una prima. Comprar una opción arriesga la prima; vender puede perder mucho más.
+
 ## Cuidado con
 
 - Perseguir el precio con una orden a mercado en un movimiento rápido.

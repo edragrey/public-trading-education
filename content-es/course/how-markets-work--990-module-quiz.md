@@ -3,11 +3,11 @@ title: "Cómo funcionan los mercados: test del módulo"
 module: how-markets-work
 order: 990
 kind: quiz
-summary: Diez preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
+summary: Doce preguntas rápidas para comprobar que has captado las ideas clave de este módulo. Toca una respuesta para ver por qué.
 date: 2026-11-22
 ---
 
-Diez preguntas rápidas sobre este módulo. Toca una respuesta para ver si es correcta y por qué. No se guarda ninguna puntuación y puedes volver a leer la lección cuando quieras.
+Doce preguntas rápidas sobre este módulo. Toca una respuesta para ver si es correcta y por qué. No se guarda ninguna puntuación y puedes volver a leer la lección cuando quieras.
 
 ## 1. ¿Qué significa operar «al contado» (spot)?
 
@@ -100,3 +100,21 @@ Diez preguntas rápidas sobre este módulo. Toca una respuesta para ver si es co
 </div>
 
 **Idea clave:** Las respuestas equivocadas son útiles. Vuelve a la lección que hay detrás de cualquier pregunta que hayas fallado.
+
+## 11. ¿Qué gana un creador de mercado?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Una comisión del mercado por cada trader</button>
+<button type="button" data-opt="b">La pequeña diferencia entre sus precios de compra y de venta</button>
+<button type="button" data-opt="c">Una parte del beneficio de cada trader</button>
+<p class="quiz-why" hidden>Los creadores de mercado cotizan un precio de compra y otro de venta, y se quedan con el spread entre ambos.</p>
+</div>
+
+## 12. ¿Cuánto es lo máximo que puedes perder al comprar una opción?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">La prima que pagaste</button>
+<button type="button" data-opt="b">Cantidades ilimitadas</button>
+<button type="button" data-opt="c">Diez veces la prima</button>
+<p class="quiz-why" hidden>El comprador de una opción tiene un derecho, no una obligación, así que la pérdida se detiene en la prima. Los vendedores son otra historia.</p>
+</div>

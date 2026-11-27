@@ -3,11 +3,11 @@ title: "How markets work: module quiz"
 module: how-markets-work
 order: 990
 kind: quiz
-summary: Ten quick questions to check you've got the key ideas from this module. Tap an answer to see why.
+summary: Twelve quick questions to check you've got the key ideas from this module. Tap an answer to see why.
 date: 2026-11-22
 ---
 
-Ten quick questions on this module. Tap an answer to see whether it's right and why. No score is kept, and you can read the lesson again any time.
+Twelve quick questions on this module. Tap an answer to see whether it's right and why. No score is kept, and you can read the lesson again any time.
 
 ## 1. What does 'spot' trading mean?
 
@@ -100,3 +100,21 @@ Ten quick questions on this module. Tap an answer to see whether it's right and 
 </div>
 
 **Key idea:** Wrong answers are useful. Go back to the lesson behind any question you missed.
+
+## 11. What does a market maker earn?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">A commission from the exchange on every trader</button>
+<button type="button" data-opt="b">The small gap between its buy and sell prices</button>
+<button type="button" data-opt="c">A share of every trader's profit</button>
+<p class="quiz-why" hidden>Market makers quote both a buy and a sell price and keep the spread between them.</p>
+</div>
+
+## 12. What is the most you can lose when you buy an option?
+
+<div class="quiz" data-answer="a">
+<button type="button" data-opt="a">The premium you paid</button>
+<button type="button" data-opt="b">Unlimited amounts</button>
+<button type="button" data-opt="c">Ten times the premium</button>
+<p class="quiz-why" hidden>An option buyer has a right, not an obligation, so the loss stops at the premium. Sellers are a different story.</p>
+</div>
