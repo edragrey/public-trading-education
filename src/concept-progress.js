@@ -28,7 +28,7 @@ if (root) {
       card.querySelector('[data-concept-state]').value = state;
       if (state === 'understood') understood++;
       if (state === 'review') review++;
-      const matchesState = filter.value === 'all' || (filter.value === 'videos' ? card.dataset.fromVideo === 'true' : state === filter.value);
+      const matchesState = filter.value === 'all' || state === filter.value;
       const matchesText = !query || normalizeConceptText(card.dataset.search).includes(query);
       card.hidden = !matchesState || !matchesText;
       if (!card.hidden) shown++;

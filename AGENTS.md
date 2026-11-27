@@ -14,6 +14,8 @@ Read `docs/transcript-learning.md` and `content/concepts.json` before explaining
 - An unmarked concept is unknown, not mastered. Completing a lesson does not establish understanding.
 - Obtain personal marks only from an authorized account response or the reader's exported checklist. If unavailable, say so; never pretend to know their saved state.
 - Add missing concepts in both glossary languages, add their canonical metadata/aliases, and record the public video reference. Do not copy full transcripts or validate a speaker's price forecast by repeating it.
+- Glossary entries are self-contained explanations: define the idea, explain how it works, and give a concrete hypothetical example or important limitation in short visible paragraphs. Apply this to every entry in both languages, not just selected terms.
+- Keep origin/video references only in editorial metadata for deduplication. Do not show where a concept came from, a video-origin filter, or a separate "Help me understand" disclosure on the glossary. Keep related course links and personal understanding marks.
 
 The automatic Explain tool uses account marks to omit understood definitions. Chat agents must apply the editorial rules above as well.
 

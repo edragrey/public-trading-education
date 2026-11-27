@@ -31,6 +31,20 @@ test('catalogue has a unique shared ID and EN/ES glossary heading for every conc
   assert.equal(concepts.find(c => c.id === 'seasonality').courseCoverage, 'related');
 });
 
+test('every glossary concept has a substantive visible explanation in both languages', () => {
+  for (const lang of ['en', 'es']) {
+    const raw = fs.readFileSync(new URL(`../${lang === 'es' ? 'content-es' : 'content'}/glossary.md`, import.meta.url), 'utf8');
+    const entries = raw.split(/^## /m).slice(1);
+    for (const entry of entries) {
+      const title = entry.slice(0, entry.indexOf('\n'));
+      const body = entry.slice(entry.indexOf('\n') + 1).trim();
+      assert.ok(body.split(/\n\s*\n/).length >= 3, `${lang}: ${title} needs visible paragraphs`);
+      assert.ok(body.split(/\s+/).length >= 60, `${lang}: ${title} is still too terse`);
+      assert.doesNotMatch(body, /<details|youtube\.com|youtu\.be|SpotScribe/i);
+    }
+  }
+});
+
 test('only known personal marks survive validation; unknown is never understood', () => {
   assert.deepEqual(cleanConceptStates({ support: 'understood', rsi: { status: 'review' }, imaginary: 'understood', macd: 'read', leverage: { status: 'unmarked' } }, conceptIds), { support: { status: 'understood' }, rsi: { status: 'review' }, leverage: { status: 'unmarked' } });
   assert.deepEqual(cleanConceptStates(null), {});
@@ -123,6 +137,7 @@ test('build preserves old anchors, adds shared concept anchors and translated co
     assert.equal((html.match(/data-concept-id=/g) || []).length, 112);
     assert.match(html, /id="concept-rsi"/);
     assert.match(html, /data-concept-export/);
+    assert.doesNotMatch(html, /g-sources|g-review|data-from-video|value="videos"|Help me understand|Ayúdame a entenderlo|Encountered in|Visto en|youtube\.com|rP--9HfkYfA|h5PlmAVXVu4/);
     assert.match(html, /value="review"/);
     assert.doesNotMatch(html, /value="understood" selected/);
     assert.match(html, lang === 'es' ? /Necesito repasarlo/ : /Needs review/);
