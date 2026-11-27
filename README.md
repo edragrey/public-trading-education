@@ -1,6 +1,8 @@
 # Public trading-education site
 
-A small, fast static site for beginner trading education. Pages: Home, Course, Articles, Glossary, About, plus Account and Privacy.
+A small, fast static site for beginner trading education. Pages: Home, Course, Explain, Articles, Glossary, About, plus Account and Privacy.
+
+**Explain** turns public transcripts/articles and available YouTube captions into plain-language concept breakdowns, with labelled claims and follow-up questions. It has an account-free sample; live AI explanations require server configuration. See [docs/explainer.md](docs/explainer.md) for activation, privacy and verification.
 
 Lessons after the free module need a free account that saves progress. See [docs/accounts.md](docs/accounts.md) for how it works and how to switch it on. Which lessons are free is set in `access.config.js`.
 This repo is public-only content. Never add positions, wallets, trades, journal notes, watchlists, keys, tokens or private desk URLs.

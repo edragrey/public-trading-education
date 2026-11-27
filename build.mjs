@@ -5,6 +5,8 @@ import { marked } from "marked";
 import access from "./access.config.js";
 import { accountsEnabled, isFreePath } from "./lib/token.js";
 import { STR } from "./src/i18n.mjs";
+import { COPY as EXPLAINER } from "./src/explainer-copy.js";
+import { explainerPage } from "./src/explainer-page.js";
 // Accounts are on only when every env var is set in Vercel (see docs/accounts.md). Changing them needs a redeploy.
 const ACCOUNTS = accountsEnabled(process.env);
 
@@ -68,7 +70,7 @@ const logo = `<img class="logo" src="/brand-logo.jpg" alt="" aria-hidden="true">
 // Runs before the page paints so a saved theme never flashes. "tb-theme" is light, dark, or unset (match device).
 const themeBoot = `(function(){try{var t=localStorage.getItem("tb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}})()`;
 
-const nav = () => [["/", L.nav.home], ["/course/", L.nav.course], ["/articles/", L.nav.articles], ["/glossary/", L.nav.glossary], ["/about/", L.nav.about]];
+const nav = () => [["/", L.nav.home], ["/course/", L.nav.course], ["/explain/", EXPLAINER[L.code].nav], ["/articles/", L.nav.articles], ["/glossary/", L.nav.glossary], ["/about/", L.nav.about]];
 const tagline = () => (L.code === "es" && cfg.es?.tagline) || cfg.tagline;
 const siteDesc = () => (L.code === "es" && cfg.es?.description) || cfg.description;
 const OTHER = { en: "es", es: "en" };
@@ -98,6 +100,7 @@ function page(urlPath, title, content, { description = siteDesc(), wide = false 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/style.css">
+${urlPath === '/explain/' || urlPath === '/' ? '<link rel="stylesheet" href="/explainer.css">' : ''}
 <link rel="icon" href="/brand-logo.jpg" type="image/jpeg">
 </head>
 <body>
@@ -134,7 +137,7 @@ ${content}
 </html>`;
   // Spanish pages live under /es/ with the same paths. Internal links in templates and lesson text are written
   // as plain /course/... paths and get the prefix here, except assets and the API.
-  if (L.prefix) html = html.replace(/href="\/(?!\/|es\/|api\/|style\.css|site\.js|theme\.js|brand-logo|logo\.jpg)/g, `href="${L.prefix}/`);
+  if (L.prefix) html = html.replace(/href="\/(?!\/|es\/|api\/|style\.css|explainer\.css|site\.js|theme\.js|brand-logo|logo\.jpg)/g, `href="${L.prefix}/`);
   const alt = ["en", "es"].map((c) => `<link rel="alternate" hreflang="${c}" href="${STR[c].prefix}${urlPath}">`).join("\n") + `\n<link rel="alternate" hreflang="x-default" href="${urlPath}">`;
   html = html.replace("@@ALT@@", alt).replace("@@SWITCH@@", `${other.prefix}${urlPath}`);
   const dir = path.join(out, L.prefix, urlPath);
@@ -309,6 +312,7 @@ function buildSite(lang) {
   ${heroChart}
 </section>
 <section class="promises"><ul>${promises}</ul></section>
+<section class="explain-home"><div><h2>${EXPLAINER[L.code].title}</h2><p>${EXPLAINER[L.code].intro}</p></div><a class="btn ghost" href="/explain/">${EXPLAINER[L.code].nav} ${icon("arrow", "icon xs")}</a></section>
 <section class="block">
   <div class="block-head"><h2>${L.glance}</h2><a href="/course/">${L.allModules} ${icon("arrow", "icon xs")}</a></div>
   <ol class="steps">${modsHtml}</ol>
@@ -316,6 +320,8 @@ function buildSite(lang) {
 ${latest.length ? `<section class="block"><div class="block-head"><h2>${L.startWith}</h2><a href="/course/">${L.seeAll} ${icon("arrow", "icon xs")}</a></div><ul class="cards${latest.length === 1 ? " solo" : ""}">${latest.map((l) => card(l, { chip: modOf(l.module)?.title, chipIcon: modIcon(l.module) })).join("")}</ul></section>` : ""}
 ${market}`, { wide: true, description: h.meta.description });
   }
+
+  page("/explain/", EXPLAINER[L.code].nav, explainerPage(L.code, esc), { wide: true, description: EXPLAINER[L.code].intro });
 
   // Course
   {
@@ -507,5 +513,5 @@ L = STR.en;
 page("/404-tmp/", "Page not found", `<div class="empty"><span class="band-icon">${icon("search")}</span><h1>Page not found</h1><p>That page doesn't exist, or it moved.</p><p><a class="btn" href="/">Go to the home page</a></p></div>`);
 fs.renameSync(path.join(out, "404-tmp/index.html"), path.join(out, "404.html"));
 fs.rmSync(path.join(out, "404-tmp"), { recursive: true });
-for (const f of ["style.css", "site.js", "theme.js", "logo.jpg", "brand-logo.jpg"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
+for (const f of ["style.css", "site.js", "theme.js", "logo.jpg", "brand-logo.jpg", "explainer.js", "explainer-copy.js", "explainer.css"]) fs.copyFileSync(path.join(root, "src", f), path.join(out, f));
 console.log(`Built EN ${stats.en.lessons} lesson(s) and ES ${stats.es.lessons} lesson(s) (${stats.es.fallbacks} not translated yet, shown in English) into dist/. Accounts ${ACCOUNTS ? "ON" : "off (env vars not set)"}.`);
