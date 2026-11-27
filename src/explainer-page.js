@@ -7,7 +7,9 @@ export function explainerPage(language, esc) {
     <div class="explain-layout">
       <section class="explain-source" aria-labelledby="source-title">
         <h2 id="source-title">${t.source}</h2>
+        <p id="explain-access" class="explain-access" role="status">${t.checking}</p>
         <form id="explain-form">
+          <fieldset id="explain-fields" class="explain-fields" disabled><legend class="sr">${t.source}</legend>
           <fieldset class="explain-choice source-choice"><legend class="sr">${t.source}</legend>
             <label><input type="radio" name="mode" value="text" checked><span>${t.text}</span></label>
             <label><input type="radio" name="mode" value="youtube"><span>${t.youtube}</span></label>
@@ -27,9 +29,10 @@ export function explainerPage(language, esc) {
             <label><input type="radio" name="level" value="some"><span>${t.some}</span></label>
           </fieldset>
           <button class="btn explain-submit" type="submit">${t.explain}<span aria-hidden="true">→</span></button>
+          </fieldset>
           <button class="text-button" id="explain-cancel" type="button" hidden>${t.cancel}</button>
           <div id="explain-message" role="status" aria-live="polite"></div>
-          <a id="explain-signin" href="/account/?next=/explain/" hidden>${t.errors.sign_in}</a>
+          <a id="explain-signin" class="btn" href="/account/?next=/explain/" hidden>${t.signup}</a>
           <p class="explain-fine">${t.account}</p><p class="explain-fine">${t.privacy}</p>
         </form>
       </section>

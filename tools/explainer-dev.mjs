@@ -2,13 +2,17 @@
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { POST } from '../api/explain.js';
+import { POST, GET } from '../api/explain.js';
 const root = path.resolve(new URL('../dist', import.meta.url).pathname);
 const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.jpg': 'image/jpeg' };
 const port = Number(process.env.PORT || 4173);
 http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, `http://127.0.0.1:${port}`);
+    if (url.pathname === '/api/explain' && req.method === 'GET') {
+      const response = await GET(new Request(url, { headers: req.headers }));
+      res.writeHead(response.status, Object.fromEntries(response.headers)); res.end(await response.text()); return;
+    }
     if (url.pathname === '/api/explain' && req.method === 'POST') {
       const chunks = []; let size = 0;
       for await (const chunk of req) { size += chunk.length; if (size > 260000) { res.writeHead(413, { 'content-type': 'application/json' }); res.end('{"error":"source_too_large"}'); return; } chunks.push(chunk); }

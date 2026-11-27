@@ -24,7 +24,7 @@ Si usas **Explicar** con tu propio contenido, enviamos ese texto y las preguntas
 
 No guardamos las transcripciones, las preguntas ni las respuestas en nuestra base de datos ni en el almacenamiento de tu navegador. La explicación permanece en la página abierta hasta que la sustituyes o sales. OpenAI trata el texto según sus [políticas de datos de la API](https://platform.openai.com/docs/guides/your-data); solicitar que no se almacene la respuesta no significa que el proveedor no conserve registros operativos o de seguridad.
 
-Para limitar el uso indebido, guardamos tu número de solicitudes y la fecha del último día de uso, vinculados a tu cuenta. Ese registro se incluye al descargar tus datos y se elimina al borrar tu cuenta. También guardamos un recuento total anónimo para el sitio. El ejemplo ilustrativo no envía contenido a OpenAI ni necesita cuenta.
+Para limitar el uso indebido, guardamos tu número de solicitudes y la fecha del último día de uso, vinculados a tu cuenta. Para aplicar el límite de una explicación gratuita, también guardamos una huella SHA-256 del texto de origen y cuándo utilizaste con éxito la explicación gratuita, no el texto en sí. Estos registros se incluyen al descargar tus datos y se eliminan al borrar tu cuenta. También guardamos un recuento total anónimo para el sitio. El ejemplo ilustrativo no envía contenido a OpenAI ni necesita cuenta.
 
 ## Cookies
 

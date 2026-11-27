@@ -17,12 +17,14 @@ export async function GET(request) {
   const u = (await q("select email, created_at, last_login_at, email_updates, email_updates_at, progress, progress_at from tb_users where id = $1", [uid])).rows[0];
   if (!u) return json({ error: "Not signed in." }, 401);
   const usage = (await q("select day, uses from tb_explainer_usage where user_id = $1", [uid])).rows[0];
+  const access = (await q("select source_hash, completed_at from tb_explainer_access where user_id = $1", [uid])).rows[0];
   const data = {
     exportedAt: new Date().toISOString(),
     account: { email: u.email, createdAt: u.created_at, lastSignInAt: u.last_login_at },
     emailUpdates: { optedIn: u.email_updates, changedAt: u.email_updates_at },
     progress: { ...u.progress, updatedAt: u.progress_at },
     explainerUsage: usage ? { day: usage.day, requests: usage.uses } : null,
+    freeExplanation: access ? { sourceFingerprint: access.source_hash, completedAt: access.completed_at } : null,
   };
   return new Response(JSON.stringify(data, null, 2), {
     headers: { "content-type": "application/json; charset=utf-8", "content-disposition": 'attachment; filename="my-course-data.json"', "cache-control": "no-store" },

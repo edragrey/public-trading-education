@@ -24,7 +24,7 @@ If you use **Explain** with your own content, we send that text and any follow-u
 
 We don't save transcripts, questions or generated answers in our database or your browser storage. The explanation stays in the open page until you replace it or leave. OpenAI processes the submitted text under its own [API data policies](https://platform.openai.com/docs/guides/your-data); requesting no stored response does not mean the provider keeps no operational or safety logs.
 
-To limit misuse, we keep your request count and the date of your most recent day of use, linked to your account. That record is included in your data download and removed when you delete your account. We also keep an anonymous total request count for the site. The illustrative example does not send content to OpenAI and needs no account.
+To limit misuse, we keep your request count and the date of your most recent day of use, linked to your account. To enforce one free explanation, we also store a SHA-256 fingerprint of the source text and when you successfully used your free explanation, not the text itself. These records are included in your data download and removed when you delete your account. We also keep an anonymous total request count for the site. The illustrative example does not send content to OpenAI and needs no account.
 
 ## Cookies
 

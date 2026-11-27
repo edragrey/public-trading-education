@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { cleanInput, youtubeId, youtubeTranscript, generateBreakdown, limitedText, validateResult, ExplainError } from '../lib/explainer.js';
-import { createHandler, reserveUsage } from '../api/explain.js';
+import { createHandler, createStatusHandler, reserveUsage } from '../api/explain.js';
+import { sourceHash, reserveFreeSource, finishFreeSource } from '../lib/explainer-access.js';
 import { COPY } from '../src/explainer-copy.js';
 const text = 'The author argues that market liquidity can affect how easily an investor can sell an asset. This is not a prediction of future prices. '.repeat(3);
 const fail = code => e => e.code === code;
@@ -78,7 +79,7 @@ test('validates follow-up answers and rejects invalid claim categories', () => {
 });
 
 const req = (body, origin = 'https://example.test') => new Request('https://example.test/api/explain', { method: 'POST', headers: { origin, 'content-type': 'application/json' }, body: typeof body === 'string' ? body : JSON.stringify(body) });
-const handler = overrides => createHandler({ env: { OPENAI_API_KEY: 'test-only' }, configured: () => true, userId: async () => '1', reserve: async () => {}, generate: async () => sample(), ...overrides });
+const handler = overrides => createHandler({ env: { OPENAI_API_KEY: 'test-only' }, configured: () => true, userId: async () => '1', reserve: async () => {}, generate: async () => sample(), authorize: async () => ({ uid: '1', token: 'test-lease' }), finish: async () => {}, ...overrides });
 test('API rejects other origins and unsigned users before generation', async () => {
   assert.equal((await handler()(req({ text }, 'https://evil.test'))).status, 403);
   assert.equal((await handler({ userId: async () => null })(req({ text }))).status, 401);
@@ -106,4 +107,56 @@ test('durable usage is atomically bounded per account and globally', async () =>
   assert.match(queries[0][0], /day < current_date/);
   assert.equal(queries[1][1][0], 'global'); assert.equal(queries[1][1][2], null);
   await assert.rejects(() => reserveUsage('42', async () => ({ rowCount: 0 })), fail('daily_limit'));
+});
+
+test('source fingerprints ignore whitespace, but never store the source text', () => {
+  assert.equal(sourceHash('one  two\nthree'), sourceHash('one two three'));
+  assert.notEqual(sourceHash('one source'), sourceHash('another source'));
+  assert.match(sourceHash(text), /^[a-f0-9]{64}$/);
+});
+test('free-source reservation uses an atomic lifetime allowance and expiring lease', async () => {
+  const calls = [];
+  const lease = await reserveFreeSource('1', text, async (sql, params) => { calls.push({ sql, params }); return { rowCount: 1, rows: [{}] }; });
+  assert.equal(lease.uid, '1'); assert.ok(lease.token);
+  assert.equal(calls[0].params[1], sourceHash(text));
+  assert.match(calls[0].sql, /on conflict \(user_id\)/);
+  assert.match(calls[0].sql, /completed_at is null or tb_explainer_access.source_hash = excluded.source_hash/);
+  assert.match(calls[0].sql, /interval '2 minutes'/);
+  assert.doesNotMatch(calls[0].sql, /current_date/);
+});
+test('a different completed source requires paid access', async () => {
+  await assert.rejects(() => reserveFreeSource('1', text, async sql => sql.startsWith('insert') ? { rowCount: 0 } : { rows: [{ source_hash: sourceHash('other video'), completed_at: '2026-11-27' }] }), e => e.code === 'free_limit' && e.status === 402);
+});
+test('concurrent attempts cannot both claim the free source', async () => {
+  await assert.rejects(() => reserveFreeSource('1', text, async sql => sql.startsWith('insert') ? { rowCount: 0 } : { rows: [{ source_hash: sourceHash(text), completed_at: null }] }), e => e.code === 'already_processing' && e.status === 409);
+});
+test('completion/failure only changes the matching lease; failure preserves earlier success', async () => {
+  const calls = [];
+  await finishFreeSource({ uid: '1', token: 'lease' }, false, async (sql, params) => { calls.push({ sql, params }); return { rowCount: 1 }; });
+  assert.deepEqual(calls[0].params, ['1', 'lease', false]);
+  assert.match(calls[0].sql, /else completed_at end/);
+  assert.match(calls[0].sql, /lease_token = \$2/);
+  await assert.rejects(() => finishFreeSource({ uid: '1', token: 'old' }, true, async () => ({ rowCount: 0 })), fail('already_processing'));
+});
+test('API never calls the model when the free allowance is used on another source', async () => {
+  let generated = false;
+  const response = await handler({ authorize: async () => { throw new ExplainError('free_limit', 402); }, generate: async () => { generated = true; } })(req({ text }));
+  assert.equal(response.status, 402); assert.equal(generated, false);
+});
+test('failed generation releases the reservation without using the free video', async () => {
+  const finishes = [];
+  const response = await handler({ generate: async () => { throw new ExplainError('generation_unavailable', 502); }, finish: async (lease, success) => { finishes.push(success); } })(req({ text }));
+  assert.equal(response.status, 502); assert.deepEqual(finishes, [false]);
+});
+test('successful generation finalizes the free allowance once', async () => {
+  const finishes = [];
+  const response = await handler({ finish: async (lease, success) => { finishes.push(success); } })(req({ text }));
+  assert.equal(response.status, 200); assert.deepEqual(finishes, [true]);
+});
+test('access status requires an account, returns no source content and never claims checkout exists', async () => {
+  const get = createStatusHandler({ env: { OPENAI_API_KEY: 'test-only' }, configured: () => true, userId: async () => '1', query: async () => ({ rows: [{ completed_at: '2026-11-27' }] }) });
+  const response = await get(new Request('https://example.test/api/explain'));
+  assert.deepEqual(await response.json(), { enabled: true, signedIn: true, freeUsed: true, paymentsEnabled: false });
+  const unsigned = createStatusHandler({ env: { OPENAI_API_KEY: 'test-only' }, configured: () => true, userId: async () => null });
+  assert.deepEqual(await (await unsigned(new Request('https://example.test/api/explain'))).json(), { enabled: true, signedIn: false });
 });

@@ -39,6 +39,13 @@ create table if not exists tb_explainer_usage (
   day date not null default current_date,
   uses integer not null
 );
+create table if not exists tb_explainer_access (
+  user_id bigint primary key references tb_users(id) on delete cascade,
+  source_hash text not null,
+  completed_at timestamptz,
+  lease_token text,
+  lease_at timestamptz
+);
 `;
 
 export async function q(text, params) {

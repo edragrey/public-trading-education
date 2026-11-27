@@ -16,9 +16,24 @@ if (root) {
   let currentSource;
   let currentResult;
   let isSample = false;
+  let canUse = false;
+  let freeUsed = false;
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   const prefix = language === 'es' ? '/es' : '';
   signin.href = `${prefix}/account/?next=${encodeURIComponent(`${prefix}/explain/`)}`;
+  async function loadAccess() {
+    try {
+      const response = await fetch('/api/explain', { credentials: 'same-origin', cache: 'no-store' });
+      if (!response.ok) throw new Error();
+      const access = await response.json();
+      freeUsed = Boolean(access.freeUsed);
+      canUse = access.enabled && access.signedIn && !freeUsed;
+      $('#explain-fields').disabled = !canUse;
+      signin.hidden = !access.enabled || access.signedIn;
+      $('#explain-access').textContent = !access.enabled ? t.errors.not_configured : !access.signedIn ? t.errors.sign_in : freeUsed ? t.usedNotice : t.freeAvailable;
+    } catch { $('#explain-access').textContent = t.errors.service_unavailable; }
+  }
+  loadAccess();
   const errorText = code => t.errors[code] || t.errors.service_unavailable;
   const count = () => { $('#source-count').textContent = `${source.value.length.toLocaleString(language)} ${t.chars}`; };
   source.addEventListener('input', count);
@@ -28,6 +43,7 @@ if (root) {
     signin.hidden = code !== 'sign_in';
   }
   function busy(value) {
+    $('#explain-fields').disabled = value || !canUse;
     form.querySelectorAll('input, textarea, button').forEach(el => { el.disabled = value; });
     cancel.disabled = false;
     cancel.hidden = !value;
@@ -64,6 +80,7 @@ if (root) {
   }
   form.addEventListener('submit', async event => {
     event.preventDefault();
+    if (!canUse) { showError(freeUsed ? 'free_limit' : 'sign_in'); return; }
     controller?.abort();
     const fields = new FormData(form);
     const input = { mode: fields.get('mode'), text: fields.get('mode') === 'text' ? source.value.trim() : '',
@@ -84,6 +101,8 @@ if (root) {
       const data = await request(input, pending.signal);
       if (controller !== pending) return;
       currentSource = { ...input, text: data.sourceText };
+      freeUsed = true; canUse = false;
+      $('#explain-access').textContent = t.upgrade;
       isSample = false;
       render(data.result, data.sourceUrl);
     } catch (e) { if (controller === pending && e.name !== 'AbortError') showError(e.message === 'Failed to fetch' ? 'network' : e.message); }
@@ -119,6 +138,7 @@ if (root) {
       catch { message.textContent = t.copyFailed; }
     });
     resultEl.querySelector('[data-new]').addEventListener('click', () => {
+      if (freeUsed) { showError('free_limit'); return; }
       controller?.abort(); currentSource = null; currentResult = null;
       resultEl.hidden = true; $('#explain-empty').hidden = false;
       (new FormData(form).get('mode') === 'youtube' ? $('#source-url') : source).focus();
