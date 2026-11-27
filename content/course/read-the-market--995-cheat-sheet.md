@@ -24,6 +24,8 @@ A one-page reminder of this module. Read the lessons first; use this to refresh 
 
 - **Trendline and channel:** two swing points make a line, a third touch makes it believable. **Volume:** compare to recent bars; breakouts on thin volume can fail. **ATR:** how far a price normally moves; stop = a multiple of ATR, smaller size when ATR is big. **Top-down:** trend, areas, extras, timing, plan.
 
+- **MACD:** fast average minus slow average; shrinking histogram = fading momentum; lags and whipsaws in ranges. **Bollinger bands:** a stretchy envelope; a squeeze warns of a bigger move, direction unknown. **Fibonacci:** 38.2 / 50 / 61.8% pullback areas, high − (% × move); an area to watch, never a guarantee.
+
 ## Watch out for
 
 - Seeing patterns because you want a trade.

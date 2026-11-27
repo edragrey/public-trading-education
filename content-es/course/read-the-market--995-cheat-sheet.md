@@ -24,6 +24,8 @@ Un recordatorio de una página de este módulo. Lee primero las lecciones; usa e
 
 - **Línea de tendencia y canal:** dos puntos del swing hacen una línea, un tercer toque la hace creíble. **Volumen:** compara con barras recientes; las rupturas con poco volumen pueden fallar. **ATR:** cuánto se mueve normalmente un precio; stop = múltiplo del ATR, menos tamaño si el ATR es grande. **De arriba abajo:** tendencia, zonas, extras, momento, plan.
 
+- **MACD:** media rápida menos media lenta; histograma que se encoge = momentum que se apaga; llega tarde y da bandazos en rangos. **Bandas de Bollinger:** una envoltura elástica; una compresión avisa de un movimiento mayor, dirección desconocida. **Fibonacci:** zonas de retroceso 38,2 / 50 / 61,8 %, máximo − (% × movimiento); una zona a vigilar, nunca una garantía.
+
 ## Ojo con
 
 - Ver patrones porque quieres una operación.
