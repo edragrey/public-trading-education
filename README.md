@@ -36,7 +36,7 @@ A module can list `"sections"` in `site.config.json` (for example `["The basics"
 
 ### Step-by-step version of a lesson
 
-Create `content/steps/<lesson-slug>.md` with `lesson: <lesson-slug>` (and optionally `article: <article-slug>`) in the frontmatter. Split screens with a line `<!-- step -->`. It's published at `<lesson url>steps/`, and the lesson page links to it automatically. Quick questions use:
+The one-screen version of every lesson is built automatically from the full lesson text (split at its `##` headings), so it always matches. A curated step file below only adds extras to it: its quick questions and any figure the lesson does not already have. Create `content/steps/<lesson-slug>.md` with `lesson: <lesson-slug>` (and optionally `article: <article-slug>`) in the frontmatter. Split screens with a line `<!-- step -->`. It's published at `<lesson url>steps/`, and the lesson page links to it automatically. Quick questions use:
 
 ```html
 <div class="quiz" data-answer="b">

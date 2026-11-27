@@ -212,13 +212,41 @@ function buildSite(lang) {
   const stepsUrl = (l) => `${l.url}steps/`;
   const lessonBySlug = (slug) => lessons.find((l) => l.slug === slug);
 
-  // Every core lesson gets a guided view. Curated step files stay hand-crafted; the rest
-  // are split at section headings so the course never has a dead-end "full lesson only" path.
-  const autoWalk = (l) => ({
-    meta: { title: `${l.meta.title}${L.guided}`, summary: l.meta.summary || "" },
-    parts: l.body.split(/(?=^##\s)/m).map((p) => p.trim()).filter(Boolean),
-  });
-  const walks = Object.fromEntries(lessons.filter(isCore).map((l) => [l.slug, steps[l.slug] || autoWalk(l)]));
+  // Every core lesson gets a guided view built from the full lesson text, split at its section
+  // headings, so the one-screen version always says exactly what the lesson says. Tiny sections
+  // are joined to the next one. Interactive extras from a curated step file (quick-check questions
+  // and figures the lesson doesn't already have) are added after the lesson screens.
+  const wordsOf = (s) => s.replace(/<svg[\s\S]*?<\/svg>/g, " ").replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+  const autoWalk = (l) => {
+    const raw = l.body.split(/(?=^##\s)/m).map((p) => p.trim()).filter(Boolean);
+    const parts = [];
+    for (let i = 0; i < raw.length; i++) {
+      let p = raw[i];
+      while (wordsOf(p) < 40 && i + 1 < raw.length) p += "\n\n" + raw[++i];
+      parts.push(p);
+    }
+    const cur = steps[l.slug];
+    if (cur) {
+      const label = L.code === "es" ? "Pregunta rápida" : "Quick check";
+      const figLabel = L.code === "es" ? "Esquema" : "Visual";
+      const nQuiz = cur.parts.filter((sp) => /<div class="quiz"/.test(sp)).length;
+      let qi = 0;
+      const have = (frag) => l.body.includes(frag);
+      for (const sp of cur.parts) {
+        for (const m of sp.matchAll(/<figure class="fig"[\s\S]*?<\/figure>/g)) {
+          const key = (m[0].match(/aria-label="([^"]{0,60})/) || [])[1];
+          if (!key || !have(key)) parts.push(`## ${figLabel}\n\n${m[0]}`);
+        }
+        const quizzes = sp.match(/<div class="quiz"[\s\S]*?<\/div>/g);
+        if (quizzes) {
+          const q = (sp.match(/^[^<#>\n][^\n]*\?\s*$/m) || [""])[0];
+          parts.push(`## ${label}${nQuiz > 1 ? ` ${++qi}` : ""}\n\n${q ? q + "\n\n" : ""}${quizzes.join("\n\n")}`);
+        }
+      }
+    }
+    return { meta: { title: `${l.meta.title}${L.guided}`, summary: l.meta.summary || "", article: cur?.meta?.article }, parts };
+  };
+  const walks = Object.fromEntries(lessons.filter(isCore).map((l) => [l.slug, autoWalk(l)]));
   const walkFor = (l) => walks[l.slug];
 
   // Lessons in a module, grouped by "section" (order from site.config.json; no section = the first one).
