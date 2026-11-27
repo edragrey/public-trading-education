@@ -1,6 +1,6 @@
 ---
 title: Privacy notice
-date: 2026-11-24
+date: 2026-11-27
 ---
 
 This is a free education site. You can read the home page, articles, glossary and the first module without an account. To read the rest of the course you need a free account, so we can save your progress.
@@ -16,7 +16,15 @@ When you create an account we store:
 
 To sign you in we also keep the one-time code we email you (scrambled, never in plain text) for up to a day.
 
-We don't store passwords, names, payment details, or anything about your trading. We don't use analytics, ads or tracking cookies, and we don't sell or share your data.
+We don't store passwords, names, payment details, or anything about your trading. We don't use analytics, ads or tracking cookies, and we don't sell your data.
+
+## The explainer
+
+If you use **Explain** with your own content, we send that text and any follow-up question to OpenAI to generate an explanation. A YouTube link also makes a request to YouTube for its available captions. Only submit public content or text you are allowed to share; don't submit private information.
+
+We don't save transcripts, questions or generated answers in our database or your browser storage. The explanation stays in the open page until you replace it or leave. OpenAI processes the submitted text under its own [API data policies](https://platform.openai.com/docs/guides/your-data); requesting no stored response does not mean the provider keeps no operational or safety logs.
+
+To limit misuse, we keep your request count and the date of your most recent day of use, linked to your account. That record is included in your data download and removed when you delete your account. We also keep an anonymous total request count for the site. The illustrative example does not send content to OpenAI and needs no account.
 
 ## Cookies
 
@@ -31,6 +39,7 @@ We use your email and progress to provide the account you asked for. We send ema
 - **Vercel** hosts the site.
 - **Neon** hosts the database with your email and progress.
 - **Resend** sends the sign-in email.
+- **OpenAI** generates explanations when you submit your own content to Explain.
 
 These companies process data for us under their own data protection terms. Some of them may process data outside the EU.
 

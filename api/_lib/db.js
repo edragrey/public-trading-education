@@ -33,6 +33,12 @@ create table if not exists tb_login_codes (
   used_at timestamptz
 );
 create index if not exists tb_login_codes_email on tb_login_codes (email, created_at);
+create table if not exists tb_explainer_usage (
+  bucket text primary key,
+  user_id bigint references tb_users(id) on delete cascade,
+  day date not null default current_date,
+  uses integer not null
+);
 `;
 
 export async function q(text, params) {
