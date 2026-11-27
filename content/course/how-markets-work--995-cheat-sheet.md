@@ -26,6 +26,9 @@ A one-page reminder of this module. Read the lessons first; use this to refresh 
 3. Place the stop as soon as the entry fills.
 4. Plan the trade on five lines before you click: asset, reason, entry, stop, target.
 
+5. Others in the market: funds, bots and market makers; size and speed are theirs, patience and a plan are yours.
+6. Futures are obligations at a set price; options are rights you pay a premium for. Buying an option risks the premium; selling can lose far more.
+
 ## Watch out for
 
 - Chasing with a market order in a fast move.
