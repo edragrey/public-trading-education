@@ -3,11 +3,11 @@ title: "Going further: module quiz"
 module: going-further
 order: 990
 kind: quiz
-summary: Ten quick questions to check you've got the key ideas from this module. Tap an answer to see why.
+summary: Twelve quick questions to check you've got the key ideas from this module. Tap an answer to see why.
 date: 2026-11-22
 ---
 
-Ten quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
+Twelve quick questions on this module. Six are about this module and four bring back earlier ideas, mixed in on purpose: recalling old ideas is what makes them stick. Tap an answer to see why. No score is kept.
 
 ## 1. What did the March 2020 'dash for cash' show?
 
@@ -97,4 +97,22 @@ Ten quick questions on this module. Six are about this module and four bring bac
 <button type="button" data-opt="b">So you can use more leverage</button>
 <button type="button" data-opt="c">So fees are lower</button>
 <p class="quiz-why" hidden>Stop distance and risk amount together set the size.</p>
+</div>
+
+## 11. In a simple portfolio split, what is the "trading slice"?
+
+<div class="quiz" data-answer="b">
+<button type="button" data-opt="a">Your emergency money</button>
+<button type="button" data-opt="b">A small part you can afford to lose while you practise</button>
+<button type="button" data-opt="c">Most of your long-term holdings</button>
+<p class="quiz-why" hidden>Keeping the trading slice small means a loss can't harm your life, and you can follow your plan more calmly.</p>
+</div>
+
+## 12. A "trading group" promises to double your deposit in a week. What is the sensible reaction?
+
+<div class="quiz" data-answer="c">
+<button type="button" data-opt="a">Deposit a large amount quickly before the offer ends</button>
+<button type="button" data-opt="b">Ask for a screenshot of past wins</button>
+<button type="button" data-opt="c">Treat it as a scam warning and walk away</button>
+<p class="quiz-why" hidden>Guaranteed returns and urgency are classic scam signs. Screenshots are easy to fake.</p>
 </div>
