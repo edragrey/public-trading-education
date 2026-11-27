@@ -1,0 +1,2048 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "wealth-transfer",
+      "title": "The Crypto WEALTH TRANSFER is About To Begin!",
+      "url": "https://www.youtube.com/watch?v=rP--9HfkYfA"
+    },
+    {
+      "id": "bitcoin-floor-or-trap",
+      "title": "Bitcoin hoy: ¿piso o trampa? Semanal, diario y liquidaciones",
+      "url": "https://www.youtube.com/watch?v=h5PlmAVXVu4"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "break-even",
+      "terms": {
+        "en": "Break even",
+        "es": "Break even (punto de equilibrio)"
+      },
+      "aliases": [
+        "Break even"
+      ],
+      "lessons": [
+        "averages-ratios-and-r-multiples"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "cross-margin",
+      "terms": {
+        "en": "Cross margin",
+        "es": "Margen cruzado (cross margin)"
+      },
+      "aliases": [
+        "Cross margin",
+        "Margen cruzado"
+      ],
+      "lessons": [
+        "leverage-in-plain-words"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "drawdown",
+      "terms": {
+        "en": "Drawdown",
+        "es": "Drawdown (caída desde máximos)"
+      },
+      "aliases": [
+        "Drawdown"
+      ],
+      "lessons": [
+        "losing-streaks-and-drawdowns"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "expectancy",
+      "terms": {
+        "en": "Expectancy",
+        "es": "Expectativa (expectancy)"
+      },
+      "aliases": [
+        "Expectancy",
+        "Expectativa"
+      ],
+      "lessons": [
+        "win-rate-and-expectancy"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "hypothetical-example",
+      "terms": {
+        "en": "Hypothetical example",
+        "es": "Ejemplo hipotético"
+      },
+      "aliases": [
+        "Hypothetical example",
+        "Ejemplo hipotético"
+      ],
+      "lessons": [
+        "what-this-course-will-teach"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "index",
+      "terms": {
+        "en": "Index",
+        "es": "Índice"
+      },
+      "aliases": [
+        "Index",
+        "Índice"
+      ],
+      "lessons": [
+        "investing-vs-trading-and-etfs"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "isolated-margin",
+      "terms": {
+        "en": "Isolated margin",
+        "es": "Margen aislado (isolated margin)"
+      },
+      "aliases": [
+        "Isolated margin",
+        "Margen aislado"
+      ],
+      "lessons": [
+        "leverage-in-plain-words"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "leverage",
+      "terms": {
+        "en": "Leverage",
+        "es": "Apalancamiento (leverage)"
+      },
+      "aliases": [
+        "Leverage",
+        "Apalancamiento"
+      ],
+      "lessons": [
+        "leverage-in-plain-words"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "liquidation",
+      "terms": {
+        "en": "Liquidation",
+        "es": "Liquidación"
+      },
+      "aliases": [
+        "Liquidation",
+        "Liquidación",
+        "liquidations",
+        "liquidaciones"
+      ],
+      "lessons": [
+        "what-happens-when-you-get-liquidated"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "liquidation-price",
+      "terms": {
+        "en": "Liquidation price",
+        "es": "Precio de liquidación"
+      },
+      "aliases": [
+        "Liquidation price",
+        "Precio de liquidación"
+      ],
+      "lessons": [
+        "what-happens-when-you-get-liquidated"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "liquidity",
+      "terms": {
+        "en": "Liquidity",
+        "es": "Liquidez"
+      },
+      "aliases": [
+        "Liquidity",
+        "Liquidez"
+      ],
+      "lessons": [
+        "volume-and-liquidity"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "margin",
+      "terms": {
+        "en": "Margin",
+        "es": "Margen"
+      },
+      "aliases": [
+        "Margin",
+        "Margen"
+      ],
+      "lessons": [
+        "leverage-in-plain-words"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "position-size",
+      "terms": {
+        "en": "Position size",
+        "es": "Tamaño de la posición"
+      },
+      "aliases": [
+        "Position size",
+        "Tamaño de la posición"
+      ],
+      "lessons": [
+        "size-your-trade-from-your-stop"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "risk-per-trade",
+      "terms": {
+        "en": "Risk per trade",
+        "es": "Riesgo por operación"
+      },
+      "aliases": [
+        "Risk per trade",
+        "Riesgo por operación"
+      ],
+      "lessons": [
+        "size-your-trade-from-your-stop"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "s-p-500",
+      "terms": {
+        "en": "S&P 500",
+        "es": "S&P 500"
+      },
+      "aliases": [
+        "S&P 500"
+      ],
+      "lessons": [
+        "investing-vs-trading-and-etfs"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "stop-loss",
+      "terms": {
+        "en": "Stop loss",
+        "es": "Stop loss (orden de pérdida máxima)"
+      },
+      "aliases": [
+        "Stop loss"
+      ],
+      "lessons": [
+        "stop-losses"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "volatility",
+      "terms": {
+        "en": "Volatility",
+        "es": "Volatilidad"
+      },
+      "aliases": [
+        "Volatility",
+        "Volatilidad"
+      ],
+      "lessons": [
+        "volatility-and-atr"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "win-rate",
+      "terms": {
+        "en": "Win rate",
+        "es": "Tasa de acierto (win rate)"
+      },
+      "aliases": [
+        "Win rate",
+        "Tasa de acierto"
+      ],
+      "lessons": [
+        "win-rate-and-expectancy"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "account",
+      "terms": {
+        "en": "Account",
+        "es": "Cuenta"
+      },
+      "aliases": [
+        "Account",
+        "Cuenta"
+      ],
+      "lessons": [
+        "how-much-to-risk-on-one-trade"
+      ],
+      "sources": [],
+      "courseCoverage": "covered",
+      "matchAliases": [
+        "trading account",
+        "trading capital",
+        "cuenta de trading",
+        "capital para operar"
+      ]
+    },
+    {
+      "id": "break-even-win-rate",
+      "terms": {
+        "en": "Break-even win rate",
+        "es": "Tasa de acierto de equilibrio (break-even win rate)"
+      },
+      "aliases": [
+        "Break-even win rate",
+        "Tasa de acierto de equilibrio"
+      ],
+      "lessons": [
+        "win-rate-and-expectancy"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "reward-to-risk",
+      "terms": {
+        "en": "Reward to risk",
+        "es": "Relación beneficio-riesgo (reward to risk)"
+      },
+      "aliases": [
+        "Reward to risk",
+        "Relación beneficio-riesgo"
+      ],
+      "lessons": [
+        "risk-and-reward"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "slippage",
+      "terms": {
+        "en": "Slippage",
+        "es": "Deslizamiento (slippage)"
+      },
+      "aliases": [
+        "Slippage",
+        "Deslizamiento"
+      ],
+      "lessons": [
+        "the-hidden-costs"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "stop-distance",
+      "terms": {
+        "en": "Stop distance",
+        "es": "Distancia al stop"
+      },
+      "aliases": [
+        "Stop distance",
+        "Distancia al stop"
+      ],
+      "lessons": [
+        "stop-losses"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "stop-limit-order",
+      "terms": {
+        "en": "Stop limit order",
+        "es": "Orden stop limit"
+      },
+      "aliases": [
+        "Stop limit order",
+        "Orden stop limit"
+      ],
+      "lessons": [
+        "stop-losses"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "stop-market-order",
+      "terms": {
+        "en": "Stop market order",
+        "es": "Orden stop a mercado (stop market)"
+      },
+      "aliases": [
+        "Stop market order",
+        "Orden stop a mercado"
+      ],
+      "lessons": [
+        "stop-losses"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "target",
+      "terms": {
+        "en": "Target",
+        "es": "Objetivo (target)"
+      },
+      "aliases": [
+        "Target",
+        "Objetivo"
+      ],
+      "lessons": [
+        "risk-and-reward"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "funding-rate",
+      "terms": {
+        "en": "Funding rate",
+        "es": "Tasa de financiación (funding rate)"
+      },
+      "aliases": [
+        "Funding rate",
+        "Tasa de financiación"
+      ],
+      "lessons": [
+        "perpetual-futures-and-funding"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "losing-streak",
+      "terms": {
+        "en": "Losing streak",
+        "es": "Racha perdedora"
+      },
+      "aliases": [
+        "Losing streak",
+        "Racha perdedora",
+        "red weeks",
+        "semanas rojas",
+        "racha",
+        "rachas",
+        "losing streaks"
+      ],
+      "lessons": [
+        "losing-streaks-and-drawdowns"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "maker-and-taker-fees",
+      "terms": {
+        "en": "Maker and taker fees",
+        "es": "Comisiones maker y taker"
+      },
+      "aliases": [
+        "Maker and taker fees",
+        "Comisiones maker y taker"
+      ],
+      "lessons": [
+        "the-hidden-costs"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "rug-pull",
+      "terms": {
+        "en": "Rug pull",
+        "es": "Rug pull"
+      },
+      "aliases": [
+        "Rug pull"
+      ],
+      "lessons": [
+        "staying-safe"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "seed-phrase",
+      "terms": {
+        "en": "Seed phrase",
+        "es": "Frase semilla (seed phrase)"
+      },
+      "aliases": [
+        "Seed phrase",
+        "Frase semilla"
+      ],
+      "lessons": [
+        "staying-safe"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "spread",
+      "terms": {
+        "en": "Spread",
+        "es": "Diferencial (spread)"
+      },
+      "aliases": [
+        "Spread",
+        "Diferencial"
+      ],
+      "lessons": [
+        "volume-and-liquidity"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "two-factor-authentication-2fa",
+      "terms": {
+        "en": "Two-factor authentication (2FA)",
+        "es": "Autenticación en dos pasos (2FA)"
+      },
+      "aliases": [
+        "Two-factor authentication",
+        "Autenticación en dos pasos"
+      ],
+      "lessons": [
+        "staying-safe"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "ask",
+      "terms": {
+        "en": "Ask",
+        "es": "Ask (precio de venta)"
+      },
+      "aliases": [
+        "Ask"
+      ],
+      "lessons": [
+        "volume-and-liquidity"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "bid",
+      "terms": {
+        "en": "Bid",
+        "es": "Bid (precio de compra)"
+      },
+      "aliases": [
+        "Bid"
+      ],
+      "lessons": [
+        "volume-and-liquidity"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "candlestick",
+      "terms": {
+        "en": "Candlestick",
+        "es": "Vela japonesa (candlestick)"
+      },
+      "aliases": [
+        "Candlestick",
+        "Vela japonesa",
+        "candle",
+        "candles",
+        "velas",
+        "vela",
+        "velas japonesas"
+      ],
+      "lessons": [
+        "how-to-read-a-candlestick"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "limit-order",
+      "terms": {
+        "en": "Limit order",
+        "es": "Orden limitada (limit order)"
+      },
+      "aliases": [
+        "Limit order",
+        "Orden limitada"
+      ],
+      "lessons": [],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "market-order",
+      "terms": {
+        "en": "Market order",
+        "es": "Orden a mercado (market order)"
+      },
+      "aliases": [
+        "Market order",
+        "Orden a mercado"
+      ],
+      "lessons": [],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "order-book",
+      "terms": {
+        "en": "Order book",
+        "es": "Libro de órdenes (order book)"
+      },
+      "aliases": [
+        "Order book",
+        "Libro de órdenes"
+      ],
+      "lessons": [
+        "volume-and-liquidity"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "range",
+      "terms": {
+        "en": "Range",
+        "es": "Rango"
+      },
+      "aliases": [
+        "Range",
+        "Rango"
+      ],
+      "lessons": [
+        "trends-ranges-support-resistance"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "resistance",
+      "terms": {
+        "en": "Resistance",
+        "es": "Resistencia"
+      },
+      "aliases": [
+        "Resistance",
+        "Resistencia"
+      ],
+      "lessons": [
+        "trends-ranges-support-resistance"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "support",
+      "terms": {
+        "en": "Support",
+        "es": "Soporte"
+      },
+      "aliases": [
+        "Support",
+        "Soporte"
+      ],
+      "lessons": [
+        "trends-ranges-support-resistance"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "timeframe",
+      "terms": {
+        "en": "Timeframe",
+        "es": "Marco temporal (timeframe)"
+      },
+      "aliases": [
+        "Timeframe",
+        "Marco temporal",
+        "timeframes",
+        "temporalidad",
+        "temporalidades",
+        "marcos temporales"
+      ],
+      "lessons": [
+        "timeframes"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "trend",
+      "terms": {
+        "en": "Trend",
+        "es": "Tendencia"
+      },
+      "aliases": [
+        "Trend",
+        "Tendencia"
+      ],
+      "lessons": [
+        "trends-ranges-support-resistance"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "circulating-supply",
+      "terms": {
+        "en": "Circulating supply",
+        "es": "Oferta circulante"
+      },
+      "aliases": [
+        "Circulating supply",
+        "Oferta circulante"
+      ],
+      "lessons": [
+        "market-cap-supply-and-unlocks"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "economic-calendar",
+      "terms": {
+        "en": "Economic calendar",
+        "es": "Calendario económico"
+      },
+      "aliases": [
+        "Economic calendar",
+        "Calendario económico"
+      ],
+      "lessons": [
+        "news-and-big-events"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "fully-diluted-value-fdv",
+      "terms": {
+        "en": "Fully diluted value (FDV)",
+        "es": "Valor totalmente diluido (FDV)"
+      },
+      "aliases": [
+        "Fully diluted value",
+        "Valor totalmente diluido"
+      ],
+      "lessons": [
+        "market-cap-supply-and-unlocks"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "futures",
+      "terms": {
+        "en": "Futures",
+        "es": "Futuros"
+      },
+      "aliases": [
+        "Futures",
+        "Futuros"
+      ],
+      "lessons": [
+        "perpetual-futures-and-funding"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "gap",
+      "terms": {
+        "en": "Gap",
+        "es": "Gap (hueco)"
+      },
+      "aliases": [
+        "Gap"
+      ],
+      "lessons": [],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "hype-cycle",
+      "terms": {
+        "en": "Hype cycle",
+        "es": "Ciclo de entusiasmo (hype cycle)"
+      },
+      "aliases": [
+        "Hype cycle",
+        "Ciclo de entusiasmo"
+      ],
+      "lessons": [
+        "narratives-and-hype-cycles"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "market-cap",
+      "terms": {
+        "en": "Market cap",
+        "es": "Capitalización de mercado (market cap)"
+      },
+      "aliases": [
+        "Market cap",
+        "Capitalización de mercado"
+      ],
+      "lessons": [
+        "market-cap-supply-and-unlocks"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "narrative",
+      "terms": {
+        "en": "Narrative",
+        "es": "Narrativa"
+      },
+      "aliases": [
+        "Narrative",
+        "Narrativa"
+      ],
+      "lessons": [
+        "narratives-and-hype-cycles"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "priced-in",
+      "terms": {
+        "en": "Priced in",
+        "es": "Ya descontado (priced in)"
+      },
+      "aliases": [
+        "Priced in",
+        "Ya descontado"
+      ],
+      "lessons": [
+        "news-and-big-events"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "unlock",
+      "terms": {
+        "en": "Unlock",
+        "es": "Desbloqueo (unlock)"
+      },
+      "aliases": [
+        "Unlock",
+        "Desbloqueo"
+      ],
+      "lessons": [
+        "market-cap-supply-and-unlocks"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "volume",
+      "terms": {
+        "en": "Volume",
+        "es": "Volumen"
+      },
+      "aliases": [
+        "Volume",
+        "Volumen"
+      ],
+      "lessons": [
+        "volume-and-liquidity"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "backtest",
+      "terms": {
+        "en": "Backtest",
+        "es": "Backtest"
+      },
+      "aliases": [
+        "Backtest"
+      ],
+      "lessons": [
+        "test-before-you-risk-money"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "paper-trading",
+      "terms": {
+        "en": "Paper trading",
+        "es": "Paper trading (operar en simulado)"
+      },
+      "aliases": [
+        "Paper trading"
+      ],
+      "lessons": [
+        "test-before-you-risk-money"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "r-r-multiple",
+      "terms": {
+        "en": "R (R-multiple)",
+        "es": "R (múltiplo R)"
+      },
+      "aliases": [
+        "R"
+      ],
+      "lessons": [
+        "averages-ratios-and-r-multiples"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "sample-size",
+      "terms": {
+        "en": "Sample size",
+        "es": "Tamaño de la muestra"
+      },
+      "aliases": [
+        "Sample size",
+        "Tamaño de la muestra"
+      ],
+      "lessons": [
+        "probability-and-sample-size"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "setup",
+      "terms": {
+        "en": "Setup",
+        "es": "Setup (configuración de entrada)"
+      },
+      "aliases": [
+        "Setup"
+      ],
+      "lessons": [
+        "your-one-page-trade-plan"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "trade-plan",
+      "terms": {
+        "en": "Trade plan",
+        "es": "Plan de trading"
+      },
+      "aliases": [
+        "Trade plan",
+        "Plan de trading"
+      ],
+      "lessons": [
+        "your-one-page-trade-plan"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "trading-journal",
+      "terms": {
+        "en": "Trading journal",
+        "es": "Diario de trading"
+      },
+      "aliases": [
+        "Trading journal",
+        "Diario de trading"
+      ],
+      "lessons": [
+        "keeping-a-trading-journal"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "trading-system",
+      "terms": {
+        "en": "Trading system",
+        "es": "Sistema de trading"
+      },
+      "aliases": [
+        "Trading system",
+        "Sistema de trading"
+      ],
+      "lessons": [
+        "your-one-page-trade-plan"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "variance",
+      "terms": {
+        "en": "Variance",
+        "es": "Varianza"
+      },
+      "aliases": [
+        "Variance",
+        "Varianza"
+      ],
+      "lessons": [
+        "probability-and-sample-size"
+      ],
+      "sources": [],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "daily-loss-limit",
+      "terms": {
+        "en": "Daily loss limit",
+        "es": "Límite de pérdida diaria"
+      },
+      "aliases": [
+        "Daily loss limit",
+        "Límite de pérdida diaria"
+      ],
+      "lessons": [
+        "daily-loss-limits"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "fomo",
+      "terms": {
+        "en": "FOMO",
+        "es": "FOMO (miedo a perderse algo)"
+      },
+      "aliases": [
+        "FOMO"
+      ],
+      "lessons": [
+        "fomo"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "overconfidence",
+      "terms": {
+        "en": "Overconfidence",
+        "es": "Exceso de confianza"
+      },
+      "aliases": [
+        "Overconfidence",
+        "Exceso de confianza"
+      ],
+      "lessons": [
+        "overconfidence"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "revenge-trading",
+      "terms": {
+        "en": "Revenge trading",
+        "es": "Trading de venganza (revenge trading)"
+      },
+      "aliases": [
+        "Revenge trading",
+        "Trading de venganza"
+      ],
+      "lessons": [
+        "revenge-trading-and-tilt"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "tilt",
+      "terms": {
+        "en": "Tilt",
+        "es": "Tilt"
+      },
+      "aliases": [
+        "Tilt"
+      ],
+      "lessons": [
+        "revenge-trading-and-tilt"
+      ],
+      "sources": [],
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "bounce",
+      "terms": {
+        "en": "Bounce",
+        "es": "Rebote"
+      },
+      "aliases": [],
+      "lessons": [
+        "market-structure"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: 100 → 70 → 80 → 60. The move to 80 was a bounce, not a lasting recovery.",
+        "es": "Hipotético: 100 → 70 → 80 → 60. La subida a 80 fue un rebote, no una recuperación duradera."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "market-bottom",
+      "terms": {
+        "en": "Market bottom",
+        "es": "Suelo de mercado"
+      },
+      "aliases": [
+        "bottom",
+        "bottoming",
+        "suelo",
+        "suelos",
+        "piso"
+      ],
+      "lessons": [
+        "market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A price looking cheap or a market feeling fearful does not establish that the lowest price has been reached.",
+        "es": "Que un precio parezca barato o que haya miedo no demuestra que ya se haya alcanzado el mínimo."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "bull-market",
+      "terms": {
+        "en": "Bull market",
+        "es": "Mercado alcista"
+      },
+      "aliases": [],
+      "lessons": [
+        "market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: a recovery from 70 to 80 can still be part of a decline from 100. Look at the broader structure.",
+        "es": "Hipotético: recuperarse de 70 a 80 aún puede formar parte de una caída desde 100. Importa la estructura general."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "bear-market",
+      "terms": {
+        "en": "Bear market",
+        "es": "Mercado bajista"
+      },
+      "aliases": [],
+      "lessons": [
+        "market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "The label describes what has happened; it does not tell you how much further prices must fall.",
+        "es": "La etiqueta describe lo ocurrido; no indica cuánto más tienen que caer los precios."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "correction",
+      "terms": {
+        "en": "Correction",
+        "es": "Corrección"
+      },
+      "aliases": [],
+      "lessons": [
+        "market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A correction can end or deepen. Calling it a correction does not make the loss temporary or harmless.",
+        "es": "Una corrección puede terminar o profundizarse. Llamarla así no hace que la pérdida sea temporal ni inofensiva."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "bull-trap",
+      "terms": {
+        "en": "Bull trap",
+        "es": "Trampa alcista"
+      },
+      "aliases": [],
+      "lessons": [
+        "chart-patterns"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: a price briefly moves above a watched level, attracts buyers and then falls back below it.",
+        "es": "Hipotético: el precio supera brevemente un nivel vigilado, atrae compras y después vuelve a caer por debajo."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "breakout",
+      "terms": {
+        "en": "Breakout",
+        "es": "Ruptura al alza"
+      },
+      "aliases": [],
+      "lessons": [
+        "chart-patterns"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A close, extra trading activity or a retest may be used as confirmation rules; none guarantees that the move will last.",
+        "es": "Un cierre, más actividad o una nueva prueba del nivel pueden usarse como confirmación; nada garantiza que el movimiento dure."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "breakdown",
+      "terms": {
+        "en": "Breakdown",
+        "es": "Ruptura a la baja"
+      },
+      "aliases": [],
+      "lessons": [
+        "chart-patterns"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: support is around 100. A brief move to 99 followed by a recovery differs from several closes below it.",
+        "es": "Hipotético: hay soporte cerca de 100. Una visita breve a 99 y una recuperación no son lo mismo que varios cierres por debajo."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "retest",
+      "terms": {
+        "en": "Retest",
+        "es": "Nueva prueba del nivel"
+      },
+      "aliases": [],
+      "lessons": [
+        "trendlines-and-channels"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "Old support may become resistance, but it does not have to. Watch what actually happens rather than assuming a reaction.",
+        "es": "Un soporte anterior puede actuar como resistencia, pero no tiene por qué. Importa la reacción real, no la imaginada."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "moving-average",
+      "terms": {
+        "en": "Moving average",
+        "es": "Media móvil"
+      },
+      "aliases": [
+        "moving averages",
+        "medias móviles"
+      ],
+      "lessons": [
+        "moving-averages"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: averaging the last 10 closing prices reduces day-to-day noise. A line based on more periods usually changes more slowly.",
+        "es": "Hipotético: promediar los últimos 10 cierres reduce el ruido diario. Una media de más periodos suele cambiar más despacio."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "200-week-moving-average",
+      "terms": {
+        "en": "200-week moving average",
+        "es": "Media móvil de 200 semanas"
+      },
+      "aliases": [
+        "200 week",
+        "200-week"
+      ],
+      "lessons": [
+        "moving-averages"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "Bitcoin has traded below this line before. A historical reaction near it does not establish a dependable future buying opportunity.",
+        "es": "Bitcoin ya ha cotizado por debajo de esta línea. Una reacción histórica cercana no garantiza una oportunidad de compra futura."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "seasonality",
+      "terms": {
+        "en": "Seasonality",
+        "es": "Estacionalidad"
+      },
+      "aliases": [],
+      "lessons": [
+        "market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "A few strong Januaries are not a reliable forecast. Ask how many years were examined and whether weak examples were left out.",
+        "es": "Unos pocos eneros fuertes no son un pronóstico fiable. Pregunta cuántos años se analizaron y si se omitieron ejemplos débiles."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "bitcoin-halving",
+      "terms": {
+        "en": "Bitcoin halving",
+        "es": "Halving de Bitcoin"
+      },
+      "aliases": [
+        "halving"
+      ],
+      "lessons": [
+        "market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "A change in new issuance can matter, but demand, expectations and wider conditions also affect price. Few past cycles are a small sample.",
+        "es": "La emisión nueva puede importar, pero también la demanda, las expectativas y el entorno. Unos pocos ciclos pasados son una muestra pequeña."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "market-cycle",
+      "terms": {
+        "en": "Market cycle",
+        "es": "Ciclo de mercado"
+      },
+      "aliases": [
+        "market cycles",
+        "ciclos de mercado"
+      ],
+      "lessons": [
+        "market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A four-year comparison is an interpretation of limited history, not a clock forcing prices to follow a schedule.",
+        "es": "Comparar ciclos de 4 años es una interpretación de un historial limitado, no un reloj que obligue al precio a seguir un calendario."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "all-time-high",
+      "terms": {
+        "en": "All-time high",
+        "es": "Máximo histórico"
+      },
+      "aliases": [
+        "ATH"
+      ],
+      "lessons": [
+        "market-structure"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "An asset that once reached a high is not guaranteed to return to it. The previous high is a reference, not a promise.",
+        "es": "Que un activo alcanzara un máximo no garantiza que vuelva a él. El máximo anterior es una referencia, no una promesa."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "fear-and-greed-index",
+      "terms": {
+        "en": "Fear and Greed Index",
+        "es": "Índice de Miedo y Codicia"
+      },
+      "aliases": [
+        "Fear & Greed",
+        "miedo y codicia",
+        "extreme fear",
+        "miedo extremo"
+      ],
+      "lessons": [
+        "sentiment-and-market-cycles"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Different providers use different ingredients. Extreme fear can last, and a sentiment score does not establish what prices do next.",
+        "es": "Cada proveedor puede usar ingredientes distintos. El miedo extremo puede durar y la puntuación no determina el siguiente movimiento del precio."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "momentum",
+      "terms": {
+        "en": "Momentum",
+        "es": "Momentum o impulso"
+      },
+      "aliases": [],
+      "lessons": [
+        "momentum-and-rsi"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: 100 → 90 → 85 → 83. The losses get smaller, but the price has not started rising.",
+        "es": "Hipotético: 100 → 90 → 85 → 83. Las caídas se reducen, pero el precio aún no ha empezado a subir."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "rsi",
+      "terms": {
+        "en": "RSI",
+        "es": "RSI"
+      },
+      "aliases": [
+        "Relative Strength Index",
+        "índice de fuerza relativa"
+      ],
+      "lessons": [
+        "momentum-and-rsi"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Below 30 is conventionally called oversold. That label does not mean cheap, safe or certain to rebound.",
+        "es": "Por debajo de 30 suele hablarse de sobreventa. No significa barato, seguro ni que vaya a rebotar."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "oversold",
+      "terms": {
+        "en": "Oversold",
+        "es": "Sobreventa"
+      },
+      "aliases": [],
+      "lessons": [
+        "momentum-and-rsi"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A strongly falling market can stay oversold. The indicator describes recent movement rather than guaranteeing a reversal.",
+        "es": "Un mercado que cae con fuerza puede seguir en sobreventa. El indicador describe movimientos recientes, no garantiza un giro."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "bullish-divergence",
+      "terms": {
+        "en": "Bullish divergence",
+        "es": "Divergencia alcista"
+      },
+      "aliases": [
+        "divergencia alcista",
+        "bullish divergences",
+        "divergencia",
+        "divergencias"
+      ],
+      "lessons": [
+        "momentum-and-rsi"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: price lows are 100 then 95, while RSI lows are 20 then 28. The disagreement is the divergence.",
+        "es": "Hipotético: los mínimos del precio son 100 y 95, y los del RSI, 20 y 28. Esa discrepancia es la divergencia."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "macd",
+      "terms": {
+        "en": "MACD",
+        "es": "MACD"
+      },
+      "aliases": [
+        "MAC de",
+        "MACD histogram"
+      ],
+      "lessons": [
+        "macd-in-plain-words"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Negative histogram bars becoming smaller is not the same as prices rising. MACD and RSI both use price history, so they are not independent proof.",
+        "es": "Que las barras negativas del histograma se reduzcan no equivale a que suba el precio. MACD y RSI usan el historial del precio: no son pruebas independientes."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "candlestick-wick",
+      "terms": {
+        "en": "Candlestick wick",
+        "es": "Mecha de una vela"
+      },
+      "aliases": [],
+      "lessons": [
+        "how-to-read-a-candlestick"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Hypothetical: a price briefly falls below support and recovers before the candle closes. The wick records the visit, not a lasting break.",
+        "es": "Hipotético: el precio cae brevemente bajo un soporte y se recupera antes del cierre. La mecha registra la visita, no una ruptura duradera."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "closing-price",
+      "terms": {
+        "en": "Closing price",
+        "es": "Precio de cierre"
+      },
+      "aliases": [],
+      "lessons": [
+        "how-to-read-a-candlestick"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A weekly candle still in progress can change colour. A close is one confirmation rule, not a guarantee.",
+        "es": "Una vela semanal que sigue abierta puede cambiar de color. El cierre es una regla de confirmación, no una garantía."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "double-bottom",
+      "terms": {
+        "en": "Double bottom",
+        "es": "Doble suelo"
+      },
+      "aliases": [],
+      "lessons": [
+        "chart-patterns"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Traders often watch for a move above the intervening high. The pattern can fail even after that move.",
+        "es": "Se suele vigilar si el precio supera el máximo intermedio. El patrón puede fallar incluso después."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "symmetrical-triangle",
+      "terms": {
+        "en": "Symmetrical triangle",
+        "es": "Triángulo simétrico"
+      },
+      "aliases": [],
+      "lessons": [
+        "chart-patterns"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A drawing extending years into the future is an extrapolation, not a timetable for the market.",
+        "es": "Prolongar el dibujo años hacia el futuro es una extrapolación, no un calendario para el mercado."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "wedge",
+      "terms": {
+        "en": "Wedge",
+        "es": "Cuña"
+      },
+      "aliases": [],
+      "lessons": [
+        "chart-patterns"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Check the actual drawing. Lower highs combined with higher lows usually describe a symmetrical triangle instead.",
+        "es": "Comprueba el dibujo real. Unos máximos menores junto con mínimos mayores suelen describir un triángulo simétrico."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "long-position",
+      "terms": {
+        "en": "Long position",
+        "es": "Posición larga"
+      },
+      "aliases": [
+        "going long",
+        "longs",
+        "largos"
+      ],
+      "lessons": [
+        "going-long-and-short"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "You can be long by owning the asset outright or through a derivative. The risks depend on how the position is built.",
+        "es": "Puedes estar largo comprando el activo o usando un derivado. Los riesgos dependen de cómo esté construida la posición."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "short-position",
+      "terms": {
+        "en": "Short position",
+        "es": "Posición corta"
+      },
+      "aliases": [
+        "short selling",
+        "shorts",
+        "cortos"
+      ],
+      "lessons": [
+        "going-long-and-short"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Selling an asset you own is not automatically opening a short. A short creates exposure that benefits from further falls.",
+        "es": "Vender un activo que ya tienes no equivale automáticamente a abrir un corto. El corto crea una exposición que gana con nuevas caídas."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "spot-market",
+      "terms": {
+        "en": "Spot market",
+        "es": "Mercado al contado"
+      },
+      "aliases": [
+        "spot",
+        "portfolio spot"
+      ],
+      "lessons": [
+        "where-you-trade"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Buying outright without borrowing does not create a leveraged liquidation price. It can still lose most or all of its value.",
+        "es": "Comprar sin financiación no crea un precio de liquidación apalancada. Aun así, el activo puede perder casi todo su valor."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "scalping",
+      "terms": {
+        "en": "Scalping",
+        "es": "Scalping"
+      },
+      "aliases": [],
+      "lessons": [
+        "trading-styles"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "An advertised return is incomplete without the full record, losses, fees, capital and leverage used.",
+        "es": "Una rentabilidad anunciada no se puede valorar sin conocer el historial completo, pérdidas, comisiones, capital y apalancamiento."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "liquidation-heatmap",
+      "terms": {
+        "en": "Liquidation heatmap",
+        "es": "Mapa de liquidaciones"
+      },
+      "aliases": [
+        "mapa de liquidaciones",
+        "liquidation map",
+        "mapas de liquidaciones"
+      ],
+      "lessons": [
+        "leverage-as-a-price-force"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Bright areas are estimates, not guaranteed destinations. News and ordinary spot orders can move prices even when nearby clusters are small.",
+        "es": "Las zonas brillantes son estimaciones, no destinos garantizados. Las noticias y órdenes al contado pueden mover el precio aunque haya pocos grupos cercanos."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "liquidation-cascade",
+      "terms": {
+        "en": "Liquidation cascade",
+        "es": "Cascada de liquidaciones"
+      },
+      "aliases": [],
+      "lessons": [
+        "leverage-as-a-price-force"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Falling prices can force longs to sell; rising prices can force shorts to buy. Both can amplify an existing move.",
+        "es": "Las caídas pueden obligar a vender a los largos; las subidas pueden obligar a comprar a los cortos. Ambas pueden amplificar un movimiento."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "short-squeeze",
+      "terms": {
+        "en": "Short squeeze",
+        "es": "Cierre forzoso de cortos"
+      },
+      "aliases": [],
+      "lessons": [
+        "case-study-gamestop-squeeze"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A squeeze need not mean the asset's long-term prospects improved. It describes part of the trading mechanism.",
+        "es": "Un cierre masivo de cortos no implica que mejoren las perspectivas de largo plazo del activo. Describe parte del mecanismo de negociación."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "v-shaped-recovery",
+      "terms": {
+        "en": "V-shaped recovery",
+        "es": "Recuperación en V"
+      },
+      "aliases": [],
+      "lessons": [
+        "market-structure"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "A quiet or oversold market does not owe anyone a V-shaped recovery. Sideways movement or further falls are also possible.",
+        "es": "Un mercado quieto o en sobreventa no debe a nadie una recuperación en V. También puede lateralizar o seguir cayendo."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "gdp",
+      "terms": {
+        "en": "GDP",
+        "es": "PIB"
+      },
+      "aliases": [
+        "gross domestic product",
+        "producto interior bruto",
+        "producto interno bruto"
+      ],
+      "lessons": [
+        "macro-central-banks-rates-and-money"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "An annualized quarterly growth rate is not the same as growth during that quarter. Check the release date, unit and revisions.",
+        "es": "Una tasa trimestral anualizada no equivale al crecimiento de ese trimestre. Comprueba fecha, unidad y revisiones del dato."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "interest-rate",
+      "terms": {
+        "en": "Interest rate",
+        "es": "Tipo de interés"
+      },
+      "aliases": [
+        "interest rates",
+        "tasas",
+        "tasas de interés",
+        "tipos de interés"
+      ],
+      "lessons": [
+        "interest-rates-inflation-and-the-dollar"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Higher rates can affect borrowing costs and the appeal of safer interest-paying assets. Market reactions also depend on expectations.",
+        "es": "Los tipos más altos pueden afectar al coste de financiación y al atractivo de activos más seguros que pagan intereses. También importan las expectativas."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "inflation",
+      "terms": {
+        "en": "Inflation",
+        "es": "Inflación"
+      },
+      "aliases": [],
+      "lessons": [
+        "interest-rates-inflation-and-the-dollar"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "One product becoming dearer does not establish general inflation. Different inflation measures track different baskets.",
+        "es": "Que un producto se encarezca no demuestra inflación general. Cada medida de inflación sigue una cesta distinta."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "federal-reserve",
+      "terms": {
+        "en": "Federal Reserve",
+        "es": "Reserva Federal"
+      },
+      "aliases": [
+        "Fed",
+        "Reserva Federal"
+      ],
+      "lessons": [
+        "macro-central-banks-rates-and-money"
+      ],
+      "sources": [
+        "wealth-transfer",
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Strong growth can change expectations about rate cuts. It does not by itself establish inflation, employment or Bitcoin's next move.",
+        "es": "El crecimiento fuerte puede cambiar las expectativas de recortes. No demuestra por sí solo la inflación, el empleo ni el siguiente movimiento de Bitcoin."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "fomc",
+      "terms": {
+        "en": "FOMC",
+        "es": "FOMC"
+      },
+      "aliases": [],
+      "lessons": [
+        "macro-central-banks-rates-and-money"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "A market bottom occurring near a past meeting does not prove the next meeting will create another bottom.",
+        "es": "Que un suelo coincidiera con una reunión pasada no demuestra que la siguiente vaya a generar otro."
+      },
+      "courseCoverage": "covered"
+    },
+    {
+      "id": "ipo",
+      "terms": {
+        "en": "IPO",
+        "es": "Salida a bolsa (OPV)"
+      },
+      "aliases": [],
+      "lessons": [
+        "reading-a-company"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "A well-known company can be a poor investment at an excessive price. Check the offering details rather than assuming an IPO is a bargain.",
+        "es": "Una empresa conocida puede ser una mala inversión a un precio excesivo. Revisa la oferta en lugar de asumir que la salida a bolsa es una ganga."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "retail-investor",
+      "terms": {
+        "en": "Retail investor",
+        "es": "Inversor particular"
+      },
+      "aliases": [],
+      "lessons": [
+        "who-else-is-trading"
+      ],
+      "sources": [
+        "wealth-transfer"
+      ],
+      "review": {
+        "en": "Saying retail bought from insiders does not establish who held every side of every trade. That needs actual ownership and trading evidence.",
+        "es": "Decir que los particulares compraron a los insiders no demuestra quién estaba al otro lado de cada operación. Hace falta evidencia."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "conditional-scenario",
+      "terms": {
+        "en": "Conditional scenario",
+        "es": "Escenario condicional"
+      },
+      "aliases": [],
+      "lessons": [
+        "think-in-probabilities"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Two scenarios do not automatically have 50% probability each, and may leave out sideways movement or failed breakouts.",
+        "es": "Dos escenarios no tienen automáticamente un 50% de probabilidad cada uno; además pueden omitir un rango o rupturas fallidas."
+      },
+      "courseCoverage": "related"
+    },
+    {
+      "id": "gambler-s-fallacy",
+      "terms": {
+        "en": "Gambler's fallacy",
+        "es": "Falacia del jugador"
+      },
+      "aliases": [],
+      "lessons": [
+        "probability-and-sample-size"
+      ],
+      "sources": [
+        "bitcoin-floor-or-trap"
+      ],
+      "review": {
+        "en": "Eight red candles do not by themselves establish that the next candle is more likely to be green. Comparable evidence is needed.",
+        "es": "Ocho velas rojas no demuestran por sí solas que sea más probable una vela verde después. Hace falta evidencia comparable."
+      },
+      "courseCoverage": "covered"
+    }
+  ]
+}

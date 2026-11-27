@@ -24,10 +24,10 @@ Una cesta de inversiones que se sigue como un solo número, como el S&P 500. Mue
 Un ajuste en el que solo puedes perder en una operación el margen que elegiste para ella. El resto de tu cuenta queda separado.
 
 ## Apalancamiento (leverage)
-Pedir prestado para operar una cantidad mayor de la que tienes. Hace más grandes tanto las ganancias como las pérdidas, y puede liquidar una cuenta muy rápido.
+Tomar una exposición de mercado mayor que el dinero que aportas, mediante financiación o un contrato con margen. Amplifica las ganancias y las pérdidas respecto a ese dinero.
 
 ## Liquidación
-Cuando un exchange cierra por ti tu operación apalancada porque tus pérdidas casi han consumido tu margen. El dinero que pusiste se pierde.
+Cuando una plataforma cierra por la fuerza una posición apalancada porque su garantía ya no cumple el margen requerido. Puedes perder gran parte o todo el dinero que respalda esa posición.
 
 ## Precio de liquidación
 El precio al que el exchange cerrará tu operación apalancada. Cuanto mayor es tu apalancamiento, más cerca queda del precio al que compraste.
@@ -48,7 +48,7 @@ La cantidad que estás dispuesto a perder en una operación si sale mal, a menud
 Un índice de unas 500 grandes empresas que cotizan en Estados Unidos. Se usa a menudo como lectura rápida del mercado bursátil estadounidense.
 
 ## Stop loss (orden de pérdida máxima)
-Una orden que fijas de antemano para vender si el precio cae a cierto nivel, de modo que una pérdida no pueda crecer más de lo que planeaste.
+Una orden pensada para cerrar una posición cuando el precio se mueve en tu contra una cantidad elegida. Ayuda a limitar pérdidas, pero los huecos, el deslizamiento o una orden stop limit sin ejecutar pueden causar una pérdida mayor de la prevista.
 
 ## Volatilidad
 Cuánto y con qué rapidez sube y baja un precio. Alta volatilidad significa oscilaciones mayores en ambos sentidos.
@@ -208,3 +208,132 @@ Abrir una nueva operación sobre todo para recuperar una pérdida, en lugar de p
 
 ## Tilt
 Un estado en el que la frustración o la rabia toman por ti las decisiones de trading.
+
+## Rebote
+Una subida después de una caída. Puede ocurrir dentro de una tendencia bajista sin ponerle fin.
+
+## Suelo de mercado
+Un mínimo anterior a una recuperación sostenida. Identificarlo en tiempo real es incierto.
+
+## Mercado alcista
+Un periodo sostenido de subidas generales. Un solo día de fuertes subidas no lo confirma.
+
+## Mercado bajista
+Un periodo sostenido de caídas generales. Una bajada del 20% desde un máximo reciente es una convención habitual, no una ley universal.
+
+## Corrección
+Una caída después de una subida. En índices bursátiles se suele llamar corrección a una bajada de alrededor del 10% desde un máximo reciente.
+
+## Trampa alcista
+Una subida que parece anunciar una recuperación, pero va seguida de nuevas caídas.
+
+## Ruptura al alza
+Un movimiento por encima de un rango o resistencia vigilados. Puede fallar.
+
+## Ruptura a la baja
+Un movimiento por debajo de un soporte o rango vigilados. Puede revertirse.
+
+## Nueva prueba del nivel
+Cuando el precio vuelve a una zona que había atravesado para comprobar si allí aparecen compras o ventas.
+
+## Media móvil
+Una media de precios recientes que se actualiza con cada periodo nuevo. Suaviza el gráfico, pero reacciona después del precio.
+
+## Media móvil de 200 semanas
+Una media basada en 200 semanas de precios. Algunos traders la usan como contexto de largo plazo; no es un suelo garantizado.
+
+## Estacionalidad
+Una tendencia de los rendimientos o la actividad a variar según el calendario. Un patrón mensual pasado puede no repetirse.
+
+## Halving de Bitcoin
+Una reducción programada a la mitad de los nuevos bitcoins incluidos en la recompensa por minar un bloque. No reduce automáticamente a la mitad el precio ni la oferta total.
+
+## Ciclo de mercado
+Una secuencia amplia de condiciones de mercado, como expansión, optimismo, caída y recuperación. Su duración no es fija.
+
+## Máximo histórico
+El precio más alto registrado en una serie de datos concreta. Las plataformas y proveedores pueden mostrar valores ligeramente distintos.
+
+## Índice de Miedo y Codicia
+Una puntuación que resume ciertas medidas del sentimiento del mercado. Un valor bajo no es una orden automática de comprar ni vender.
+
+## Momentum o impulso
+El ritmo y la fuerza de los cambios del precio. Una caída puede perder impulso mientras el precio sigue bajando.
+
+## RSI
+Un indicador del impulso del precio en una escala de 0 a 100, basado en subidas y bajadas recientes. No cuenta compradores ni vendedores.
+
+## Sobreventa
+Una condición de un indicador asociada a fuertes caídas recientes. No significa que la caída tenga que terminar.
+
+## Divergencia alcista
+Cuando el precio marca un mínimo menor y un indicador marca un mínimo mayor. Puede sugerir menos impulso bajista, no una recuperación confirmada.
+
+## MACD
+Un indicador que compara medias móviles rápidas y lentas para estudiar cambios de impulso y tendencia.
+
+## Mecha de una vela
+La línea fina que muestra precios alcanzados más allá de la apertura y el cierre de una vela durante ese periodo.
+
+## Precio de cierre
+El último precio registrado para una vela o periodo elegido. Las velas de cripto cierran aunque el mercado opere las 24 horas.
+
+## Doble suelo
+Un posible patrón de giro con dos mínimos cerca de una misma zona y una recuperación entre ellos. Dos visitas no bastan para confirmar el giro.
+
+## Triángulo simétrico
+Un rango cada vez más estrecho formado por máximos menores y mínimos mayores. La figura no decide por sí sola la dirección de la ruptura.
+
+## Cuña
+Un patrón que se estrecha y cuyos dos límites suelen inclinarse en la misma dirección. No es lo mismo que un triángulo simétrico.
+
+## Posición larga
+Una posición que gana si sube el precio del activo y pierde si baja, antes de costes.
+
+## Posición corta
+Una posición que gana si baja el precio del activo y pierde si sube, antes de costes.
+
+## Mercado al contado
+Un mercado donde compras o vendes el propio activo, no solo un contrato que sigue su precio.
+
+## Scalping
+Un estilo de trading que busca pequeños movimientos en periodos muy cortos, a menudo segundos o minutos. Operar mucho también genera costes.
+
+## Mapa de liquidaciones
+Un modelo que estima dónde podrían cerrarse por la fuerza posiciones apalancadas si el precio llega a ciertos niveles. No es el libro de órdenes.
+
+## Cascada de liquidaciones
+Una reacción en cadena donde los cierres forzosos añaden órdenes que pueden desencadenar más cierres forzosos.
+
+## Cierre forzoso de cortos
+Una subida fuerte amplificada por vendedores en corto que compran para cerrar sus posiciones, voluntariamente o bajo presión.
+
+## Recuperación en V
+Una caída brusca seguida de una subida brusca. Describe un recorrido del precio, no un resultado prometido.
+
+## PIB
+Producto interior bruto: el valor de los bienes y servicios producidos dentro de una economía durante un periodo.
+
+## Tipo de interés
+El coste de pedir dinero prestado, o la remuneración por prestarlo o ahorrarlo, durante un periodo determinado.
+
+## Inflación
+Una subida sostenida del nivel general de precios. Reduce lo que puede comprar una unidad de dinero.
+
+## Reserva Federal
+El banco central de Estados Unidos. Sus decisiones influyen en las condiciones de financiación, pero no controlan cada precio del mercado.
+
+## FOMC
+El comité de la Reserva Federal encargado de decisiones clave de política monetaria, incluido el rango objetivo de su tipo de referencia.
+
+## Salida a bolsa (OPV)
+Una oferta pública inicial: una empresa ofrece acciones a inversores públicos al comenzar a cotizar.
+
+## Inversor particular
+Una persona que invierte su propio dinero, en lugar de hacerlo en nombre de una gran institución.
+
+## Escenario condicional
+Una descripción de qué podría pasar y qué evidencia lo apoyaría o invalidaría. No es una estimación de probabilidad.
+
+## Falacia del jugador
+La creencia errónea de que una racha obliga a que llegue el resultado contrario. Los mercados no son monedas independientes, pero una racha por sí sola demuestra poco.

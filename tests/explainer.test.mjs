@@ -79,7 +79,7 @@ test('validates follow-up answers and rejects invalid claim categories', () => {
 });
 
 const req = (body, origin = 'https://example.test') => new Request('https://example.test/api/explain', { method: 'POST', headers: { origin, 'content-type': 'application/json' }, body: typeof body === 'string' ? body : JSON.stringify(body) });
-const handler = overrides => createHandler({ env: { OPENAI_API_KEY: 'test-only' }, configured: () => true, userId: async () => '1', reserve: async () => {}, generate: async () => sample(), authorize: async () => ({ uid: '1', token: 'test-lease' }), finish: async () => {}, ...overrides });
+const handler = overrides => createHandler({ env: { OPENAI_API_KEY: 'test-only' }, configured: () => true, userId: async () => '1', reserve: async () => {}, learning: async () => ({}), generate: async () => sample(), authorize: async () => ({ uid: '1', token: 'test-lease' }), finish: async () => {}, ...overrides });
 test('API rejects other origins and unsigned users before generation', async () => {
   assert.equal((await handler()(req({ text }, 'https://evil.test'))).status, 403);
   assert.equal((await handler({ userId: async () => null })(req({ text }))).status, 401);

@@ -11,6 +11,7 @@ When you create an account we store:
 
 - **Your email address**, so you can sign in and so the account is yours.
 - **Your course progress**: which lessons you marked complete and whether your answers to the lesson quick questions were right.
+- **Your concept understanding marks**, if you choose to save them: not marked, needs review or understood. These are your own assessments, not inferred test results. Signed-out choices stay on your device; signed-in choices sync with your account and are included in account export/deletion.
 - **When** you created the account, last signed in and last saved progress.
 - **Whether you want emails about new lessons.** This is off unless you tick the box, and you can turn it off any time on your account page.
 
@@ -21,6 +22,8 @@ We don't store passwords, names, payment details, or anything about your trading
 ## The explainer
 
 If you use **Explain** with your own content, we send that text and any follow-up question to OpenAI to generate an explanation. A YouTube link also makes a request to YouTube for its available captions. Only submit public content or text you are allowed to share; don't submit private information.
+
+To avoid repeating definitions, we also send the relevant concept names and your understanding marks to OpenAI. We do not send your account email. Public glossary/video references are editorial content, not a record of visitors' private submissions.
 
 We don't save transcripts, questions or generated answers in our database or your browser storage. The explanation stays in the open page until you replace it or leave. OpenAI processes the submitted text under its own [API data policies](https://platform.openai.com/docs/guides/your-data); requesting no stored response does not mean the provider keeps no operational or safety logs.
 

@@ -11,6 +11,7 @@ Cuando creas una cuenta guardamos:
 
 - **Tu correo electrónico**, para que puedas iniciar sesión y para que la cuenta sea tuya.
 - **Tu progreso en el curso**: qué lecciones marcaste como completadas y si tus respuestas a las preguntas rápidas de las lecciones fueron correctas.
+- **Tus marcas de comprensión**, si decides guardarlas: sin marcar, necesito repasarlo o lo entiendo. Son tus propias valoraciones, no resultados inferidos. Sin sesión se quedan en el dispositivo; con sesión se sincronizan y se incluyen al descargar o eliminar tu cuenta.
 - **Cuándo** creaste la cuenta, cuándo iniciaste sesión por última vez y cuándo guardaste progreso por última vez.
 - **Si quieres recibir correos sobre lecciones nuevas.** Está desactivado salvo que marques la casilla, y puedes desactivarlo cuando quieras en la página de tu cuenta.
 
@@ -21,6 +22,8 @@ No guardamos contraseñas, nombres, datos de pago ni nada sobre tus operaciones.
 ## La herramienta Explicar
 
 Si usas **Explicar** con tu propio contenido, enviamos ese texto y las preguntas que hagas a OpenAI para generar una explicación. Un enlace de YouTube también solicita a YouTube sus subtítulos disponibles. Comparte solo contenido público o textos que tengas permiso para compartir; no envíes información privada.
+
+Para evitar repetir definiciones, también enviamos a OpenAI los nombres de los conceptos pertinentes y tus marcas de comprensión, pero no tu correo. Las referencias públicas del glosario son contenido editorial, no un historial de los textos privados de visitantes.
 
 No guardamos las transcripciones, las preguntas ni las respuestas en nuestra base de datos ni en el almacenamiento de tu navegador. La explicación permanece en la página abierta hasta que la sustituyes o sales. OpenAI trata el texto según sus [políticas de datos de la API](https://platform.openai.com/docs/guides/your-data); solicitar que no se almacene la respuesta no significa que el proveedor no conserve registros operativos o de seguridad.
 
