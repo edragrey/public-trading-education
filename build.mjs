@@ -60,7 +60,7 @@ const ICONS = {
   scale: '<path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8l-2.5 6a3 3 0 0 0 5 0z"/><path d="M19 8l-2.5 6a3 3 0 0 0 5 0z"/>',
 };
 const icon = (name, cls = "icon") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.book}</svg>`;
-const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "trading-math": "calc", "how-markets-really-work": "flow", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "thinking-in-probabilities": "scale", "going-further": "book" };
+const MODULE_ICONS = { "start-here": "info", "how-markets-work": "scale", "trading-math": "calc", "how-markets-really-work": "flow", "survive-first": "shield", "read-the-market": "chart", "build-a-system": "list", "the-traders-mind": "mind", "thinking-in-probabilities": "scale", "going-further": "book", "finish-line": "check" };
 const modIcon = (slug) => MODULE_ICONS[slug] || "book";
 
 const logo = `<img class="logo" src="/brand-logo.jpg" alt="" aria-hidden="true">`;

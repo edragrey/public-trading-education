@@ -26,7 +26,7 @@ date: 2026-11-26
 Lesson text in markdown...
 ```
 
-Modules are `start-here`, `how-markets-work`, `trading-math`, `how-markets-really-work`, `survive-first`, `read-the-market`, `build-a-system`, `the-traders-mind`, `going-further` (three stages: Foundations, Skills, Mind and world) (listed in `site.config.json`). Use `order` in steps of 10 so new lessons can slot in between. A module with `sections` in `site.config.json` groups lessons by their `section:` frontmatter.
+Modules are `start-here`, `how-markets-work`, `trading-math`, `how-markets-really-work`, `survive-first`, `read-the-market`, `build-a-system`, `the-traders-mind`, `going-further`, `finish-line` (capstone, completion page and a 20-question final exam, labelled not accredited) (three stages: Foundations, Skills, Mind and world) (listed in `site.config.json`). Use `order` in steps of 10 so new lessons can slot in between. A module with `sections` in `site.config.json` groups lessons by their `section:` frontmatter.
 
 ### Group lessons into sections
 
