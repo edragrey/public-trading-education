@@ -779,6 +779,48 @@ State the condition, the possible outcome and what would contradict the idea. Th
 
 Two scenarios do not automatically have 50% probability each, and may leave out sideways movement or failed breakouts.
 
+## Treasury yield
+A Treasury yield expresses the return implied by the price of US government debt as an annual rate. The maturity matters: a one-month bill and a ten-year note promise payments on different dates.
+
+Imagine a bill that pays $100 in one year and nothing before then. At $98, the buyer earns $2 if they hold it to repayment. At $96, the same promise earns the buyer $4. This is why a lower price means a higher yield when the payments stay fixed.
+
+A higher yield is not a rate increase announced by the Federal Reserve. One is a price set in a market; the other is a policy decision.
+
+## Margin call
+A margin call is a demand to restore the financial cushion backing a position. It tells you the account no longer meets the provider’s requirements. It is not the same as a liquidation, which is the actual closing or sale of assets.
+
+Suppose the required cushion is $500 and yours falls to $400. If nothing else changes, adding $100 brings it back to the minimum. Reducing the position may also reduce the requirement.
+
+Do not count on receiving a phone call or having time to respond. Depending on the agreement, the provider may sell assets without waiting.
+
+## Collateral
+Collateral is cash or property pledged to back an obligation. Think of a home securing a mortgage: the house is the collateral, not the loan. In a trading account, the provider decides which assets it accepts and how much credit to give them.
+
+Imagine pledging $1,000 of a volatile asset. If the platform counts only 80% of its market value, it gives you $800 of backing.
+
+If that asset’s price falls, the backing shrinks too. Your account can come under pressure even if the price of the investment you borrowed to buy has barely moved.
+
+## Volume profile
+A volume profile answers “At which prices did trading take place?” Ordinary volume bars group trading by time. A profile takes a chosen period and groups the amount traded into price bands instead. A longer horizontal bar means more units changed hands in that band.
+
+Imagine a share that finished the day at $25. Its longest volume bar could still be near $23 if most of the day’s business took place there.
+
+The profile records past trades, not orders waiting to be filled. Changing the period or the width of the bands can change its shape.
+
+## Value area
+The value area is a band of prices that accounts for a chosen share of a period’s trading volume, often about 70%. Chart tools typically start with the busiest price band and include neighbouring bands until they approach the chosen share.
+
+Suppose 1,000 shares traded in a session and the highlighted band from $19 to $21 accounts for 700 of them. That band tells you where much of the trading happened, not what the company is worth.
+
+The percentage describes past activity. It does not mean there is a 70% chance the next trade will fall inside those boundaries.
+
+## Point of control (POC)
+The point of control is the price, or narrow price band, with the most volume on a volume profile. The value area covers several prices; the point of control identifies just the busiest row. It need not sit in the middle of the range.
+
+Suppose 40 shares trade at $19, 90 at $20 and 70 at $21. The point of control is $20, even if the last trade happens at $21.
+
+Use the same time window when comparing profiles. Yesterday’s busiest price and this month’s busiest price can differ, and neither obliges the market to return.
+
 ## Gambler's fallacy
 The mistaken belief that a streak alone makes the opposite result due. Markets are not independent coin flips, but a streak alone still proves little.
 

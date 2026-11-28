@@ -2,6 +2,11 @@
   "version": 1,
   "sources": [
     {
+      "id": "bitcoin-bonds-and-margin-calls",
+      "title": "Bitcoin cae a 59.000: miedo extremo, bonos y llamadas de margen",
+      "url": "https://www.youtube.com/watch?v=LEQTe-dz88c"
+    },
+    {
       "id": "wealth-transfer",
       "title": "The Crypto WEALTH TRANSFER is About To Begin!",
       "url": "https://www.youtube.com/watch?v=rP--9HfkYfA"
@@ -13,6 +18,120 @@
     }
   ],
   "concepts": [
+    {
+      "id": "treasury-yield",
+      "terms": {
+        "en": "Treasury yield",
+        "es": "Rendimiento del Tesoro estadounidense"
+      },
+      "aliases": [
+        "Treasury yields",
+        "rendimientos del Tesoro",
+        "rentabilidad de los bonos del Tesoro"
+      ],
+      "lessons": [
+        "interest-rates-inflation-and-the-dollar"
+      ],
+      "sources": [
+        "bitcoin-bonds-and-margin-calls"
+      ],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "margin-call",
+      "terms": {
+        "en": "Margin call",
+        "es": "Llamada de margen"
+      },
+      "aliases": [
+        "margin calls",
+        "llamadas de margen",
+        "requerimiento de garantías"
+      ],
+      "lessons": [
+        "what-happens-when-you-get-liquidated"
+      ],
+      "sources": [
+        "bitcoin-bonds-and-margin-calls"
+      ],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "collateral",
+      "terms": {
+        "en": "Collateral",
+        "es": "Colateral (garantía)"
+      },
+      "aliases": [
+        "posted collateral",
+        "colateral",
+        "activos en garantía"
+      ],
+      "lessons": [
+        "leverage-in-plain-words"
+      ],
+      "sources": [
+        "bitcoin-bonds-and-margin-calls"
+      ],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "volume-profile",
+      "terms": {
+        "en": "Volume profile",
+        "es": "Perfil de volumen"
+      },
+      "aliases": [
+        "volume profiles",
+        "perfiles de volumen",
+        "volume by price"
+      ],
+      "lessons": [
+        "volume-confirming-or-doubting-a-move"
+      ],
+      "sources": [
+        "bitcoin-bonds-and-margin-calls"
+      ],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "value-area",
+      "terms": {
+        "en": "Value area",
+        "es": "Área de valor"
+      },
+      "aliases": [
+        "value areas",
+        "áreas de valor",
+        "zona de valor"
+      ],
+      "lessons": [
+        "volume-confirming-or-doubting-a-move"
+      ],
+      "sources": [
+        "bitcoin-bonds-and-margin-calls"
+      ],
+      "courseCoverage": "related"
+    },
+    {
+      "id": "point-of-control",
+      "terms": {
+        "en": "Point of control (POC)",
+        "es": "Punto de control (POC)"
+      },
+      "aliases": [
+        "POC",
+        "point of control",
+        "punto de control"
+      ],
+      "lessons": [
+        "volume-confirming-or-doubting-a-move"
+      ],
+      "sources": [
+        "bitcoin-bonds-and-margin-calls"
+      ],
+      "courseCoverage": "related"
+    },
     {
       "id": "break-even",
       "terms": {

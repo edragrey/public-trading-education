@@ -13,7 +13,7 @@ import { COPY } from '../src/explainer-copy.js';
 const request = (body, origin = 'https://example.test') => new Request('https://example.test/api/concepts/', { method: 'PATCH', headers: { origin, 'content-type': 'application/json' }, body: typeof body === 'string' ? body : JSON.stringify(body) });
 
 test('catalogue has a unique shared ID and EN/ES glossary heading for every concept', () => {
-  assert.equal(concepts.length, 112);
+  assert.equal(concepts.length, 118);
   assert.equal(conceptIds.size, concepts.length);
   for (const lang of ['en', 'es']) {
     const glossary = fs.readFileSync(new URL(`../${lang === 'es' ? 'content-es' : 'content'}/glossary.md`, import.meta.url), 'utf8');
@@ -134,7 +134,7 @@ test('build preserves old anchors, adds shared concept anchors and translated co
   assert.equal(run.status, 0, run.stderr);
   for (const lang of ['en', 'es']) {
     const html = fs.readFileSync(new URL(`../dist/${lang === 'es' ? 'es/' : ''}glossary/index.html`, import.meta.url), 'utf8');
-    assert.equal((html.match(/data-concept-id=/g) || []).length, 112);
+    assert.equal((html.match(/data-concept-id=/g) || []).length, concepts.length);
     assert.match(html, /id="concept-rsi"/);
     assert.match(html, /data-concept-export/);
     assert.doesNotMatch(html, /g-sources|g-review|data-from-video|value="videos"|Help me understand|Ayúdame a entenderlo|Encountered in|Visto en|youtube\.com|rP--9HfkYfA|h5PlmAVXVu4/);

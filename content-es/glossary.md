@@ -779,6 +779,48 @@ Define la condición, el resultado posible y qué hechos contradirían la idea. 
 
 Dos escenarios no tienen automáticamente un 50% de probabilidad cada uno; además pueden omitir un rango o rupturas fallidas.
 
+## Rendimiento del Tesoro estadounidense
+El rendimiento del Tesoro expresa, como tasa anual, lo que ofrece la deuda pública estadounidense al precio de mercado. Hay que mirar el plazo: una letra a un mes y un bono a diez años no devuelven el dinero en la misma fecha.
+
+Imagina una letra que paga 100 dólares dentro de un año y nada antes. Si la compras por 98 y esperas al vencimiento, ganas 2 dólares. Si pagas 96, ganas 4. Por eso, cuando los pagos prometidos no cambian, un precio más bajo implica un rendimiento más alto.
+
+Que suba ese rendimiento no significa que la Reserva Federal haya subido los tipos. Lo primero ocurre en el mercado; lo segundo es una decisión de política monetaria.
+
+## Llamada de margen
+Una llamada de margen es una exigencia de reponer la garantía que respalda una posición. Indica que la cuenta ha dejado de cumplir el mínimo exigido. No es lo mismo que una liquidación: en la liquidación ya se han vendido activos o cerrado posiciones.
+
+Imagina que te exigen 500 dólares de garantía y solo te quedan 400. Si nada más cambia, aportar 100 cubre la diferencia. Reducir la posición también puede rebajar el mínimo exigido.
+
+No des por hecho que recibirás una llamada ni que tendrás tiempo para responder. Según las condiciones de la cuenta, el intermediario puede vender activos sin esperar.
+
+## Colateral (garantía)
+El colateral es dinero o un bien que dejas en garantía para respaldar una obligación. En una hipoteca, la garantía es la vivienda, no el préstamo. En una cuenta de trading, el intermediario decide qué activos acepta y por qué valor los reconoce.
+
+Imagina que aportas un activo que vale 1.000 dólares. Si la plataforma solo reconoce el 80 % de su valor por sus cambios de precio, te cuenta como garantía por 800 dólares.
+
+Si ese activo baja, tu garantía también pierde valor. Puede faltarte respaldo aunque apenas se haya movido el precio de la inversión que compraste con el préstamo.
+
+## Perfil de volumen
+El perfil de volumen responde a una pregunta: ¿a qué precios se negoció más? Las barras habituales agrupan lo negociado por tiempo. El perfil toma un periodo y agrupa esa misma actividad por franjas de precio. Cuanto más larga es la barra horizontal, más cantidad se negoció en esa franja.
+
+Imagina que una acción cierra a 25 dólares. La barra más larga del día podría estar cerca de 23 si allí cambió de manos la mayor cantidad de acciones.
+
+El perfil muestra operaciones pasadas, no órdenes pendientes. Si cambias el periodo o la anchura de las franjas, puede cambiar el dibujo.
+
+## Área de valor
+El área de valor es la franja de precios que reúne una proporción elegida del volumen negociado en un periodo, a menudo en torno al 70 %. El gráfico suele partir de la franja con más volumen e incorporar franjas vecinas hasta acercarse a esa proporción.
+
+Imagina que se negocian 1.000 acciones en una sesión y que 700 cambian de manos entre 19 y 21 dólares. Esa zona indica dónde se concentró la actividad, no cuánto vale la empresa.
+
+El porcentaje describe operaciones pasadas. No significa que la próxima operación tenga un 70 % de probabilidades de caer dentro del área.
+
+## Punto de control (POC)
+El punto de control es el precio, o la franja estrecha de precios, donde más volumen se negoció en un perfil de volumen. El área de valor abarca varios precios; el punto de control señala solo la fila más activa. No tiene por qué estar en el centro del rango.
+
+Imagina que se negocian 40 acciones a 19 dólares, 90 a 20 y 70 a 21. El punto de control es 20, aunque la última operación se cierre a 21.
+
+Compara perfiles del mismo periodo. El precio más negociado ayer puede no coincidir con el del mes, y ninguno obliga al mercado a volver allí.
+
 ## Falacia del jugador
 La creencia errónea de que una racha obliga a que llegue el resultado contrario. Los mercados no son monedas independientes, pero una racha por sí sola demuestra poco.
 
